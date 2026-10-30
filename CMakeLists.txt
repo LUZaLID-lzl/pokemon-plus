@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16)
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+set(PROJECT_VER "0.34.16")
+set(PP_APP_VERSION "${PROJECT_VER}")
+configure_file(web/version.json.in web/version.json @ONLY)
+project(pokemon_plus)

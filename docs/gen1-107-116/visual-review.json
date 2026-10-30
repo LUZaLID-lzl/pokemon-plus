@@ -1,0 +1,71 @@
+{
+  "identityReviewed": [
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116
+  ],
+  "animationReviewed": [
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116
+  ],
+  "runtimeIntegrated": true,
+  "acceptedVersions": {
+    "107": 1,
+    "108": 1,
+    "109": 1,
+    "110": 1,
+    "111": 1,
+    "112": 1,
+    "113": 1,
+    "114": 1,
+    "115": 1,
+    "116": 1
+  },
+  "note": "All10 identity drawings and articulated six-action sets visually accepted; full runtime/build/browser QA passed. Not flashed.",
+  "identityVersion": 1,
+  "identityNote": "Raw source and native48 preview visually reviewed: correct10 identities, connected two-head Weezing, four-leg Rhyhorn/two-leg Rhydon, attached egg/pouch baby/tongue and seahorse fin/tail. Native silhouette40/alpha/palette checks passed.",
+  "notes": {
+    "107": "Raw/native48 complete poses reviewed: red gloves/purple tunic retained, articulated alternating leg steps, bent-knee happy return, low seated all8 closed-eye sleep, compact glove extension and recoil. First request succeeded.",
+    "108": "Native48 poses reviewed: attached compact tongue/tail, true alternate short feet, tongue/muzzle gestures, low seated all8 closed-eye sleep, compact tongue extension/recovery. First request succeeded.",
+    "109": "Native48 poses reviewed: one purple sphere/skull marking/no invented limbs or smoke, changing tilt/gaze/mouth with constant volume, all8 low closed-eye sleep, awake lean/recovery. First request succeeded.",
+    "110": "Native48 poses reviewed: connected large/small purple heads and two faces retained, relative neck/face tilt, all four eyes closed in8 low hovering sleep poses, awake inclination/recovery. Third request succeeded after two HTTP400s.",
+    "111": "Native48 poses reviewed: quadruped gray armor and attached cream horn/tail retained, fore/hind legs alternate with natural far-leg occlusion; all8 low lying closed-eye sleep; compact foreleg brace and head recovery. First request succeeded.",
+    "112": "Native48 poses reviewed: biped gray armor/cream segmented belly and attached horn/tail, alternating bent-knee steps/arm counterbalance, all8 low seated closed-eye sleep, compact arm gesture and recovery. First request succeeded.",
+    "113": "Native48 poses reviewed: one egg secured in belly pouch, connected three head tufts per side, true foot/arm phases and expression changes, all8 low closed-eye sleeping poses; compact egg-cradling gestures and recovery. First request succeeded.",
+    "114": "Native48 poses reviewed: compact connected blue vines/black face/two white eyes and two red shoes, real alternate foot/vine-curl phases; all8 low tucked sleep poses have thin closed eyelid lines, no invented mouth; compact vine gesture/recovery. First request succeeded.",
+    "115": "Native48 and enlarged raw/native sleep row reviewed: exactly one purple baby remains secured in cream pouch throughout; mother/baby eyelids closed across all8 low seated sleep frames. True short leg phases/arm and tail counterbalance, protective pouch gesture/recovery. Second request succeeded after oneHTTP400.",
+    "116": "Native48 poses reviewed: blue seahorse with attached tubular snout/dorsal fin/curled tail and no invented limbs, genuine fin flutter/tail bending, all8 low tucked closed-eye sleep, compact snout lean and recovery. Fifth request succeeded after fourHTTP400s."
+  },
+  "firmwareVersion": "v0.18.0",
+  "unreviewedAnimationNationalIds": [],
+  "runtimeValidation": "ASan/UBSan,100-level cap including40-to42 evolution,all PNG/BIN/canvas sampling/ESP bank,116 forms/220 moves/61 paired evolution transitions,display edges/battle transparency,IDF/package/readback and Web desktop/mobile passed;not flashed",
+  "webValidation": {
+    "revision": "0180-pets116-ready1",
+    "consecutiveReloads": 3,
+    "receipt": "build/pets116-web-checks.json",
+    "originalStorageRestored": true
+  },
+  "sdkCompatibility": {
+    "path": "main/pp_rom_miniz.h",
+    "source": "https://raw.githubusercontent.com/espressif/esp-idf/v5.5.3/components/esp_rom/include/miniz.h",
+    "version": "v5.5.3",
+    "license": "Apache-2.0",
+    "sha256": "c748ffeb54751a6e7a25b79f8c4c086ef07ee80c05329ff5f36f0b88383c84f3",
+    "note": "Unmodified official ESP32-S3 ROM miniz declarations. Project-local copy supplies the header missing from the local SDK. No inflater implementation or ROM symbols changed; no vendor/hardware parameters changed."
+  }
+}

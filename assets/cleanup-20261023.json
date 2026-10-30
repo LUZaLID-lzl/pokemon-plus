@@ -1,0 +1,228 @@
+{
+  "date": "2026-10-23",
+  "archive": "dist/archive/unused-art-before-001-template-20261023.zip",
+  "archivedCount": 34,
+  "removedFromActiveBytes": 9745342,
+  "archivedFiles": [
+    {
+      "path": "assets/source/pets.png",
+      "bytes": 1268880,
+      "sha256": "85dd4386b07eb3e11c32eaa59cf2fd20aa773ffc8250f512e9cbd0ef1ef7420b",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "assets/source/scenes.png",
+      "bytes": 4011752,
+      "sha256": "64e2383e4248c555f80a87e755a6ce20e4b9dad7610a5cf0fd461cb8d950630e",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "assets/source/courtyard-watch-v11.png",
+      "bytes": 1116545,
+      "sha256": "e81fb5b2b4a1800fe0c66495a82c45d99105ff742329715ac95c337424e00d33",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "assets/source/courtyard-watch-v11-preview.png",
+      "bytes": 6514,
+      "sha256": "b03d9f9a79470c83c614ff06e71d2c5237f427fc751271fa611f525d6a083a10",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "assets/source/pikachu-reference-template-v6.png",
+      "bytes": 522,
+      "sha256": "262976b489744f775125e3675fac20ad9f6f7297d1e1068ff3e5da0a6ccc5b07",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "assets/source/pikachu-reference-template-v6-10x.png",
+      "bytes": 1661,
+      "sha256": "257dc8c0889967476c382e3af346c8dd1b3461c5508b92c0656891761ffa1d28",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "assets/source/pikachu-reference-template-v6-preview.png",
+      "bytes": 1659,
+      "sha256": "382e7e234252c9a19eee3bbcf70d184d02de1c4d3259044a09c8fe81a9b60ee8",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "assets/source/pikachu-reference-template-v6.svg",
+      "bytes": 10573,
+      "sha256": "913c36fa456a71e5fa82043667f2a0e53d1554754983fb97d70608226b086317",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "docs/screenshots/web-v061-mobile.png",
+      "bytes": 89906,
+      "sha256": "218b5b8d11b7f7f8e15dae9981355d623381f04e67a216edb23b854ad239037f",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "docs/screenshots/reference-layout-v051.png",
+      "bytes": 67326,
+      "sha256": "1b64d11d1efcfef70a2a2d7eccd4af93cf4570f5213c22142dceafff0ab567d3",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "docs/screenshots/reference-layout-v050.png",
+      "bytes": 64525,
+      "sha256": "ae276d0023838f07cba9641949fcd6e9928d08bcaec53343394f24115b65b86b",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "docs/screenshots/web-v063-starter.png",
+      "bytes": 63904,
+      "sha256": "16377bcb6f4a9c89774761754f355cbc93a6d1d5deb4bf097e05d3201cae8983",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "docs/screenshots/starter-v050.png",
+      "bytes": 16258,
+      "sha256": "e1394fb8919a255d2fa5ed6c140bd926e119a7111b23bf1a9c2dd0603af6cc6c",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "docs/screenshots/starter-v050.ppm",
+      "bytes": 388815,
+      "sha256": "f861a4c1830e3e1bbfbd3de50e4db870659a30167dd6fb6228f59f63fbf91dca",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "docs/screenshots/web-v051-mobile.png",
+      "bytes": 67983,
+      "sha256": "f4a46697ad66d1a2dc78087c6f974cd0d8cf2245956c8bdbe3d11fcfda67d2d9",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "docs/screenshots/pets-reference-v5.gif",
+      "bytes": 195940,
+      "sha256": "1ef9fc283b29ec330a9555efa5a18c1c12d6353e9ce3c43366010bff114858f5",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "docs/screenshots/starter-v064.png",
+      "bytes": 18348,
+      "sha256": "353228a0948a8ac548a8a6d01e38a6f27510b1ce8bc9cda70eacceccb82a6579",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "docs/screenshots/web-v050-desktop.png",
+      "bytes": 166662,
+      "sha256": "5f8a40be5c6129d916d64ba5fbf9fc6fc8b9168a9186508b083bdfda56d22f0c",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "docs/screenshots/update-v060.png",
+      "bytes": 194691,
+      "sha256": "66b460e96fda0251afeb3d018c3284ec3fbbcd8a25c951d7cada8e87840a1bfd",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "docs/screenshots/starter-v063.png",
+      "bytes": 15989,
+      "sha256": "69b1630be933cf78e59ea83886d4ec78d69c63742dce0b54adcfad263b60927a",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "docs/screenshots/courtyard-v13.png",
+      "bytes": 39431,
+      "sha256": "37ff88202526daca7f53a0802e24bf71caeeeac3f18976fc4dc54c316b50f062",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "docs/screenshots/pet-motion-sheet.png",
+      "bytes": 18671,
+      "sha256": "116e142a866df8fc68b8d574e86022774f40e3ac8b5a486e4de7e2c883edff43",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "docs/screenshots/update-v063.png",
+      "bytes": 59548,
+      "sha256": "7dd5ae36d514b491d870f4949132aca2659f25ed45dda1ea9453ac15707393a1",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "docs/screenshots/web-v060-mobile.png",
+      "bytes": 62863,
+      "sha256": "e0e362308787d52f811ac54101761392576c8dbf3bbe90fcc69613aed2b968fc",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "docs/screenshots/web-v050-mobile.png",
+      "bytes": 67920,
+      "sha256": "c563d2bf491f9602300756c49ec85469c1ddb7369ab584b0476cbea8b367feab",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "docs/screenshots/web-v064-starter.png",
+      "bytes": 66144,
+      "sha256": "933616ad39f1e02a93190560d79e86e886070d73194d68efe88b5944f3227281",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "docs/screenshots/scenes-v064.png",
+      "bytes": 480130,
+      "sha256": "b0ef2edf58f59e3ddd39f7821040bbcf69d86312d5d69e5a392db5f3f455ed13",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "docs/screenshots/web-v062-mobile.png",
+      "bytes": 91611,
+      "sha256": "60c0ab81d19f0c417686ba11b97bd9e29c1ab8429666f5a1b673802506d7e27f",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "docs/screenshots/scenes-v063.png",
+      "bytes": 478605,
+      "sha256": "9dd7d72d98a71c387c9022fda5cb66c54870c7f094f419bac1b7f390a3c3bd50",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "docs/screenshots/web-v063-home.png",
+      "bytes": 91273,
+      "sha256": "4afa1b80d227baa8b2beea6b9b032c1f5b27b4d71e6fc97c0f35e372a5f6d981",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "docs/screenshots/pets-reference-v5.png",
+      "bytes": 6373,
+      "sha256": "1bc7cc564683587bcfc73193451e0385c386ffd8f3c01d2ef50ef6ee3da15aab",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "docs/screenshots/scenes-v062.png",
+      "bytes": 471545,
+      "sha256": "743821d70ee0f376c2513b481936cb8fc0a37ce78b70d41838d9f2c43bacf965",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "docs/screenshots/home-v063.png",
+      "bytes": 41487,
+      "sha256": "55aa9b25b623cff8783c1cee465c5dce39b0e69f2b106af7faa2f2630fe76301",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    },
+    {
+      "path": "docs/screenshots/before-pet-fix/charmander-idle.png",
+      "bytes": 1288,
+      "sha256": "564d1fe3fc759a0a3d61dfc955f24995073605a5bb6fd2ca64e00f17f2a5b2c2",
+      "reason": "superseded source or historical preview, absent from current runtime inputs"
+    }
+  ],
+  "preserved": [
+    "all 001–027 reviewed native sprites and source atlases",
+    "current runtime inputs, image references and generation prompts",
+    "current game screenshots and generated animation previews"
+  ],
+  "prunedRuntimeExports": [
+    {
+      "path": "gyms/defeated.bin",
+      "bytes": 19596
+    },
+    {
+      "path": "gyms/defeated.png",
+      "bytes": 2369
+    }
+  ],
+  "runtimeBytesRemoved": 21965
+}

@@ -1,0 +1,190 @@
+{
+  "version": 1,
+  "kind": "single-pose art review",
+  "generator": "MobiIoT",
+  "model": "gpt-image-2.5-sunburst",
+  "attempts": 2,
+  "sourceAtlas": "../../source/gen1-077-086-v1.png",
+  "sourceSha256": "4f5efad6148f338e21c120120d402a41f03470a4e61b3efdf76e9f6d21470dcc",
+  "prompt": "../../prompts/gen1-077-086-v1.txt",
+  "nativeCanvas": 48,
+  "maxColors": 16,
+  "outlineColor": "#1b263a",
+  "alpha": "binary",
+  "gameIntegrated": true,
+  "animationPosesPerSpecies": 1,
+  "items": [
+    {
+      "id": 77,
+      "name": "小火马",
+      "english": "Ponyta",
+      "chain": 31,
+      "stage": 0,
+      "image": "077.png",
+      "preview": "077@8x.png",
+      "sourceBox": [
+        44,
+        64,
+        323,
+        402
+      ],
+      "outlinePixels": 192,
+      "source": "https://wiki.52poke.com/wiki/小火马"
+    },
+    {
+      "id": 78,
+      "name": "烈焰马",
+      "english": "Rapidash",
+      "chain": 31,
+      "stage": 1,
+      "image": "078.png",
+      "preview": "078@8x.png",
+      "sourceBox": [
+        370,
+        56,
+        693,
+        402
+      ],
+      "outlinePixels": 208,
+      "source": "https://wiki.52poke.com/wiki/烈焰马"
+    },
+    {
+      "id": 79,
+      "name": "呆呆兽",
+      "english": "Slowpoke",
+      "chain": 32,
+      "stage": 0,
+      "image": "079.png",
+      "preview": "079@8x.png",
+      "sourceBox": [
+        732,
+        114,
+        1033,
+        402
+      ],
+      "outlinePixels": 188,
+      "source": "https://wiki.52poke.com/wiki/呆呆兽"
+    },
+    {
+      "id": 80,
+      "name": "呆壳兽",
+      "english": "Slowbro",
+      "chain": 32,
+      "stage": 1,
+      "image": "080.png",
+      "preview": "080@8x.png",
+      "sourceBox": [
+        1094,
+        98,
+        1406,
+        402
+      ],
+      "outlinePixels": 192,
+      "source": "https://wiki.52poke.com/wiki/呆壳兽"
+    },
+    {
+      "id": 81,
+      "name": "小磁怪",
+      "english": "Magnemite",
+      "chain": 33,
+      "stage": 0,
+      "image": "081.png",
+      "preview": "081@8x.png",
+      "sourceBox": [
+        1453,
+        154,
+        1735,
+        360
+      ],
+      "outlinePixels": 172,
+      "source": "https://wiki.52poke.com/wiki/小磁怪"
+    },
+    {
+      "id": 82,
+      "name": "三合一磁怪",
+      "english": "Magneton",
+      "chain": 33,
+      "stage": 1,
+      "image": "082.png",
+      "preview": "082@8x.png",
+      "sourceBox": [
+        25,
+        488,
+        370,
+        823
+      ],
+      "outlinePixels": 244,
+      "source": "https://wiki.52poke.com/wiki/三合一磁怪"
+    },
+    {
+      "id": 83,
+      "name": "大葱鸭",
+      "english": "Farfetchd",
+      "chain": 34,
+      "stage": 0,
+      "image": "083.png",
+      "preview": "083@8x.png",
+      "sourceBox": [
+        417,
+        504,
+        690,
+        833
+      ],
+      "outlinePixels": 202,
+      "source": "https://wiki.52poke.com/wiki/大葱鸭"
+    },
+    {
+      "id": 84,
+      "name": "嘟嘟",
+      "english": "Doduo",
+      "chain": 35,
+      "stage": 0,
+      "image": "084.png",
+      "preview": "084@8x.png",
+      "sourceBox": [
+        741,
+        467,
+        1013,
+        839
+      ],
+      "outlinePixels": 196,
+      "source": "https://wiki.52poke.com/wiki/嘟嘟"
+    },
+    {
+      "id": 85,
+      "name": "嘟嘟利",
+      "english": "Dodrio",
+      "chain": 35,
+      "stage": 1,
+      "image": "085.png",
+      "preview": "085@8x.png",
+      "sourceBox": [
+        1062,
+        449,
+        1397,
+        839
+      ],
+      "outlinePixels": 233,
+      "source": "https://wiki.52poke.com/wiki/嘟嘟利"
+    },
+    {
+      "id": 86,
+      "name": "小海狮",
+      "english": "Seel",
+      "chain": 36,
+      "stage": 0,
+      "image": "086.png",
+      "preview": "086@8x.png",
+      "sourceBox": [
+        1420,
+        595,
+        1746,
+        839
+      ],
+      "outlinePixels": 192,
+      "source": "https://wiki.52poke.com/wiki/小海狮"
+    }
+  ],
+  "firmwareVersion": "v0.15.0",
+  "fullAnimationPackage": "dist/077-086-animation-templates.zip"
+}
