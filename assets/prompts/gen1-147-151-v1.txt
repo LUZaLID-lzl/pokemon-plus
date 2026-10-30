@@ -1,0 +1,13 @@
+Create 5 recognizable Kanto Pokemon pixel companions for a handheld pet game. The attached sheet controls ONLY the approved style: compact cute full bodies, continuous deep-navy outline, flat limited colors, crisp uniform pixel grid and true transparent background. Exactly FIVE columns and ONE row, one isolated complete sprite per cell, ample transparent gutters, left-facing three-quarter view. Native48x48 proportions, silhouette at most40x40, maximum15 opaque colors. No text, effects, shadows, props or detached parts.
+
+Row 1, column 1: 147 Dratini: small pale-BLUE serpentine dragon with cream snout and belly, TWO eyes, TWO attached white fin ears, ONE small white forehead horn and ONE connected curled tail, no arms or legs. Calm neutral pose.
+
+Row 1, column 2: 148 Dragonair: slender BLUE serpentine dragon coiled compactly, cream snout and underside, TWO eyes, ONE short cream forehead horn, TWO attached white wing-shaped ear fins, ONE blue orb at throat and TWO blue orbs attached near tail tip; no arms or legs. Calm neutral pose.
+
+Row 1, column 3: 149 Dragonite: round ORANGE upright dragon with cream segmented belly, TWO short antennae, TWO eyes, TWO attached short arms, TWO sturdy legs, TWO small attached green-membrane back wings and ONE thick orange tail. Calm neutral pose.
+
+Row 1, column 4: 150 Mewtwo: pale-LAVENDER upright feline companion with TWO short head ears, TWO purple eyes, rounded pale torso with purple belly patch, TWO attached three-finger hands, TWO digitigrade legs and ONE thick attached long PURPLE tail curling close. Calm neutral pose.
+
+Row 1, column 5: 151 Mew: small pale-PINK floating feline companion with TWO short triangular ears, TWO blue eyes, TWO small arms, TWO large hind feet and ONE long thin attached pink tail curling close with a rounded tip. Calm neutral pose.
+
+Keep actual anatomy and all appendages attached; no invented human limbs on fish or serpents. The attached reference is for style only, not its characters.

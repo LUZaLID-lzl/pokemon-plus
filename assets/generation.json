@@ -1,0 +1,447 @@
+{
+  "date": "2026-10-23",
+  "service": "MobiIoT",
+  "model": "gpt-image-2.5-sunburst",
+  "selection": "First gpt-image-* model in GET /models response on each attempt",
+  "tasks": [
+    {
+      "asset": "pets",
+      "attempts": 4,
+      "status": "success",
+      "sha256": "85dd4386b07eb3e11c32eaa59cf2fd20aa773ffc8250f512e9cbd0ef1ef7420b",
+      "prompt": "prompts/pets.txt"
+    },
+    {
+      "asset": "scenes",
+      "attempts": 1,
+      "status": "success",
+      "sha256": "64e2383e4248c555f80a87e755a6ce20e4b9dad7610a5cf0fd461cb8d950630e",
+      "prompt": "prompts/scenes.txt"
+    },
+    {
+      "asset": "icons",
+      "attempts": 1,
+      "status": "success",
+      "sha256": "476e50f4d12555cb28e4d45a24d0c08690df3bce47d18c376a02b56dd236bcd0",
+      "prompt": "prompts/icons.txt"
+    }
+  ],
+  "v2": {
+    "reference": "reference/home-20261022.png",
+    "editBatch": {
+      "status": "stopped",
+      "attempts": 6,
+      "error": "HTTP 400",
+      "model": "gpt-image-2.5-sunburst",
+      "generatedFiles": 0
+    },
+    "integratedArtwork": "Existing successful MobiIoT pets.png, reduced to 20px native grid, binary alpha and 16 colors; detached alpha specks removed and one-native-pixel navy contour added",
+    "playbackFrames": 24,
+    "generatedKeyPoses": 4,
+    "processor": "tools/pet_frames.py",
+    "newHandDrawnPoses": "pending"
+  },
+  "v4": {
+    "outline": "Removed dilated navy halo. Only existing dark edge pixels recolored with body tint; alpha never expanded.",
+    "evolution": {
+      "status": "stopped",
+      "attempts": 6,
+      "error": "HTTP 400",
+      "generatedFiles": 0,
+      "prompt": "prompts/evolution-charmander.txt"
+    },
+    "effects": {
+      "status": "success",
+      "attempts": 1,
+      "model": "gpt-image-2.5-sunburst",
+      "prompt": "prompts/move-effects-v4.txt",
+      "source": "source/move-effects-v4.png",
+      "sha256": "35c8e231d755ff9d2dc5bfcfea285e4ebae5adf465fb7f310fadf3ed2c90aec0"
+    }
+  },
+  "v5": {
+    "reference": "reference/pet-style-20261022.png",
+    "referenceSha256": "cfbd078244741520ee484d182446e2a798bebe179f200b41885513efffdf2363",
+    "editBatch": {
+      "status": "stopped",
+      "attempts": 6,
+      "error": "HTTP 400",
+      "generatedFiles": 0,
+      "prompt": "prompts/pets-reference-v5.txt",
+      "model": "gpt-image-2.5-sunburst"
+    },
+    "integratedArtwork": "Existing MobiIoT source/pets.png reprocessed; NOT newly generated reference drawings",
+    "processing": {
+      "nativeCanvas": 40,
+      "maximumPoseSize": 32,
+      "paletteColors": 12,
+      "lowerBodyWidthScale": 0.88,
+      "lowerBodyHeightScale": 0.68,
+      "headSplit": 0.62,
+      "sleepProportionsUnchanged": true,
+      "outline": "Tint inside original alpha; no dilation"
+    },
+    "processor": "tools/pet_frames.py",
+    "playbackFrames": 24,
+    "generatedKeyPoses": 4
+  },
+  "v6": {
+    "reference": "reference/pikachu-closeup-20261022.png",
+    "editBatch": {
+      "status": "stopped",
+      "attempts": 6,
+      "error": "HTTP 400",
+      "generatedFiles": 0,
+      "prompt": "prompts/pikachu-closeup-v6.txt",
+      "model": "gpt-image-2.5-sunburst"
+    },
+    "standaloneCandidate": {
+      "kind": "manually plotted native pixel/SVG artwork",
+      "source": "tools/draw_pikachu_reference.py",
+      "imageServiceGenerated": false,
+      "canvas": [
+        32,
+        32
+      ],
+      "png": "source/pikachu-reference-template-v6.png",
+      "svg": "source/pikachu-reference-template-v6.svg",
+      "preview": "source/pikachu-reference-template-v6-preview.png",
+      "integrated": false
+    }
+  },
+  "v7": {
+    "reference": "reference/pikachu-closeup-20261022.png",
+    "prompt": "prompts/pikachu-user-prompt-v7.txt",
+    "promptSource": "user supplied, unchanged",
+    "command": "edit",
+    "status": "stopped",
+    "attempts": 6,
+    "error": "HTTP 400",
+    "generatedFiles": 0,
+    "model": "gpt-image-2.5-sunburst"
+  },
+  "v8": {
+    "reference": "reference/pikachu-closeup-20261022.png",
+    "prompt": "prompts/pikachu-user-prompt-v7.txt",
+    "promptSource": "user supplied, unchanged; user explicitly requested another batch",
+    "command": "edit",
+    "status": "stopped",
+    "attempts": 6,
+    "error": "HTTP 400",
+    "generatedFiles": 0,
+    "model": "gpt-image-2.5-sunburst"
+  },
+  "v9": {
+    "task": "Kanto national dex 001-009, three consecutive evolution chains",
+    "status": "success",
+    "attempts": 1,
+    "command": "generate",
+    "model": "gpt-image-2.5-sunburst",
+    "prompt": "prompts/gen1-001-009-v9.txt",
+    "source": "source/gen1-001-009-v9.png",
+    "sha256": "9b908728dc520dcbd743927730d9587e1fd340350cd0289793ecf4902aa66998",
+    "export": "pokemon/gen1-001-009/manifest.json",
+    "nativeCanvas": 48,
+    "postprocessing": "nearest-neighbor reduction, <=16 colors, connected outline repair",
+    "gameIntegrated": false
+  },
+  "v10": {
+    "task": "Kanto national dex 010-018, three consecutive evolution chains",
+    "status": "success",
+    "attempts": 6,
+    "failedAttempts": 5,
+    "errorBeforeSuccess": "HTTP 400",
+    "command": "generate",
+    "model": "gpt-image-2.5-sunburst",
+    "prompt": "prompts/gen1-010-018-v10.txt",
+    "source": "source/gen1-010-018-v10.png",
+    "sha256": "a2e78c01db8518b64476458528dda5e703cda58c9de80871a08a5322827141e9",
+    "export": "pokemon/gen1-010-018/manifest.json",
+    "nativeCanvas": 48,
+    "postprocessing": "nearest-neighbor reduction, <=16 colors, subpixel connectivity and closed outline repair",
+    "gameIntegrated": false
+  },
+  "v11": {
+    "task": "Sparse mint courtyard based on user watch photo",
+    "status": "success",
+    "attempts": 1,
+    "command": "edit",
+    "model": "gpt-image-2.5-sunburst",
+    "reference": "reference/courtyard-watch-20261022.png",
+    "prompt": "prompts/courtyard-watch-v11.txt",
+    "source": "source/courtyard-watch-v11.png",
+    "sha256": "e81fb5b2b4a1800fe0c66495a82c45d99105ff742329715ac95c337424e00d33",
+    "processing": "120px nearest-neighbor grid, alpha threshold220, mint ground composite, 24 colors, 3x nearest-neighbor scale",
+    "gameIntegrated": false,
+    "scene": 0,
+    "retiredBy": "v13"
+  },
+  "v12": {
+    "task": "Pedometer footprint app icon",
+    "generator": "mobiiot-imagegen",
+    "model": "gpt-image-2.5-sunburst",
+    "attempts": 1,
+    "prompt": "prompts/pedometer-icon-v12.txt",
+    "source": "source/pedometer-icon-v12.png",
+    "sha256": "23a3a93f7bafa6236bd928673dde76207d891bdff22d02a35eeabe2f50898bf8",
+    "processing": "binary alpha, centered nearest-neighbor 28px silhouette on 32px canvas"
+  },
+  "v13": {
+    "task": "Courtyard with shaded low-contrast clock and coin region",
+    "generator": "mobiiot-imagegen",
+    "command": "edit",
+    "status": "success",
+    "model": "gpt-image-2.5-sunburst",
+    "attempts": 1,
+    "reference": "reference/courtyard-original-v13.png",
+    "prompt": "prompts/courtyard-hud-v13.txt",
+    "source": "source/courtyard-hud-v13.png",
+    "sha256": "e8caf562fbac533c3505c6eb84531ed48b65324516485e3e27f39f9f610849d4",
+    "processing": "120px nearest-neighbor grid, 48 colors without dither, 3x nearest-neighbor scale",
+    "gameIntegrated": true,
+    "scene": 0,
+    "hudQuietRegion": [
+      120,
+      30,
+      242,
+      103
+    ]
+  },
+  "v14": {
+    "task": "Regenerate scenes01-11 with natural dark clock/coin background, retain courtyard00 v13",
+    "status": "success",
+    "command": "edit",
+    "generator": "mobiiot-imagegen",
+    "styleReference": "source/courtyard-hud-v13.png",
+    "processing": "120px nearest-neighbor grid,48 colors without dither,3x nearest-neighbor",
+    "gameIntegrated": true,
+    "jobs": [
+      {
+        "id": 1,
+        "name": "樱花小院",
+        "reference": "reference/scenes-hud-v14/01.png",
+        "prompt": "prompts/scenes-hud-v14/01.txt",
+        "source": "source/scenes-hud-v14/01.png",
+        "status": "reviewed-integrated",
+        "attempts": 1,
+        "model": "gpt-image-2.5-sunburst",
+        "sha256": "3898b28a16301d4f0c52be5e6d86acca7ee4e9b1a7bfd92985fc873d5c4957af"
+      },
+      {
+        "id": 2,
+        "name": "晴日海岸",
+        "reference": "reference/scenes-hud-v14/02.png",
+        "prompt": "prompts/scenes-hud-v14/02.txt",
+        "source": "source/scenes-hud-v14/02.png",
+        "status": "reviewed-integrated",
+        "attempts": 1,
+        "model": "gpt-image-2.5-sunburst",
+        "sha256": "699bb38ca3bf2be2d0ce5ce7319c057557fc91c7f3f0ee32365ff23a438dc57e"
+      },
+      {
+        "id": 3,
+        "name": "月光森林",
+        "reference": "reference/scenes-hud-v14/03.png",
+        "prompt": "prompts/scenes-hud-v14/03.txt",
+        "source": "source/scenes-hud-v14/03.png",
+        "status": "reviewed-integrated",
+        "attempts": 1,
+        "model": "gpt-image-2.5-sunburst",
+        "sha256": "7218f2489dd151f41bf7b3c18f3166ebe99279f052c8e0d35c56e4cd063abcdc"
+      },
+      {
+        "id": 4,
+        "name": "秋日木林",
+        "reference": "reference/scenes-hud-v14/04.png",
+        "prompt": "prompts/scenes-hud-v14/04.txt",
+        "source": "source/scenes-hud-v14/04.png",
+        "status": "reviewed-integrated",
+        "attempts": 1,
+        "model": "gpt-image-2.5-sunburst",
+        "sha256": "8734743fd031e2e9834a5e1ed620770cbeadfcacbf5654b3bce343b51f072061"
+      },
+      {
+        "id": 5,
+        "name": "雪落小镇",
+        "reference": "reference/scenes-hud-v14/05.png",
+        "prompt": "prompts/scenes-hud-v14/05.txt",
+        "source": "source/scenes-hud-v14/05.png",
+        "status": "reviewed-integrated",
+        "attempts": 1,
+        "model": "gpt-image-2.5-sunburst",
+        "sha256": "d102ec83347dbbb635fe65054dd7a04e29f4c47608d37a997f04a6c8e6c10ca2"
+      },
+      {
+        "id": 6,
+        "name": "向日葵田",
+        "reference": "reference/scenes-hud-v14/06.png",
+        "prompt": "prompts/scenes-hud-v14/06.txt",
+        "source": "source/scenes-hud-v14/06.png",
+        "status": "reviewed-integrated",
+        "attempts": 1,
+        "model": "gpt-image-2.5-sunburst",
+        "sha256": "261d50aa4c6f698c65f7c1a57b0a940953fc199ba39ffa0fa5b6c67e88861109"
+      },
+      {
+        "id": 7,
+        "name": "蘑菇秘境",
+        "reference": "reference/scenes-hud-v14/07.png",
+        "prompt": "prompts/scenes-hud-v14/07.txt",
+        "source": "source/scenes-hud-v14/07.png",
+        "status": "reviewed-integrated",
+        "attempts": 1,
+        "model": "gpt-image-2.5-sunburst",
+        "sha256": "61ac9f156d821fe9f17f0b18337e29e7e184f28d038180ac8a124d8a505e38b8"
+      },
+      {
+        "id": 8,
+        "name": "星空山丘",
+        "reference": "reference/scenes-hud-v14/08.png",
+        "prompt": "prompts/scenes-hud-v14/08.txt",
+        "source": "source/scenes-hud-v14/08.png",
+        "status": "reviewed-integrated",
+        "attempts": 1,
+        "model": "gpt-image-2.5-sunburst",
+        "sha256": "3b1c49bde9ac4a13794c9539d73fbe5ceb64b1dbabca46ca4e7501976fc796b0"
+      },
+      {
+        "id": 9,
+        "name": "沙漠绿洲",
+        "reference": "reference/scenes-hud-v14/09.png",
+        "prompt": "prompts/scenes-hud-v14/09.txt",
+        "source": "source/scenes-hud-v14/09.png",
+        "status": "reviewed-integrated",
+        "attempts": 1,
+        "model": "gpt-image-2.5-sunburst",
+        "sha256": "58850be7f94149b0a91da17b7dd617708585f1fcb7ff18fb394b76c62ed2c3ec"
+      },
+      {
+        "id": 10,
+        "name": "雨中村庄",
+        "reference": "reference/scenes-hud-v14/10.png",
+        "prompt": "prompts/scenes-hud-v14/10.txt",
+        "source": "source/scenes-hud-v14/10.png",
+        "status": "reviewed-integrated",
+        "attempts": 1,
+        "model": "gpt-image-2.5-sunburst",
+        "sha256": "e9c429fb2f6417f62732abc15271cdc0df558546e92801ccd64bf658f88389f5"
+      },
+      {
+        "id": 11,
+        "name": "春日花园",
+        "reference": "reference/scenes-hud-v14/11.png",
+        "prompt": "prompts/scenes-hud-v14/11.txt",
+        "source": "source/scenes-hud-v14/11.png",
+        "status": "reviewed-integrated",
+        "attempts": 1,
+        "model": "gpt-image-2.5-sunburst",
+        "sha256": "8c86cdd02b7f9e7cd61c94e2dc66059c64b64ba3aad464df4d0cd057d19620fc"
+      }
+    ]
+  },
+  "gen1-019-027-v11": {
+    "task": "National Pokedex 019–027 single-pose pixel pets",
+    "generator": "mobiiot-imagegen",
+    "command": "edit",
+    "status": "success",
+    "date": "2026-10-23",
+    "model": "gpt-image-2.5-sunburst",
+    "attempts": 2,
+    "attemptNotes": [
+      "HTTP 400 Bad Request",
+      "success"
+    ],
+    "reference": "source/gen1-010-018-v10.png",
+    "prompt": "prompts/gen1-019-027-v11.txt",
+    "source": "source/gen1-019-027-v11.png",
+    "sha256": "3f199c8baedb891e6f5b419f5a5da088fa015c168fa08fe48c75d0b0d403818e",
+    "manifest": "pokemon/gen1-019-027/manifest.json",
+    "processing": "MobiIoT atlas split by measured source boxes, nearest-neighbor reduction, palette quantization and deterministic closed-outline repair",
+    "gameIntegrated": false
+  },
+  "v15": {
+    "task": "Starter elemental type icons: grass, poison, fire, water",
+    "generator": "mobiiot-imagegen",
+    "command": "generate",
+    "status": "success",
+    "model": "gpt-image-2.5-sunburst",
+    "attempts": 1,
+    "prompt": "prompts/starter-types-v15.txt",
+    "source": "source/starter-types-v15.png",
+    "sha256": "55b7a537bbea53288d5effb27a85d7c5e291c917942620f7339aabf6c65fe69c",
+    "processing": "Four equal horizontal cells, alpha threshold200, crop silhouette, nearest-neighbor14px, native16px transparent canvas",
+    "gameIntegrated": true
+  },
+  "animation-001-master-v1": {
+    "task": "001 identity-preserving six-action eight-phase animation template",
+    "date": "2026-10-23",
+    "service": "MobiIoT",
+    "model": "gpt-image-2.5-sunburst",
+    "attempts": 1,
+    "status": "success",
+    "reference": "pokemon/gen1-001-009/001@8x.png",
+    "prompt": "prompts/animation-001/master-v1.txt",
+    "source": "source/animation-001-master-v1.png",
+    "manifest": "animation-templates/001/manifest.json",
+    "gameIntegrated": false
+  },
+  "historicalArtworkArchive": "../dist/archive/unused-art-before-001-template-20261023.zip",
+  "pokedex-icon-v16": {
+    "date": "2026-10-23",
+    "service": "MobiIoT",
+    "model": "gpt-image-2.5-sunburst",
+    "attempts": 1,
+    "status": "success",
+    "prompt": "prompts/pokedex-icon-v16.txt",
+    "source": "source/pokedex-icon-v16.png",
+    "sha256": "0d599ae9d203ef64b17c1e4ed2aef81edd238cd4d3cc59f45849ff14e6a7ee60",
+    "processing": "binary alpha threshold200, silhouette crop, nearest-neighbor fit28px,16-color palette,centered32px canvas",
+    "runtime": "hud/pokedex.png",
+    "gameIntegrated": true
+  },
+  "scene-v18-06": {
+    "id": 6,
+    "name": "水晶洞穴",
+    "prompt": "prompts/scenes-v18/06.txt",
+    "source": "source/scenes-v18/06.png",
+    "status": "reviewed-integrated",
+    "attempts": 1,
+    "model": "gpt-image-2.5-sunburst",
+    "sha256": "8c48e15b77ba0432d6453ca520ea628dfa813a5b53817937f9c23de6a1c5b6b0",
+    "date": "2026-10-23",
+    "service": "MobiIoT",
+    "reference": "source/courtyard-hud-v13.png",
+    "gameIntegrated": true
+  },
+  "scene-v18-11": {
+    "id": 11,
+    "name": "天空岛",
+    "prompt": "prompts/scenes-v18/11.txt",
+    "source": "source/scenes-v18/11.png",
+    "status": "reviewed-integrated",
+    "attempts": 1,
+    "model": "gpt-image-2.5-sunburst",
+    "sha256": "8d395bec16ee1c994e4520faae6bbdafcd69ddbb7c1c239d54ee59dff6335401",
+    "date": "2026-10-23",
+    "service": "MobiIoT",
+    "reference": "source/courtyard-hud-v13.png",
+    "gameIntegrated": true
+  },
+  "scene-v18-03": {
+    "id": 3,
+    "name": "城镇",
+    "prompt": "prompts/scenes-v18/03.txt",
+    "source": "source/scenes-v18/03.png",
+    "status": "reviewed-integrated",
+    "attempts": 1,
+    "model": "gpt-image-2.5-sunburst",
+    "sha256": "59f36bd49b02e2e79504db27fe4e068d3dfade5dfc667ba9784342a731e11a33",
+    "date": "2026-10-23",
+    "service": "MobiIoT",
+    "reference": "source/courtyard-hud-v13.png",
+    "gameIntegrated": true,
+    "runtimeSource": "source/scenes-v18/03-native.png",
+    "runtimeSourceSha256": "e82ba450a183fe1fc37d2f73b8c10704661ee48df838c9644ed3e63c75cf8efc",
+    "processing": "120px/48-color native conversion; one stray highlight pixel merged with adjacent foliage, generated original preserved"
+  }
+}

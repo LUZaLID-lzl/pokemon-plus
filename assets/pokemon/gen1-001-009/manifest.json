@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "kind": "single-pose art review",
+  "generator": "MobiIoT",
+  "model": "gpt-image-2.5-sunburst",
+  "attempts": 1,
+  "sourceAtlas": "../../source/gen1-001-009-v9.png",
+  "sourceSha256": "9b908728dc520dcbd743927730d9587e1fd340350cd0289793ecf4902aa66998",
+  "prompt": "../../prompts/gen1-001-009-v9.txt",
+  "nativeCanvas": 48,
+  "upscale": 8,
+  "maxColors": 16,
+  "outlineColor": "#1b263a",
+  "alpha": "binary",
+  "outline": "one connected 4-neighbor boundary; local corner bridges",
+  "processing": "MobiIoT atlas split by measured source boxes, nearest-neighbor reduction, palette quantization and deterministic closed-outline repair",
+  "gameIntegrated": false,
+  "animationPosesPerSpecies": 1,
+  "items": [
+    {
+      "id": 1,
+      "name": "妙蛙种子",
+      "english": "Bulbasaur",
+      "chain": 0,
+      "stage": 0,
+      "evolvesTo": 2,
+      "image": "001.png",
+      "preview": "001@8x.png",
+      "sourceBox": [
+        55,
+        122,
+        367,
+        413
+      ],
+      "outlinePixels": 166,
+      "source": "https://wiki.52poke.com/wiki/妙蛙种子"
+    },
+    {
+      "id": 2,
+      "name": "妙蛙草",
+      "english": "Ivysaur",
+      "chain": 0,
+      "stage": 1,
+      "evolvesTo": 3,
+      "image": "002.png",
+      "preview": "002@8x.png",
+      "sourceBox": [
+        446,
+        76,
+        802,
+        417
+      ],
+      "outlinePixels": 174,
+      "source": "https://wiki.52poke.com/wiki/妙蛙草"
+    },
+    {
+      "id": 3,
+      "name": "妙蛙花",
+      "english": "Venusaur",
+      "chain": 0,
+      "stage": 2,
+      "evolvesTo": null,
+      "image": "003.png",
+      "preview": "003@8x.png",
+      "sourceBox": [
+        834,
+        38,
+        1257,
+        422
+      ],
+      "outlinePixels": 178,
+      "source": "https://wiki.52poke.com/wiki/妙蛙花"
+    },
+    {
+      "id": 4,
+      "name": "小火龙",
+      "english": "Charmander",
+      "chain": 1,
+      "stage": 0,
+      "evolvesTo": 5,
+      "image": "004.png",
+      "preview": "004@8x.png",
+      "sourceBox": [
+        93,
+        505,
+        379,
+        787
+      ],
+      "outlinePixels": 227,
+      "source": "https://wiki.52poke.com/wiki/小火龙"
+    },
+    {
+      "id": 5,
+      "name": "火恐龙",
+      "english": "Charmeleon",
+      "chain": 1,
+      "stage": 1,
+      "evolvesTo": 6,
+      "image": "005.png",
+      "preview": "005@8x.png",
+      "sourceBox": [
+        485,
+        459,
+        776,
+        791
+      ],
+      "outlinePixels": 215,
+      "source": "https://wiki.52poke.com/wiki/火恐龙"
+    },
+    {
+      "id": 6,
+      "name": "喷火龙",
+      "english": "Charizard",
+      "chain": 1,
+      "stage": 2,
+      "evolvesTo": null,
+      "image": "006.png",
+      "preview": "006@8x.png",
+      "sourceBox": [
+        834,
+        436,
+        1270,
+        795
+      ],
+      "outlinePixels": 202,
+      "source": "https://wiki.52poke.com/wiki/喷火龙"
+    },
+    {
+      "id": 7,
+      "name": "杰尼龟",
+      "english": "Squirtle",
+      "chain": 2,
+      "stage": 0,
+      "evolvesTo": 8,
+      "image": "007.png",
+      "preview": "007@8x.png",
+      "sourceBox": [
+        75,
+        898,
+        389,
+        1180
+      ],
+      "outlinePixels": 160,
+      "source": "https://wiki.52poke.com/wiki/杰尼龟"
+    },
+    {
+      "id": 8,
+      "name": "卡咪龟",
+      "english": "Wartortle",
+      "chain": 2,
+      "stage": 1,
+      "evolvesTo": 9,
+      "image": "008.png",
+      "preview": "008@8x.png",
+      "sourceBox": [
+        453,
+        840,
+        818,
+        1182
+      ],
+      "outlinePixels": 202,
+      "source": "https://wiki.52poke.com/wiki/卡咪龟"
+    },
+    {
+      "id": 9,
+      "name": "水箭龟",
+      "english": "Blastoise",
+      "chain": 2,
+      "stage": 2,
+      "evolvesTo": null,
+      "image": "009.png",
+      "preview": "009@8x.png",
+      "sourceBox": [
+        842,
+        837,
+        1245,
+        1182
+      ],
+      "outlinePixels": 180,
+      "source": "https://wiki.52poke.com/wiki/水箭龟"
+    }
+  ],
+  "starterPickerIntegratedIds": [
+    1,
+    4,
+    7
+  ],
+  "gameplayAnimationIntegrated": false
+}

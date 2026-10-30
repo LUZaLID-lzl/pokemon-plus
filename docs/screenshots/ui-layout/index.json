@@ -1,0 +1,526 @@
+[
+  {
+    "id": "page-0",
+    "label": "庭院",
+    "args": [
+      "--page",
+      "0"
+    ]
+  },
+  {
+    "id": "page-1",
+    "label": "APP",
+    "args": [
+      "--page",
+      "1"
+    ]
+  },
+  {
+    "id": "page-2",
+    "label": "背包",
+    "args": [
+      "--page",
+      "2"
+    ]
+  },
+  {
+    "id": "page-3",
+    "label": "商店",
+    "args": [
+      "--page",
+      "3"
+    ]
+  },
+  {
+    "id": "page-4",
+    "label": "伙伴状态",
+    "args": [
+      "--page",
+      "4"
+    ]
+  },
+  {
+    "id": "page-5",
+    "label": "旅行选宠",
+    "args": [
+      "--page",
+      "5"
+    ]
+  },
+  {
+    "id": "page-8",
+    "label": "收藏品",
+    "args": [
+      "--page",
+      "8"
+    ]
+  },
+  {
+    "id": "page-9",
+    "label": "场景选择",
+    "args": [
+      "--page",
+      "9"
+    ]
+  },
+  {
+    "id": "page-10",
+    "label": "塔罗牌",
+    "args": [
+      "--page",
+      "10"
+    ]
+  },
+  {
+    "id": "page-11",
+    "label": "设置",
+    "args": [
+      "--page",
+      "11"
+    ]
+  },
+  {
+    "id": "page-12",
+    "label": "藏品详情",
+    "args": [
+      "--page",
+      "12"
+    ]
+  },
+  {
+    "id": "page-13",
+    "label": "初选伙伴",
+    "args": [
+      "--page",
+      "13"
+    ]
+  },
+  {
+    "id": "page-14",
+    "label": "计步器",
+    "args": [
+      "--page",
+      "14"
+    ]
+  },
+  {
+    "id": "page-15",
+    "label": "宠物图鉴",
+    "args": [
+      "--page",
+      "15"
+    ]
+  },
+  {
+    "id": "page-16",
+    "label": "宠物仓库",
+    "args": [
+      "--page",
+      "16"
+    ]
+  },
+  {
+    "id": "page-18",
+    "label": "馆主详情",
+    "args": [
+      "--page",
+      "18"
+    ]
+  },
+  {
+    "id": "page-19",
+    "label": "出战编队",
+    "args": [
+      "--page",
+      "19"
+    ]
+  },
+  {
+    "id": "page-20",
+    "label": "徽章展馆",
+    "args": [
+      "--page",
+      "20"
+    ]
+  },
+  {
+    "id": "page-24",
+    "label": "神兽列表",
+    "args": [
+      "--page",
+      "24"
+    ]
+  },
+  {
+    "id": "page-25",
+    "label": "神兽详情",
+    "args": [
+      "--page",
+      "25"
+    ]
+  },
+  {
+    "id": "page-26",
+    "label": "个体值",
+    "args": [
+      "--page",
+      "26"
+    ]
+  },
+  {
+    "id": "page-27",
+    "label": "命名键盘",
+    "args": [
+      "--page",
+      "27"
+    ]
+  },
+  {
+    "id": "page-28",
+    "label": "放生确认",
+    "args": [
+      "--page",
+      "28"
+    ]
+  },
+  {
+    "id": "page-29",
+    "label": "替换伙伴",
+    "args": [
+      "--page",
+      "29"
+    ]
+  },
+  {
+    "id": "page-31",
+    "label": "钓鱼",
+    "args": [
+      "--page",
+      "31"
+    ]
+  },
+  {
+    "id": "travel",
+    "label": "旅途中",
+    "args": [
+      "--activity",
+      "travel"
+    ]
+  },
+  {
+    "id": "travel-ready",
+    "label": "旅行完成待领取",
+    "args": [
+      "--activity",
+      "travel-ready"
+    ]
+  },
+  {
+    "id": "travel-receipt",
+    "label": "旅行收获",
+    "args": [
+      "--activity",
+      "travel-receipt"
+    ]
+  },
+  {
+    "id": "gym-team",
+    "label": "五只伙伴编队",
+    "args": [
+      "--activity",
+      "gym-team"
+    ]
+  },
+  {
+    "id": "gym-empty",
+    "label": "伙伴不足",
+    "args": [
+      "--activity",
+      "gym-empty"
+    ]
+  },
+  {
+    "id": "gym-win",
+    "label": "道馆首次获胜",
+    "args": [
+      "--activity",
+      "gym-win"
+    ]
+  },
+  {
+    "id": "gym-rematch",
+    "label": "道馆再次获胜",
+    "args": [
+      "--activity",
+      "gym-rematch"
+    ]
+  },
+  {
+    "id": "evolution-choice",
+    "label": "进化选择",
+    "args": [
+      "--activity",
+      "evolution-choice"
+    ]
+  },
+  {
+    "id": "evolution-decline",
+    "label": "保留形态",
+    "args": [
+      "--activity",
+      "evolution-decline"
+    ]
+  },
+  {
+    "id": "wild-pending",
+    "label": "野生相遇",
+    "args": [
+      "--wild",
+      "pending"
+    ]
+  },
+  {
+    "id": "wild-battle",
+    "label": "野外战斗",
+    "args": [
+      "--wild",
+      "battle"
+    ]
+  },
+  {
+    "id": "wild-caught",
+    "label": "捕捉确认",
+    "args": [
+      "--wild",
+      "caught"
+    ]
+  },
+  {
+    "id": "wild-success",
+    "label": "捕捉成功",
+    "args": [
+      "--wild",
+      "success"
+    ]
+  },
+  {
+    "id": "wild-lost",
+    "label": "野生伙伴离开",
+    "args": [
+      "--wild",
+      "lost"
+    ]
+  },
+  {
+    "id": "hatch",
+    "label": "孵化揭晓",
+    "args": [
+      "--legend",
+      "hatched",
+      "--legend-index",
+      "3"
+    ]
+  },
+  {
+    "id": "intro",
+    "label": "片头",
+    "args": [
+      "--page",
+      "22",
+      "--at-ms",
+      "9500"
+    ]
+  },
+  {
+    "id": "gym-map",
+    "label": "尼比地图",
+    "args": [
+      "--activity",
+      "gym-map"
+    ]
+  },
+  {
+    "id": "gym-detail",
+    "label": "尼比详情",
+    "args": [
+      "--activity",
+      "gym-detail"
+    ]
+  },
+  {
+    "id": "gym-cleared",
+    "label": "尼比击败",
+    "args": [
+      "--activity",
+      "gym-cleared"
+    ]
+  },
+  {
+    "id": "cerulean-map",
+    "label": "华蓝地图",
+    "args": [
+      "--activity",
+      "cerulean-map"
+    ]
+  },
+  {
+    "id": "cerulean-detail",
+    "label": "华蓝详情",
+    "args": [
+      "--activity",
+      "cerulean-detail"
+    ]
+  },
+  {
+    "id": "cerulean-cleared",
+    "label": "华蓝击败",
+    "args": [
+      "--activity",
+      "cerulean-cleared"
+    ]
+  },
+  {
+    "id": "vermilion-map",
+    "label": "枯叶地图",
+    "args": [
+      "--activity",
+      "vermilion-map"
+    ]
+  },
+  {
+    "id": "vermilion-detail",
+    "label": "枯叶详情",
+    "args": [
+      "--activity",
+      "vermilion-detail"
+    ]
+  },
+  {
+    "id": "vermilion-cleared",
+    "label": "枯叶击败",
+    "args": [
+      "--activity",
+      "vermilion-cleared"
+    ]
+  },
+  {
+    "id": "celadon-map",
+    "label": "玉虹地图",
+    "args": [
+      "--activity",
+      "celadon-map"
+    ]
+  },
+  {
+    "id": "celadon-detail",
+    "label": "玉虹详情",
+    "args": [
+      "--activity",
+      "celadon-detail"
+    ]
+  },
+  {
+    "id": "celadon-cleared",
+    "label": "玉虹击败",
+    "args": [
+      "--activity",
+      "celadon-cleared"
+    ]
+  },
+  {
+    "id": "fuchsia-map",
+    "label": "浅红地图",
+    "args": [
+      "--activity",
+      "fuchsia-map"
+    ]
+  },
+  {
+    "id": "fuchsia-detail",
+    "label": "浅红详情",
+    "args": [
+      "--activity",
+      "fuchsia-detail"
+    ]
+  },
+  {
+    "id": "fuchsia-cleared",
+    "label": "浅红击败",
+    "args": [
+      "--activity",
+      "fuchsia-cleared"
+    ]
+  },
+  {
+    "id": "saffron-map",
+    "label": "金黄地图",
+    "args": [
+      "--activity",
+      "saffron-map"
+    ]
+  },
+  {
+    "id": "saffron-detail",
+    "label": "金黄详情",
+    "args": [
+      "--activity",
+      "saffron-detail"
+    ]
+  },
+  {
+    "id": "saffron-cleared",
+    "label": "金黄击败",
+    "args": [
+      "--activity",
+      "saffron-cleared"
+    ]
+  },
+  {
+    "id": "cinnabar-map",
+    "label": "红莲地图",
+    "args": [
+      "--activity",
+      "cinnabar-map"
+    ]
+  },
+  {
+    "id": "cinnabar-detail",
+    "label": "红莲详情",
+    "args": [
+      "--activity",
+      "cinnabar-detail"
+    ]
+  },
+  {
+    "id": "cinnabar-cleared",
+    "label": "红莲击败",
+    "args": [
+      "--activity",
+      "cinnabar-cleared"
+    ]
+  },
+  {
+    "id": "viridian-map",
+    "label": "常青地图",
+    "args": [
+      "--activity",
+      "viridian-map"
+    ]
+  },
+  {
+    "id": "viridian-detail",
+    "label": "常青详情",
+    "args": [
+      "--activity",
+      "viridian-detail"
+    ]
+  },
+  {
+    "id": "viridian-cleared",
+    "label": "常青击败",
+    "args": [
+      "--activity",
+      "viridian-cleared"
+    ]
+  }
+]
