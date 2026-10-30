@@ -1,0 +1,23 @@
+{
+  "nationalId": 9,
+  "frames": 48,
+  "actions": 6,
+  "framesPerAction": 8,
+  "uniqueFrames": 48,
+  "binaryAlpha": true,
+  "maxOpaqueColors": 16,
+  "maxSilhouette": 40,
+  "exactMirrors": 48,
+  "referenceIdentity": "assets/pokemon/gen1-001-009/009.png",
+  "visualReview": "contact sheet and all six actions reviewed; same identity, joint motion and closed-eye rest",
+  "runtimeIntegrated": true,
+  "firmwareVersion": "0.6.8",
+  "mmapReadback": "exact match",
+  "patrolFileReadsGrowth": 0,
+  "patrolSeconds": 45,
+  "webViewports": [
+    1440,
+    390
+  ],
+  "webErrors": 0
+}

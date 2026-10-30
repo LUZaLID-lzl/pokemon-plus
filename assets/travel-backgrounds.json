@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "selection": "per-trip hash of persisted travel deadline; equal-weight ten destinations; stable through reopen/reload",
+  "width": 360,
+  "height": 112,
+  "items": [
+    {"id": 0, "name": "晨雾竹林", "source": "source/travel-v1/00.png", "activities": ["穿过晨雾中的竹林", "听了听竹叶的沙沙声", "在竹荫下歇脚"], "encounters": ["帮旅人找到了竹林出口", "帮忙扶好了小路的竹篱"]},
+    {"id": 1, "name": "碧海沙湾", "source": "source/travel-v1/01.png", "activities": ["沿着沙湾小路前进", "观察潮水留下的贝壳", "听着海浪歇脚"], "encounters": ["帮渔人找回了绳索", "清理了沙滩上的杂物"]},
+    {"id": 2, "name": "赤岩峡谷", "source": "source/travel-v1/02.png", "activities": ["沿着峡谷小路前进", "观察赤岩上的纹路", "在石拱旁歇脚"], "encounters": ["为旅人标记了安全小路", "帮忙找回了遗落的水壶"]},
+    {"id": 3, "name": "极光雪原", "source": "source/travel-v1/03.png", "activities": ["踏着积雪缓缓前进", "抬头看了看极光", "在松树旁避风歇脚"], "encounters": ["替村民送去了围巾", "帮忙扫开了门前的积雪"]},
+    {"id": 4, "name": "萤火湿地", "source": "source/travel-v1/04.png", "activities": ["走过湿地的小木桥", "观察水边的萤火", "在柳树旁歇脚"], "encounters": ["帮旅人找回了小灯笼", "帮忙修好了木桥的路标"]},
+    {"id": 5, "name": "浮云群岛", "source": "source/travel-v1/05.png", "activities": ["沿着浮岛草径前进", "看着远处的云瀑", "在石桥边歇脚"], "encounters": ["找回了被风吹走的风筝", "帮忙扶正了浮岛的路牌"]},
+    {"id": 6, "name": "金色麦田", "source": "source/travel-v1/06.png", "activities": ["沿着金色麦田前进", "看了看转动的风车", "在田边的树荫下歇脚"], "encounters": ["帮农人捡回了麦穗", "给田边的小屋送了包裹"]},
+    {"id": 7, "name": "古树遗迹", "source": "source/travel-v1/07.png", "activities": ["沿着苔石小径探索", "观察石柱上的花纹", "在古树旁歇脚"], "encounters": ["替旅人找到了遗迹出口", "帮忙清理了石阶上的落叶"]},
+    {"id": 8, "name": "熔岩山径", "source": "source/travel-v1/08.png", "activities": ["沿着安全山径前进", "远远看着流动的熔岩", "在背风的岩石旁歇脚"], "encounters": ["帮旅人确认了安全路标", "帮驿站送去了饮水"]},
+    {"id": 9, "name": "薰衣花丘", "source": "source/travel-v1/09.png", "activities": ["穿过花丘间的小路", "闻了闻风中的花香", "在花田边歇脚"], "encounters": ["帮忙整理了花田的小篱笆", "替花店送去了花篮"]}
+  ]
+}

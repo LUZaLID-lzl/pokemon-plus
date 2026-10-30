@@ -1,0 +1,11 @@
+{
+  "service": "MobiIoT",
+  "model": "gpt-image-2.5",
+  "attempts": 1,
+  "source": "source/waterfall-v24/03-base.png",
+  "prompt": "prompts/waterfall-v24/03-base.txt",
+  "sourceSha256": "6e027a29933e0e243bc8de4b4dd3a593691b8bca825a7083d0e9acd2480bbb76",
+  "scene": 3,
+  "name": "林间瀑布",
+  "recipe": "Full new scene; native120px, at most48 colors, nearest3x; dry clearing and left rock nook; final nest ground in scene-nest-terrain-v3/03-native.png"
+}

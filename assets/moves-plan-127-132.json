@@ -1,0 +1,229 @@
+{
+  "status": "integrated firmware/Web v0.20.0",
+  "firstFamily": 62,
+  "lastFamily": 66,
+  "previousMoveCount": 248,
+  "moves": [
+    {
+      "id": 248,
+      "slot": 0,
+      "species": "凯罗斯",
+      "name": "夹住",
+      "english": "Vise Grip",
+      "type": "一般",
+      "description": "用双角夹住对手",
+      "visual": "白色夹击",
+      "source": "https://wiki.52poke.com/wiki/夹住（招式）"
+    },
+    {
+      "id": 249,
+      "slot": 0,
+      "species": "肯泰罗",
+      "name": "撞击",
+      "english": "Tackle",
+      "type": "一般",
+      "description": "用身体撞击对手",
+      "visual": "白色冲击",
+      "source": "https://wiki.52poke.com/wiki/撞击（招式）"
+    },
+    {
+      "id": 250,
+      "slot": 0,
+      "species": "鲤鱼王",
+      "name": "跃起",
+      "english": "Splash",
+      "type": "一般",
+      "description": "轻轻跃起摆动身体",
+      "visual": "浅色跳跃",
+      "source": "https://wiki.52poke.com/wiki/跃起（招式）"
+    },
+    {
+      "id": 251,
+      "slot": 0,
+      "species": "拉普拉斯",
+      "name": "水枪",
+      "english": "Water Gun",
+      "type": "水",
+      "description": "喷射水流攻击",
+      "visual": "蓝色水流",
+      "source": "https://wiki.52poke.com/wiki/水枪（招式）"
+    },
+    {
+      "id": 252,
+      "slot": 0,
+      "species": "百变怪",
+      "name": "变身",
+      "english": "Transform",
+      "type": "一般",
+      "description": "模仿对手的姿态",
+      "visual": "浅色光环",
+      "source": "https://wiki.52poke.com/wiki/变身（招式）"
+    },
+    {
+      "id": 253,
+      "slot": 1,
+      "species": "凯罗斯",
+      "name": "地球上投",
+      "english": "Seismic Toss",
+      "type": "格斗",
+      "description": "抓起对手后投掷",
+      "visual": "橙色冲击",
+      "source": "https://wiki.52poke.com/wiki/地球上投（招式）"
+    },
+    {
+      "id": 254,
+      "slot": 1,
+      "species": "肯泰罗",
+      "name": "角撞",
+      "english": "Horn Attack",
+      "type": "一般",
+      "description": "用头角撞击对手",
+      "visual": "白色角痕",
+      "source": "https://wiki.52poke.com/wiki/角撞（招式）"
+    },
+    {
+      "id": 255,
+      "slot": 1,
+      "species": "鲤鱼王",
+      "name": "撞击",
+      "english": "Tackle",
+      "type": "一般",
+      "description": "用身体撞击对手",
+      "visual": "白色冲击",
+      "source": "https://wiki.52poke.com/wiki/撞击（招式）"
+    },
+    {
+      "id": 256,
+      "slot": 1,
+      "species": "拉普拉斯",
+      "name": "冰砾",
+      "english": "Ice Shard",
+      "type": "冰",
+      "description": "释放冰砾攻击",
+      "visual": "蓝白冰晶",
+      "source": "https://wiki.52poke.com/wiki/冰砾（招式）"
+    },
+    {
+      "id": 257,
+      "slot": 1,
+      "species": "百变怪",
+      "name": "撞击",
+      "english": "Tackle",
+      "type": "一般",
+      "description": "用身体撞击对手",
+      "visual": "白色冲击",
+      "source": "https://wiki.52poke.com/wiki/撞击（招式）"
+    },
+    {
+      "id": 258,
+      "slot": 2,
+      "species": "凯罗斯",
+      "name": "劈开",
+      "english": "Slash",
+      "type": "一般",
+      "description": "挥动前肢劈击",
+      "visual": "白色爪痕",
+      "source": "https://wiki.52poke.com/wiki/劈开（招式）"
+    },
+    {
+      "id": 259,
+      "slot": 2,
+      "species": "肯泰罗",
+      "name": "意念头锤",
+      "english": "Zen Headbutt",
+      "type": "超能",
+      "description": "集中意念用头攻击",
+      "visual": "紫色念力",
+      "source": "https://wiki.52poke.com/wiki/意念头锤（招式）"
+    },
+    {
+      "id": 260,
+      "slot": 2,
+      "species": "鲤鱼王",
+      "name": "抓狂",
+      "english": "Flail",
+      "type": "一般",
+      "description": "摆动身体全力攻击",
+      "visual": "白色冲击",
+      "source": "https://wiki.52poke.com/wiki/抓狂（招式）"
+    },
+    {
+      "id": 261,
+      "slot": 2,
+      "species": "拉普拉斯",
+      "name": "水之波动",
+      "english": "Water Pulse",
+      "type": "水",
+      "description": "用水的波动攻击",
+      "visual": "蓝色波纹",
+      "source": "https://wiki.52poke.com/wiki/水之波动（招式）"
+    },
+    {
+      "id": 262,
+      "slot": 2,
+      "species": "百变怪",
+      "name": "高速星星",
+      "english": "Swift",
+      "type": "一般",
+      "description": "释放星形能量",
+      "visual": "白色星点",
+      "source": "https://wiki.52poke.com/wiki/高速星星（招式）"
+    },
+    {
+      "id": 263,
+      "slot": 3,
+      "species": "凯罗斯",
+      "name": "十字剪",
+      "english": "X-Scissor",
+      "type": "虫",
+      "description": "交叉挥动前肢攻击",
+      "visual": "绿色交叉斩",
+      "source": "https://wiki.52poke.com/wiki/十字剪（招式）"
+    },
+    {
+      "id": 264,
+      "slot": 3,
+      "species": "肯泰罗",
+      "name": "猛撞",
+      "english": "Take Down",
+      "type": "一般",
+      "description": "猛烈冲撞对手",
+      "visual": "白色冲击",
+      "source": "https://wiki.52poke.com/wiki/猛撞（招式）"
+    },
+    {
+      "id": 265,
+      "slot": 3,
+      "species": "鲤鱼王",
+      "name": "挣扎",
+      "english": "Struggle",
+      "type": "一般",
+      "description": "奋力挣扎攻击",
+      "visual": "白色冲击",
+      "source": "https://wiki.52poke.com/wiki/挣扎（招式）"
+    },
+    {
+      "id": 266,
+      "slot": 3,
+      "species": "拉普拉斯",
+      "name": "冰冻光束",
+      "english": "Ice Beam",
+      "type": "冰",
+      "description": "发射冰冷光束",
+      "visual": "蓝白光束",
+      "source": "https://wiki.52poke.com/wiki/冰冻光束（招式）"
+    },
+    {
+      "id": 267,
+      "slot": 3,
+      "species": "百变怪",
+      "name": "挣扎",
+      "english": "Struggle",
+      "type": "一般",
+      "description": "奋力挣扎攻击",
+      "visual": "白色冲击",
+      "source": "https://wiki.52poke.com/wiki/挣扎（招式）"
+    }
+  ],
+  "runtimeIntegrated": true
+}
