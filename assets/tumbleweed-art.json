@@ -1,0 +1,273 @@
+{
+  "service": "MobiIoT",
+  "model": "gpt-image-1.5",
+  "attempts": 1,
+  "source": "source/oasis-tumbleweed-v2.png",
+  "prompt": "prompts/oasis-tumbleweed-v2.txt",
+  "log": "build/tumbleweed-imagegen-v2.log",
+  "sourceSha256": "0abfc82368255b8adf21cff14314c9dd569bada93cc40a44412d87238dce6085",
+  "recipe": {
+    "sizes": [
+      32,
+      36,
+      40
+    ],
+    "frames": 8,
+    "angleStep": -45,
+    "alphaThreshold": 160,
+    "colors": 4,
+    "pixelBlock": 2,
+    "designGrids": [
+      16,
+      18,
+      20
+    ],
+    "resampling": "nearest",
+    "precomputed": true
+  },
+  "references": [
+    "source/oasis-tumbleweed-v1.png"
+  ],
+  "outputs": [
+    {
+      "path": "effects/tumble-32-0.png",
+      "bytes": 365,
+      "sha256": "7f9d196e0f9bfadf869af8847b08c7d73b9d81ed57a76aee58918f318255c334"
+    },
+    {
+      "path": "effects/tumble-32-0.bin",
+      "bytes": 588,
+      "sha256": "c4141d21ad4ba11067e2e6c4db04ec63071690855b073072a1c0b8b3800f4cf3"
+    },
+    {
+      "path": "effects/tumble-32-1.png",
+      "bytes": 358,
+      "sha256": "ada2ed38f54da20d3658a4e93f7b910bbdbcf4a5ded16bf77575f2c5f7a353ab"
+    },
+    {
+      "path": "effects/tumble-32-1.bin",
+      "bytes": 588,
+      "sha256": "1de63896eacdf250eda2ae123c96a43681ab7ca975581c1caf94eca2f913d714"
+    },
+    {
+      "path": "effects/tumble-32-2.png",
+      "bytes": 381,
+      "sha256": "2ddef370503a2249c5f9e2104f3bec19d0d3c082ed49268da4c70d4a386e05e6"
+    },
+    {
+      "path": "effects/tumble-32-2.bin",
+      "bytes": 588,
+      "sha256": "d3fd6896ea3451a5cc6628da6aaec730758a7a6e0a6098fb67cd30381f17eeb9"
+    },
+    {
+      "path": "effects/tumble-32-3.png",
+      "bytes": 349,
+      "sha256": "77c1160767ce7019de5b88cdc6b8825ede8ffb355c7af574e0ea0937def2dd82"
+    },
+    {
+      "path": "effects/tumble-32-3.bin",
+      "bytes": 588,
+      "sha256": "20fa9d9db7a297fe4cee6e71d3b6b1c5cb795c9ca17b6423024bfe5d3554ce5a"
+    },
+    {
+      "path": "effects/tumble-32-4.png",
+      "bytes": 356,
+      "sha256": "a2e83a879d9b2bb26731143f5b7cb8423a11d74498761a45817e8ef0cf336c49"
+    },
+    {
+      "path": "effects/tumble-32-4.bin",
+      "bytes": 588,
+      "sha256": "1146193de06fd34bf345a1900448944887238d88771be4798e82b87fce0923f8"
+    },
+    {
+      "path": "effects/tumble-32-5.png",
+      "bytes": 351,
+      "sha256": "385db249de6fede6c1325282ad4e009defdd6caf18950bbc034b691db9e1db78"
+    },
+    {
+      "path": "effects/tumble-32-5.bin",
+      "bytes": 588,
+      "sha256": "f286f3813d29cea9dd4aad6122f4931a8f646c3fb23cc85ff03a8d2ce60163a3"
+    },
+    {
+      "path": "effects/tumble-32-6.png",
+      "bytes": 398,
+      "sha256": "c917f6c833dcbeb7dd066f2ac6164f60c5c21a6ff0c62ce644d8a9a9a1d2652b"
+    },
+    {
+      "path": "effects/tumble-32-6.bin",
+      "bytes": 588,
+      "sha256": "141be5861e3f4955272a7fb0c3c17fdc6e6443559c1b6fd725120786ea6eb7e3"
+    },
+    {
+      "path": "effects/tumble-32-7.png",
+      "bytes": 352,
+      "sha256": "f10187d7d5cf45d5879219105e7d508154d9453620a46d758d4d39b74339be01"
+    },
+    {
+      "path": "effects/tumble-32-7.bin",
+      "bytes": 588,
+      "sha256": "e8080922adba65df7b0e9a1ad6a6ae17bf8576210ae07a375f12eaf01ba13e9f"
+    },
+    {
+      "path": "effects/tumble-36-0.png",
+      "bytes": 402,
+      "sha256": "f1702788221c791d99620d3dafdef5d8cd5dfed413631cea999c4bd7bc5c88d6"
+    },
+    {
+      "path": "effects/tumble-36-0.bin",
+      "bytes": 724,
+      "sha256": "d361a635f227ee75cc5467148a1cb8a65ed5af10c24e807a60d87b6e22a42e9f"
+    },
+    {
+      "path": "effects/tumble-36-1.png",
+      "bytes": 405,
+      "sha256": "2899b643a3c61b6bd3723c9d260e53b30b7725b83b4fdce61a4fc055ae302cfc"
+    },
+    {
+      "path": "effects/tumble-36-1.bin",
+      "bytes": 724,
+      "sha256": "3c5e9e3314484fbe90f581ccd82728dbdfaecff094088be3a27efe889192a33f"
+    },
+    {
+      "path": "effects/tumble-36-2.png",
+      "bytes": 417,
+      "sha256": "c4bce1163e7307600756ec03017fb6cd7a749162fb7ca3741112461bc4d8a949"
+    },
+    {
+      "path": "effects/tumble-36-2.bin",
+      "bytes": 724,
+      "sha256": "4e8a24b5a2332e7a9dd7bc8c0326ce4a4fe903f7c4632dfb95a706eb11850ee7"
+    },
+    {
+      "path": "effects/tumble-36-3.png",
+      "bytes": 380,
+      "sha256": "99f0bbd6cbb6eeb69e7288d427ae679215b1d3e895ef57b5f89cbd1834d1072d"
+    },
+    {
+      "path": "effects/tumble-36-3.bin",
+      "bytes": 724,
+      "sha256": "c92fad442dd8b20b58ce48b1fa56bcbdf9540ee5bd60af7708ad2230a4986d64"
+    },
+    {
+      "path": "effects/tumble-36-4.png",
+      "bytes": 397,
+      "sha256": "5bb162a9feb2a29a34adaca550254e406517aca99bb54a089e08085692bae10f"
+    },
+    {
+      "path": "effects/tumble-36-4.bin",
+      "bytes": 724,
+      "sha256": "7d3be5b47925de10eefe6599fd0b4ec1f99519b56a04903f7757ae9c21bc2371"
+    },
+    {
+      "path": "effects/tumble-36-5.png",
+      "bytes": 392,
+      "sha256": "36af6963c2876a21095327ba0c31f422d29deb40ea6c6e7efbdd9ac612ff6c12"
+    },
+    {
+      "path": "effects/tumble-36-5.bin",
+      "bytes": 724,
+      "sha256": "a35aea90f3c81aedb8ad2e0178dae28f658bc81f87f8ae4c2476359b8ce9c074"
+    },
+    {
+      "path": "effects/tumble-36-6.png",
+      "bytes": 391,
+      "sha256": "30a709283460e595f8bdf1697916ddcf816900c164e64b83430f897fa8cfb143"
+    },
+    {
+      "path": "effects/tumble-36-6.bin",
+      "bytes": 724,
+      "sha256": "1ac6458e79537b5f746292765280dfbf800b10576c254b5877d31b7ba70e3a88"
+    },
+    {
+      "path": "effects/tumble-36-7.png",
+      "bytes": 377,
+      "sha256": "10528de7d09256ba726e6901e4043f0e6ccf238102777dcf98ccbd81537aa1ce"
+    },
+    {
+      "path": "effects/tumble-36-7.bin",
+      "bytes": 724,
+      "sha256": "dc1f6b1814356165c205852986f7a8912c5ec1341deeafedadb1df1dd6866aa4"
+    },
+    {
+      "path": "effects/tumble-40-0.png",
+      "bytes": 465,
+      "sha256": "c03401bcb39545424317ac8dc3d3b5c3bf3dacc9b75fff7654e6240bc9bc2c65"
+    },
+    {
+      "path": "effects/tumble-40-0.bin",
+      "bytes": 876,
+      "sha256": "2bb5886a5b70f5a04204020ccc07ded14c06929e6bb80c03e3b57f79c4d84cae"
+    },
+    {
+      "path": "effects/tumble-40-1.png",
+      "bytes": 487,
+      "sha256": "175a7bf6c05c7c3c80e214c1bf57f884d92e6576a99742040087d962937f00f1"
+    },
+    {
+      "path": "effects/tumble-40-1.bin",
+      "bytes": 876,
+      "sha256": "a36c990703964a372d2a9950aecde90c5ee9d7011c86330a17cffa477c9677df"
+    },
+    {
+      "path": "effects/tumble-40-2.png",
+      "bytes": 464,
+      "sha256": "ad690c562f7adf229d3e5578ba3979f70f6791ab60961f93a16983d4f2fdfe47"
+    },
+    {
+      "path": "effects/tumble-40-2.bin",
+      "bytes": 876,
+      "sha256": "32820d35665b7dba25c05d6bba5c6f3400dfdb78bacdda9712e2e900eb9fc66c"
+    },
+    {
+      "path": "effects/tumble-40-3.png",
+      "bytes": 440,
+      "sha256": "4324d8f7e86383d1584b293e43e93cd2fc686afa6a21198ee61efd3f1bab30ea"
+    },
+    {
+      "path": "effects/tumble-40-3.bin",
+      "bytes": 876,
+      "sha256": "0be5340e91a3d39c1b5fcfff6d9d04ddb5dc2fc3222a11ec3225ca9bdf9e981a"
+    },
+    {
+      "path": "effects/tumble-40-4.png",
+      "bytes": 485,
+      "sha256": "b6c2e910113df2e1051a629a952cf41330a17f1079796414f06e263929dad6da"
+    },
+    {
+      "path": "effects/tumble-40-4.bin",
+      "bytes": 876,
+      "sha256": "025856831d24f9575d83775002c9c4e895617216f60767c9c1a2e85191b4d1b3"
+    },
+    {
+      "path": "effects/tumble-40-5.png",
+      "bytes": 466,
+      "sha256": "beb676ac8106c0b88e2f5591d68f07b11af627e2ef1f6b2e13d73524990f8aae"
+    },
+    {
+      "path": "effects/tumble-40-5.bin",
+      "bytes": 876,
+      "sha256": "bb338517dde812b61b6fc5296324a6412bd3368c3e4ddff3070845c998b3f583"
+    },
+    {
+      "path": "effects/tumble-40-6.png",
+      "bytes": 452,
+      "sha256": "599c86c1c30bc67f08be9c3638631c4d3fafee3bf413b497261aa9e937251d10"
+    },
+    {
+      "path": "effects/tumble-40-6.bin",
+      "bytes": 876,
+      "sha256": "98709cfcdf241be8a19c71df06e69a505b5b3979a65c31dcfc3700309c2e6319"
+    },
+    {
+      "path": "effects/tumble-40-7.png",
+      "bytes": 447,
+      "sha256": "8352aa661cb556662ae36eeea6a0e6b7eb4fad065b25455417db3939fb38f118"
+    },
+    {
+      "path": "effects/tumble-40-7.bin",
+      "bytes": 876,
+      "sha256": "6b6852488e3d0e15e83cd851906c3aecc4ee3ba251945395299acac49ca1ef8b"
+    }
+  ]
+}

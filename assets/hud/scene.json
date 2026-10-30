@@ -1,0 +1,22 @@
+{
+  "service": "MobiIoT",
+  "model": "gpt-image-1.5",
+  "attempts": 1,
+  "source": "source/scene-icon-v1.png",
+  "prompt": "prompts/scene-icon-v1.txt",
+  "log": "build/scene-icon-generation-v1.log",
+  "references": [
+    "sdcard/pokemon-plus/hud/gym.png",
+    "sdcard/pokemon-plus/icons/13.png"
+  ],
+  "sourceSha256": "3ccb24c301c50765a3ff5da29a9803f9c5be57f3c121d3f370d1a1e40de97764",
+  "output": "hud/scene.png",
+  "sha256": "507017b5134112f7ab8bdcb8b455aee067998f79012e1f7b26c10833ae968b58",
+  "recipe": {
+    "alphaThreshold": 200,
+    "maxSilhouette": 29,
+    "canvas": 32,
+    "resampling": "nearest",
+    "quantizeColors": 15
+  }
+}

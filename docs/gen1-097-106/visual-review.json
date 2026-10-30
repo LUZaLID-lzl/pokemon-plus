@@ -1,0 +1,67 @@
+{
+  "identityReviewed": [
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106
+  ],
+  "animationReviewed": [
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106
+  ],
+  "note": "All ten identities and six-action animation sets visually accepted. Historical identity-v1,100-v1 and104-v1 stopped tasks retained;104-v2,105-v1,106-v1 each succeeded on first request. Runtime v0.17.0 build and QA passed; not flashed.",
+  "identityVersion": 2,
+  "identityNote": "Reviewed raw and native preview: correct ten characters; six touching eggs, three coconut heads; opposite red/white spheres with no limbs; connected accessories, native48px outline/color/alpha validation passed.",
+  "acceptedVersions": {
+    "97": 1,
+    "98": 1,
+    "99": 1,
+    "100": 2,
+    "101": 1,
+    "102": 1,
+    "103": 1,
+    "104": 2,
+    "105": 1,
+    "106": 1
+  },
+  "notes": {
+    "97": "Reviewed48 native poses: ruff/pendulum remain connected; alternate short steps, low seated closed-eye sleep; compact arm gesture/recovery.",
+    "98": "Reviewed48 native poses: attached asymmetrical claws and short scuttling legs; low folded claws, closed eyestalk sleep; compact pinch and recovery.",
+    "99": "48 poses reviewed: crown shell and oversized near pincer retained; real short scuttling, low crouched closed eyestalk rest; claw opens and recovers without leaving cell.",
+    "100": "Reviewed48 poses: red-upper/white-lower intact circular body, no mouth/limbs; gentle tilt/gaze motion, eight closed-eye sleep phases, compact awake inclination/recovery. v2 fifth request succeeded after four400s.",
+    "101": "Reviewed48 poses: white-top/red-bottom round body, no limbs; brow/mouth changes and gentle rocking, all eight sleep eyes closed, compact lean/recovery. First request succeeded.",
+    "102": "Reviewed48 poses: six touching pink eggs retained as a compact cluster, individual gentle tilts without limbs; every visible sleep eye closed, connected cracked crown retained. v1 second request succeeded.",
+    "103": "Reviewed48 poses: three coconut faces, connected leaf crown/trunk and two legs; short alternating steps, low seated sleep with all six eyes closed, compact leaf/trunk gesture and recovery. v1 first request succeeded.",
+    "104": "Reviewed48 native poses against approved identity: ivory helmet, rounded brown body/tail and lowered held accessory retained; alternating short steps, low seated closed-eye sleep; compact attentive weight-shift/recovery. v2 first request succeeded.",
+    "105": "Reviewed48 native poses: pointed ivory helmet, single connected held bone, short alternating steps and arm counterbalance; eight low seated closed-eye sleep frames, compact bone gesture and recovery. v1 first request succeeded.",
+    "106": "Reviewed48 native poses: oval tan body with no invented mouth, two attached arms and two segmented legs; genuine knee/foot phases, low folded-leg closed-eye sleep, compact leg lift/recoil/recovery. v1 first request succeeded."
+  },
+  "runtimeIntegrated": true,
+  "unreviewedAnimationNationalIds": [],
+  "firmwareVersion": "v0.17.0",
+  "runtimeValidation": "ASan/UBSan,PNG/native canvas and ESP bank,all106 forms/188 moves/59 paired evolution transitions,display edges/battle transparency,IDF/package/readback and browser UI passed;not flashed",
+  "webValidation": {
+    "revision": "0170-pets106-ready3",
+    "consecutiveReloads": 3,
+    "finalActionsChecked": 60,
+    "allEightFramesLoaded": true,
+    "scriptErrors": 0,
+    "failedRequests": 0,
+    "originalStorageRestored": true,
+    "evidence": "build/pets106-web-checks.json"
+  }
+}

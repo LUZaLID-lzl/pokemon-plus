@@ -1,0 +1,20 @@
+Create a professional pixel-art game prop spritesheet: EXACTLY 13 EMPTY EGG INCUBATION NESTS in a regular 4 columns by 4 rows grid. First 13 cells occupied in reading order, final 3 cells empty. Each nest is a complete separate isolated prop centered in its cell, separated from all other props by very wide blank margins. Background pure solid magenta #ff00ff, no floor or surrounding scenery, no shadows outside the prop, no writing, no numbers, no eggs, no creatures. The attached image is the actual game's background reference: match its classic cozy handheld pixel RPG art and restrained palette.
+
+All nests have the SAME low oval bowl silhouette, viewed from slightly above at 3/4 angle, approximately twice as wide as tall. Wide dark EMPTY central hollow large enough to hold one big egg. Clearly visible thin foreground woven rim at the bottom. Roughly 32 by 20 logical pixels per nest, clean hard square pixels, no blur, no gradients, no antialiasing. Dark blue-black thin contour, limited cohesive 10-14 colors per nest. Delicate, natural, integrated environment materials, not an inventory icon or raised platform.
+
+Reading order cell designs:
+1. Morning courtyard: warm straw woven nest, small fresh green leaves.
+2. Cherry blossom yard: brown fine twigs with a few pink cherry petals tucked into rim.
+3. Sunny beach: pale driftwood and dry seagrass, two tiny cream seashells on rim, sandy palette.
+4. Medieval village: small rustic low wooden basket lined with golden straw, no tall handle.
+5. Autumn forest: russet interwoven twigs lined with orange and ochre fallen leaves.
+6. Snowy village: warm brown woven straw nest, a little clean white snow ONLY on outer edges, center warm and empty.
+7. Crystal cave: dark stone and twisted dry roots, tiny cyan and violet crystals outside rim, empty blue-gray hollow.
+8. Mushroom grove: soft dark moss and twigs, two tiny red mushroom caps at outer rim, deep green empty hollow.
+9. Starry hill: muted cool blue-green grass nest, tiny pale gold flecks in rim, deep desaturated blue central hollow, no large magical glow.
+10. Desert oasis: palm fiber woven nest, sandy ochre and sage-green palm leaf tips, no water.
+11. Rainy village: rain-darkened willow woven nest, a broad green leaf lining with small turquoise water droplets on OUTER rim only.
+12. Sky island: soft grass nest with white feather tufts on outer edges, turquoise and pale mint palette.
+13. Sacred blue tree: a cradle of gnarled BLUE-GRAY TREE ROOTS woven into a low oval nest, lined with pale blue moss and a few sky-blue leaves. Natural root wood, not a stone altar. Empty dark center. This must sit at the base of the blue tree.
+
+IMPORTANT: 13 genuinely different complete nests, regular 4x4 grid, cells 14-16 empty magenta. NO eggs anywhere. All silhouettes fit fully inside cells. Keep the foreground rim low so an egg placed in the center will remain visible.

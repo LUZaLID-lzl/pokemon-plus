@@ -1,0 +1,188 @@
+{
+  "range": [
+    77,
+    86
+  ],
+  "status": "complete; Web and firmware v0.15.0",
+  "runtimeIntegrated": true,
+  "actions": [
+    "idle",
+    "walk",
+    "happy",
+    "eat",
+    "sleep",
+    "attack"
+  ],
+  "framesPerAction": 8,
+  "items": [
+    {
+      "nationalId": 77,
+      "name": "小火马",
+      "english": "Ponyta",
+      "artId": 76,
+      "species": 31,
+      "stage": 0,
+      "anatomy": "small cream-colored horse, exactly FOUR slim legs with gray hooves, TWO pointed ears, orange-red flame mane and attached flame tail, dark eyes, no horn"
+    },
+    {
+      "nationalId": 78,
+      "name": "烈焰马",
+      "english": "Rapidash",
+      "artId": 77,
+      "species": 31,
+      "stage": 1,
+      "anatomy": "cream-colored elegant horse, exactly FOUR legs with gray hooves, TWO pointed ears, ONE slender forehead horn, long orange-red flame mane and attached flame tail, no wings"
+    },
+    {
+      "nationalId": 79,
+      "name": "呆呆兽",
+      "english": "Slowpoke",
+      "artId": 78,
+      "species": 32,
+      "stage": 0,
+      "anatomy": "pink round quadruped, broad cream-colored muzzle, two small rounded ears, placid round eyes, exactly FOUR short legs and ONE long thick tapering pink tail with cream tip attached at rear"
+    },
+    {
+      "nationalId": 80,
+      "name": "呆壳兽",
+      "english": "Slowbro",
+      "artId": 79,
+      "species": 32,
+      "stage": 1,
+      "anatomy": "pink upright creature with cream belly and muzzle, two rounded ears, TWO short arms and TWO hind legs; long pink tail stays attached and ends inside ONE attached gray spiraled shell with two narrow eyes and toothed rim; shell is part of silhouette, never detached"
+    },
+    {
+      "nationalId": 81,
+      "name": "小磁怪",
+      "english": "Magnemite",
+      "artId": 80,
+      "species": 33,
+      "stage": 0,
+      "anatomy": "ONE spherical metallic gray body, ONE central white circular eye with black pupil, ONE screw on top, TWO small front screws, TWO side horseshoe magnets attached by their bases, red and blue pole tips; no feet or mouth"
+    },
+    {
+      "nationalId": 82,
+      "name": "三合一磁怪",
+      "english": "Magneton",
+      "artId": 81,
+      "species": 33,
+      "stage": 1,
+      "anatomy": "exactly THREE metallic gray spherical eye units joined in one compact triangular cluster, exactly THREE round central eyes and THREE top screws; each unit has two attached horseshoe magnets with red and blue tips, overlap behind other units naturally; no feet or mouth"
+    },
+    {
+      "nationalId": 83,
+      "name": "大葱鸭",
+      "english": "Farfetchd",
+      "artId": 82,
+      "species": 34,
+      "stage": 0,
+      "anatomy": "tan-brown duck, cream belly, one dark V-shaped forehead mark, small three-point head tuft, yellow broad beak and exactly TWO webbed feet, TWO feather wings; ONE long green-and-white leek gripped firmly by near wing and physically touching its body, never floating"
+    },
+    {
+      "nationalId": 84,
+      "name": "嘟嘟",
+      "english": "Doduo",
+      "artId": 83,
+      "species": 35,
+      "stage": 0,
+      "anatomy": "round brown flightless bird, EXACTLY TWO brown heads on TWO long thin attached dark necks, long pale pointed beaks, exactly TWO long brown legs and three-toed feet; small brown feather tail, no arms or visible wings"
+    },
+    {
+      "nationalId": 85,
+      "name": "嘟嘟利",
+      "english": "Dodrio",
+      "artId": 84,
+      "species": 35,
+      "stage": 1,
+      "anatomy": "round brown flightless bird, EXACTLY THREE brown heads on THREE long thin attached dark necks, THREE long pale pointed beaks, dark head crests, exactly TWO long brown legs and three-toed feet, attached pink-red tail feathers; no arms or visible wings"
+    },
+    {
+      "nationalId": 86,
+      "name": "小海狮",
+      "english": "Seel",
+      "artId": 85,
+      "species": 36,
+      "stage": 0,
+      "anatomy": "white seal pup with round smooth body, ONE short forehead horn, black eyes, cream muzzle with TWO tiny downward tusks and pink tongue, exactly TWO attached front flippers and ONE attached forked rear tail flipper; no walking legs"
+    }
+  ],
+  "evolution": [
+    {
+      "species": 31,
+      "nationalIds": [
+        77,
+        78
+      ],
+      "steps": [
+        {
+          "level": 40,
+          "trigger": "level"
+        }
+      ]
+    },
+    {
+      "species": 32,
+      "nationalIds": [
+        79,
+        80
+      ],
+      "steps": [
+        {
+          "level": 37,
+          "trigger": "level"
+        }
+      ]
+    },
+    {
+      "species": 33,
+      "nationalIds": [
+        81,
+        82
+      ],
+      "steps": [
+        {
+          "level": 30,
+          "trigger": "level"
+        }
+      ]
+    },
+    {
+      "species": 35,
+      "nationalIds": [
+        84,
+        85
+      ],
+      "steps": [
+        {
+          "level": 31,
+          "trigger": "level"
+        }
+      ]
+    }
+  ],
+  "pendingEvolution": [
+    {
+      "species": 36,
+      "nationalIds": [
+        86,
+        87
+      ],
+      "level": 34,
+      "status": "087 artwork not generated; unavailable"
+    }
+  ],
+  "completedAnimationNationalIds": [
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86
+  ],
+  "pendingAnimationNationalIds": [],
+  "identityGenerationAttempts": 2
+}

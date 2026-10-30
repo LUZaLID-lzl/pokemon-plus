@@ -1,0 +1,52 @@
+{
+  "identityReviewed": [
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76
+  ],
+  "animationReviewed": [
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76
+  ],
+  "acceptedVersions": {
+    "67": 2,
+    "68": 2,
+    "69": 2,
+    "70": 2,
+    "71": 2,
+    "72": 2,
+    "73": 2,
+    "74": 2,
+    "75": 2,
+    "76": 3
+  },
+  "notes": {
+    "identity": "Source and native48 preview reviewed. Full bodies have margin in ten measured alpha boxes; Machamp/Graveler four arms, Geodude two arms/no legs, jellyfish attached tentacles, connected plants. Identity-only; complete action sheets pending.",
+    "67": "v2 accepted, service attempt2: two attached arms/legs, ridges, red eyes, belt, no tail. Genuine alternating steps/jab recovery, closed-eye seated-to-low resting cycle, eight distinct poses per action. Prior v1 failure retained.",
+    "68": "v2 accepted, service attempt1: four attached arms in both shoulder pairs, two legs, no tail, consistent belt and ridges; articulated phases, four fists tucked around low closed-eye sleeping body, compact action and recovery.",
+    "69": "v2 accepted: attached yellow bell head/pink lip, brown stem and alternating forked root feet, two green leaves; eight articulated phases/action, bent low stem/closed eyes and lowered leaves in sleep, compact leaf/head action.",
+    "70": "v2 accepted: two attached leaf arms, hooked brown vine, no feet; eight distinct leaf/mouth/tilt phases, lowered closed-eye low floating rest and compact leaning action. Movement labeled leaf-assisted floating.",
+    "71": "v2 accepted: attached pitcher body, lid, two side leaves and rear leaf-tipped vine; no feet. Eight genuine leaf/lid/mouth phases, low resting tilt and fully lowered lid covering eyes in sleep, compact leaf/mouth action.",
+    "72": "v2 accepted: stable blue dome/two red gems, exactly two connected pale tentacles with genuine alternating bends, no arms or feet; low floating closed-eye rest and compact tentacle action/recovery.",
+    "73": "v2 accepted, attempt2: stable blue dome/two red gems and attached compact tentacle cluster; eight genuine swimming/curl/action phases, closed narrow eyes in low floating sleep. Multiple pale tips overlap in side view and are simplified at native40px; no separate arms/legs or detached tentacles.",
+    "74": "v2 accepted, attempt2: round rock body/two attached rock arms, no legs or feet; eight real arm bends/tilts, closed-eye low hovering rest and compact fist extension/recoil/recovery; continuous outline and exact mirrors.",
+    "75": "v2 accepted, attempt1: four attached rock arms/two short feet throughout articulated phases; four fists tucked around low resting body, all eyes closed in eight sleep frames, compact action/recovery, fixed rock volume.",
+    "76-rejected-v2": "v2 generated successfully but adjacent poses touch, including row6 middle pair. Export rejects component count; not used as a complete template. Source/prompt/log retained. Request v3 with larger transparent gutters and compact arm gestures.",
+    "76": "v3 accepted, attempt1: all48 components isolated with generous measured gutters, brown polygonal shell/gray head and two short arms/legs with pale claws; eight genuine steps/compact bent-arm gestures and low curled closed-eye sleep. v2 measured47 components due touching pair and is rejected, retained with report."
+  }
+}

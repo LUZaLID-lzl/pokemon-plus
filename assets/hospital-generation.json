@@ -1,0 +1,37 @@
+{
+  "service": "MobiIoT",
+  "reviewed": true,
+  "background": "hospital/room.png",
+  "icon": "hospital/icon.png",
+  "host": "hospital/joy.png",
+  "game": "heart-catch",
+  "goal": 6,
+  "durationMs": 19200,
+  "recovery": [
+    80,
+    90
+  ],
+  "sourceSha256": {
+    "hospital-room-v1.png": "1ac05a422186a0d3c04704f8f7221941660ca7b41247592fcabbaedd962a7f3b",
+    "hospital-icon-v1.png": "cb53daa08aaa330ff76fe16e43c096ff81bcb7f2bab9afd755e6cd063a86b7a3",
+    "hospital-joy-v1.png": "400b33676a0b5f6b21d351609729f16b299dab95c0722cb1e7daba667a8c6456"
+  },
+  "recipe": "room120px/32colors/brightness0.68/nearest3x; icon32px/15colors/binary alpha200; joy96x128/logical60px/15colors/nearest2x",
+  "generations": {
+    "room": {
+      "model": "gpt-image-1.5",
+      "attempts": 1,
+      "prompt": "prompts/hospital-room-v1.txt"
+    },
+    "icon": {
+      "model": "gpt-image-1.5",
+      "attempts": 1,
+      "prompt": "prompts/hospital-icon-v1.txt"
+    },
+    "joy": {
+      "model": "gpt-image-1.5",
+      "attempts": 1,
+      "prompt": "prompts/hospital-joy-v1.txt"
+    }
+  }
+}

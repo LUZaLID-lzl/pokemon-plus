@@ -1,0 +1,23 @@
+{
+  "service": "MobiIoT",
+  "model": "gpt-image-1.5",
+  "attempts": 1,
+  "source": "source/capture-ball-v1.png",
+  "prompt": "prompts/items/capture-ball-v1.txt",
+  "log": "build/capture-ball-generation-v1.log",
+  "references": [
+    "sdcard/pokemon-plus/icons/2.png",
+    "sdcard/pokemon-plus/icons/5.png",
+    "assets/items/hatch-boost.png"
+  ],
+  "sourceSha256": "3b5e10c2d3476848a22ae0d3bffe2eb2f04ada70f6d6d3235d72f48400ef2739",
+  "output": "items/capture-ball.png",
+  "sha256": "baba85fcb80010322a0b21e3f6b0e75d528589a1107dd17df5ef917023925711",
+  "recipe": {
+    "alphaThreshold": 200,
+    "maxSilhouette": 29,
+    "canvas": 32,
+    "resampling": "nearest",
+    "quantizeColors": 15
+  }
+}
