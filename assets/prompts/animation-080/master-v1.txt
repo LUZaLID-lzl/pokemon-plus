@@ -1,0 +1,11 @@
+Draw a transparent pixel-art animation sheet of 080 Slowbro, exactly the same friendly game creature as the attached approved reference. Preserve exact face, colors, proportions and connected anatomy: pink upright creature with cream belly and muzzle, two rounded ears, TWO short arms and TWO hind legs; long pink tail stays attached and ends inside ONE attached gray spiraled shell with two narrow eyes and toothed rim; shell is part of silhouette, never detached.
+Layout: 8 columns by 6 rows, exactly48 separate COMPLETE whole-body poses. Spacious1536x1152 canvas. Every complete creature including all appendages occupies at most55% of cell width and65% of cell height. Generous fully transparent gutters in BOTH axes, no touching bodies or cropping, no detached components. Consistent left-facing camera, body volume, scale and baseline. Native48px pixel style with subject within40px, at most15 opaque colors plus transparency, crisp square pixels, thin continuous deep-navy contour. REAL transparent alpha, no text/ground/props/particles/checkerboard/shadows.
+Rows top to bottom:
+1. Idle: eight subtle breathing and blinking poses, seamless loop.
+2. Travel: eight genuine articulated in-place phases, seamless loop.
+3. Happy: eight small cheerful phases returning to neutral.
+4. Eat: eight gentle chewing or species-appropriate phases without extra food props.
+5. Sleep: eight LOW resting poses with ALL eyes CLOSED throughout, subtle breathing, seamless loop.
+6. Action: eight compact game-action phases: prepare, brace, lean, extend, peak, recoil, recover, neutral. No effects. Complete body and every appendage in each cell.
+Species motion: Upright biped with TWO arms, TWO legs, and ONE gray shell visibly attached to tail in EVERY frame. Travel short leg steps, small arm counterbalance. Happy small arm lift. Eat subtle muzzle chewing. Sleep seated-to-low rest with ALL eyes including shell eyes CLOSED throughout, shell attached beside body. Action compact arm push and recover; shell never floats or detaches.
+Every row must contain eight DISTINCT full-body poses with genuine joint/eye/mouth changes, not copies shifted or stretched. Fixed body volume, no cut-body assembly. Gentle phase spacing, no abrupt flips. Happy and action end at neutral. The approved reference is authoritative for identity.

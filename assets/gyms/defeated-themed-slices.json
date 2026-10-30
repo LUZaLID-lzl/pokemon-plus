@@ -1,0 +1,9 @@
+{
+  "source":"assets/source/gyms/defeated-themed-atlas-v1.png",
+  "alphaThreshold":220,
+  "slices":[
+    {"name":"defeated-rock","gym":0,"theme":"rock","box":[0,0,1254,474]},
+    {"name":"defeated-water","gym":1,"theme":"water","box":[0,474,1254,913]},
+    {"name":"defeated-electric","gym":2,"theme":"electric","box":[0,913,1254,1254]}
+  ]
+}

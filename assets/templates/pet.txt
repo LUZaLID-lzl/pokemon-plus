@@ -1,0 +1,10 @@
+# 当前宠物动画模板入口
+
+统一规范：pet-animation-48/README.md
+机器可读规格：pet-animation-48/spec.json
+001实际生成提示词：pet-animation-48/sample-001.txt
+001动画输出：../animation-templates/001/manifest.json
+可离线打开的场景预览：../../docs/animation-001/index.html
+
+以assets/pokemon/{batch}/{id:03}.png作为角色身份来源；六动作×八帧，48px原生、主体≤40px、≤16色、透明背景、深蓝黑闭合描边。按自然身体结构补绘真实关节动作，不以整只拉伸或头身切片模拟动作。
+当前固件24帧契约与新48帧模板独立，不能直接覆盖旧资源路径。

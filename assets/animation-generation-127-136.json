@@ -1,0 +1,223 @@
+{
+  "scope": "127-136",
+  "generator": "mobiiot-imagegen",
+  "generated": [
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136
+  ],
+  "exported": [
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136
+  ],
+  "completed": true,
+  "status": "complete reviewed identities and full48-pose templates; integrated firmware/Web v0.21.1",
+  "runtimeIntegrated": true,
+  "identityCompletedNationalIds": [
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136
+  ],
+  "completedAnimationNationalIds": [
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136
+  ],
+  "pendingAnimationNationalIds": [],
+  "activeTask": null,
+  "pendingIdentityNationalIds": [],
+  "previousStoppedTasks": [
+    {
+      "kind": "identity",
+      "nationalId": 130,
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-130-generation-v1.log",
+      "prompt": "assets/prompts/identity-130-v1.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 133,
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-133-generation-v1.log",
+      "prompt": "assets/prompts/identity-133-v1.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 133,
+      "version": 2,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-133-generation-v2.log",
+      "prompt": "assets/prompts/identity-133-v2.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 133,
+      "version": 3,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-133-generation-v3.log",
+      "prompt": "assets/prompts/identity-133-v3.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 133,
+      "version": 4,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-133-generation-v4.log",
+      "prompt": "assets/prompts/identity-133-v4.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 133,
+      "version": 5,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-133-generation-v5.log",
+      "prompt": "assets/prompts/identity-133-v5.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 134,
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-134-generation-v1.log",
+      "prompt": "assets/prompts/identity-134-v1.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 134,
+      "version": 2,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-134-generation-v2.log",
+      "prompt": "assets/prompts/identity-134-v2.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 134,
+      "version": 3,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-134-generation-v3.log",
+      "prompt": "assets/prompts/identity-134-v3.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 134,
+      "version": 4,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-134-generation-v4.log",
+      "prompt": "assets/prompts/identity-134-v4.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 134,
+      "version": 5,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-134-generation-v5.log",
+      "prompt": "assets/prompts/identity-134-v5.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 134,
+      "version": 6,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-134-generation-v6.log",
+      "prompt": "assets/prompts/identity-134-v6.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 134,
+      "version": 7,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-134-generation-v7.log",
+      "prompt": "assets/prompts/identity-134-v7.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "animation",
+      "nationalId": 135,
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "assets/prompts/animation-135/generation-v1.log",
+      "prompt": "assets/prompts/animation-135/master-v1.txt",
+      "sourceImage": null
+    }
+  ],
+  "integratedNationalIds": [
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136
+  ],
+  "firmwareVersion": "v0.21.1",
+  "scopeCompleted": true,
+  "continuationPreference": {
+    "order": "national-number",
+    "nextNationalId": 139,
+    "nextKind": "identity",
+    "source": "User retains numbered order;137–138 full art reviewed, next139 identity"
+  },
+  "failedNationalId": null,
+  "failedTask": null,
+  "failureLog": null
+}

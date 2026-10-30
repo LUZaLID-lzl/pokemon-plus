@@ -1,0 +1,1344 @@
+{
+  "version": 18,
+  "species": 2,
+  "forms": [
+    {
+      "stage": 0,
+      "name": "小火龙",
+      "art": 2,
+      "status": "integrated"
+    },
+    {
+      "stage": 1,
+      "name": "火恐龙",
+      "level": 16,
+      "art": 4,
+      "status": "integrated"
+    },
+    {
+      "stage": 2,
+      "name": "喷火龙",
+      "level": 36,
+      "art": 5,
+      "status": "integrated"
+    }
+  ],
+  "xpPerLevel": "20 × current level",
+  "levelCap": 40,
+  "trigger": "等级进化自动弹出选择；进化石及联系之绳从状态页直接购买使用",
+  "source": "https://wiki.52poke.com/zh-hans/小火龙",
+  "imageFallback": "001-024 and026-136 dedicated48 poses;025 retains original24 translation slots",
+  "coreTemplate": "pp_evolutions in core/game.c",
+  "chains": [
+    {
+      "species": 1,
+      "nationalIds": [
+        1,
+        2,
+        3
+      ],
+      "levels": [
+        16,
+        32
+      ],
+      "artIds": [
+        1,
+        6,
+        7
+      ],
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 16
+        },
+        {
+          "trigger": "level",
+          "level": 32
+        }
+      ]
+    },
+    {
+      "species": 2,
+      "nationalIds": [
+        4,
+        5,
+        6
+      ],
+      "levels": [
+        16,
+        36
+      ],
+      "artIds": [
+        2,
+        4,
+        5
+      ],
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 16
+        },
+        {
+          "trigger": "level",
+          "level": 36
+        }
+      ]
+    },
+    {
+      "species": 3,
+      "nationalIds": [
+        7,
+        8,
+        9
+      ],
+      "levels": [
+        16,
+        36
+      ],
+      "artIds": [
+        3,
+        8,
+        9
+      ],
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 16
+        },
+        {
+          "trigger": "level",
+          "level": 36
+        }
+      ]
+    },
+    {
+      "species": 4,
+      "nationalIds": [
+        10,
+        11,
+        12
+      ],
+      "levels": [
+        7,
+        10
+      ],
+      "artIds": [
+        10,
+        11,
+        12
+      ],
+      "source": "https://wiki.52poke.com/wiki/绿毛虫",
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 7
+        },
+        {
+          "trigger": "level",
+          "level": 10
+        }
+      ]
+    },
+    {
+      "species": 5,
+      "nationalIds": [
+        13,
+        14,
+        15
+      ],
+      "levels": [
+        7,
+        10
+      ],
+      "artIds": [
+        13,
+        14,
+        15
+      ],
+      "source": "https://wiki.52poke.com/wiki/独角虫",
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 7
+        },
+        {
+          "trigger": "level",
+          "level": 10
+        }
+      ]
+    },
+    {
+      "species": 6,
+      "nationalIds": [
+        16,
+        17,
+        18
+      ],
+      "levels": [
+        18,
+        36
+      ],
+      "artIds": [
+        16,
+        17,
+        18
+      ],
+      "source": "https://wiki.52poke.com/wiki/波波",
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 18
+        },
+        {
+          "trigger": "level",
+          "level": 36
+        }
+      ]
+    },
+    {
+      "species": 7,
+      "nationalIds": [
+        19,
+        20
+      ],
+      "levels": [
+        20
+      ],
+      "artIds": [
+        19,
+        20
+      ],
+      "trigger": "level",
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 20
+        }
+      ]
+    },
+    {
+      "species": 8,
+      "nationalIds": [
+        21,
+        22
+      ],
+      "levels": [
+        20
+      ],
+      "artIds": [
+        21,
+        22
+      ],
+      "trigger": "level",
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 20
+        }
+      ]
+    },
+    {
+      "species": 9,
+      "nationalIds": [
+        23,
+        24
+      ],
+      "levels": [
+        22
+      ],
+      "artIds": [
+        23,
+        24
+      ],
+      "trigger": "level",
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 22
+        }
+      ]
+    },
+    {
+      "species": 0,
+      "nationalIds": [
+        25,
+        26
+      ],
+      "levels": [
+        0
+      ],
+      "artIds": [
+        0,
+        25
+      ],
+      "trigger": "thunder-stone",
+      "item": "雷之石",
+      "price": 200,
+      "steps": [
+        {
+          "trigger": "thunder-stone",
+          "item": "雷之石",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "species": 10,
+      "nationalIds": [
+        27,
+        28
+      ],
+      "levels": [
+        22
+      ],
+      "artIds": [
+        26,
+        27
+      ],
+      "trigger": "level",
+      "steps": [
+        {
+          "level": 22,
+          "trigger": "level"
+        }
+      ]
+    },
+    {
+      "species": 11,
+      "nationalIds": [
+        29,
+        30,
+        31
+      ],
+      "levels": [
+        16,
+        0
+      ],
+      "artIds": [
+        28,
+        29,
+        30
+      ],
+      "trigger": "mixed",
+      "steps": [
+        {
+          "level": 16,
+          "trigger": "level"
+        },
+        {
+          "item": "月之石",
+          "price": 200,
+          "trigger": "moon-stone"
+        }
+      ]
+    },
+    {
+      "species": 12,
+      "nationalIds": [
+        32,
+        33,
+        34
+      ],
+      "levels": [
+        16,
+        0
+      ],
+      "artIds": [
+        31,
+        32,
+        33
+      ],
+      "trigger": "mixed",
+      "steps": [
+        {
+          "level": 16,
+          "trigger": "level"
+        },
+        {
+          "item": "月之石",
+          "price": 200,
+          "trigger": "moon-stone"
+        }
+      ]
+    },
+    {
+      "species": 13,
+      "nationalIds": [
+        35,
+        36
+      ],
+      "levels": [
+        0
+      ],
+      "artIds": [
+        34,
+        35
+      ],
+      "trigger": "moon-stone",
+      "steps": [
+        {
+          "item": "月之石",
+          "price": 200,
+          "trigger": "moon-stone"
+        }
+      ]
+    },
+    {
+      "species": 14,
+      "nationalIds": [
+        37,
+        38
+      ],
+      "levels": [
+        0
+      ],
+      "artIds": [
+        36,
+        37
+      ],
+      "trigger": "fire-stone",
+      "steps": [
+        {
+          "item": "火之石",
+          "price": 200,
+          "trigger": "fire-stone"
+        }
+      ]
+    },
+    {
+      "species": 15,
+      "nationalIds": [
+        39,
+        40
+      ],
+      "levels": [
+        0
+      ],
+      "artIds": [
+        38,
+        39
+      ],
+      "trigger": "moon-stone",
+      "steps": [
+        {
+          "item": "月之石",
+          "price": 200,
+          "trigger": "moon-stone"
+        }
+      ]
+    },
+    {
+      "species": 16,
+      "nationalIds": [
+        41,
+        42
+      ],
+      "levels": [
+        22
+      ],
+      "artIds": [
+        40,
+        41
+      ],
+      "trigger": "level",
+      "steps": [
+        {
+          "level": 22,
+          "trigger": "level"
+        }
+      ]
+    },
+    {
+      "species": 17,
+      "nationalIds": [
+        43,
+        44,
+        45
+      ],
+      "levels": [
+        21,
+        0
+      ],
+      "artIds": [
+        42,
+        43,
+        44
+      ],
+      "trigger": "mixed",
+      "steps": [
+        {
+          "level": 21,
+          "trigger": "level"
+        },
+        {
+          "item": "叶之石",
+          "price": 200,
+          "trigger": "leaf-stone"
+        }
+      ]
+    },
+    {
+      "species": 18,
+      "nationalIds": [
+        46,
+        47
+      ],
+      "levels": [
+        24
+      ],
+      "artIds": [
+        45,
+        46
+      ],
+      "trigger": "level",
+      "steps": [
+        {
+          "level": 24,
+          "trigger": "level"
+        }
+      ]
+    },
+    {
+      "species": 19,
+      "nationalIds": [
+        48,
+        49
+      ],
+      "levels": [
+        31
+      ],
+      "artIds": [
+        47,
+        48
+      ],
+      "trigger": "level",
+      "steps": [
+        {
+          "level": 31,
+          "trigger": "level"
+        }
+      ]
+    },
+    {
+      "species": 20,
+      "nationalIds": [
+        50,
+        51
+      ],
+      "levels": [
+        26
+      ],
+      "artIds": [
+        49,
+        50
+      ],
+      "trigger": "level",
+      "steps": [
+        {
+          "level": 26,
+          "trigger": "level"
+        }
+      ]
+    },
+    {
+      "species": 21,
+      "nationalIds": [
+        52,
+        53
+      ],
+      "levels": [
+        28
+      ],
+      "artIds": [
+        51,
+        52
+      ],
+      "trigger": "level",
+      "steps": [
+        {
+          "level": 28,
+          "trigger": "level"
+        }
+      ]
+    },
+    {
+      "species": 22,
+      "nationalIds": [
+        54,
+        55
+      ],
+      "levels": [
+        33
+      ],
+      "artIds": [
+        53,
+        54
+      ],
+      "trigger": "level",
+      "steps": [
+        {
+          "level": 33,
+          "trigger": "level"
+        }
+      ]
+    },
+    {
+      "species": 23,
+      "nationalIds": [
+        56,
+        57
+      ],
+      "levels": [
+        28
+      ],
+      "artIds": [
+        55,
+        56
+      ],
+      "trigger": "level",
+      "steps": [
+        {
+          "level": 28,
+          "trigger": "level"
+        }
+      ]
+    },
+    {
+      "species": 24,
+      "nationalIds": [
+        58,
+        59
+      ],
+      "levels": [
+        0
+      ],
+      "artIds": [
+        57,
+        58
+      ],
+      "trigger": "fire-stone",
+      "steps": [
+        {
+          "level": 0,
+          "trigger": "fire-stone",
+          "item": "火之石",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "species": 25,
+      "nationalIds": [
+        60,
+        61,
+        62
+      ],
+      "levels": [
+        25,
+        0
+      ],
+      "artIds": [
+        59,
+        60,
+        61
+      ],
+      "trigger": "mixed",
+      "steps": [
+        {
+          "level": 25,
+          "trigger": "level"
+        },
+        {
+          "level": 0,
+          "trigger": "water-stone",
+          "item": "水之石",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "species": 26,
+      "nationalIds": [
+        63,
+        64,
+        65
+      ],
+      "levels": [
+        16,
+        0
+      ],
+      "artIds": [
+        62,
+        63,
+        64
+      ],
+      "trigger": "mixed",
+      "steps": [
+        {
+          "level": 16,
+          "trigger": "level"
+        },
+        {
+          "level": 0,
+          "trigger": "link-cord",
+          "item": "联系之绳",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "species": 27,
+      "nationalIds": [
+        66,
+        67,
+        68
+      ],
+      "levels": [
+        28,
+        0
+      ],
+      "artIds": [
+        65,
+        66,
+        67
+      ],
+      "trigger": "mixed",
+      "steps": [
+        {
+          "level": 28,
+          "trigger": "level"
+        },
+        {
+          "level": 0,
+          "trigger": "link-cord",
+          "item": "联系之绳",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "species": 28,
+      "nationalIds": [
+        69,
+        70,
+        71
+      ],
+      "levels": [
+        21,
+        0
+      ],
+      "artIds": [
+        68,
+        69,
+        70
+      ],
+      "trigger": "mixed",
+      "steps": [
+        {
+          "level": 21,
+          "trigger": "level"
+        },
+        {
+          "level": 0,
+          "trigger": "leaf-stone",
+          "item": "叶之石",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "species": 29,
+      "nationalIds": [
+        72,
+        73
+      ],
+      "levels": [
+        30
+      ],
+      "artIds": [
+        71,
+        72
+      ],
+      "trigger": "level",
+      "steps": [
+        {
+          "level": 30,
+          "trigger": "level"
+        }
+      ]
+    },
+    {
+      "species": 30,
+      "nationalIds": [
+        74,
+        75,
+        76
+      ],
+      "levels": [
+        25,
+        0
+      ],
+      "artIds": [
+        73,
+        74,
+        75
+      ],
+      "trigger": "mixed",
+      "steps": [
+        {
+          "level": 25,
+          "trigger": "level"
+        },
+        {
+          "level": 0,
+          "trigger": "link-cord",
+          "item": "联系之绳",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "species": 31,
+      "nationalIds": [
+        77,
+        78
+      ],
+      "levels": [
+        40
+      ],
+      "artIds": [
+        76,
+        77
+      ],
+      "trigger": "level",
+      "steps": [
+        {
+          "level": 40,
+          "trigger": "level"
+        }
+      ]
+    },
+    {
+      "species": 32,
+      "nationalIds": [
+        79,
+        80
+      ],
+      "levels": [
+        37
+      ],
+      "artIds": [
+        78,
+        79
+      ],
+      "trigger": "level",
+      "steps": [
+        {
+          "level": 37,
+          "trigger": "level"
+        }
+      ]
+    },
+    {
+      "species": 33,
+      "nationalIds": [
+        81,
+        82
+      ],
+      "levels": [
+        30
+      ],
+      "artIds": [
+        80,
+        81
+      ],
+      "trigger": "level",
+      "steps": [
+        {
+          "level": 30,
+          "trigger": "level"
+        }
+      ]
+    },
+    {
+      "species": 35,
+      "nationalIds": [
+        84,
+        85
+      ],
+      "levels": [
+        31
+      ],
+      "artIds": [
+        83,
+        84
+      ],
+      "trigger": "level",
+      "steps": [
+        {
+          "level": 31,
+          "trigger": "level"
+        }
+      ]
+    },
+    {
+      "species": 36,
+      "nationalIds": [
+        86,
+        87
+      ],
+      "levels": [
+        34
+      ],
+      "artIds": [
+        85,
+        86
+      ],
+      "trigger": "level",
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 34
+        }
+      ]
+    },
+    {
+      "species": 37,
+      "nationalIds": [
+        88,
+        89
+      ],
+      "levels": [
+        38
+      ],
+      "artIds": [
+        87,
+        88
+      ],
+      "trigger": "level",
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 38
+        }
+      ]
+    },
+    {
+      "species": 38,
+      "nationalIds": [
+        90,
+        91
+      ],
+      "levels": [
+        0
+      ],
+      "artIds": [
+        89,
+        90
+      ],
+      "trigger": "water-stone",
+      "steps": [
+        {
+          "trigger": "water-stone",
+          "level": 0,
+          "item": "水之石",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "species": 39,
+      "nationalIds": [
+        92,
+        93,
+        94
+      ],
+      "levels": [
+        25,
+        0
+      ],
+      "artIds": [
+        91,
+        92,
+        93
+      ],
+      "trigger": "mixed",
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 25
+        },
+        {
+          "trigger": "link-cord",
+          "level": 0,
+          "item": "联系之绳",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "species": 41,
+      "nationalIds": [
+        96,
+        97
+      ],
+      "levels": [
+        26
+      ],
+      "artIds": [
+        95,
+        96
+      ],
+      "trigger": "level",
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 26
+        }
+      ]
+    },
+    {
+      "species": 42,
+      "nationalIds": [
+        98,
+        99
+      ],
+      "levels": [
+        28
+      ],
+      "artIds": [
+        97,
+        98
+      ],
+      "trigger": "level",
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 28
+        }
+      ]
+    },
+    {
+      "species": 43,
+      "nationalIds": [
+        100,
+        101
+      ],
+      "levels": [
+        30
+      ],
+      "artIds": [
+        99,
+        100
+      ],
+      "trigger": "level",
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "species": 44,
+      "nationalIds": [
+        102,
+        103
+      ],
+      "levels": [
+        0
+      ],
+      "artIds": [
+        101,
+        102
+      ],
+      "trigger": "leaf-stone",
+      "steps": [
+        {
+          "trigger": "leaf-stone",
+          "level": 0,
+          "item": "叶之石",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "species": 45,
+      "nationalIds": [
+        104,
+        105
+      ],
+      "levels": [
+        28
+      ],
+      "artIds": [
+        103,
+        104
+      ],
+      "trigger": "level",
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 28
+        }
+      ]
+    },
+    {
+      "species": 49,
+      "nationalIds": [
+        109,
+        110
+      ],
+      "levels": [
+        35
+      ],
+      "artIds": [
+        108,
+        109
+      ],
+      "trigger": "level",
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 35
+        }
+      ]
+    },
+    {
+      "species": 50,
+      "nationalIds": [
+        111,
+        112
+      ],
+      "levels": [
+        40
+      ],
+      "artIds": [
+        110,
+        111
+      ],
+      "trigger": "level",
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 40
+        }
+      ]
+    },
+    {
+      "species": 54,
+      "nationalIds": [
+        116,
+        117
+      ],
+      "levels": [
+        32
+      ],
+      "artIds": [
+        115,
+        116
+      ],
+      "trigger": "level",
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 32
+        }
+      ]
+    },
+    {
+      "species": 55,
+      "nationalIds": [
+        118,
+        119
+      ],
+      "levels": [
+        33
+      ],
+      "artIds": [
+        117,
+        118
+      ],
+      "trigger": "level",
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 33
+        }
+      ]
+    },
+    {
+      "species": 56,
+      "nationalIds": [
+        120,
+        121
+      ],
+      "levels": [
+        0
+      ],
+      "artIds": [
+        119,
+        120
+      ],
+      "trigger": "water-stone",
+      "steps": [
+        {
+          "trigger": "water-stone",
+          "item": "水之石",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "species": 64,
+      "nationalIds": [
+        129,
+        130
+      ],
+      "levels": [
+        20
+      ],
+      "artIds": [
+        128,
+        129
+      ],
+      "trigger": "level",
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 20
+        }
+      ]
+    },
+    {
+      "species": 67,
+      "nationalIds": [
+        133,
+        134,
+        135,
+        136
+      ],
+      "artIds": [
+        132,
+        133,
+        134,
+        135
+      ],
+      "levels": [],
+      "trigger": "branch",
+      "branches": [
+        {
+          "fromNationalId": 133,
+          "toNationalId": 134,
+          "trigger": "water-stone",
+          "item": "水之石",
+          "price": 200
+        },
+        {
+          "fromNationalId": 133,
+          "toNationalId": 135,
+          "trigger": "thunder-stone",
+          "item": "雷之石",
+          "price": 200
+        },
+        {
+          "fromNationalId": 133,
+          "toNationalId": 136,
+          "trigger": "fire-stone",
+          "item": "火之石",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "species": 69,
+      "nationalIds": [
+        138,
+        139
+      ],
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 40
+        }
+      ],
+      "artIds": [
+        137,
+        138
+      ],
+      "levels": [
+        40
+      ],
+      "trigger": "level"
+    },
+    {
+      "species": 70,
+      "nationalIds": [
+        140,
+        141
+      ],
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 40
+        }
+      ],
+      "artIds": [
+        139,
+        140
+      ],
+      "levels": [
+        40
+      ],
+      "trigger": "level"
+    },
+    {
+      "species": 76,
+      "nationalIds": [
+        147,
+        148,
+        149
+      ],
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 30
+        },
+        {
+          "trigger": "level",
+          "level": 55
+        }
+      ],
+      "artIds": [
+        146,
+        147,
+        148
+      ],
+      "levels": [
+        30,
+        55
+      ],
+      "trigger": "level"
+    }
+  ],
+  "stonePrice": 200,
+  "pendingChains": [],
+  "decision": {
+    "options": [
+      "进化",
+      "保持原样 · 永久"
+    ],
+    "scope": "individual-pet",
+    "declinePermanent": true,
+    "gift": {
+      "collectionId": 583,
+      "name": "纯净之心",
+      "unique": true
+    },
+    "declineCost": 0,
+    "declineMessage": "成长，也可以是守护最初的自己。",
+    "evolveMessage": "每一次成长，都有你的陪伴。",
+    "saveVersion": 4
+  },
+  "maxLevel": 60
+}
