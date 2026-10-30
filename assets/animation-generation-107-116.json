@@ -1,0 +1,70 @@
+{
+  "scope": "107-116",
+  "generator": "mobiiot-imagegen",
+  "generated": [
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116
+  ],
+  "exported": [
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116
+  ],
+  "completed": true,
+  "status": "complete;integrated firmware/Web v0.18.0",
+  "failedNationalId": null,
+  "runtimeIntegrated": true,
+  "firmwareVersion": "v0.18.0",
+  "identityCompletedNationalIds": [
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116
+  ],
+  "completedAnimationNationalIds": [
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116
+  ],
+  "pendingAnimationNationalIds": [],
+  "acceptedVersions": {
+    "107": 1,
+    "108": 1,
+    "109": 1,
+    "110": 1,
+    "111": 1,
+    "112": 1,
+    "113": 1,
+    "114": 1,
+    "115": 1,
+    "116": 1
+  }
+}

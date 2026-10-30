@@ -1,0 +1,35 @@
+{
+  "scope": "010-018",
+  "generated": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "completed": true,
+  "status": "generated, exported, visually reviewed, integrated and validated",
+  "acceptedVersions": {
+    "10": 2,
+    "11": 1,
+    "12": 1,
+    "13": 2,
+    "14": 1,
+    "15": 1,
+    "16": 1,
+    "17": 1,
+    "18": 2
+  },
+  "firmwareVersion": "0.7.0",
+  "poses": 432,
+  "directions": 2,
+  "rejectedMasters": {
+    "10": "v1: attack row had seven poses or touching silhouettes",
+    "13": "v1: attack row had seven poses or touching silhouettes",
+    "18": "v1: attack row had seven poses or touching silhouettes"
+  }
+}

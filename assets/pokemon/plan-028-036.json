@@ -1,0 +1,170 @@
+{
+  "range": [
+    28,
+    36
+  ],
+  "status": "all nine complete; integrated into firmware and Web v0.10.0",
+  "runtimeIntegrated": true,
+  "source": "assets/source/gen1-028-036-v12.png",
+  "prompt": "assets/prompts/gen1-028-036-v12.txt",
+  "actions": [
+    "idle",
+    "walk",
+    "happy",
+    "eat",
+    "sleep",
+    "attack"
+  ],
+  "framesPerAction": 8,
+  "nativeCanvas": 48,
+  "silhouetteMax": 40,
+  "maxOpaqueColors": 15,
+  "items": [
+    {
+      "nationalId": 28,
+      "name": "穿山王",
+      "english": "Sandslash",
+      "artId": 27,
+      "species": 10,
+      "stage": 1
+    },
+    {
+      "nationalId": 29,
+      "name": "尼多兰",
+      "english": "Nidoran-female",
+      "artId": 28,
+      "species": 11,
+      "stage": 0
+    },
+    {
+      "nationalId": 30,
+      "name": "尼多娜",
+      "english": "Nidorina",
+      "artId": 29,
+      "species": 11,
+      "stage": 1
+    },
+    {
+      "nationalId": 31,
+      "name": "尼多后",
+      "english": "Nidoqueen",
+      "artId": 30,
+      "species": 11,
+      "stage": 2
+    },
+    {
+      "nationalId": 32,
+      "name": "尼多朗",
+      "english": "Nidoran-male",
+      "artId": 31,
+      "species": 12,
+      "stage": 0
+    },
+    {
+      "nationalId": 33,
+      "name": "尼多力诺",
+      "english": "Nidorino",
+      "artId": 32,
+      "species": 12,
+      "stage": 1
+    },
+    {
+      "nationalId": 34,
+      "name": "尼多王",
+      "english": "Nidoking",
+      "artId": 33,
+      "species": 12,
+      "stage": 2
+    },
+    {
+      "nationalId": 35,
+      "name": "皮皮",
+      "english": "Clefairy",
+      "artId": 34,
+      "species": 13,
+      "stage": 0
+    },
+    {
+      "nationalId": 36,
+      "name": "皮可西",
+      "english": "Clefable",
+      "artId": 35,
+      "species": 13,
+      "stage": 1
+    }
+  ],
+  "evolution": [
+    {
+      "species": 10,
+      "nationalIds": [
+        27,
+        28
+      ],
+      "steps": [
+        {
+          "level": 22
+        }
+      ]
+    },
+    {
+      "species": 11,
+      "nationalIds": [
+        29,
+        30,
+        31
+      ],
+      "steps": [
+        {
+          "level": 16
+        },
+        {
+          "item": "月之石",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "species": 12,
+      "nationalIds": [
+        32,
+        33,
+        34
+      ],
+      "steps": [
+        {
+          "level": 16
+        },
+        {
+          "item": "月之石",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "species": 13,
+      "nationalIds": [
+        35,
+        36
+      ],
+      "steps": [
+        {
+          "item": "月之石",
+          "price": 200
+        }
+      ]
+    }
+  ],
+  "identityGenerationAttempts": 5,
+  "completedAnimationNationalIds": [
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36
+  ],
+  "pendingAnimationNationalIds": []
+}

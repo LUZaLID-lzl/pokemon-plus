@@ -1,0 +1,186 @@
+{
+  "range": [
+    47,
+    56
+  ],
+  "status": "completed full animations and runtime integration v0.12.0",
+  "runtimeIntegrated": true,
+  "actions": [
+    "idle",
+    "walk",
+    "happy",
+    "eat",
+    "sleep",
+    "attack"
+  ],
+  "framesPerAction": 8,
+  "items": [
+    {
+      "nationalId": 47,
+      "name": "派拉斯特",
+      "english": "Parasect",
+      "artId": 46,
+      "species": 18,
+      "stage": 1
+    },
+    {
+      "nationalId": 48,
+      "name": "毛球",
+      "english": "Venonat",
+      "artId": 47,
+      "species": 19,
+      "stage": 0
+    },
+    {
+      "nationalId": 49,
+      "name": "摩鲁蛾",
+      "english": "Venomoth",
+      "artId": 48,
+      "species": 19,
+      "stage": 1
+    },
+    {
+      "nationalId": 50,
+      "name": "地鼠",
+      "english": "Diglett",
+      "artId": 49,
+      "species": 20,
+      "stage": 0
+    },
+    {
+      "nationalId": 51,
+      "name": "三地鼠",
+      "english": "Dugtrio",
+      "artId": 50,
+      "species": 20,
+      "stage": 1
+    },
+    {
+      "nationalId": 52,
+      "name": "喵喵",
+      "english": "Meowth",
+      "artId": 51,
+      "species": 21,
+      "stage": 0
+    },
+    {
+      "nationalId": 53,
+      "name": "猫老大",
+      "english": "Persian",
+      "artId": 52,
+      "species": 21,
+      "stage": 1
+    },
+    {
+      "nationalId": 54,
+      "name": "可达鸭",
+      "english": "Psyduck",
+      "artId": 53,
+      "species": 22,
+      "stage": 0
+    },
+    {
+      "nationalId": 55,
+      "name": "哥达鸭",
+      "english": "Golduck",
+      "artId": 54,
+      "species": 22,
+      "stage": 1
+    },
+    {
+      "nationalId": 56,
+      "name": "猴怪",
+      "english": "Mankey",
+      "artId": 55,
+      "species": 23,
+      "stage": 0
+    }
+  ],
+  "evolution": [
+    {
+      "species": 18,
+      "nationalIds": [
+        46,
+        47
+      ],
+      "steps": [
+        {
+          "level": 24
+        }
+      ]
+    },
+    {
+      "species": 19,
+      "nationalIds": [
+        48,
+        49
+      ],
+      "steps": [
+        {
+          "level": 31
+        }
+      ]
+    },
+    {
+      "species": 20,
+      "nationalIds": [
+        50,
+        51
+      ],
+      "steps": [
+        {
+          "level": 26
+        }
+      ]
+    },
+    {
+      "species": 21,
+      "nationalIds": [
+        52,
+        53
+      ],
+      "steps": [
+        {
+          "level": 28
+        }
+      ]
+    },
+    {
+      "species": 22,
+      "nationalIds": [
+        54,
+        55
+      ],
+      "steps": [
+        {
+          "level": 33
+        }
+      ]
+    }
+  ],
+  "pendingEvolution": [
+    {
+      "species": 23,
+      "nationalIds": [
+        56,
+        57
+      ],
+      "level": 28,
+      "status": "057 not generated; no runtime evolution until next batch"
+    }
+  ],
+  "identityGenerationAttempts": 3,
+  "completedAnimationNationalIds": [
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56
+  ],
+  "pendingAnimationNationalIds": []
+}
