@@ -1,0 +1,281 @@
+{
+  "scope": "147-151",
+  "generator": "mobiiot-imagegen",
+  "generated": [
+    147,
+    148,
+    149,
+    150,
+    151
+  ],
+  "exported": [
+    147,
+    148,
+    149,
+    150,
+    151
+  ],
+  "completed": true,
+  "runtimeIntegrated": true,
+  "activeTask": null,
+  "failedTask": null,
+  "failedNationalId": null,
+  "failureLog": null,
+  "continuationPreference": null,
+  "status": "147-151 reviewed artwork and complete48-pose sets integrated into firmware/Web v0.29.0; runtime QA passed",
+  "identityCompletedNationalIds": [
+    147,
+    148,
+    149,
+    150,
+    151
+  ],
+  "completedAnimationNationalIds": [
+    147,
+    148,
+    149,
+    150,
+    151
+  ],
+  "pendingIdentityNationalIds": [],
+  "pendingAnimationNationalIds": [],
+  "previousStoppedTasks": [
+    {
+      "kind": "identity",
+      "nationalId": 149,
+      "version": 1,
+      "log": "build/identity-149-generation-v1.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy x1;HTTP500/unclassified x5",
+      "prompt": "assets/prompts/identity-149-v1.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 1,
+        "500": 5
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 149,
+      "version": 2,
+      "log": "build/identity-149-generation-v2.log",
+      "attempts": 6,
+      "category": "network/connection_refused",
+      "prompt": "assets/prompts/identity-149-v2.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {},
+      "networkErrorCounts": {
+        "connection_refused": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 149,
+      "version": 3,
+      "log": "build/identity-149-generation-v3.log",
+      "attempts": 6,
+      "category": "network/connection_refused",
+      "prompt": "assets/prompts/identity-149-v3.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {},
+      "networkErrorCounts": {
+        "connection_refused": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 149,
+      "version": 4,
+      "log": "build/identity-149-generation-v4.log",
+      "attempts": 6,
+      "category": "network/connection_refused",
+      "prompt": "assets/prompts/identity-149-v4.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {},
+      "networkErrorCounts": {
+        "connection_refused": 6
+      }
+    },
+    {
+      "kind": "service-model-discovery",
+      "nationalId": 149,
+      "version": null,
+      "attempts": 6,
+      "category": "no_gpt_image_model",
+      "baseUrl": "http://172.16.104.193:8317/v1",
+      "log": "build/mobiiot-models-172-16-104-193-check.log",
+      "sourceImage": null,
+      "note": "Captured output of installed imagegen.py models; no image generation endpoint invoked"
+    },
+    {
+      "kind": "identity",
+      "nationalId": 149,
+      "version": 5,
+      "log": "build/identity-149-generation-v5.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-149-v5.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 149,
+      "version": 6,
+      "log": "build/identity-149-generation-v6.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-149-v6.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 149,
+      "version": 7,
+      "log": "build/identity-149-generation-v7.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-149-v7.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 150,
+      "version": 1,
+      "log": "build/identity-150-generation-v1.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-150-v1.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "animation",
+      "nationalId": 150,
+      "version": 1,
+      "log": "assets/prompts/animation-150/generation-v1.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/animation-150/master-v1.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 151,
+      "version": 1,
+      "log": "build/identity-151-generation-v1.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-151-v1.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 151,
+      "version": 2,
+      "log": "build/identity-151-generation-v2.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-151-v2.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 151,
+      "version": 3,
+      "log": "build/identity-151-generation-v3.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-151-v3.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 151,
+      "version": 4,
+      "log": "build/identity-151-generation-v4.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-151-v4.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 151,
+      "version": 5,
+      "log": "build/identity-151-generation-v5.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-151-v5.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 151,
+      "version": 6,
+      "log": "build/identity-151-generation-v6.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-151-v6.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 151,
+      "version": 7,
+      "log": "build/identity-151-generation-v7.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-151-v7.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 151,
+      "version": 8,
+      "log": "build/identity-151-generation-v8.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-151-v8.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    }
+  ],
+  "artScopeCompleted": true
+}

@@ -1,0 +1,198 @@
+--- a/core/game.h
++++ b/core/game.h
+@@ -4,9 +4,10 @@
+ #include <stdint.h>
+ #include "pokedex_roster.h"
+ #define PP_PETS 5
+-#define PP_SPECIES 11
+-#define PP_EVOLUTIONS 16
++#define PP_SPECIES 14
++#define PP_EVOLUTIONS 22
+ #define PP_THUNDER_STONE_PRICE 200u
++#define PP_MOON_STONE_PRICE 200u
+ #define PP_ITEMS 6
+ /* Immediate hatch is shop-only; keep six-slot inventory/save layout intact. */
+ #define PP_INSTANT_EGG PP_ITEMS
+@@ -138,6 +139,9 @@
+ pp_result pp_decline_evolution(pp_game *, unsigned pet);
+ /* Purchased and consumed on the selected Pikachu; no save inventory slot. */
+ pp_result pp_evolve_thunder_stone(pp_game *, unsigned pet);
++/* Current-form stone, purchased/consumed atomically without inventory expansion. */
++const char *pp_evolution_stone(const pp_game *, unsigned pet);
++pp_result pp_evolve_stone(pp_game *, unsigned pet);
+ const char *pp_form_name(const pp_game *, unsigned pet);
+ unsigned pp_art_id(const pp_game *, unsigned pet);
+ unsigned pp_base_art(unsigned species);
+--- a/core/game.c
++++ b/core/game.c
+@@ -11,7 +11,7 @@
+ #include <stdio.h>
+ #include <string.h>
+ const pp_dex_entry pp_pokedex[PP_DEX_COUNT] = { PP_DEX_ENTRIES };
+-const char *const pp_pet_names[] = {"皮卡丘", "妙蛙种子", "小火龙", "杰尼龟", "绿毛虫", "独角虫", "波波", "小拉达", "烈雀", "阿柏蛇", "穿山鼠"};
++const char *const pp_pet_names[] = {"皮卡丘", "妙蛙种子", "小火龙", "杰尼龟", "绿毛虫", "独角虫", "波波", "小拉达", "烈雀", "阿柏蛇", "穿山鼠", "尼多兰", "尼多朗", "皮皮"};
+ const char *const pp_scene_names[] = {
+     "清晨庭院", "樱花小院", "晴日海岸", "城镇", "秋日木林", "雪落小镇",
+     "水晶洞穴", "蘑菇秘境", "星空山丘", "沙漠绿洲", "雨中村庄", "天空岛"};
+@@ -778,7 +778,9 @@
+  {5,7,0,14,"铁壳蛹"}, {5,10,1,15,"大针蜂"},
+  {6,18,0,17,"比比鸟"}, {6,36,1,18,"大比鸟"},
+  {7,20,0,20,"拉达"}, {8,20,0,22,"大嘴雀"},
+- {9,22,0,24,"阿柏怪"}, {0,0,0,25,"雷丘"}};
++ {9,22,0,24,"阿柏怪"}, {0,0,0,25,"雷丘"},
++ {10,22,0,27,"穿山王"}, {11,16,0,29,"尼多娜"}, {11,0,1,30,"尼多后"},
++ {12,16,0,32,"尼多力诺"}, {12,0,1,33,"尼多王"}, {13,0,0,35,"皮可西"}};
+ unsigned pp_evolution_level(const pp_game *g, unsigned pet) {
+   if (pet >= g->count || pp_evolution_locked(g, pet))
+     return 0;
+@@ -793,11 +795,20 @@
+ bool pp_evolution_locked(const pp_game *g, unsigned pet) {
+   return pet < g->count && (g->evolution_declined & (1ULL << pet));
+ }
++const char *pp_evolution_stone(const pp_game *g, unsigned pet) {
++  if (pet >= g->count) return NULL;
++  for (unsigned i=0;i<PP_EVOLUTIONS;i++) {
++    const pp_evolution_template *t=&pp_evolutions[i];
++    if (t->species==g->pets[pet].species && t->from_stage==g->growth[pet].stage && !t->level)
++      return t->species==0 ? "雷之石" : "月之石";
++  }
++  return NULL;
++}
+ /* Check the current form and activity before either irreversible choice. */
+ pp_result pp_evolution_offer(const pp_game *g, unsigned pet) {
+   if (pet >= g->count || pp_needs_starter(g)) return PP_INVALID;
+   if (pp_evolution_locked(g, pet)) return PP_EVOLUTION_LOCKED;
+-  bool stone = g->pets[pet].species == 0 && !g->growth[pet].stage;
++  bool stone = pp_evolution_stone(g, pet) != NULL;
+   unsigned gate = pp_evolution_level(g, pet);
+   if (!gate && !stone) return PP_INVALID;
+   if (g->traveler == (int)pet || (g->battling && g->battle_pet == pet) ||
+@@ -826,12 +837,20 @@
+ }
+ pp_result pp_evolve_thunder_stone(pp_game *g, unsigned pet) {
+   if (pet >= g->count || g->pets[pet].species != 0 || g->growth[pet].stage) return PP_INVALID;
++  return pp_evolve_stone(g, pet);
++}
++pp_result pp_evolve_stone(pp_game *g, unsigned pet) {
++  const char *stone=pp_evolution_stone(g, pet);
++  if (!stone) return PP_INVALID;
+   pp_result result = pp_evolution_offer(g, pet);
+   if (result != PP_OK) return result;
+-  if (g->coins < PP_THUNDER_STONE_PRICE) return PP_NO_COINS;
+-  g->coins -= PP_THUNDER_STONE_PRICE;
++  unsigned price=g->pets[pet].species==0 ? PP_THUNDER_STONE_PRICE : PP_MOON_STONE_PRICE;
++  if (g->coins < price) return PP_NO_COINS;
++  g->coins -= price;
+   g->growth[pet].stage++;
+-  log_line(g, "使用雷之石，进化为雷丘！");
++  char s[96];
++  snprintf(s,sizeof(s),"使用%s，进化为%s！",stone,pp_form_name(g,pet));
++  log_line(g, s);
+   return PP_OK;
+ }
+ const char *pp_form_name(const pp_game *g, unsigned pet) {
+--- a/core/moves.h
++++ b/core/moves.h
+@@ -7,7 +7,7 @@
+   PP_FIRE,
+   PP_WATER,
+   PP_NORMAL,
+-  PP_BUG, PP_POISON, PP_FLYING, PP_GROUND, PP_ROCK
++  PP_BUG, PP_POISON, PP_FLYING, PP_GROUND, PP_ROCK, PP_FAIRY
+ } pp_move_type;
+ typedef struct {
+   const char *name, *type_name, *description;
+--- a/core/moves.c
++++ b/core/moves.c
+@@ -48,10 +48,21 @@
+     {"啄钻", "飞行", "旋转尖喙攻击", PP_FLYING},
+     {"酸液炸弹", "毒", "发射酸液团", PP_POISON},
+     {"地震", "地面", "震动地面攻击", PP_GROUND},
+-
++    {"毒针", "毒", "射出毒针攻击", PP_POISON},
++    {"啄", "飞行", "用尖锐的喙啄击", PP_FLYING},
++    {"拍击", "一般", "用前肢拍击对手", PP_NORMAL},
++    {"咬住", "一般", "用牙齿咬住对手", PP_NORMAL},
++    {"角撞", "一般", "用尖角撞击对手", PP_NORMAL},
++    {"魅惑之声", "妖精", "用妖精之声攻击", PP_FAIRY},
++    {"毒液冲击", "毒", "将毒液泼向对手", PP_POISON},
++    {"毒针", "毒", "射出毒针攻击", PP_POISON},
++    {"巨声", "一般", "用响亮的声音攻击", PP_NORMAL},
++    {"毒击", "毒", "用带毒的肢体刺击", PP_POISON},
++    {"毒击", "毒", "用带毒的肢体刺击", PP_POISON},
++    {"月亮之力", "妖精", "借助月亮的力量攻击", PP_FAIRY},
+ };
+ const pp_move *pp_move_at(unsigned species, unsigned slot) {
+   if (species >= PP_SPECIES || slot >= PP_MOVE_SLOTS)
+     return 0;
+-  return &pp_moves[species<4 ? slot*4+species : species<7 ? 16+slot*3+species-4 : 28+slot*4+species-7];
++  return &pp_moves[species<4 ? slot*4+species : species<7 ? 16+slot*3+species-4 : species<11 ? 28+slot*4+species-7 : 44+slot*3+species-11];
+ }
+--- a/main/game_ui.c
++++ b/main/game_ui.c
+@@ -75,7 +75,8 @@
+ /* Primary types, independent of whichever attack occupies slot zero. */
+ static const unsigned evo_colors[] = {
+   0xf4ce58, 0x80cb83, 0xf69b68, 0x74c7ed, 0xb4cb65, 0xb4cb65,
+-  0xc4b29a, 0xc4b29a, 0xc4b29a, 0xc294df, 0xd9b67c
++  0xc4b29a, 0xc4b29a, 0xc4b29a, 0xc294df, 0xd9b67c,
++  0xc294df, 0xc294df, 0xf4a8c5
+ };
+ static void evolution_tick(void);
+ static void evolution_open(unsigned pet, bool stone);
+@@ -1147,8 +1148,8 @@
+       if (pp_evolution_locked(g, selected)) {
+         lv_obj_t *l=label(body,"已选择永久不进化",70,152,220,0xbbe6df);
+         lv_obj_set_style_text_font(l,&pp_font_12,0);
+-      } else if (g->pets[selected].species == 0 && !growth->stage) {
+-        snprintf(s,sizeof(s),"雷之石 · %u币",PP_THUNDER_STONE_PRICE);
++      } else if (pp_evolution_stone(g,selected)) {
++        snprintf(s,sizeof(s),"%s · %u币",pp_evolution_stone(g,selected),PP_THUNDER_STONE_PRICE);
+         button(body,s,98,144,164,32,177);
+       } else if (gate) {
+         snprintf(s, sizeof(s),
+@@ -1401,7 +1402,7 @@
+ static void evolution_choose(bool decline) {
+   if (!evolution || !evo_choosing) return;
+   unsigned pet=evo_pet_id, before_art=evo_before_art; bool stone=evo_stone;
+-  pp_result result=decline?pp_decline_evolution(g,pet):stone?pp_evolve_thunder_stone(g,pet):pp_evolve(g,pet);
++  pp_result result=decline?pp_decline_evolution(g,pet):stone?pp_evolve_stone(g,pet):pp_evolve(g,pet);
+   if (result != PP_OK) {
+     if (result == PP_NO_COINS) { notice(pp_message(result)); lv_obj_move_foreground(toast); return; }
+     selected=pet;pp_ui_open(4);notice(pp_message(result));return;
+@@ -1421,7 +1422,7 @@
+   lv_obj_set_style_bg_opa(evolution, 255, 0);
+   lv_obj_remove_flag(evolution, LV_OBJ_FLAG_SCROLLABLE);
+   lv_obj_add_flag(evolution, LV_OBJ_FLAG_CLICKABLE);
+-  lv_obj_t *l = label(evolution, decline ? "守护最初的自己" : stone ? "雷之石进化" : "突破进化", 70, 47, 220, evo_tint);
++  lv_obj_t *l = label(evolution, decline ? "守护最初的自己" : stone ? (g->pets[pet].species==0?"雷之石进化":"月之石进化") : "突破进化", 70, 47, 220, evo_tint);
+   lv_obj_set_style_text_font(l, &pp_font_18, 0);
+   char str[96];
+   snprintf(str, sizeof(str), "%s", decline ? "成长，也可以是\n守护最初的自己。" : "每一次成长，都有你的陪伴。");
+--- a/main/battle_view.c
++++ b/main/battle_view.c
+@@ -64,7 +64,7 @@
+ 
+ static const unsigned palette[] = {0xffdf69, 0x8fe68b, 0xff9a63, 0x6edaff,
+                                    0xe6d2c1, 0xb8d961, 0xc78de0, 0xb4e8ed, 0xd6b685,
+-                                   0xbcb397};
++                                   0xbcb397, 0xf4a8c5};
+ static lv_obj_t *caption(lv_obj_t *parent, const char *s, int x, int y, int w,
+                          const lv_font_t *font, unsigned c) {
+   lv_obj_t *o = lv_label_create(parent);
+@@ -139,6 +139,15 @@
+       for(unsigned i=0;i<24;i++) {
+         int x=source+(int)((dest-source)*progress)+(int)(i%6)*5-15;
+         pixel(x,124+(int)(i/6)*3-(int)(sinf(ms*.02f+i)*6),3,3,i%3?tint:0xf3dfb4,235);
++      }
++    } else if (type == PP_FAIRY) {
++      int x=source+(int)((dest-source)*progress);
++      for(unsigned i=0;i<12;i++) {
++        int dx=(int)(cosf(i*1.9f+ms*.004f)*18);
++        int dy=(int)(sinf(i*1.9f+ms*.004f)*14);
++        unsigned c=i%3?tint:0xfff0dc;
++        pixel(x+dx-3,118+dy,7,2,c,235);
++        pixel(x+dx,115+dy,2,7,c,235);
+       }
+     } else if (type == PP_BUG || type == PP_POISON || type == PP_FLYING) {
+       int x = source + (int)((dest-source)*progress);

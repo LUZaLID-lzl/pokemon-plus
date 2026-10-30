@@ -1,0 +1,10 @@
+Create a pixel-art animation atlas for the horned cream horse in the attached approved reference. Preserve the one ivory forehead horn, two ears, four gray-hoofed legs and connected orange-red mane and tail. All shapes are friendly and compact.
+Use a transparent 1536x1152 canvas, with exactly eight columns and six rows. Each complete horse is centered inside a192x192 cell, with its whole silhouette no wider than85px and no taller than90px, including mane, horn and tail. Keep generous fully transparent space between every pair of horses. Exactly48 isolated whole-body silhouettes. No detached flame particles, shadows, text or grid.
+Maintain the left-facing view, cream torso volume, native48px pixel style, crisp square blocks, continuous thin deep-navy outline and at most15 opaque colors plus transparency.
+Row1: eight subtly different idle breathing/blinking phases.
+Row2: eight short alternating four-leg walking phases, drawn in place.
+Row3: eight small cheerful forehoof lifts that return to neutral.
+Row4: eight muzzle lowering and gentle chewing phases; four legs remain beneath torso.
+Row5: eight low lying resting phases; all four legs tucked, eye fully CLOSED in EVERY pose. Keep the single horn visible above the muzzle. Tiny breathing/mane changes only.
+Row6: eight compact forehoof brace and head-nod phases: prepare, brace, lean, peak, recoil, recover, settle, neutral. Keep tail close to rear body.
+Draw each complete pose separately with real leg/head/eyelid articulation, no translated or stretched duplicate frames. Keep the horn attached and visible in all48 images. Loop boundaries are gentle; no changes in body size or facing.

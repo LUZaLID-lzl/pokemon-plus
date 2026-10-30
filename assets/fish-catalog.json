@@ -1,0 +1,218 @@
+[
+  {
+    "id": 0,
+    "name": "青尾鱼",
+    "weight": 230,
+    "coins": 10,
+    "rarity": 0,
+    "image": "fishing/fish-0.png"
+  },
+  {
+    "id": 1,
+    "name": "银鳍鱼",
+    "weight": 140,
+    "coins": 18,
+    "rarity": 0,
+    "image": "fishing/fish-1.png"
+  },
+  {
+    "id": 2,
+    "name": "金鳞鱼",
+    "weight": 40,
+    "coins": 35,
+    "rarity": 1,
+    "image": "fishing/fish-2.png"
+  },
+  {
+    "id": 3,
+    "name": "红斑鲫",
+    "weight": 110,
+    "coins": 12,
+    "rarity": 0,
+    "image": "fishing/fish-3.png"
+  },
+  {
+    "id": 4,
+    "name": "蓝纹鲈",
+    "weight": 80,
+    "coins": 16,
+    "rarity": 0,
+    "image": "fishing/fish-4.png"
+  },
+  {
+    "id": 5,
+    "name": "虎纹鳜",
+    "weight": 55,
+    "coins": 22,
+    "rarity": 1,
+    "image": "fishing/fish-5.png"
+  },
+  {
+    "id": 6,
+    "name": "月光鳟",
+    "weight": 35,
+    "coins": 40,
+    "rarity": 1,
+    "image": "fishing/fish-6.png"
+  },
+  {
+    "id": 7,
+    "name": "紫晶鱼",
+    "weight": 22,
+    "coins": 55,
+    "rarity": 2,
+    "image": "fishing/fish-7.png"
+  },
+  {
+    "id": 8,
+    "name": "樱花鲤",
+    "weight": 18,
+    "coins": 65,
+    "rarity": 2,
+    "image": "fishing/fish-8.png"
+  },
+  {
+    "id": 9,
+    "name": "星砂鱼",
+    "weight": 10,
+    "coins": 85,
+    "rarity": 2,
+    "image": "fishing/fish-9.png"
+  },
+  {
+    "id": 10,
+    "name": "琉璃蝶鱼",
+    "weight": 7,
+    "coins": 110,
+    "rarity": 3,
+    "image": "fishing/fish-10.png"
+  },
+  {
+    "id": 11,
+    "name": "金冠龙鱼",
+    "weight": 3,
+    "coins": 160,
+    "rarity": 3,
+    "image": "fishing/fish-11.png"
+  },
+  {
+    "id": 12,
+    "name": "柠檬鳉",
+    "weight": 40,
+    "coins": 12,
+    "rarity": 0,
+    "image": "fishing/fish-12.png"
+  },
+  {
+    "id": 13,
+    "name": "黑背鲶",
+    "weight": 35,
+    "coins": 14,
+    "rarity": 0,
+    "image": "fishing/fish-13.png"
+  },
+  {
+    "id": 14,
+    "name": "红眼鲢",
+    "weight": 30,
+    "coins": 15,
+    "rarity": 0,
+    "image": "fishing/fish-14.png"
+  },
+  {
+    "id": 15,
+    "name": "翠叶鲷",
+    "weight": 25,
+    "coins": 24,
+    "rarity": 1,
+    "image": "fishing/fish-15.png"
+  },
+  {
+    "id": 16,
+    "name": "斑点鳐",
+    "weight": 22,
+    "coins": 28,
+    "rarity": 1,
+    "image": "fishing/fish-16.png"
+  },
+  {
+    "id": 17,
+    "name": "雪纹鳗",
+    "weight": 20,
+    "coins": 32,
+    "rarity": 1,
+    "image": "fishing/fish-17.png"
+  },
+  {
+    "id": 18,
+    "name": "蓝焰斗鱼",
+    "weight": 18,
+    "coins": 38,
+    "rarity": 1,
+    "image": "fishing/fish-18.png"
+  },
+  {
+    "id": 19,
+    "name": "玫瑰神仙鱼",
+    "weight": 15,
+    "coins": 60,
+    "rarity": 2,
+    "image": "fishing/fish-19.png"
+  },
+  {
+    "id": 20,
+    "name": "琥珀河豚",
+    "weight": 12,
+    "coins": 70,
+    "rarity": 2,
+    "image": "fishing/fish-20.png"
+  },
+  {
+    "id": 21,
+    "name": "银月剑鱼",
+    "weight": 10,
+    "coins": 80,
+    "rarity": 2,
+    "image": "fishing/fish-21.png"
+  },
+  {
+    "id": 22,
+    "name": "虹彩孔雀鱼",
+    "weight": 8,
+    "coins": 95,
+    "rarity": 2,
+    "image": "fishing/fish-22.png"
+  },
+  {
+    "id": 23,
+    "name": "霜角冰鱼",
+    "weight": 6,
+    "coins": 125,
+    "rarity": 3,
+    "image": "fishing/fish-23.png"
+  },
+  {
+    "id": 24,
+    "name": "流星灯笼鱼",
+    "weight": 4,
+    "coins": 145,
+    "rarity": 3,
+    "image": "fishing/fish-24.png"
+  },
+  {
+    "id": 25,
+    "name": "赤焰龙鲤",
+    "weight": 3,
+    "coins": 180,
+    "rarity": 3,
+    "image": "fishing/fish-25.png"
+  },
+  {
+    "id": 26,
+    "name": "极光女王鱼",
+    "weight": 2,
+    "coins": 220,
+    "rarity": 3,
+    "image": "fishing/fish-26.png"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "nationalId": 23,
+  "status": "accepted; shared LVGL smoke passed",
+  "frames": 48,
+  "actions": 6,
+  "uniquePosesPerAction": 8,
+  "checks": [
+    "binary transparency",
+    "48px native canvas",
+    "40px maximum silhouette",
+    "16 opaque colors maximum",
+    "exact right-facing mirrors",
+    "source SHA256",
+    "visual identity, action rows and closed-eye sleep"
+  ],
+  "gameIntegrated": true,
+  "acceptedVersion": 1,
+  "firmwareVersion": "0.8.0"
+}

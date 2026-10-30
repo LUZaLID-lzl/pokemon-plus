@@ -1,0 +1,312 @@
+{
+  "identityReviewed": [
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136
+  ],
+  "animationReviewed": [
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136
+  ],
+  "runtimeIntegrated": true,
+  "acceptedVersions": {
+    "127": 1,
+    "128": 1,
+    "129": 1,
+    "130": 3,
+    "131": 1,
+    "132": 1,
+    "133": 1,
+    "134": 1,
+    "135": 3,
+    "136": 1
+  },
+  "note": "127–136全套已接入；135动作v2睡姿验收不通过保留为历史，正式使用v3；伊布三条互斥分支已实现。",
+  "identitySources": {
+    "127": {
+      "sourceImage": "assets/source/identity-127-v1.png",
+      "version": 1,
+      "attempts": 4,
+      "sourceSha256": "8771e710cdc33a9e50efc02ddbd240dec4c418cc33def9ce490e44db235bf3c9"
+    },
+    "128": {
+      "sourceImage": "assets/source/identity-128-v1.png",
+      "version": 1,
+      "attempts": 1,
+      "sourceSha256": "5374aef6bff0d77b99993df9189f92b4a0dcfb4066f55979deaa1367bc910904"
+    },
+    "129": {
+      "sourceImage": "assets/source/identity-129-v1.png",
+      "version": 1,
+      "attempts": 1,
+      "sourceSha256": "03bff7f72d93f42db0e53a394b541ab76895efce6df7dfc0fa9975be5526bb48"
+    },
+    "130": {
+      "sourceImage": "assets/source/identity-130-v2.png",
+      "version": 2,
+      "attempts": 6,
+      "sourceSha256": "c7c938c4a8d4d8d26d5cbb0486157868fc2b1735730326942792edca4d54ba91"
+    },
+    "131": {
+      "sourceImage": "assets/source/identity-131-v1.png",
+      "version": 1,
+      "attempts": 6,
+      "sourceSha256": "8500e75092300a54d76489870c3767cb90cbdfa8b59aa4361f9b3295cc31bdb3"
+    },
+    "132": {
+      "sourceImage": "assets/source/identity-132-v1.png",
+      "version": 1,
+      "attempts": 1,
+      "sourceSha256": "fe62210fea32d66af07b0ac7a924bafac1175d19b853288595edfafbef540787"
+    },
+    "133": {
+      "sourceImage": "assets/source/identity-133-v6.png",
+      "version": 6,
+      "attempts": 3,
+      "sourceSha256": "a611bdb3a2edf68a8033418aaa6aaeb3731cc7f94d86e9bdba50d1ab7e05168d"
+    },
+    "134": {
+      "sourceImage": "assets/source/identity-134-v8.png",
+      "version": 8,
+      "attempts": 6,
+      "sourceSha256": "4ab74a3d52a3567d52eb215cfc881aac969f498dfc9b9b20139a78aedb4401bd"
+    },
+    "135": {
+      "sourceImage": "assets/source/identity-135-v1.png",
+      "version": 1,
+      "attempts": 5,
+      "sourceSha256": "a0307b13c7c3fa5c1bb31b2c503a66ceeb7ee962ca2b17a009db73645d5f95d7"
+    },
+    "136": {
+      "sourceImage": "assets/source/identity-136-v1.png",
+      "version": 1,
+      "attempts": 1,
+      "sourceSha256": "ae48da71c7efd40aba553932d5a8a7a0986c5210a3ec7405b42c14987e1d27a0"
+    }
+  },
+  "notes": {
+    "127": "identity: Raw/native48 accepted: compact brown stag beetle, two cream attached head antlers, two eyes/vertical mouth, two connected arms and two legs with claws; no detached parts. Fourth attempt succeeded.\nanimation: All48 raw/native accepted: two cream head antlers and claws attached throughout, articulated stepping/arm gestures, small mouth phases, all8 low seated eyes fully closed, awake brace/recovery. First attempt.",
+    "128": "identity: Raw/native48 accepted: brown quadruped bull with two attached cream horns, forehead/mane, four hooved legs and exactly three connected tufted tails; no biped limbs or extra horns. First attempt.\nanimation: All48 raw/native accepted: quadruped stance retained, alternating four-leg phases and exactly three attached tufted tails, connected horns/mane, eight low lying closed-eye rest poses, compact foreleg/head brace and recovery; no biped standing. First attempt.",
+    "129": "identity: Raw/native48 accepted: orange fish with two eyes/pink open mouth, two attached cream whiskers, golden crown dorsal fin and attached cream side fins/tail; no legs. First attempt.\nanimation: All48 raw/native accepted: genuine connected tail/fin and whisker phases, crown dorsal fin preserved, small mouth changes, all8 low horizontal closed-eye sleep, awake fin/head brace and recovery; no legs/water/bubbles. Third animation attempt succeeded.",
+    "130": "identity: Raw/native48 accepted: blue compact coiled serpentine body, cream segmented underside, attached white fins and blue tail, two eyes/red irises, open cream muzzle, two attached cream whiskers; no legs or detached parts. Identityv2 sixth attempt succeeded; v1 failures retained.\nanimation: All48 raw/native poses accepted in v3: connected thick short whiskers/fins/serpentine tail, genuine coiling/fin/head/mouth phases, ALL8 low coiled sleep poses closed eyelids and closed mouths, awake compact prepare/recoil/recovery. v1 failed native connectivity and v2 failed sleep expressions; retained as rejected sources.",
+    "131": "identity: Raw/native48 accepted: blue long-neck water companion, two attached curled ear fins, cream throat/underside, four attached flippers, gray-purple blunt-studded back shell and attached short tail. Identityv1 sixth attempt succeeded (three HTTP500 then two HTTP400 responses retained).\nanimation: All48 raw/native accepted: long neck/curled ears/shell/four flippers remain attached; alternating flipper and neck/mouth phases, all8 low head-rest closed-eye poses, compact awake brace and recovery. First animation attempt.",
+    "132": "identity: Raw/native48 accepted: one compact purple amorphous connected body, two tiny dark eyes and simple smile, connected side lobes and wavy base; no separate limbs. First identity attempt.\nanimation: All48 raw/native accepted: connected purple soft-body lobes/base deform naturally with expression changes; no separate limbs; all8 low closed-eye sleep poses, compact concentration/recovery. First animation attempt.",
+    "133": "identity: Accepted raw and native48: brown compact quadruped Eevee, two tall dark-inner ears, two eyes, cream connected neck ruff and attached cream-tip tail; front and rear paws read as a natural three-quarter quadruped. Binary alpha, connected silhouette and compact15-color native export checked. Identityv6 succeeded on attempt3; v1-v5 six-failure histories retained.\nanimation: Accepted raw48-pose atlas and native contact sheet: six full8-pose rows, articulated four-paw gait, connected ears/ruff/cream-tip tail, eating head motions, ALL8 low-lying sleep poses fully closed eyelids, compact brace/lean/recoil/recovery. Eight distinct frames per action, shared palette, binary alpha and exact mirrored directions verified by exporter; no cut-body assembly.",
+    "134": "identity: Accepted raw/native48: cyan quadruped Vaporeon derived from reviewed133, two cream fin ears plus central head fin, two eyes, connected cream frill, four paws, dark-blue ridge and attached fish tail. Complete connected silhouette/native palette and alpha checked. Identityv8 succeeded at attempt6; v1-v7 six-failure histories preserved.\nanimation: Accepted original48-pose atlas and native contact sheet: six8-pose rows, articulated four-paw travel, fin/ruff/ridge/tail remain connected; ALL8 low sleep poses have fully closed eyelids and curled tail. Compact prepare/lean/recoil/recovery and natural feeding/happy motions checked. Eight unique/action, binary alpha/shared palette and exact mirrored directions passed export. Masterv1 succeeded on attempt2.",
+    "135": "identity: Accepted raw/native48 Jolteon: yellow compact quadruped, two tall dark-inner ears, two eyes, white connected spiky neck ruff, short paws and compact pointed rump fur. Source/native silhouette complete, binary alpha and compact palette checked. Identityv1 succeeded at attempt5, based on133 family reference.\nanimation: Accepted original master-v3 and native48 contact sheet: six8-pose rows, four-paw articulated travel, connected spiky white ruff/yellow rump/ears. ALL8 sleep poses lie low with both eyes represented by closed eyelid lines, no pupils/highlights; priorv2 open-eyed sleep source rejected and retained. Subtle breathing, feeding and prepare/lean/recoil/recovery checked. Eight unique/action, binary alpha/shared palette/exact mirrors pass export. v3 succeeded on attempt6.",
+    "136": "identity: Accepted raw/native48: orange compact quadruped Flareon from133 family reference; two tall dark-inner ears, two eyes, connected cream forehead tuft/neck ruff and large cream bushy tail; short paws and full body silhouette intact. Native binary alpha/shared compact palette checked. Identityv1 succeeded on first attempt.\nanimation: Accepted original master-v1/native48 contact sheet: six8-pose rows, orange quadruped with connected cream forehead tuft/ruff/bushy tail, four-paw gait and complete compact action phases. ALL8 sleep poses low-lying with both eyes closed; breathing/feeding/happy movements preserve anatomy. Eight unique/action,binary alpha,shared palette,exact mirrors pass exporter. First attempt success."
+  },
+  "activeTask": null,
+  "status": "complete reviewed identities and full48-pose templates; integrated firmware/Web v0.21.1",
+  "previousStoppedTasks": [
+    {
+      "kind": "identity",
+      "nationalId": 130,
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-130-generation-v1.log",
+      "prompt": "assets/prompts/identity-130-v1.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 133,
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-133-generation-v1.log",
+      "prompt": "assets/prompts/identity-133-v1.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 133,
+      "version": 2,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-133-generation-v2.log",
+      "prompt": "assets/prompts/identity-133-v2.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 133,
+      "version": 3,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-133-generation-v3.log",
+      "prompt": "assets/prompts/identity-133-v3.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 133,
+      "version": 4,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-133-generation-v4.log",
+      "prompt": "assets/prompts/identity-133-v4.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 133,
+      "version": 5,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-133-generation-v5.log",
+      "prompt": "assets/prompts/identity-133-v5.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 134,
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-134-generation-v1.log",
+      "prompt": "assets/prompts/identity-134-v1.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 134,
+      "version": 2,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-134-generation-v2.log",
+      "prompt": "assets/prompts/identity-134-v2.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 134,
+      "version": 3,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-134-generation-v3.log",
+      "prompt": "assets/prompts/identity-134-v3.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 134,
+      "version": 4,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-134-generation-v4.log",
+      "prompt": "assets/prompts/identity-134-v4.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 134,
+      "version": 5,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-134-generation-v5.log",
+      "prompt": "assets/prompts/identity-134-v5.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 134,
+      "version": 6,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-134-generation-v6.log",
+      "prompt": "assets/prompts/identity-134-v6.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 134,
+      "version": 7,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-134-generation-v7.log",
+      "prompt": "assets/prompts/identity-134-v7.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "animation",
+      "nationalId": 135,
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "assets/prompts/animation-135/generation-v1.log",
+      "prompt": "assets/prompts/animation-135/master-v1.txt",
+      "sourceImage": null
+    }
+  ],
+  "rejectedSources": [
+    {
+      "nationalId": 130,
+      "kind": "animation",
+      "version": 1,
+      "attempts": 1,
+      "source": "assets/source/animation-130-master-v1.png",
+      "reason": "Raw48 poses complete; native reduction rejects detached fine whisker fragment. Not accepted or integrated. Regenerate thicker attached whiskers."
+    },
+    {
+      "nationalId": 130,
+      "kind": "animation",
+      "version": 2,
+      "attempts": 1,
+      "source": "assets/source/animation-130-master-v2.png",
+      "reason": "Connectivity export passes; visual inspection finds open-eye/mouth expressions in sleep row third/sixth poses. Not accepted or integrated; regenerate all48 with closed sleep expressions."
+    },
+    {
+      "nationalId": 135,
+      "kind": "animation",
+      "version": 2,
+      "source": "assets/source/animation-135-master-v2.png",
+      "sourceSha256": "0943effc0b5dfbff05023d3c02cd21df857209fd4959db7f1c0a2253ff0b493a",
+      "reason": "Generated48-pose source/export succeeded; visual QA rejected sleep row: several poses raise heads and display open eyes, particularly columns6/8. Not a service failure.",
+      "attempts": 1,
+      "review": "Original atlas and native contact-sheet inspected"
+    }
+  ],
+  "integratedNationalIds": [
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136
+  ],
+  "firmwareVersion": "v0.21.1",
+  "scopeCompleted": true,
+  "continuationPreference": {
+    "order": "national-number",
+    "nextNationalId": 139,
+    "nextKind": "identity",
+    "source": "User retains numbered order;137–138 full art reviewed, next139 identity"
+  },
+  "failedTask": null,
+  "failedNationalId": null,
+  "failureLog": null,
+  "completed": true,
+  "pendingIdentityNationalIds": [],
+  "pendingAnimationNationalIds": []
+}
