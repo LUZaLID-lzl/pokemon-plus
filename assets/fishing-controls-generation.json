@@ -1,0 +1,14 @@
+{
+  "service": "MobiIoT",
+  "model": "gpt-image-1.5",
+  "attempts": 1,
+  "reviewed": true,
+  "source": "source/fishing-controls-v1.png",
+  "prompt": "prompts/fishing-controls-v1.txt",
+  "sourceSha256": "6d1d6f7d2c21278d969f16e017e318dc965ebce28a3d915b490ff3be7f6ee95c",
+  "recipe": "two padded cells; alpha>=200; whole icon nearest fit28x28;32x32 canvas;15 opaque colors plus binary transparency",
+  "icons": [
+    "fishing/partner-icon.png",
+    "fishing/dex-icon.png"
+  ]
+}

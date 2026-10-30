@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "kind": "single-pose art review",
+  "generator": "MobiIoT",
+  "model": "gpt-image-2.5-sunburst",
+  "attempts": 2,
+  "sourceAtlas": "../../source/gen1-019-027-v11.png",
+  "sourceSha256": "3f199c8baedb891e6f5b419f5a5da088fa015c168fa08fe48c75d0b0d403818e",
+  "prompt": "../../prompts/gen1-019-027-v11.txt",
+  "nativeCanvas": 48,
+  "upscale": 8,
+  "maxColors": 16,
+  "outlineColor": "#1b263a",
+  "alpha": "binary",
+  "outline": "one connected 4-neighbor boundary; local corner bridges",
+  "processing": "MobiIoT atlas split by measured source boxes, nearest-neighbor reduction, palette quantization and deterministic closed-outline repair",
+  "gameIntegrated": false,
+  "animationPosesPerSpecies": 1,
+  "items": [
+    {
+      "id": 19,
+      "name": "小拉达",
+      "english": "Rattata",
+      "chain": 6,
+      "stage": 0,
+      "evolvesTo": 20,
+      "image": "019.png",
+      "preview": "019@8x.png",
+      "sourceBox": [
+        49,
+        86,
+        432,
+        378
+      ],
+      "outlinePixels": 170,
+      "source": "https://wiki.52poke.com/wiki/小拉达"
+    },
+    {
+      "id": 20,
+      "name": "拉达",
+      "english": "Raticate",
+      "chain": 6,
+      "stage": 1,
+      "evolvesTo": null,
+      "image": "020.png",
+      "preview": "020@8x.png",
+      "sourceBox": [
+        462,
+        49,
+        878,
+        388
+      ],
+      "outlinePixels": 209,
+      "source": "https://wiki.52poke.com/wiki/拉达"
+    },
+    {
+      "id": 21,
+      "name": "烈雀",
+      "english": "Spearow",
+      "chain": 7,
+      "stage": 0,
+      "evolvesTo": 22,
+      "image": "021.png",
+      "preview": "021@8x.png",
+      "sourceBox": [
+        949,
+        45,
+        1291,
+        386
+      ],
+      "outlinePixels": 182,
+      "source": "https://wiki.52poke.com/wiki/烈雀"
+    },
+    {
+      "id": 22,
+      "name": "大嘴雀",
+      "english": "Fearow",
+      "chain": 7,
+      "stage": 1,
+      "evolvesTo": null,
+      "image": "022.png",
+      "preview": "022@8x.png",
+      "sourceBox": [
+        34,
+        402,
+        494,
+        761
+      ],
+      "outlinePixels": 180,
+      "source": "https://wiki.52poke.com/wiki/大嘴雀"
+    },
+    {
+      "id": 23,
+      "name": "阿柏蛇",
+      "english": "Ekans",
+      "chain": 8,
+      "stage": 0,
+      "evolvesTo": 24,
+      "image": "023.png",
+      "preview": "023@8x.png",
+      "sourceBox": [
+        536,
+        467,
+        873,
+        754
+      ],
+      "outlinePixels": 174,
+      "source": "https://wiki.52poke.com/wiki/阿柏蛇"
+    },
+    {
+      "id": 24,
+      "name": "阿柏怪",
+      "english": "Arbok",
+      "chain": 8,
+      "stage": 1,
+      "evolvesTo": null,
+      "image": "024.png",
+      "preview": "024@8x.png",
+      "sourceBox": [
+        940,
+        400,
+        1312,
+        773
+      ],
+      "outlinePixels": 175,
+      "source": "https://wiki.52poke.com/wiki/阿柏怪"
+    },
+    {
+      "id": 25,
+      "name": "皮卡丘",
+      "english": "Pikachu",
+      "chain": 9,
+      "stage": 0,
+      "evolvesTo": 26,
+      "image": "025.png",
+      "preview": "025@8x.png",
+      "sourceBox": [
+        59,
+        780,
+        440,
+        1131
+      ],
+      "outlinePixels": 224,
+      "source": "https://wiki.52poke.com/wiki/皮卡丘"
+    },
+    {
+      "id": 26,
+      "name": "雷丘",
+      "english": "Raichu",
+      "chain": 9,
+      "stage": 1,
+      "evolvesTo": null,
+      "image": "026.png",
+      "preview": "026@8x.png",
+      "sourceBox": [
+        490,
+        772,
+        904,
+        1136
+      ],
+      "outlinePixels": 228,
+      "source": "https://wiki.52poke.com/wiki/雷丘"
+    },
+    {
+      "id": 27,
+      "name": "穿山鼠",
+      "english": "Sandshrew",
+      "chain": 10,
+      "stage": 0,
+      "evolvesTo": 28,
+      "image": "027.png",
+      "preview": "027@8x.png",
+      "sourceBox": [
+        964,
+        804,
+        1304,
+        1136
+      ],
+      "outlinePixels": 168,
+      "source": "https://wiki.52poke.com/wiki/穿山鼠"
+    }
+  ]
+}

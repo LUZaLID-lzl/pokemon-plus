@@ -1,0 +1,127 @@
+{
+  "version": "v14",
+  "styleReference": "source/courtyard-hud-v13.png",
+  "jobs": [
+    {
+      "id": 1,
+      "name": "樱花小院",
+      "reference": "reference/scenes-hud-v14/01.png",
+      "prompt": "prompts/scenes-hud-v14/01.txt",
+      "source": "source/scenes-hud-v14/01.png",
+      "status": "reviewed-integrated",
+      "attempts": 1,
+      "model": "gpt-image-2.5-sunburst",
+      "sha256": "3898b28a16301d4f0c52be5e6d86acca7ee4e9b1a7bfd92985fc873d5c4957af"
+    },
+    {
+      "id": 2,
+      "name": "晴日海岸",
+      "reference": "reference/scenes-hud-v14/02.png",
+      "prompt": "prompts/scenes-hud-v14/02.txt",
+      "source": "source/scenes-hud-v14/02.png",
+      "status": "reviewed-integrated",
+      "attempts": 1,
+      "model": "gpt-image-2.5-sunburst",
+      "sha256": "699bb38ca3bf2be2d0ce5ce7319c057557fc91c7f3f0ee32365ff23a438dc57e"
+    },
+    {
+      "id": 3,
+      "name": "月光森林",
+      "reference": "reference/scenes-hud-v14/03.png",
+      "prompt": "prompts/scenes-hud-v14/03.txt",
+      "source": "source/scenes-hud-v14/03.png",
+      "status": "reviewed-integrated",
+      "attempts": 1,
+      "model": "gpt-image-2.5-sunburst",
+      "sha256": "7218f2489dd151f41bf7b3c18f3166ebe99279f052c8e0d35c56e4cd063abcdc"
+    },
+    {
+      "id": 4,
+      "name": "秋日木林",
+      "reference": "reference/scenes-hud-v14/04.png",
+      "prompt": "prompts/scenes-hud-v14/04.txt",
+      "source": "source/scenes-hud-v14/04.png",
+      "status": "reviewed-integrated",
+      "attempts": 1,
+      "model": "gpt-image-2.5-sunburst",
+      "sha256": "8734743fd031e2e9834a5e1ed620770cbeadfcacbf5654b3bce343b51f072061"
+    },
+    {
+      "id": 5,
+      "name": "雪落小镇",
+      "reference": "reference/scenes-hud-v14/05.png",
+      "prompt": "prompts/scenes-hud-v14/05.txt",
+      "source": "source/scenes-hud-v14/05.png",
+      "status": "reviewed-integrated",
+      "attempts": 1,
+      "model": "gpt-image-2.5-sunburst",
+      "sha256": "d102ec83347dbbb635fe65054dd7a04e29f4c47608d37a997f04a6c8e6c10ca2"
+    },
+    {
+      "id": 6,
+      "name": "向日葵田",
+      "reference": "reference/scenes-hud-v14/06.png",
+      "prompt": "prompts/scenes-hud-v14/06.txt",
+      "source": "source/scenes-hud-v14/06.png",
+      "status": "reviewed-integrated",
+      "attempts": 1,
+      "model": "gpt-image-2.5-sunburst",
+      "sha256": "261d50aa4c6f698c65f7c1a57b0a940953fc199ba39ffa0fa5b6c67e88861109"
+    },
+    {
+      "id": 7,
+      "name": "蘑菇秘境",
+      "reference": "reference/scenes-hud-v14/07.png",
+      "prompt": "prompts/scenes-hud-v14/07.txt",
+      "source": "source/scenes-hud-v14/07.png",
+      "status": "reviewed-integrated",
+      "attempts": 1,
+      "model": "gpt-image-2.5-sunburst",
+      "sha256": "61ac9f156d821fe9f17f0b18337e29e7e184f28d038180ac8a124d8a505e38b8"
+    },
+    {
+      "id": 8,
+      "name": "星空山丘",
+      "reference": "reference/scenes-hud-v14/08.png",
+      "prompt": "prompts/scenes-hud-v14/08.txt",
+      "source": "source/scenes-hud-v14/08.png",
+      "status": "reviewed-integrated",
+      "attempts": 1,
+      "model": "gpt-image-2.5-sunburst",
+      "sha256": "3b1c49bde9ac4a13794c9539d73fbe5ceb64b1dbabca46ca4e7501976fc796b0"
+    },
+    {
+      "id": 9,
+      "name": "沙漠绿洲",
+      "reference": "reference/scenes-hud-v14/09.png",
+      "prompt": "prompts/scenes-hud-v14/09.txt",
+      "source": "source/scenes-hud-v14/09.png",
+      "status": "reviewed-integrated",
+      "attempts": 1,
+      "model": "gpt-image-2.5-sunburst",
+      "sha256": "58850be7f94149b0a91da17b7dd617708585f1fcb7ff18fb394b76c62ed2c3ec"
+    },
+    {
+      "id": 10,
+      "name": "雨中村庄",
+      "reference": "reference/scenes-hud-v14/10.png",
+      "prompt": "prompts/scenes-hud-v14/10.txt",
+      "source": "source/scenes-hud-v14/10.png",
+      "status": "reviewed-integrated",
+      "attempts": 1,
+      "model": "gpt-image-2.5-sunburst",
+      "sha256": "e9c429fb2f6417f62732abc15271cdc0df558546e92801ccd64bf658f88389f5"
+    },
+    {
+      "id": 11,
+      "name": "春日花园",
+      "reference": "reference/scenes-hud-v14/11.png",
+      "prompt": "prompts/scenes-hud-v14/11.txt",
+      "source": "source/scenes-hud-v14/11.png",
+      "status": "reviewed-integrated",
+      "attempts": 1,
+      "model": "gpt-image-2.5-sunburst",
+      "sha256": "8c86cdd02b7f9e7cd61c94e2dc66059c64b64ba3aad464df4d0cd057d19620fc"
+    }
+  ]
+}

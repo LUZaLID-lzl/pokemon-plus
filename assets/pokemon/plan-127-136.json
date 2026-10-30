@@ -1,0 +1,346 @@
+{
+  "range": [
+    127,
+    136
+  ],
+  "status": "complete reviewed identities and full48-pose templates; integrated firmware/Web v0.21.1",
+  "runtimeIntegrated": true,
+  "actions": [
+    "idle",
+    "walk",
+    "happy",
+    "eat",
+    "sleep",
+    "attack"
+  ],
+  "framesPerAction": 8,
+  "items": [
+    {
+      "nationalId": 127,
+      "name": "凯罗斯",
+      "english": "Pinsir",
+      "artId": 126,
+      "species": 62,
+      "stage": 0,
+      "anatomy": "brown compact upright stag beetle with TWO large cream antlers attached to head, dark vertical mouth, TWO eyes, TWO brown arms and TWO legs with cream claws; antlers overlap body silhouette"
+    },
+    {
+      "nationalId": 128,
+      "name": "肯泰罗",
+      "english": "Tauros",
+      "artId": 127,
+      "species": 63,
+      "stage": 0,
+      "anatomy": "brown QUADRUPED bull with cream forehead and mane, TWO cream horns, TWO eyes, FOUR sturdy legs with dark hooves, THREE thin attached tails with dark tufts grouped close to body"
+    },
+    {
+      "nationalId": 129,
+      "name": "鲤鱼王",
+      "english": "Magikarp",
+      "artId": 128,
+      "species": 64,
+      "stage": 0,
+      "anatomy": "ORANGE fish with TWO eyes, pink open mouth, TWO attached cream whiskers curving close to body, ONE gold crown-shaped dorsal fin, attached cream side fins and cream tail, no arms or legs"
+    },
+    {
+      "nationalId": 130,
+      "name": "暴鲤龙",
+      "english": "Gyarados",
+      "artId": 129,
+      "species": 64,
+      "stage": 1,
+      "anatomy": "BLUE long serpentine water dragon coiled compactly, cream segmented underside, angular blue crest, TWO eyes, open cream muzzle, TWO attached short whiskers, white back fins and ONE attached blue tail, no legs"
+    },
+    {
+      "nationalId": 131,
+      "name": "拉普拉斯",
+      "english": "Lapras",
+      "artId": 130,
+      "species": 65,
+      "stage": 0,
+      "anatomy": "BLUE plesiosaur companion with long curved neck, TWO curled ear fins, TWO eyes, cream throat and underside, FOUR attached blue flippers, ONE gray-purple rounded shell with short blunt studs on back and short attached tail"
+    },
+    {
+      "nationalId": 132,
+      "name": "百变怪",
+      "english": "Ditto",
+      "artId": 131,
+      "species": 66,
+      "stage": 0,
+      "anatomy": "ONE small PURPLE amorphous rounded body, TWO tiny dark eyes and a small smile, two low connected side lobes and soft wavy base, no separate arms or legs"
+    },
+    {
+      "nationalId": 133,
+      "name": "伊布",
+      "english": "Eevee",
+      "artId": 132,
+      "species": 67,
+      "stage": 0,
+      "anatomy": "BROWN small QUADRUPED fox, TWO tall ears with dark interiors, TWO eyes, cream fluffy neck ruff, FOUR short paws and ONE large attached brown tail with cream tip"
+    },
+    {
+      "nationalId": 134,
+      "name": "水伊布",
+      "english": "Vaporeon",
+      "artId": 133,
+      "species": 67,
+      "stage": 1,
+      "anatomy": "CYAN small QUADRUPED aquatic fox, TWO fin-like ears and ONE short head fin, TWO eyes, cream neck frill, FOUR short paws, dark-blue back ridge and ONE attached long fish tail curled close"
+    },
+    {
+      "nationalId": 135,
+      "name": "雷伊布",
+      "english": "Jolteon",
+      "artId": 134,
+      "species": 67,
+      "stage": 2,
+      "anatomy": "YELLOW small QUADRUPED fox with compact spiky fur, TWO tall dark-inner ears, TWO eyes, white spiky neck ruff, FOUR short paws and ONE very short yellow tail"
+    },
+    {
+      "nationalId": 136,
+      "name": "火伊布",
+      "english": "Flareon",
+      "artId": 135,
+      "species": 67,
+      "stage": 3,
+      "anatomy": "ORANGE small QUADRUPED fox with TWO tall dark-inner ears, TWO eyes, pale-cream forehead tuft and fluffy neck ruff, FOUR short paws and ONE large attached pale-cream bushy tail"
+    }
+  ],
+  "evolution": [
+    {
+      "species": 64,
+      "nationalIds": [
+        129,
+        130
+      ],
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 20
+        }
+      ]
+    }
+  ],
+  "pendingEvolution": [],
+  "branchEvolution": [
+    {
+      "species": 67,
+      "fromNationalId": 133,
+      "choices": [
+        {
+          "toNationalId": 134,
+          "trigger": "water-stone",
+          "item": "水之石",
+          "price": 200
+        },
+        {
+          "toNationalId": 135,
+          "trigger": "thunder-stone",
+          "item": "雷之石",
+          "price": 200
+        },
+        {
+          "toNationalId": 136,
+          "trigger": "fire-stone",
+          "item": "火之石",
+          "price": 200
+        }
+      ],
+      "note": "Exclusive alternatives, never a sequential133→134→135→136 chain. Stage2/3 here are provisional form keys, not sequential growth. Runtime requires explicit branch selection and save validation before publishing."
+    }
+  ],
+  "activeTask": null,
+  "identityCompletedNationalIds": [
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136
+  ],
+  "completedAnimationNationalIds": [
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136
+  ],
+  "pendingAnimationNationalIds": [],
+  "identityMode": "per-species sources;see identity manifest and visual-review identitySources",
+  "pendingIdentityNationalIds": [],
+  "previousStoppedTasks": [
+    {
+      "kind": "identity",
+      "nationalId": 130,
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-130-generation-v1.log",
+      "prompt": "assets/prompts/identity-130-v1.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 133,
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-133-generation-v1.log",
+      "prompt": "assets/prompts/identity-133-v1.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 133,
+      "version": 2,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-133-generation-v2.log",
+      "prompt": "assets/prompts/identity-133-v2.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 133,
+      "version": 3,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-133-generation-v3.log",
+      "prompt": "assets/prompts/identity-133-v3.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 133,
+      "version": 4,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-133-generation-v4.log",
+      "prompt": "assets/prompts/identity-133-v4.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 133,
+      "version": 5,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-133-generation-v5.log",
+      "prompt": "assets/prompts/identity-133-v5.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 134,
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-134-generation-v1.log",
+      "prompt": "assets/prompts/identity-134-v1.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 134,
+      "version": 2,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-134-generation-v2.log",
+      "prompt": "assets/prompts/identity-134-v2.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 134,
+      "version": 3,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-134-generation-v3.log",
+      "prompt": "assets/prompts/identity-134-v3.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 134,
+      "version": 4,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-134-generation-v4.log",
+      "prompt": "assets/prompts/identity-134-v4.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 134,
+      "version": 5,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-134-generation-v5.log",
+      "prompt": "assets/prompts/identity-134-v5.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 134,
+      "version": 6,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-134-generation-v6.log",
+      "prompt": "assets/prompts/identity-134-v6.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 134,
+      "version": 7,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-134-generation-v7.log",
+      "prompt": "assets/prompts/identity-134-v7.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "animation",
+      "nationalId": 135,
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "assets/prompts/animation-135/generation-v1.log",
+      "prompt": "assets/prompts/animation-135/master-v1.txt",
+      "sourceImage": null
+    }
+  ],
+  "integratedNationalIds": [
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136
+  ],
+  "firmwareVersion": "v0.21.1",
+  "scopeCompleted": true,
+  "continuationPreference": {
+    "order": "national-number",
+    "nextNationalId": 139,
+    "nextKind": "identity",
+    "source": "User retains numbered order;137–138 full art reviewed, next139 identity"
+  },
+  "failedTask": null,
+  "failedNationalId": null,
+  "failureLog": null,
+  "completed": true
+}

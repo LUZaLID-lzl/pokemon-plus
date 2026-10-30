@@ -1,0 +1,20 @@
+Edit this 13-nest atlas to integrate naturally into the attached actual game scenery. The last version is rejected: bright saturated gold and black outline look like pasted UI icons. Preserve its readable raised oval woven BOWL structure, empty dark hollow, thick front wall and low perspective, but REDESIGN EACH MATERIAL AND PALETTE to belong in its scene. These are props placed on the ground, softly weathered with tiny loose material at their bases. Not holes, not shiny loot, not yellow baskets everywhere. No eggs or creatures. No scenery or floor outside each prop. Transparent background. Exactly same 4x4 grid, first 13 cells occupied, last three empty. Wide separation.
+
+Cozy natural pixel RPG prop art, readable at 24x14 logical pixels per complete sprite. LARGE square pixel clusters, 8-12 colors each, nearest-neighbor pixel art. Subdued midtones, restrained highlights; NO saturated gold/yellow or white glow. NO thick black sticker contour: thin broken outline in a darker shade of LOCAL material. Clearly raised back rim, shadowed interior, lower lit rim, darker sidewall and SHORT SOFT DARK TINTED CONTACT SHADOW directly underneath. No halo. Asymmetric small twigs/grass tie the bottom edge into the ground. Nest colors should be similar to the scenery but cavity and rim still distinct. Every nest viewed from a slightly elevated camera at same angle as the game's floor. Clear hollow and front weave at tiny size; no fine photographic strands, gradients or antialiasing.
+
+READING ORDER, each a deliberately different muted material:
+1 morning grass yard: weathered tan twigs and dry beige straw with olive leaf tips, muted earth tones.
+2 cherry yard: dusty gray-brown twigs with faded pink petals, not bright gold.
+3 sunny beach: sun-bleached gray-tan driftwood and pale dry seagrass, one small muted shell; sandy brown shaded wall.
+4 town: aged medium brown wicker with dull beige straw lining, dark wood floor-compatible shadow.
+5 autumn woodland: reddish weathered twigs and muted russet leaves, dull tan inner lining; distinct hollow.
+6 snowy village: faded tan straw, two small blue-white snow patches, cool blue-gray ground shadow, warm muted inner straw.
+7 crystal cave: desaturated lavender-gray root twigs with dull beige straw interior, one small violet crystal; visible sidewall, no glow.
+8 mushroom woodland: medium olive-brown woven twigs with moss only on edges, dull tan straw inside, one muted red tiny mushroom; no solid green mound.
+9 starry hill: muted cool slate/olive grass stems with gray-beige lining, navy hollow and blue-gray shadow; no gold stars or glow.
+10 desert oasis: faded sand-tan palm fibers and dusty sage leaf tips, pale brown sidewall; no bright yellow gold.
+11 rainy village: wet walnut-brown willow twigs and muted moss leaf lining, cool dark ground shadow, no teal glow.
+12 sky island: desaturated sage-gray grass stems, muted beige woven lining, tiny off-white feather tips, deep muted green interior; not white/cyan/gold.
+13 sacred blue tree: a handmade nest of weathered BLUE-GRAY ROOT TWIGS and DULL PALE GRAY-BEIGE dry grass, 2 small dusty blue leaf tips. Oval raised hollow bowl standing on roots at base of blue tree. Muted desaturated blue outer wall and pale gray-beige inner woven rim readable against medium-blue floor. No gold, no glowing white, no stone altar, no puddle.
+
+Highest priority: each prop belongs naturally to that scene's light and colors while the silhouette still reads as a raised empty nest. Reduce palette saturation and contrast from first reference. Second reference is final authority for environmental colors. Thirteen distinct nests, not thirteen golden baskets.
