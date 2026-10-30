@@ -1,0 +1,309 @@
+{
+  "identityReviewed": [
+    147,
+    148,
+    149,
+    150,
+    151
+  ],
+  "animationReviewed": [
+    147,
+    148,
+    149,
+    150,
+    151
+  ],
+  "runtimeIntegrated": false,
+  "acceptedVersions": {
+    "147": 1,
+    "148": 1,
+    "149": 1,
+    "150": 2,
+    "151": 1
+  },
+  "note": "All147–151 actual identity and animation sources visually reviewed;runtime not integrated",
+  "activeTask": null,
+  "failedTask": null,
+  "failedNationalId": null,
+  "failureLog": null,
+  "continuationPreference": null,
+  "status": "147–151 identities and48-pose animations fully reviewed;art scope complete;runtime integration pending",
+  "identitySources": {
+    "147": {
+      "sourceImage": "assets/source/identity-147-v1.png",
+      "version": 1,
+      "attempts": 3,
+      "sourceSha256": "b270ecc121447bfd66b5f55593fbbfd96863aa6542cad1751564f286cb6d1791"
+    },
+    "148": {
+      "sourceImage": "assets/source/identity-148-v1.png",
+      "version": 1,
+      "attempts": 2,
+      "sourceSha256": "13c4e1e46af92eeca3180f1f00e7304aae90c626dee788d53d9237567d322a49"
+    },
+    "149": {
+      "sourceImage": "assets/source/identity-149-v8.png",
+      "version": 8,
+      "attempts": 1,
+      "sourceSha256": "2de0d03428988040865f4c4f150d25c0eb29b6eee46f371644051253c1f1e57d"
+    },
+    "150": {
+      "sourceImage": "assets/source/identity-150-v2.png",
+      "version": 2,
+      "attempts": 5,
+      "sourceSha256": "3ba99c763bc87ce8ddf6adf91e58761f05ea240b6666ae3a6553ec51b721468d"
+    },
+    "151": {
+      "sourceImage": "assets/source/identity-151-v9.png",
+      "version": 9,
+      "attempts": 2,
+      "sourceSha256": "b6044887fcbfc6697b3c6078f6d2b0e5c0143c14e6d509db4e7bbba97b830039"
+    }
+  },
+  "notes": {
+    "147": "identity: Raw/native visually checked: compact pale-blue serpentine body with cream snout/underside, two attached white fin ears and one short forehead horn; two eyes, continuous curled tail, no invented limbs, transparent margins.\nanimation: Raw/native visually checked:48 distinct complete serpentine poses with connected tail-wave phases, attached ears/horn, no limbs; all8 sleep cells low coiled with eyes fully closed and head resting. Shared palette/binary alpha/exact mirrors pass.",
+    "148": "identity: Raw/native visually checked: longer slender blue serpentine body coiled compactly, cream underside/snout, forehead horn and attached white ear wings; one blue throat orb and two blue tail orbs connected along tail, no limbs, family continuity with147 and transparent margins.\nanimation: Raw/native visually checked:48 distinct connected serpentine poses with neck/tail bends, attached ear fins and throat/tail orbs following the body; all8 sleep cells coiled low with closed eyelids/head resting. No invented limbs, shared palette/binary alpha/exact mirrors pass.",
+    "149": "identity: Raw and native48 visually reviewed: recognizable orange upright dragon, cream segmented belly, two attached antennae and green wings, complete arms/legs/tail, consistent family style.\nanimation: Raw atlas and native48 contact sheet reviewed: eight articulated walking poses with connected wings/antennae/tail; all eight sleep poses low seated and eyes fully closed; six complete rows, natural arm/jaw/body phases; numeric8distinct/action and exact mirrors passed.",
+    "150": "identity: Resumed completed background request: identity-v2 attempt5 succeeded. Raw and native48 visually reviewed: pale lavender feline head/two ears/two eyes, attached hands and digitigrade feet, purple belly and complete attached curled tail; consistent001 game style.\nanimation: Raw atlas/native48 visually reviewed: six complete rows and eight articulated whole-body drawings per row; eight LOW seated sleep poses ALL eyes closed; attached ears/arms/digitigrade feet/purple tail; smooth leg/arm/mouth/gesture phases; numeric8distinct/action and exact mirrors passed.",
+    "151": "identity: Raw/native visually reviewed: pink feline with two short triangular ears, two blue eyes, attached small arms and large hind feet, complete long thin tail with rounded tip curling close; no wings. Numeric48px/40px/15colors/binary alpha/source hash passed; identity-v9 attempt2.\nanimation: Raw atlas and native48 contact sheet visually reviewed: six rows x8 complete whole-body drawings, short arms/hind feet/tail change through floating travel, attached long tail throughout, no wings; ALL8 sleep frames low curled with closed eyelids. Alpha200 resolves semitransparent tail-tip split without redrawing. 8 distinct cropped drawings/action,48px/40px/14colors/binary alpha/exact mirrors/durations/source and frame hashes pass."
+  },
+  "previousStoppedTasks": [
+    {
+      "kind": "identity",
+      "nationalId": 149,
+      "version": 1,
+      "log": "build/identity-149-generation-v1.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy x1;HTTP500/unclassified x5",
+      "prompt": "assets/prompts/identity-149-v1.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 1,
+        "500": 5
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 149,
+      "version": 2,
+      "log": "build/identity-149-generation-v2.log",
+      "attempts": 6,
+      "category": "network/connection_refused",
+      "prompt": "assets/prompts/identity-149-v2.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {},
+      "networkErrorCounts": {
+        "connection_refused": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 149,
+      "version": 3,
+      "log": "build/identity-149-generation-v3.log",
+      "attempts": 6,
+      "category": "network/connection_refused",
+      "prompt": "assets/prompts/identity-149-v3.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {},
+      "networkErrorCounts": {
+        "connection_refused": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 149,
+      "version": 4,
+      "log": "build/identity-149-generation-v4.log",
+      "attempts": 6,
+      "category": "network/connection_refused",
+      "prompt": "assets/prompts/identity-149-v4.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {},
+      "networkErrorCounts": {
+        "connection_refused": 6
+      }
+    },
+    {
+      "kind": "service-model-discovery",
+      "nationalId": 149,
+      "version": null,
+      "attempts": 6,
+      "category": "no_gpt_image_model",
+      "baseUrl": "http://172.16.104.193:8317/v1",
+      "log": "build/mobiiot-models-172-16-104-193-check.log",
+      "sourceImage": null,
+      "note": "Captured output of installed imagegen.py models; no image generation endpoint invoked"
+    },
+    {
+      "kind": "identity",
+      "nationalId": 149,
+      "version": 5,
+      "log": "build/identity-149-generation-v5.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-149-v5.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 149,
+      "version": 6,
+      "log": "build/identity-149-generation-v6.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-149-v6.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 149,
+      "version": 7,
+      "log": "build/identity-149-generation-v7.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-149-v7.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 150,
+      "version": 1,
+      "log": "build/identity-150-generation-v1.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-150-v1.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "animation",
+      "nationalId": 150,
+      "version": 1,
+      "log": "assets/prompts/animation-150/generation-v1.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/animation-150/master-v1.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 151,
+      "version": 1,
+      "log": "build/identity-151-generation-v1.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-151-v1.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 151,
+      "version": 2,
+      "log": "build/identity-151-generation-v2.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-151-v2.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 151,
+      "version": 3,
+      "log": "build/identity-151-generation-v3.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-151-v3.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 151,
+      "version": 4,
+      "log": "build/identity-151-generation-v4.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-151-v4.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 151,
+      "version": 5,
+      "log": "build/identity-151-generation-v5.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-151-v5.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 151,
+      "version": 6,
+      "log": "build/identity-151-generation-v6.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-151-v6.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 151,
+      "version": 7,
+      "log": "build/identity-151-generation-v7.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-151-v7.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 151,
+      "version": 8,
+      "log": "build/identity-151-generation-v8.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-151-v8.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    }
+  ],
+  "artScopeCompleted": true
+}

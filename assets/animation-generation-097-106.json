@@ -1,0 +1,195 @@
+{
+  "range": [
+    97,
+    106
+  ],
+  "status": "complete;integrated firmware/Web v0.17.0",
+  "generated": [
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106
+  ],
+  "exported": [
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106
+  ],
+  "identityCompletedNationalIds": [
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106
+  ],
+  "completedAnimationNationalIds": [
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106
+  ],
+  "pendingAnimationNationalIds": [],
+  "unrequestedAnimationNationalIds": [],
+  "runtimeIntegrated": true,
+  "completed": true,
+  "previousStoppedTasks": [
+    {
+      "kind": "identity",
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/gen1-097-106-generation-v1.log",
+      "prompt": "assets/prompts/gen1-097-106-v1.txt"
+    },
+    {
+      "kind": "animation",
+      "dex": 100,
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "assets/prompts/animation-100/generation-v1.log",
+      "prompt": "assets/prompts/animation-100/master-v1.txt"
+    },
+    {
+      "kind": "animation",
+      "dex": 104,
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "assets/prompts/animation-104/generation-v1.log",
+      "prompt": "assets/prompts/animation-104/master-v1.txt"
+    }
+  ],
+  "identityVersion": 2,
+  "identityAttempts": 1,
+  "scope": "097-106",
+  "generator": "mobiiot-imagegen",
+  "failedNationalId": null,
+  "acceptedVersions": {
+    "97": 1,
+    "98": 1,
+    "99": 1,
+    "100": 2,
+    "101": 1,
+    "102": 1,
+    "103": 1,
+    "104": 2,
+    "105": 1,
+    "106": 1
+  },
+  "visualReview": "docs/gen1-097-106/visual-review.json",
+  "taskHistory": [
+    {
+      "dex": 97,
+      "version": 1,
+      "attempts": 2,
+      "status": "accepted;integrated firmware/Web v0.17.0"
+    },
+    {
+      "dex": 98,
+      "version": 1,
+      "attempts": 1,
+      "status": "accepted;integrated firmware/Web v0.17.0"
+    },
+    {
+      "dex": 99,
+      "version": 1,
+      "attempts": 1,
+      "status": "accepted;integrated firmware/Web v0.17.0"
+    },
+    {
+      "kind": "animation",
+      "dex": 100,
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "assets/prompts/animation-100/generation-v1.log",
+      "prompt": "assets/prompts/animation-100/master-v1.txt",
+      "status": "failed at retry limit;entire batch stopped"
+    },
+    {
+      "dex": 100,
+      "version": 2,
+      "attempts": 5,
+      "status": "accepted;integrated firmware/Web v0.17.0",
+      "log": "assets/prompts/animation-100/generation-v2.log"
+    },
+    {
+      "dex": 101,
+      "version": 1,
+      "attempts": 1,
+      "status": "accepted;integrated firmware/Web v0.17.0",
+      "log": "assets/prompts/animation-101/generation-v1.log"
+    },
+    {
+      "dex": 102,
+      "version": 1,
+      "attempts": 2,
+      "status": "accepted;integrated firmware/Web v0.17.0",
+      "log": "assets/prompts/animation-102/generation-v1.log"
+    },
+    {
+      "dex": 103,
+      "version": 1,
+      "attempts": 1,
+      "status": "accepted;integrated firmware/Web v0.17.0",
+      "log": "assets/prompts/animation-103/generation-v1.log"
+    },
+    {
+      "kind": "animation",
+      "dex": 104,
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "assets/prompts/animation-104/generation-v1.log",
+      "prompt": "assets/prompts/animation-104/master-v1.txt",
+      "status": "failed at retry limit;entire batch stopped"
+    },
+    {
+      "dex": 104,
+      "version": 2,
+      "log": "assets/prompts/animation-104/generation-v2.log",
+      "attempts": 1,
+      "status": "accepted;integrated firmware/Web v0.17.0"
+    },
+    {
+      "dex": 105,
+      "version": 1,
+      "log": "assets/prompts/animation-105/generation-v1.log",
+      "attempts": 1,
+      "status": "accepted;integrated firmware/Web v0.17.0"
+    },
+    {
+      "dex": 106,
+      "version": 1,
+      "log": "assets/prompts/animation-106/generation-v1.log",
+      "attempts": 1,
+      "status": "accepted;integrated firmware/Web v0.17.0"
+    }
+  ],
+  "firmwareVersion": "v0.17.0"
+}

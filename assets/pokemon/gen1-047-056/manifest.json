@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "kind": "single-pose art review",
+  "generator": "MobiIoT",
+  "model": "gpt-image-2.5-sunburst",
+  "attempts": 3,
+  "sourceAtlas": "../../source/gen1-047-056-v1.png",
+  "sourceSha256": "712b4cd0556f123baf4a7184745fce50a0a17ad5aa186d97a4d2708b620f1107",
+  "prompt": "../../prompts/gen1-047-056-v1.txt",
+  "nativeCanvas": 48,
+  "maxColors": 16,
+  "outlineColor": "#1b263a",
+  "alpha": "binary",
+  "gameIntegrated": true,
+  "animationPosesPerSpecies": 1,
+  "items": [
+    {
+      "id": 47,
+      "name": "派拉斯特",
+      "english": "Parasect",
+      "chain": 18,
+      "stage": 1,
+      "image": "047.png",
+      "preview": "047@8x.png",
+      "sourceBox": [
+        16,
+        58,
+        361,
+        369
+      ],
+      "outlinePixels": 189,
+      "source": "https://wiki.52poke.com/wiki/派拉斯特"
+    },
+    {
+      "id": 48,
+      "name": "毛球",
+      "english": "Venonat",
+      "chain": 19,
+      "stage": 0,
+      "image": "048.png",
+      "preview": "048@8x.png",
+      "sourceBox": [
+        474,
+        53,
+        740,
+        375
+      ],
+      "outlinePixels": 215,
+      "source": "https://wiki.52poke.com/wiki/毛球"
+    },
+    {
+      "id": 49,
+      "name": "摩鲁蛾",
+      "english": "Venomoth",
+      "chain": 19,
+      "stage": 1,
+      "image": "049.png",
+      "preview": "049@8x.png",
+      "sourceBox": [
+        797,
+        43,
+        1170,
+        369
+      ],
+      "outlinePixels": 194,
+      "source": "https://wiki.52poke.com/wiki/摩鲁蛾"
+    },
+    {
+      "id": 50,
+      "name": "地鼠",
+      "english": "Diglett",
+      "chain": 20,
+      "stage": 0,
+      "image": "050.png",
+      "preview": "050@8x.png",
+      "sourceBox": [
+        1219,
+        129,
+        1527,
+        374
+      ],
+      "outlinePixels": 144,
+      "source": "https://wiki.52poke.com/wiki/地鼠"
+    },
+    {
+      "id": 51,
+      "name": "三地鼠",
+      "english": "Dugtrio",
+      "chain": 20,
+      "stage": 1,
+      "image": "051.png",
+      "preview": "051@8x.png",
+      "sourceBox": [
+        1592,
+        70,
+        1971,
+        369
+      ],
+      "outlinePixels": 146,
+      "source": "https://wiki.52poke.com/wiki/三地鼠"
+    },
+    {
+      "id": 52,
+      "name": "喵喵",
+      "english": "Meowth",
+      "chain": 21,
+      "stage": 0,
+      "image": "052.png",
+      "preview": "052@8x.png",
+      "sourceBox": [
+        24,
+        436,
+        344,
+        751
+      ],
+      "outlinePixels": 229,
+      "source": "https://wiki.52poke.com/wiki/喵喵"
+    },
+    {
+      "id": 53,
+      "name": "猫老大",
+      "english": "Persian",
+      "chain": 21,
+      "stage": 1,
+      "image": "053.png",
+      "preview": "053@8x.png",
+      "sourceBox": [
+        385,
+        435,
+        789,
+        750
+      ],
+      "outlinePixels": 227,
+      "source": "https://wiki.52poke.com/wiki/猫老大"
+    },
+    {
+      "id": 54,
+      "name": "可达鸭",
+      "english": "Psyduck",
+      "chain": 22,
+      "stage": 0,
+      "image": "054.png",
+      "preview": "054@8x.png",
+      "sourceBox": [
+        833,
+        412,
+        1120,
+        759
+      ],
+      "outlinePixels": 170,
+      "source": "https://wiki.52poke.com/wiki/可达鸭"
+    },
+    {
+      "id": 55,
+      "name": "哥达鸭",
+      "english": "Golduck",
+      "chain": 22,
+      "stage": 1,
+      "image": "055.png",
+      "preview": "055@8x.png",
+      "sourceBox": [
+        1176,
+        411,
+        1544,
+        764
+      ],
+      "outlinePixels": 268,
+      "source": "https://wiki.52poke.com/wiki/哥达鸭"
+    },
+    {
+      "id": 56,
+      "name": "猴怪",
+      "english": "Mankey",
+      "chain": 23,
+      "stage": 0,
+      "image": "056.png",
+      "preview": "056@8x.png",
+      "sourceBox": [
+        1592,
+        441,
+        1964,
+        749
+      ],
+      "outlinePixels": 218,
+      "source": "https://wiki.52poke.com/wiki/猴怪"
+    }
+  ],
+  "integrationNote": "Identity used for avatar and shared action palette; six-action runtime frames are in animation-templates/047..056"
+}

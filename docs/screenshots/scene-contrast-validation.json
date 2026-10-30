@@ -1,0 +1,62 @@
+[
+  {
+    "scene": 0,
+    "luminanceContrastRatio": 0.8412,
+    "brightnessDifference": -0.5147
+  },
+  {
+    "scene": 1,
+    "luminanceContrastRatio": 0.8397,
+    "brightnessDifference": -0.4467
+  },
+  {
+    "scene": 2,
+    "luminanceContrastRatio": 0.8415,
+    "brightnessDifference": -0.5085
+  },
+  {
+    "scene": 3,
+    "luminanceContrastRatio": 0.8409,
+    "brightnessDifference": -0.3127
+  },
+  {
+    "scene": 4,
+    "luminanceContrastRatio": 0.8417,
+    "brightnessDifference": -0.4909
+  },
+  {
+    "scene": 5,
+    "luminanceContrastRatio": 0.8403,
+    "brightnessDifference": -0.4542
+  },
+  {
+    "scene": 6,
+    "luminanceContrastRatio": 0.8405,
+    "brightnessDifference": -0.5577
+  },
+  {
+    "scene": 7,
+    "luminanceContrastRatio": 0.8381,
+    "brightnessDifference": -0.6167
+  },
+  {
+    "scene": 8,
+    "luminanceContrastRatio": 0.8422,
+    "brightnessDifference": -0.5189
+  },
+  {
+    "scene": 9,
+    "luminanceContrastRatio": 0.8405,
+    "brightnessDifference": -0.5183
+  },
+  {
+    "scene": 10,
+    "luminanceContrastRatio": 0.8419,
+    "brightnessDifference": -0.5563
+  },
+  {
+    "scene": 11,
+    "luminanceContrastRatio": 0.841,
+    "brightnessDifference": -0.5972
+  }
+]

@@ -1,0 +1,188 @@
+{
+  "version": 1,
+  "kind": "single-pose art review",
+  "generator": "MobiIoT",
+  "model": "gpt-image-2.5-sunburst",
+  "attempts": 3,
+  "sourceAtlas": "../../source/gen1-037-046-v1.png",
+  "sourceSha256": "950226f38487a366fc8285abb2bcec792b90ae3e8fad4366efaf335bed5daeba",
+  "prompt": "../../prompts/gen1-037-046-v1.txt",
+  "nativeCanvas": 48,
+  "maxColors": 16,
+  "outlineColor": "#1b263a",
+  "alpha": "binary",
+  "gameIntegrated": false,
+  "animationPosesPerSpecies": 1,
+  "items": [
+    {
+      "id": 37,
+      "name": "六尾",
+      "english": "Vulpix",
+      "chain": 14,
+      "stage": 0,
+      "image": "037.png",
+      "preview": "037@8x.png",
+      "sourceBox": [
+        49,
+        158,
+        353,
+        437
+      ],
+      "outlinePixels": 176,
+      "source": "https://wiki.52poke.com/wiki/六尾"
+    },
+    {
+      "id": 38,
+      "name": "九尾",
+      "english": "Ninetales",
+      "chain": 14,
+      "stage": 1,
+      "image": "038.png",
+      "preview": "038@8x.png",
+      "sourceBox": [
+        366,
+        96,
+        724,
+        437
+      ],
+      "outlinePixels": 182,
+      "source": "https://wiki.52poke.com/wiki/九尾"
+    },
+    {
+      "id": 39,
+      "name": "胖丁",
+      "english": "Jigglypuff",
+      "chain": 15,
+      "stage": 0,
+      "image": "039.png",
+      "preview": "039@8x.png",
+      "sourceBox": [
+        765,
+        189,
+        1020,
+        436
+      ],
+      "outlinePixels": 174,
+      "source": "https://wiki.52poke.com/wiki/胖丁"
+    },
+    {
+      "id": 40,
+      "name": "胖可丁",
+      "english": "Wigglytuff",
+      "chain": 15,
+      "stage": 1,
+      "image": "040.png",
+      "preview": "040@8x.png",
+      "sourceBox": [
+        1087,
+        75,
+        1357,
+        437
+      ],
+      "outlinePixels": 180,
+      "source": "https://wiki.52poke.com/wiki/胖可丁"
+    },
+    {
+      "id": 41,
+      "name": "超音蝠",
+      "english": "Zubat",
+      "chain": 16,
+      "stage": 0,
+      "image": "041.png",
+      "preview": "041@8x.png",
+      "sourceBox": [
+        1384,
+        171,
+        1746,
+        422
+      ],
+      "outlinePixels": 210,
+      "source": "https://wiki.52poke.com/wiki/超音蝠"
+    },
+    {
+      "id": 42,
+      "name": "大嘴蝠",
+      "english": "Golbat",
+      "chain": 16,
+      "stage": 1,
+      "image": "042.png",
+      "preview": "042@8x.png",
+      "sourceBox": [
+        25,
+        511,
+        406,
+        823
+      ],
+      "outlinePixels": 205,
+      "source": "https://wiki.52poke.com/wiki/大嘴蝠"
+    },
+    {
+      "id": 43,
+      "name": "走路草",
+      "english": "Oddish",
+      "chain": 17,
+      "stage": 0,
+      "image": "043.png",
+      "preview": "043@8x.png",
+      "sourceBox": [
+        435,
+        544,
+        719,
+        834
+      ],
+      "outlinePixels": 190,
+      "source": "https://wiki.52poke.com/wiki/走路草"
+    },
+    {
+      "id": 44,
+      "name": "臭臭花",
+      "english": "Gloom",
+      "chain": 17,
+      "stage": 1,
+      "image": "044.png",
+      "preview": "044@8x.png",
+      "sourceBox": [
+        739,
+        541,
+        1042,
+        832
+      ],
+      "outlinePixels": 192,
+      "source": "https://wiki.52poke.com/wiki/臭臭花"
+    },
+    {
+      "id": 45,
+      "name": "霸王花",
+      "english": "Vileplume",
+      "chain": 17,
+      "stage": 2,
+      "image": "045.png",
+      "preview": "045@8x.png",
+      "sourceBox": [
+        1061,
+        502,
+        1426,
+        834
+      ],
+      "outlinePixels": 176,
+      "source": "https://wiki.52poke.com/wiki/霸王花"
+    },
+    {
+      "id": 46,
+      "name": "派拉斯",
+      "english": "Paras",
+      "chain": 18,
+      "stage": 0,
+      "image": "046.png",
+      "preview": "046@8x.png",
+      "sourceBox": [
+        1436,
+        594,
+        1739,
+        833
+      ],
+      "outlinePixels": 188,
+      "source": "https://wiki.52poke.com/wiki/派拉斯"
+    }
+  ]
+}

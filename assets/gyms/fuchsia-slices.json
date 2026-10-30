@@ -1,0 +1,29 @@
+{
+  "source": "assets/source/gyms/fuchsia-atlas-v1.png",
+  "alphaThreshold": 220,
+  "koga": {
+    "box": [
+      163,
+      78,
+      710,
+      965
+    ]
+  },
+  "soul": {
+    "box": [
+      938,
+      123,
+      1334,
+      495
+    ]
+  },
+  "stamp": {
+    "box": [
+      590,
+      580,
+      1500,
+      965
+    ]
+  },
+  "leaderExtraction": "connected alpha>=220 component containing (350,240); complete full-body silhouette, scarf included; nearby stamp particles excluded"
+}

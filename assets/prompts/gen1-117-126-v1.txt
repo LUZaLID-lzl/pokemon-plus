@@ -1,0 +1,27 @@
+Draw a clean pixel-art companion roster for a small handheld pet game. The attached sheet is a STYLE reference only: use its compact rounded shapes, calm cute faces, limited colors and deep navy continuous outline. Draw the following ten NEW complete full-body companions in a FIVE-column TWO-row layout, one complete character centered in each cell. Wide empty transparent gutters; no text, labels, borders, ground, shadows, checkerboard or effects. Real transparent alpha.
+
+Use native48x48 sprite proportions, silhouette at most40px,12–15 opaque colors, crisp uniform square pixels and nearest-neighbor enlargement. Thin continuous closed deep-navy outside outline. Flat color clusters with two or three shades per material. Face slightly toward the left. Keep recognizable anatomy, colors and attached accessories. Small accessories naturally overlap their hand or body so each character has one connected silhouette. Keep all appendages inside each cell.
+
+
+
+Row 1, column 1: Seadra (海刺龙). BLUE seahorse with long tubular snout, angular crown of three short head spikes, TWO reddish eyes, cream segmented belly, TWO attached pale-blue spiny dorsal fins and ONE curled blue tail; no arms or legs. Calm neutral species-appropriate standing or hovering pose.
+
+Row 1, column 2: Goldeen (角金鱼). WHITE-and-orange rounded goldfish with ONE short cream forehead horn, TWO eyes, small pink mouth, attached flowing white fins edged in orange and ONE attached flowing white tail edged orange; no arms or legs. Calm neutral species-appropriate standing or hovering pose.
+
+Row 1, column 3: Seaking (金鱼王). ORANGE round fish with black irregular patches, cream underside, ONE cream forehead horn, TWO eyes, small pink mouth, attached white side and dorsal fins with dark spots and ONE attached broad white spotted tail; no arms or legs. Calm neutral species-appropriate standing or hovering pose.
+
+Row 1, column 4: Staryu (海星星). ONE ochre five-armed starfish, exactly FIVE thick triangular arms in a continuous body, central gold ring surrounding ONE RED circular jewel; no eyes, mouth, fingers or detached parts. Calm neutral species-appropriate standing or hovering pose.
+
+Row 1, column 5: Starmie (宝石海星). PURPLE starfish formed by TWO connected overlapping five-point stars rotated relative to each other, ten outer tips total, central gold angular ring around ONE RED jewel; no eyes, mouth or limbs separate from star arms. Calm neutral species-appropriate standing or hovering pose.
+
+Row 2, column 1: Mr. Mime (魔墙人偶). friendly pale-pink mime companion, round white head with TWO black eyes, pink round cheeks, TWO blue pointed side hair tufts, small smile, white round torso with red circular belly marking, TWO thin pink arms with white five-finger gloves and red shoulder joints, TWO thin pink legs with blue curled shoes; no tail. Calm neutral species-appropriate standing or hovering pose.
+
+Row 2, column 2: Scyther (飞天螳螂). GREEN upright mantis companion, angular head with TWO eyes and three short head spikes, cream segmented belly, TWO attached pale-cream curved forearm blades, TWO sturdy green legs with white toes, TWO attached pale-green folded back wings; compact nonthreatening pose, no loose objects. Calm neutral species-appropriate standing or hovering pose.
+
+Row 2, column 3: Jynx (迷唇姐). friendly round PURPLE-faced companion wearing a full-length RED robe with gold upper trim and sleeves, long pale-BLONDE hair framing face, TWO eyes and pink lips, TWO purple hands emerging from red sleeves, short red-clad feet subtly visible at robe hem; fully clothed compact game mascot, no props. Calm neutral species-appropriate standing or hovering pose.
+
+Row 2, column 4: Electabuzz (电击兽). YELLOW upright striped companion with BLACK lightning-shaped torso marks and black bands on arms and tail, TWO short antennae with rounded tips, TWO eyes, cream muzzle, TWO attached arms with three blunt fingers, TWO legs with white toes, ONE attached long yellow tail with black bands. Calm neutral species-appropriate standing or hovering pose.
+
+Row 2, column 5: Magmar (鸭嘴火兽). RED-and-yellow upright duck-billed fire companion with TWO rounded flame-shaped head bumps, TWO eyes, short cream duck bill, yellow flame-pattern belly, TWO red arms with three cream claws, TWO red legs, ONE attached tail with a SMALL flame tip touching the tail; no floating flame or effects. Calm neutral species-appropriate standing or hovering pose.
+
+Exactly TEN complete characters, five in each row. Starfish have NO eyes or mouth; goldfish keep all fins attached. Each subject forms one connected silhouette. Preserve long red robe and attached pale-blonde hair on the purple-faced companion. Ample empty transparent space around each body.

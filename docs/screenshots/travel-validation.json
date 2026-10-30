@@ -1,0 +1,152 @@
+[
+  {
+    "scene": 0,
+    "phase": "journey",
+    "movingTravelStrip": true
+  },
+  {
+    "scene": 0,
+    "phase": "ready",
+    "movingTravelStrip": false
+  },
+  {
+    "scene": 0,
+    "phase": "receipt",
+    "movingTravelStrip": false
+  },
+  {
+    "scene": 1,
+    "phase": "journey",
+    "movingTravelStrip": true
+  },
+  {
+    "scene": 1,
+    "phase": "ready",
+    "movingTravelStrip": false
+  },
+  {
+    "scene": 1,
+    "phase": "receipt",
+    "movingTravelStrip": false
+  },
+  {
+    "scene": 2,
+    "phase": "journey",
+    "movingTravelStrip": true
+  },
+  {
+    "scene": 2,
+    "phase": "ready",
+    "movingTravelStrip": false
+  },
+  {
+    "scene": 2,
+    "phase": "receipt",
+    "movingTravelStrip": false
+  },
+  {
+    "scene": 3,
+    "phase": "journey",
+    "movingTravelStrip": true
+  },
+  {
+    "scene": 3,
+    "phase": "ready",
+    "movingTravelStrip": false
+  },
+  {
+    "scene": 3,
+    "phase": "receipt",
+    "movingTravelStrip": false
+  },
+  {
+    "scene": 4,
+    "phase": "journey",
+    "movingTravelStrip": true
+  },
+  {
+    "scene": 4,
+    "phase": "ready",
+    "movingTravelStrip": false
+  },
+  {
+    "scene": 4,
+    "phase": "receipt",
+    "movingTravelStrip": false
+  },
+  {
+    "scene": 5,
+    "phase": "journey",
+    "movingTravelStrip": true
+  },
+  {
+    "scene": 5,
+    "phase": "ready",
+    "movingTravelStrip": false
+  },
+  {
+    "scene": 5,
+    "phase": "receipt",
+    "movingTravelStrip": false
+  },
+  {
+    "scene": 6,
+    "phase": "journey",
+    "movingTravelStrip": true
+  },
+  {
+    "scene": 6,
+    "phase": "ready",
+    "movingTravelStrip": false
+  },
+  {
+    "scene": 6,
+    "phase": "receipt",
+    "movingTravelStrip": false
+  },
+  {
+    "scene": 7,
+    "phase": "journey",
+    "movingTravelStrip": true
+  },
+  {
+    "scene": 7,
+    "phase": "ready",
+    "movingTravelStrip": false
+  },
+  {
+    "scene": 7,
+    "phase": "receipt",
+    "movingTravelStrip": false
+  },
+  {
+    "scene": 8,
+    "phase": "journey",
+    "movingTravelStrip": true
+  },
+  {
+    "scene": 8,
+    "phase": "ready",
+    "movingTravelStrip": false
+  },
+  {
+    "scene": 8,
+    "phase": "receipt",
+    "movingTravelStrip": false
+  },
+  {
+    "scene": 9,
+    "phase": "journey",
+    "movingTravelStrip": true
+  },
+  {
+    "scene": 9,
+    "phase": "ready",
+    "movingTravelStrip": false
+  },
+  {
+    "scene": 9,
+    "phase": "receipt",
+    "movingTravelStrip": false
+  }
+]

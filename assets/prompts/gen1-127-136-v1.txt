@@ -1,0 +1,23 @@
+Create 10 recognizable Kanto Pokemon pixel companions for a handheld pet game. The attached sheet controls ONLY the approved style: compact cute full bodies, continuous deep-navy outline, flat limited colors, crisp uniform pixel grid and true transparent background. Exactly FIVE columns and TWO rows, one isolated complete sprite per cell, ample transparent gutters, left-facing three-quarter view. Native48x48 proportions, silhouette at most40x40, maximum15 opaque colors. No text, effects, shadows, props or detached parts.
+
+Row 1, column 1: 127 Pinsir: brown compact upright stag beetle with TWO large cream antlers attached to head, dark vertical mouth, TWO eyes, TWO brown arms and TWO legs with cream claws; antlers overlap body silhouette. Calm neutral pose.
+
+Row 1, column 2: 128 Tauros: brown QUADRUPED bull with cream forehead and mane, TWO cream horns, TWO eyes, FOUR sturdy legs with dark hooves, THREE thin attached tails with dark tufts grouped close to body. Calm neutral pose.
+
+Row 1, column 3: 129 Magikarp: ORANGE fish with TWO eyes, pink open mouth, TWO attached cream whiskers curving close to body, ONE gold crown-shaped dorsal fin, attached cream side fins and cream tail, no arms or legs. Calm neutral pose.
+
+Row 1, column 4: 130 Gyarados: BLUE long serpentine water dragon coiled compactly, cream segmented underside, angular blue crest, TWO eyes, open cream muzzle, TWO attached short whiskers, white back fins and ONE attached blue tail, no legs. Calm neutral pose.
+
+Row 1, column 5: 131 Lapras: BLUE plesiosaur companion with long curved neck, TWO curled ear fins, TWO eyes, cream throat and underside, FOUR attached blue flippers, ONE gray-purple rounded shell with short blunt studs on back and short attached tail. Calm neutral pose.
+
+Row 2, column 1: 132 Ditto: ONE small PURPLE amorphous rounded body, TWO tiny dark eyes and a small smile, two low connected side lobes and soft wavy base, no separate arms or legs. Calm neutral pose.
+
+Row 2, column 2: 133 Eevee: BROWN small QUADRUPED fox, TWO tall ears with dark interiors, TWO eyes, cream fluffy neck ruff, FOUR short paws and ONE large attached brown tail with cream tip. Calm neutral pose.
+
+Row 2, column 3: 134 Vaporeon: CYAN small QUADRUPED aquatic fox, TWO fin-like ears and ONE short head fin, TWO eyes, cream neck frill, FOUR short paws, dark-blue back ridge and ONE attached long fish tail curled close. Calm neutral pose.
+
+Row 2, column 4: 135 Jolteon: YELLOW small QUADRUPED fox with compact spiky fur, TWO tall dark-inner ears, TWO eyes, white spiky neck ruff, FOUR short paws and ONE very short yellow tail. Calm neutral pose.
+
+Row 2, column 5: 136 Flareon: ORANGE small QUADRUPED fox with TWO tall dark-inner ears, TWO eyes, pale-cream forehead tuft and fluffy neck ruff, FOUR short paws and ONE large attached pale-cream bushy tail. Calm neutral pose.
+
+Keep actual anatomy and all appendages attached; no invented human limbs on fish or serpents. The attached reference is for style only, not its characters.

@@ -1,0 +1,8 @@
+Draw a transparent PIXEL ART animation atlas. Image1 is the exact purple mouse identity to preserve. Image2 is ONLY the layout reference: reproduce its exact EIGHT columns by SIX rows, 48 separated full-body characters, with the same 4:3 atlas aspect ratio. Replace every green creature with the PURPLE mouse of image1. No green creatures or plants remain. Purple fur, cream muzzle/belly, pink-lined round ears, white front incisors, attached curled purple tail, deep navy outline. Face LEFT. Keep fixed scale and transparent gutters, one complete mouse per cell. Strict 6 rows, NOT 5 rows.
+Row1: 8 subtle idle breathing/blinking poses.
+Row2: 8 quadruped walking-in-place alternating foot poses.
+Row3: 8 small happy hop phases, landing and returning to neutral.
+Row4: 8 head-lowering/nibbling/chewing/recovering poses, no food prop.
+Row5: 8 CLOSED-EYE low lying SLEEP poses with slow breathing. This entire row is REQUIRED.
+Row6: 8 anticipation/brace/small lunge/recoil/recover attack poses. This entire row is also REQUIRED.
+48 sprites total. Keep attached limbs/tail, no stretch or body-part splitting, crisp square pixels, limited reference palette, no labels/effects/shadows/grid lines. Transparent background. Use full atlas canvas and evenly spaced SIX horizontal rows exactly as image2.

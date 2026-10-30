@@ -1,0 +1,525 @@
+{
+  "source": "Current type assignments for national IDs001–151; no abilities in combat",
+  "types": {
+    "1": [
+      "GRASS",
+      "POISON"
+    ],
+    "2": [
+      "GRASS",
+      "POISON"
+    ],
+    "3": [
+      "GRASS",
+      "POISON"
+    ],
+    "4": [
+      "FIRE"
+    ],
+    "5": [
+      "FIRE"
+    ],
+    "6": [
+      "FIRE",
+      "FLYING"
+    ],
+    "7": [
+      "WATER"
+    ],
+    "8": [
+      "WATER"
+    ],
+    "9": [
+      "WATER"
+    ],
+    "10": [
+      "BUG"
+    ],
+    "11": [
+      "BUG"
+    ],
+    "12": [
+      "BUG",
+      "FLYING"
+    ],
+    "13": [
+      "BUG",
+      "POISON"
+    ],
+    "14": [
+      "BUG",
+      "POISON"
+    ],
+    "15": [
+      "BUG",
+      "POISON"
+    ],
+    "16": [
+      "NORMAL",
+      "FLYING"
+    ],
+    "17": [
+      "NORMAL",
+      "FLYING"
+    ],
+    "18": [
+      "NORMAL",
+      "FLYING"
+    ],
+    "19": [
+      "NORMAL"
+    ],
+    "20": [
+      "NORMAL"
+    ],
+    "21": [
+      "NORMAL",
+      "FLYING"
+    ],
+    "22": [
+      "NORMAL",
+      "FLYING"
+    ],
+    "23": [
+      "POISON"
+    ],
+    "24": [
+      "POISON"
+    ],
+    "25": [
+      "ELECTRIC"
+    ],
+    "26": [
+      "ELECTRIC"
+    ],
+    "27": [
+      "GROUND"
+    ],
+    "28": [
+      "GROUND"
+    ],
+    "29": [
+      "POISON"
+    ],
+    "30": [
+      "POISON"
+    ],
+    "31": [
+      "POISON",
+      "GROUND"
+    ],
+    "32": [
+      "POISON"
+    ],
+    "33": [
+      "POISON"
+    ],
+    "34": [
+      "POISON",
+      "GROUND"
+    ],
+    "35": [
+      "FAIRY"
+    ],
+    "36": [
+      "FAIRY"
+    ],
+    "37": [
+      "FIRE"
+    ],
+    "38": [
+      "FIRE"
+    ],
+    "39": [
+      "NORMAL",
+      "FAIRY"
+    ],
+    "40": [
+      "NORMAL",
+      "FAIRY"
+    ],
+    "41": [
+      "POISON",
+      "FLYING"
+    ],
+    "42": [
+      "POISON",
+      "FLYING"
+    ],
+    "43": [
+      "GRASS",
+      "POISON"
+    ],
+    "44": [
+      "GRASS",
+      "POISON"
+    ],
+    "45": [
+      "GRASS",
+      "POISON"
+    ],
+    "46": [
+      "BUG",
+      "GRASS"
+    ],
+    "47": [
+      "BUG",
+      "GRASS"
+    ],
+    "48": [
+      "BUG",
+      "POISON"
+    ],
+    "49": [
+      "BUG",
+      "POISON"
+    ],
+    "50": [
+      "GROUND"
+    ],
+    "51": [
+      "GROUND"
+    ],
+    "52": [
+      "NORMAL"
+    ],
+    "53": [
+      "NORMAL"
+    ],
+    "54": [
+      "WATER"
+    ],
+    "55": [
+      "WATER"
+    ],
+    "56": [
+      "FIGHTING"
+    ],
+    "57": [
+      "FIGHTING"
+    ],
+    "58": [
+      "FIRE"
+    ],
+    "59": [
+      "FIRE"
+    ],
+    "60": [
+      "WATER"
+    ],
+    "61": [
+      "WATER"
+    ],
+    "62": [
+      "WATER",
+      "FIGHTING"
+    ],
+    "63": [
+      "PSYCHIC"
+    ],
+    "64": [
+      "PSYCHIC"
+    ],
+    "65": [
+      "PSYCHIC"
+    ],
+    "66": [
+      "FIGHTING"
+    ],
+    "67": [
+      "FIGHTING"
+    ],
+    "68": [
+      "FIGHTING"
+    ],
+    "69": [
+      "GRASS",
+      "POISON"
+    ],
+    "70": [
+      "GRASS",
+      "POISON"
+    ],
+    "71": [
+      "GRASS",
+      "POISON"
+    ],
+    "72": [
+      "WATER",
+      "POISON"
+    ],
+    "73": [
+      "WATER",
+      "POISON"
+    ],
+    "74": [
+      "ROCK",
+      "GROUND"
+    ],
+    "75": [
+      "ROCK",
+      "GROUND"
+    ],
+    "76": [
+      "ROCK",
+      "GROUND"
+    ],
+    "77": [
+      "FIRE"
+    ],
+    "78": [
+      "FIRE"
+    ],
+    "79": [
+      "WATER",
+      "PSYCHIC"
+    ],
+    "80": [
+      "WATER",
+      "PSYCHIC"
+    ],
+    "81": [
+      "ELECTRIC",
+      "STEEL"
+    ],
+    "82": [
+      "ELECTRIC",
+      "STEEL"
+    ],
+    "83": [
+      "NORMAL",
+      "FLYING"
+    ],
+    "84": [
+      "NORMAL",
+      "FLYING"
+    ],
+    "85": [
+      "NORMAL",
+      "FLYING"
+    ],
+    "86": [
+      "WATER"
+    ],
+    "87": [
+      "WATER",
+      "ICE"
+    ],
+    "88": [
+      "POISON"
+    ],
+    "89": [
+      "POISON"
+    ],
+    "90": [
+      "WATER"
+    ],
+    "91": [
+      "WATER",
+      "ICE"
+    ],
+    "92": [
+      "GHOST",
+      "POISON"
+    ],
+    "93": [
+      "GHOST",
+      "POISON"
+    ],
+    "94": [
+      "GHOST",
+      "POISON"
+    ],
+    "95": [
+      "ROCK",
+      "GROUND"
+    ],
+    "96": [
+      "PSYCHIC"
+    ],
+    "97": [
+      "PSYCHIC"
+    ],
+    "98": [
+      "WATER"
+    ],
+    "99": [
+      "WATER"
+    ],
+    "100": [
+      "ELECTRIC"
+    ],
+    "101": [
+      "ELECTRIC"
+    ],
+    "102": [
+      "GRASS",
+      "PSYCHIC"
+    ],
+    "103": [
+      "GRASS",
+      "PSYCHIC"
+    ],
+    "104": [
+      "GROUND"
+    ],
+    "105": [
+      "GROUND"
+    ],
+    "106": [
+      "FIGHTING"
+    ],
+    "107": [
+      "FIGHTING"
+    ],
+    "108": [
+      "NORMAL"
+    ],
+    "109": [
+      "POISON"
+    ],
+    "110": [
+      "POISON"
+    ],
+    "111": [
+      "ROCK",
+      "GROUND"
+    ],
+    "112": [
+      "ROCK",
+      "GROUND"
+    ],
+    "113": [
+      "NORMAL"
+    ],
+    "114": [
+      "GRASS"
+    ],
+    "115": [
+      "NORMAL"
+    ],
+    "116": [
+      "WATER"
+    ],
+    "117": [
+      "WATER"
+    ],
+    "118": [
+      "WATER"
+    ],
+    "119": [
+      "WATER"
+    ],
+    "120": [
+      "WATER"
+    ],
+    "121": [
+      "WATER",
+      "PSYCHIC"
+    ],
+    "122": [
+      "PSYCHIC",
+      "FAIRY"
+    ],
+    "123": [
+      "BUG",
+      "FLYING"
+    ],
+    "124": [
+      "ICE",
+      "PSYCHIC"
+    ],
+    "125": [
+      "ELECTRIC"
+    ],
+    "126": [
+      "FIRE"
+    ],
+    "127": [
+      "BUG"
+    ],
+    "128": [
+      "NORMAL"
+    ],
+    "129": [
+      "WATER"
+    ],
+    "130": [
+      "WATER",
+      "FLYING"
+    ],
+    "131": [
+      "WATER",
+      "ICE"
+    ],
+    "132": [
+      "NORMAL"
+    ],
+    "133": [
+      "NORMAL"
+    ],
+    "134": [
+      "WATER"
+    ],
+    "135": [
+      "ELECTRIC"
+    ],
+    "136": [
+      "FIRE"
+    ],
+    "137": [
+      "NORMAL"
+    ],
+    "138": [
+      "ROCK",
+      "WATER"
+    ],
+    "139": [
+      "ROCK",
+      "WATER"
+    ],
+    "140": [
+      "ROCK",
+      "WATER"
+    ],
+    "141": [
+      "ROCK",
+      "WATER"
+    ],
+    "142": [
+      "ROCK",
+      "FLYING"
+    ],
+    "143": [
+      "NORMAL"
+    ],
+    "144": [
+      "ICE",
+      "FLYING"
+    ],
+    "145": [
+      "ELECTRIC",
+      "FLYING"
+    ],
+    "146": [
+      "FIRE",
+      "FLYING"
+    ],
+    "147": [
+      "DRAGON"
+    ],
+    "148": [
+      "DRAGON"
+    ],
+    "149": [
+      "DRAGON",
+      "FLYING"
+    ],
+    "150": [
+      "PSYCHIC"
+    ],
+    "151": [
+      "PSYCHIC"
+    ]
+  }
+}

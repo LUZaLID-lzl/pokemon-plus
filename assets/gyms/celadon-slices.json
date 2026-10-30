@@ -1,0 +1,7 @@
+{
+  "source": "assets/source/gyms/celadon-atlas-v1.png",
+  "alphaThreshold": 220,
+  "erika": {"box": [274, 95, 547, 983]},
+  "rainbow": {"box": [867, 107, 1358, 581]},
+  "stamp": {"box": [634, 642, 1489, 993]}
+}

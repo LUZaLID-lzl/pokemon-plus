@@ -1,0 +1,36 @@
+{
+  "firmwareVersion": "0.11.0",
+  "flashPerformed": false,
+  "sourceHashes": {
+    "main/display_port.c": "190f03b8ea9b9219deaa3503dd839da815fd2afbc24d465bb489e7ef2374c1b2",
+    "main/image_assets.c": "94944f3a61d9aa675d787513cb4369b80d97ede8dc1217bcd8b977f2c37bd50a",
+    "core/game.c": "53ca6d1728a3de752cf27d639e521cb8531121d86ede6cebddaca22fc5cc402e",
+    "core/game.h": "224c14495a4c2148cf959451fc04e6dba2841b9158c3a1767a5e8e03228dacaa",
+    "core/moves.c": "34c4985bc89abd1576b26bd6bd4209e50f3646ed1a491d84457d43d8c9d9eba9",
+    "main/game_ui.c": "0d030d6d62b4aaed4ebd20fc4c7abb6f083b13f2708d9caf8172fe8340797691",
+    "assets/pet-roster.json": "87a2153ecd072233398cf1abeebcb3fba798ebd999423543f2afd651eae2b2c4",
+    "assets/evolution.json": "7467563b443e304c989dd9b0fabc46dbacdeb82bacaf859bdd931cbc1c12b862",
+    "assets/moves.json": "249dfc1c2c79caab32ebd94875a2665883b3f1ecc6d04a9ddd743342aa609b07",
+    "main/pet_animation.h": "2087b12c0b58b57f2b1cb480d21c2a0fe8d24edc373e76ac258ee566c0c68a85",
+    "web/app.js": "91ac1fe730da8e0bc0a86a37406bca3e313e219eb5436631f527aa3497fc1b80",
+    "web/animation-player.js": "5447abc11844a5f2de00bc24b876265011f50a6a8b6cc7518045bfb801d7b070",
+    "web/index.html": "fa85d95bbb0c0734f4441c0231693e73e6604eeaaa7ec7c1bf74d90779a2dff8"
+  },
+  "firmwareSha256": "1d9205c733dd85c4accfccae62b52e3f169ee173f905ae408e7335f726d9f662",
+  "imageCount": 5703,
+  "imageBankBytes": 9886872,
+  "templates": 45,
+  "runtimeForms": 46,
+  "newNationalIds": [
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46
+  ]
+}

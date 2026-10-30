@@ -1,0 +1,132 @@
+[
+  {
+    "scene": 0,
+    "name": "庭院风叶",
+    "kind": 0,
+    "chance": 30,
+    "durationMs": 32000,
+    "count": 40,
+    "color": "b9d990",
+    "speed": 20
+  },
+  {
+    "scene": 1,
+    "name": "樱花轻舞",
+    "kind": 0,
+    "chance": 30,
+    "durationMs": 36000,
+    "count": 48,
+    "color": "ffc3dc",
+    "speed": 24
+  },
+  {
+    "scene": 2,
+    "name": "潮汐波光",
+    "kind": 1,
+    "chance": 30,
+    "durationMs": 40000,
+    "count": 44,
+    "color": "b8edf4",
+    "speed": 14
+  },
+  {
+    "scene": 3,
+    "name": "瀑畔微风",
+    "kind": 0,
+    "chance": 30,
+    "durationMs": 30000,
+    "count": 36,
+    "color": "b9d990",
+    "speed": 18
+  },
+  {
+    "scene": 4,
+    "name": "枫叶轻旋",
+    "kind": 10,
+    "chance": 30,
+    "durationMs": 36000,
+    "count": 48,
+    "color": "e66f41",
+    "speed": 26
+  },
+  {
+    "scene": 5,
+    "name": "层层轻雪",
+    "kind": 2,
+    "chance": 30,
+    "durationMs": 34000,
+    "count": 48,
+    "color": "deefff",
+    "speed": 26
+  },
+  {
+    "scene": 6,
+    "name": "晶光蝠影",
+    "kind": 3,
+    "chance": 30,
+    "durationMs": 40000,
+    "count": 44,
+    "color": "b9e5ff",
+    "speed": 9
+  },
+  {
+    "scene": 7,
+    "name": "林间萤光",
+    "kind": 4,
+    "chance": 30,
+    "durationMs": 40000,
+    "count": 48,
+    "color": "bfeeb1",
+    "speed": 10
+  },
+  {
+    "scene": 8,
+    "name": "星丘流星",
+    "kind": 9,
+    "chance": 30,
+    "durationMs": 38000,
+    "count": 36,
+    "color": "d5d6ff",
+    "speed": 42
+  },
+  {
+    "scene": 9,
+    "name": "风沙滚草",
+    "kind": 6,
+    "chance": 30,
+    "durationMs": 32000,
+    "count": 40,
+    "color": "e5cb91",
+    "speed": 36
+  },
+  {
+    "scene": 10,
+    "name": "雨丝涟漪",
+    "kind": 7,
+    "chance": 30,
+    "durationMs": 34000,
+    "count": 48,
+    "color": "92c7e9",
+    "speed": 155
+  },
+  {
+    "scene": 11,
+    "name": "浮云逐风",
+    "kind": 8,
+    "chance": 30,
+    "durationMs": 40000,
+    "count": 12,
+    "color": "e5f1fa",
+    "speed": 14
+  },
+  {
+    "scene": 12,
+    "name": "蓝叶涟漪",
+    "kind": 11,
+    "chance": 30,
+    "durationMs": 40000,
+    "count": 48,
+    "color": "b2e4f2",
+    "speed": 16
+  }
+]

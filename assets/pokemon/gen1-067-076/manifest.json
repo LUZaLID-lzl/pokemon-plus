@@ -1,0 +1,190 @@
+{
+  "version": 1,
+  "kind": "single-pose art review",
+  "generator": "MobiIoT",
+  "model": "gpt-image-2.5-sunburst",
+  "attempts": 2,
+  "sourceAtlas": "../../source/gen1-067-076-v1.png",
+  "sourceSha256": "077f248399957ca5b269a88bf6cd3cd9591ef5c84aa86dc816ac82fa97e69819",
+  "prompt": "../../prompts/gen1-067-076-v1.txt",
+  "nativeCanvas": 48,
+  "maxColors": 16,
+  "outlineColor": "#1b263a",
+  "alpha": "binary",
+  "gameIntegrated": true,
+  "animationPosesPerSpecies": 1,
+  "items": [
+    {
+      "id": 67,
+      "name": "豪力",
+      "english": "Machoke",
+      "chain": 27,
+      "stage": 1,
+      "image": "067.png",
+      "preview": "067@8x.png",
+      "sourceBox": [
+        42,
+        64,
+        369,
+        388
+      ],
+      "outlinePixels": 180,
+      "source": "https://wiki.52poke.com/wiki/豪力"
+    },
+    {
+      "id": 68,
+      "name": "怪力",
+      "english": "Machamp",
+      "chain": 27,
+      "stage": 2,
+      "image": "068.png",
+      "preview": "068@8x.png",
+      "sourceBox": [
+        411,
+        53,
+        782,
+        383
+      ],
+      "outlinePixels": 202,
+      "source": "https://wiki.52poke.com/wiki/怪力"
+    },
+    {
+      "id": 69,
+      "name": "喇叭芽",
+      "english": "Bellsprout",
+      "chain": 28,
+      "stage": 0,
+      "image": "069.png",
+      "preview": "069@8x.png",
+      "sourceBox": [
+        858,
+        122,
+        1129,
+        399
+      ],
+      "outlinePixels": 256,
+      "source": "https://wiki.52poke.com/wiki/喇叭芽"
+    },
+    {
+      "id": 70,
+      "name": "口呆花",
+      "english": "Weepinbell",
+      "chain": 28,
+      "stage": 1,
+      "image": "070.png",
+      "preview": "070@8x.png",
+      "sourceBox": [
+        1194,
+        81,
+        1541,
+        383
+      ],
+      "outlinePixels": 183,
+      "source": "https://wiki.52poke.com/wiki/口呆花"
+    },
+    {
+      "id": 71,
+      "name": "大食花",
+      "english": "Victreebel",
+      "chain": 28,
+      "stage": 2,
+      "image": "071.png",
+      "preview": "071@8x.png",
+      "sourceBox": [
+        1580,
+        43,
+        1966,
+        389
+      ],
+      "outlinePixels": 170,
+      "source": "https://wiki.52poke.com/wiki/大食花"
+    },
+    {
+      "id": 72,
+      "name": "玛瑙水母",
+      "english": "Tentacool",
+      "chain": 29,
+      "stage": 0,
+      "image": "072.png",
+      "preview": "072@8x.png",
+      "sourceBox": [
+        58,
+        440,
+        308,
+        746
+      ],
+      "outlinePixels": 200,
+      "source": "https://wiki.52poke.com/wiki/玛瑙水母"
+    },
+    {
+      "id": 73,
+      "name": "毒刺水母",
+      "english": "Tentacruel",
+      "chain": 29,
+      "stage": 1,
+      "image": "073.png",
+      "preview": "073@8x.png",
+      "sourceBox": [
+        389,
+        426,
+        750,
+        747
+      ],
+      "outlinePixels": 234,
+      "source": "https://wiki.52poke.com/wiki/毒刺水母"
+    },
+    {
+      "id": 74,
+      "name": "小拳石",
+      "english": "Geodude",
+      "chain": 30,
+      "stage": 0,
+      "image": "074.png",
+      "preview": "074@8x.png",
+      "sourceBox": [
+        782,
+        503,
+        1148,
+        709
+      ],
+      "outlinePixels": 154,
+      "source": "https://wiki.52poke.com/wiki/小拳石"
+    },
+    {
+      "id": 75,
+      "name": "隆隆石",
+      "english": "Graveler",
+      "chain": 30,
+      "stage": 1,
+      "image": "075.png",
+      "preview": "075@8x.png",
+      "sourceBox": [
+        1162,
+        448,
+        1561,
+        747
+      ],
+      "outlinePixels": 208,
+      "source": "https://wiki.52poke.com/wiki/隆隆石"
+    },
+    {
+      "id": 76,
+      "name": "隆隆岩",
+      "english": "Golem",
+      "chain": 30,
+      "stage": 2,
+      "image": "076.png",
+      "preview": "076@8x.png",
+      "sourceBox": [
+        1580,
+        423,
+        1949,
+        751
+      ],
+      "outlinePixels": 183,
+      "source": "https://wiki.52poke.com/wiki/隆隆岩"
+    }
+  ],
+  "firmwareVersion": "v0.14.0",
+  "runtimeAnimationPosesPerSpecies": 48
+}

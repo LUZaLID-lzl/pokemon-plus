@@ -1,0 +1,27 @@
+import assert from 'node:assert/strict';
+import {webcrypto} from 'node:crypto';
+import {readFileSync} from 'node:fs';
+import {createEvolutionDemo} from '../web/evolution-choice.js';
+import {createFishing} from '../web/fishing-preview.mjs';
+import {fishCatalog} from '../web/fish-catalog.js';
+globalThis.crypto ??= webcrypto;
+const manifest=JSON.parse(readFileSync(new URL('../web/manifest.json',import.meta.url)));
+let raw=null,fail=false;
+const storage={getItem:()=>raw,setItem:(k,v)=>{if(fail)throw Error('quota');raw=v}};
+const open=()=>createEvolutionDemo({storage,roster:manifest.pets,chains:manifest.evolution.chains});
+let demo=open();const pets=Array.from({length:13},()=>demo.add(1));
+assert.equal(demo.state.fishCaught.length,27);assert.equal(demo.state.fishingPartner,null);
+assert.throws(()=>demo.selectFishingPartner(pets[0].id),/仓库/);
+demo.selectFishingPartner(pets[11].id);demo.rename(pets[11].id,'angler');
+let saved=raw;assert.throws(()=>demo.release(pets[11].id),/陪钓/);assert.equal(raw,saved);
+assert.throws(()=>demo.setActive([pets[11].id]),/陪钓/);assert.equal(raw,saved);
+demo.release(pets[5].id);demo=open();assert.equal(demo.state.fishingPartner,pets[11].id);assert.equal(demo.state.pets.find(p=>p.id===pets[11].id).nickname,'angler');
+fail=true;saved=raw;assert.throws(()=>demo.selectFishingPartner(pets[12].id),/quota/);assert.equal(raw,saved);assert.equal(demo.state.fishingPartner,pets[11].id);
+assert.throws(()=>demo.catchFish(26,220),/quota/);assert.equal(raw,saved);assert.equal(demo.state.fishCaught[26],0);
+fail=false;const coins=demo.state.coins;assert.equal(demo.catchFish(26,220),220);demo=open();assert.equal(demo.state.coins,coins+220);assert.equal(demo.state.fishCaught[26],1);
+assert.equal(demo.catchFish(26,230,0xffffffff),0);assert.equal(demo.state.fishCaught[26],2);assert.equal(demo.state.coins,0xffffffff);
+demo.selectFishingPartner(pets[12].id);demo.release(pets[11].id);demo.selectFishingPartner(null);demo.setActive([pets[12].id]);demo=open();assert.equal(demo.state.fishingPartner,null);
+// A rejected storage write must not consume the fish roll or award twice.
+const f=createFishing(123,{onCatch:(id,reward)=>demo.catchFish(id,reward)});f.press(0);const s=f.state,time=s.waitMs+s.target*10;fail=true;saved=raw;assert.throws(()=>f.press(time),/quota/);assert.equal(raw,saved);fail=false;f.press(time);assert(f.state.caught);const id=f.state.fish;assert.equal(demo.state.fishCaught[id],(id===26?2:0)+1);assert.equal(f.state.reward,0);
+assert.throws(()=>demo.catchFish(27,10),/无效/);
+console.log('PASS: warehouse-only persistent fishing individual, rename/reload/compaction, release/field protection, explicit change/clear, 27 catch counters, capped coins and atomic storage retry');

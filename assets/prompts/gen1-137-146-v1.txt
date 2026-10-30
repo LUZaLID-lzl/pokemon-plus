@@ -1,0 +1,23 @@
+Create 10 recognizable Kanto Pokemon pixel companions for a handheld pet game. The attached sheet controls ONLY the approved style: compact cute full bodies, continuous deep-navy outline, flat limited colors, crisp uniform pixel grid and true transparent background. Exactly FIVE columns and TWO rows, one isolated complete sprite per cell, ample transparent gutters, left-facing three-quarter view. Native48x48 proportions, silhouette at most40x40, maximum15 opaque colors. No text, effects, shadows, props or detached parts.
+
+Row 1, column 1: 137 Porygon: compact low-poly duck companion with angular PINK head and body, short BLUE polygonal bill, TWO eyes, TWO attached broad BLUE feet and ONE short attached BLUE tail, all solid connected polygon shapes. Calm neutral pose.
+
+Row 1, column 2: 138 Omanyte: small BLUE mollusk with ONE cream spiral shell on back, TWO big eyes, a compact fringe of short attached blue tentacles beneath head, no separate limbs or props. Calm neutral pose.
+
+Row 1, column 3: 139 Omastar: BLUE mollusk with ONE cream spiral shell with short attached cream spikes, TWO eyes, small circular beak opening and compact attached blue tentacles beneath head. Calm neutral pose.
+
+Row 1, column 4: 140 Kabuto: small brown dome-shaped horseshoe crab, TWO small black marks on top shell, TWO RED eyes visible in dark underside, FOUR short cream hooked legs attached beneath shell; shell and limbs form one compact body. Calm neutral pose.
+
+Row 1, column 5: 141 Kabutops: BROWN upright armored companion with wide flat head crest, TWO eyes, cream chest plates, TWO attached curved cream forearms, TWO brown legs and ONE attached pointed tail, forearms folded close. Calm neutral pose.
+
+Row 2, column 1: 142 Aerodactyl: GRAY-purple small pterosaur with TWO pointed ears, TWO eyes, short long-snouted head, TWO attached wings with violet membranes, TWO small legs and ONE attached arrow-tip tail curled close; wings folded compactly. Calm neutral pose.
+
+Row 2, column 2: 143 Snorlax: round dark-TEAL bear companion with cream face and belly, TWO small ears, TWO naturally narrow eyes, TWO short arms, TWO cream feet with three small toes, compact seated posture. Calm neutral pose.
+
+Row 2, column 3: 144 Articuno: light-BLUE bird with THREE short crest feathers, TWO eyes, white chest tuft, TWO attached folded blue wings, TWO short gray feet and ONE attached long blue ribbon-like tail curled close. Calm neutral pose.
+
+Row 2, column 4: 145 Zapdos: YELLOW bird with compact jagged feather crest, TWO eyes, long orange bill, TWO attached angular yellow wings with black undersides folded close, TWO orange feet and ONE short attached black-and-yellow tail. Calm neutral pose.
+
+Row 2, column 5: 146 Moltres: GOLDEN-orange bird with TWO eyes, short cream bill, TWO attached golden wings and TWO cream feet; flame-shaped RED-orange crest, wing fringes and tail remain physically attached to body, no floating flames. Calm neutral pose.
+
+Keep actual anatomy and all appendages attached; no invented human limbs on fish or serpents. The attached reference is for style only, not its characters.

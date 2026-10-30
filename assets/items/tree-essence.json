@@ -1,0 +1,21 @@
+{
+  "service": "MobiIoT",
+  "model": "gpt-image-1.5",
+  "attempts": 1,
+  "source": "source/tree-essence-v1.png",
+  "prompt": "prompts/items/tree-essence-v1.txt",
+  "log": "build/tree-essence-generation.log",
+  "references": [
+    "sdcard/pokemon-plus/icons/2.png",
+    "assets/items/hatch-boost.png"
+  ],
+  "sourceSha256": "f075abbbaaad92559060d110f6d7501d265b04acd8edbf1af34e75bfa76cfce1",
+  "sha256": "f9d3c61bc0e2d9e21e2355f78a6ced1422610890f6640570cb1b5f37938d45b9",
+  "recipe": {
+    "alphaThreshold": 200,
+    "maxSilhouette": 29,
+    "canvas": 32,
+    "resampling": "nearest",
+    "quantizeColors": 15
+  }
+}

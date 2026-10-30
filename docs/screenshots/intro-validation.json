@@ -1,0 +1,11 @@
+{
+  "durationMs": 11200,
+  "actors": [
+    1,
+    4,
+    7
+  ],
+  "nativeSpriteSize": 48,
+  "framesExported": 120,
+  "transition": "starter selection"
+}

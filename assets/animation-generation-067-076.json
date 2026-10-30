@@ -1,0 +1,85 @@
+{
+  "scope": "067-076",
+  "generator": "mobiiot-imagegen",
+  "generated": [
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76
+  ],
+  "exported": [
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76
+  ],
+  "completed": true,
+  "status": "complete; all ten visual/runtime/release checks passed",
+  "failedNationalId": null,
+  "runtimeIntegrated": true,
+  "identityReviewed": [
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76
+  ],
+  "visualReviewed": [
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76
+  ],
+  "pendingNationalIds": [],
+  "failedTask": null,
+  "failedAttempts": 0,
+  "failureCategory": null,
+  "acceptedVersions": {
+    "67": 2,
+    "68": 2,
+    "69": 2,
+    "70": 2,
+    "71": 2,
+    "72": 2,
+    "73": 2,
+    "74": 2,
+    "75": 2,
+    "76": 3
+  },
+  "taskHistory": [
+    {
+      "nationalId": 67,
+      "version": 1,
+      "outcome": "previous turn six HTTP400/content_policy failures; retained log"
+    },
+    {
+      "nationalId": 76,
+      "version": 2,
+      "outcome": "generated attempt1; rejected47 alpha components; touching middle action pair"
+    }
+  ],
+  "firmwareVersion": "v0.14.0"
+}

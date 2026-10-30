@@ -1,0 +1,121 @@
+--- a/core/game.h
++++ b/core/game.h
+@@ -5,10 +5,12 @@
+ #include "pokedex_roster.h"
+ #include "travel_catalog.h"
+ #define PP_PETS 5
+-#define PP_SPECIES 14
+-#define PP_EVOLUTIONS 22
++#define PP_SPECIES 19
++#define PP_EVOLUTIONS 27
+ #define PP_THUNDER_STONE_PRICE 200u
+ #define PP_MOON_STONE_PRICE 200u
++#define PP_FIRE_STONE_PRICE 200u
++#define PP_LEAF_STONE_PRICE 200u
+ #define PP_ITEMS 6
+ /* Immediate hatch is shop-only; keep six-slot inventory/save layout intact. */
+ #define PP_INSTANT_EGG PP_ITEMS
+--- a/core/game.c
++++ b/core/game.c
+@@ -11,7 +11,7 @@
+ #include <stdio.h>
+ #include <string.h>
+ const pp_dex_entry pp_pokedex[PP_DEX_COUNT] = { PP_DEX_ENTRIES };
+-const char *const pp_pet_names[] = {"皮卡丘", "妙蛙种子", "小火龙", "杰尼龟", "绿毛虫", "独角虫", "波波", "小拉达", "烈雀", "阿柏蛇", "穿山鼠", "尼多兰", "尼多朗", "皮皮"};
++const char *const pp_pet_names[] = {"皮卡丘", "妙蛙种子", "小火龙", "杰尼龟", "绿毛虫", "独角虫", "波波", "小拉达", "烈雀", "阿柏蛇", "穿山鼠", "尼多兰", "尼多朗", "皮皮", "六尾", "胖丁", "超音蝠", "走路草", "派拉斯"};
+ const char *const pp_scene_names[] = {
+     "清晨庭院", "樱花小院", "晴日海岸", "城镇", "秋日木林", "雪落小镇",
+     "水晶洞穴", "蘑菇秘境", "星空山丘", "沙漠绿洲", "雨中村庄", "天空岛"};
+@@ -772,7 +772,9 @@
+  {7,20,0,20,"拉达"}, {8,20,0,22,"大嘴雀"},
+  {9,22,0,24,"阿柏怪"}, {0,0,0,25,"雷丘"},
+  {10,22,0,27,"穿山王"}, {11,16,0,29,"尼多娜"}, {11,0,1,30,"尼多后"},
+- {12,16,0,32,"尼多力诺"}, {12,0,1,33,"尼多王"}, {13,0,0,35,"皮可西"}};
++ {12,16,0,32,"尼多力诺"}, {12,0,1,33,"尼多王"}, {13,0,0,35,"皮可西"},
++ {14,0,0,37,"九尾"}, {15,0,0,39,"胖可丁"}, {16,22,0,41,"大嘴蝠"},
++ {17,21,0,43,"臭臭花"}, {17,0,1,44,"霸王花"}};
+ unsigned pp_evolution_level(const pp_game *g, unsigned pet) {
+   if (pet >= g->count || pp_evolution_locked(g, pet))
+     return 0;
+@@ -792,7 +794,7 @@
+   for (unsigned i=0;i<PP_EVOLUTIONS;i++) {
+     const pp_evolution_template *t=&pp_evolutions[i];
+     if (t->species==g->pets[pet].species && t->from_stage==g->growth[pet].stage && !t->level)
+-      return t->species==0 ? "雷之石" : "月之石";
++      return t->species==0 ? "雷之石" : t->species==14 ? "火之石" : t->species==17 ? "叶之石" : "月之石";
+   }
+   return NULL;
+ }
+@@ -836,7 +838,8 @@
+   if (!stone) return PP_INVALID;
+   pp_result result = pp_evolution_offer(g, pet);
+   if (result != PP_OK) return result;
+-  unsigned price=g->pets[pet].species==0 ? PP_THUNDER_STONE_PRICE : PP_MOON_STONE_PRICE;
++  unsigned species=g->pets[pet].species;
++  unsigned price=species==0 ? PP_THUNDER_STONE_PRICE : species==14 ? PP_FIRE_STONE_PRICE : species==17 ? PP_LEAF_STONE_PRICE : PP_MOON_STONE_PRICE;
+   if (g->coins < price) return PP_NO_COINS;
+   g->coins -= price;
+   g->growth[pet].stage++;
+--- a/core/moves.c
++++ b/core/moves.c
+@@ -60,9 +60,29 @@
+     {"毒击", "毒", "用带毒的肢体刺击", PP_POISON},
+     {"毒击", "毒", "用带毒的肢体刺击", PP_POISON},
+     {"月亮之力", "妖精", "借助月亮的力量攻击", PP_FAIRY},
++    {"火花", "火", "发射小火苗攻击", PP_FIRE},
++    {"拍击", "一般", "用前肢拍击对手", PP_NORMAL},
++    {"吸血", "虫", "用尖牙吸取对手体力", PP_BUG},
++    {"吸取", "草", "吸取对手体力", PP_GRASS},
++    {"抓", "一般", "用爪子抓向对手", PP_NORMAL},
++    {"电光一闪", "一般", "快速冲向对手", PP_NORMAL},
++    {"魅惑之声", "妖精", "用妖精之声攻击", PP_FAIRY},
++    {"咬住", "一般", "用牙齿咬住对手", PP_NORMAL},
++    {"溶解液", "毒", "用酸液攻击对手", PP_POISON},
++    {"吸取", "草", "吸取对手体力", PP_GRASS},
++    {"火焰旋涡", "火", "用旋转火焰攻击", PP_FIRE},
++    {"巨声", "一般", "用响亮的声音攻击", PP_NORMAL},
++    {"空气利刃", "飞行", "发出锐利气流攻击", PP_FLYING},
++    {"超级吸取", "草", "用更强能量吸取体力", PP_GRASS},
++    {"连斩", "虫", "用锋利前肢斩击", PP_BUG},
++    {"喷射火焰", "火", "喷射强烈火焰攻击", PP_FIRE},
++    {"月亮之力", "妖精", "借助月亮的力量攻击", PP_FAIRY},
++    {"毒液冲击", "毒", "将毒液泼向对手", PP_POISON},
++    {"花瓣舞", "草", "用花瓣般的能量攻击", PP_GRASS},
++    {"十字剪", "虫", "交叉前肢斩向对手", PP_BUG},
+ };
+ const pp_move *pp_move_at(unsigned species, unsigned slot) {
+   if (species >= PP_SPECIES || slot >= PP_MOVE_SLOTS)
+     return 0;
+-  return &pp_moves[species<4 ? slot*4+species : species<7 ? 16+slot*3+species-4 : species<11 ? 28+slot*4+species-7 : 44+slot*3+species-11];
++  return &pp_moves[species<4 ? slot*4+species : species<7 ? 16+slot*3+species-4 : species<11 ? 28+slot*4+species-7 : species<14 ? 44+slot*3+species-11 : 56+slot*5+species-14];
+ }
+--- a/main/game_ui.c
++++ b/main/game_ui.c
+@@ -75,7 +75,8 @@
+ static const unsigned evo_colors[] = {
+   0xf4ce58, 0x80cb83, 0xf69b68, 0x74c7ed, 0xb4cb65, 0xb4cb65,
+   0xc4b29a, 0xc4b29a, 0xc4b29a, 0xc294df, 0xd9b67c,
+-  0xc294df, 0xc294df, 0xf4a8c5
++  0xc294df, 0xc294df, 0xf4a8c5,
++  0xf69b68, 0xc4b29a, 0xc294df, 0x80cb83, 0xb4cb65
+ };
+ static void evolution_tick(void);
+ static void evolution_open(unsigned pet, bool stone);
+@@ -1373,6 +1374,7 @@
+ static void evolution_choose(bool decline) {
+   if (!evolution || !evo_choosing) return;
+   unsigned pet=evo_pet_id, before_art=evo_before_art; bool stone=evo_stone;
++  const char *stone_name=stone?pp_evolution_stone(g,pet):NULL;
+   pp_result result=decline?pp_decline_evolution(g,pet):stone?pp_evolve_stone(g,pet):pp_evolve(g,pet);
+   if (result != PP_OK) {
+     if (result == PP_NO_COINS) { notice(pp_message(result)); lv_obj_move_foreground(toast); return; }
+@@ -1393,7 +1395,8 @@
+   lv_obj_set_style_bg_opa(evolution, 255, 0);
+   lv_obj_remove_flag(evolution, LV_OBJ_FLAG_SCROLLABLE);
+   lv_obj_add_flag(evolution, LV_OBJ_FLAG_CLICKABLE);
+-  lv_obj_t *l = label(evolution, decline ? "守护最初的自己" : stone ? (g->pets[pet].species==0?"雷之石进化":"月之石进化") : "突破进化", 70, 47, 220, evo_tint);
++  char title[64];snprintf(title,sizeof(title),"%s进化",stone_name?stone_name:"");
++  lv_obj_t *l = label(evolution, decline ? "守护最初的自己" : stone ? title : "突破进化", 70, 47, 220, evo_tint);
+   lv_obj_set_style_text_font(l, &pp_font_18, 0);
+   char str[96];
+   snprintf(str, sizeof(str), "%s", decline ? "成长，也可以是\n守护最初的自己。" : "每一次成长，都有你的陪伴。");

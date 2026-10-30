@@ -1,0 +1,11 @@
+{
+  "service": "MobiIoT",
+  "model": "gpt-image-2.5-sunburst",
+  "attempts": 1,
+  "source": "source/shop-lottery-v2.png",
+  "sourceSha256": "a580a10b5befce6c3cf453645e0e3249f813127a8d866a6f7de777474449f525",
+  "prompt": "prompts/items/shop-lottery-v2.txt",
+  "recipe": "tools/shop_art.py: binary alpha, magenta key, nearest fit 48x40 on 52x44 canvas, 15 colors",
+  "log": "build/shop-polish-imagegen-v2.log",
+  "supersedes": "source/shop-lottery-v1.png"
+}

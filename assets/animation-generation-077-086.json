@@ -1,0 +1,164 @@
+{
+  "scope": "077-086",
+  "generator": "mobiiot-imagegen",
+  "generated": [
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86
+  ],
+  "exported": [
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86
+  ],
+  "completed": true,
+  "status": "complete; ten accepted full templates and Web/firmware v0.15.0",
+  "failedNationalId": null,
+  "runtimeIntegrated": true,
+  "identityCompletedNationalIds": [
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86
+  ],
+  "completedAnimationNationalIds": [
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86
+  ],
+  "unrequestedAnimationNationalIds": [],
+  "taskHistory": [
+    {
+      "dex": 77,
+      "version": 1,
+      "status": "accepted48 poses",
+      "attempts": 1
+    },
+    {
+      "dex": 78,
+      "version": 1,
+      "status": "generated but rejected; touching silhouettes",
+      "report": "assets/source/animation-078-master-v1-rejected-components.json"
+    },
+    {
+      "dex": 78,
+      "version": 2,
+      "status": "failed after six HTTP400/500 failures; entire batch stopped",
+      "attempts": 6
+    },
+    {
+      "dex": 77,
+      "version": 1,
+      "status": "accepted and integrated v0.15.0",
+      "review": "v1 accepted, attempt1: four-legged cream horse/no horn, attached flame mane/tail. Genuine alternating travel/hop/brace/recovery poses, low closed-eye sleep throughout; legs may extend gently during sleep breathing. Six actions each eight distinct complete bodies and exact mirrors. Source/measurements/frame hashes retained. Not runtime integrated."
+    },
+    {
+      "dex": 78,
+      "version": 3,
+      "status": "accepted and integrated v0.15.0",
+      "review": "v3 accepted, attempt1. Source and native contact sheet reviewed: compact cream four-legged horse, visible forehead horn, ears and attached orange mane/tail, true alternating steps and recovery; all eight sleep poses low with closed visible eye.48 separated complete source bodies; native silhouette<=40px. Prior v1 rejection/v2 six failures retained."
+    },
+    {
+      "dex": 79,
+      "version": 1,
+      "status": "accepted and integrated v0.15.0",
+      "review": "v1 accepted, attempt1: source and native contact sheet reviewed. Four short legs, connected cream-tipped pink tail, consistent broad muzzle/ears. Distinct leg bends, hop, chewing and compact brace/recovery. Eight low resting sleep poses have closed eyes; tail relaxes to ground then raises at loop recovery. Native48px exact mirrors; no stretched duplicates."
+    },
+    {
+      "dex": 80,
+      "version": 3,
+      "status": "accepted and integrated v0.15.0",
+      "review": "v3 accepted: source sleep row and native contact sheet reviewed. Five original complete action bands retained pixel-exactly; eight newly generated complete resting bodies assembled with one fixed uniform scale. Pink-body eyes closed; gray shell uses closed dark lines without white eyeballs/pupils. Attached shell/tail and limbs stay intact; one curled side-rest hides face naturally. Original v1 open-shell sleep and rejected sleep-v2 retained, assembly records/hash/boxes included. Sleep-v3 attempt1."
+    },
+    {
+      "dex": 81,
+      "version": 1,
+      "status": "accepted and integrated v0.15.0",
+      "review": "v1 accepted, attempt2: native contact sheet reviewed. One connected sphere/eye, attached top and front screws and two red-blue tipped magnets. Eight genuine tilt/magnet gestures, no legs or mouth; low hovering rest with single eye fully closed in all eight sleep frames. Movement labeled hovering. Source/frames distinct, exact mirrors."
+    },
+    {
+      "dex": 82,
+      "version": 2,
+      "status": "accepted and integrated v0.15.0",
+      "review": "Reviewed native48px contact sheet: all48 whole-cluster poses retain three visible round connected bodies and magnet arms; eight replacement sleep bodies have all three gray eyelids closed, retain volume and no invented legs. Original v1 flattened/hidden lower sleep spheres rejected. Whole-row assembly retains five original awake rows with measured source provenance."
+    },
+    {
+      "dex": 83,
+      "version": 1,
+      "status": "accepted and integrated v0.15.0",
+      "review": "v1 accepted, attempt1: native contact sheet reviewed. Brown duck, forehead mark, beak, two attached wings and webbed feet; one leek held against near wing/body throughout all48 frames, including closed-eye low sitting sleep. Real steps, beak chewing and compact held-leek/head gestures with recovery; no detached prop."
+    },
+    {
+      "dex": 84,
+      "version": 1,
+      "status": "accepted and integrated v0.15.0",
+      "review": "v1 accepted, attempt1: native contact sheet reviewed. Exactly two heads and two attached necks, two long legs in every pose, no wings. Alternating running steps, genuine beak/head/knee changes, both heads tuck into low seated sleep with all visible eyes closed; compact two-head lean and recovery. Native silhouettes and exact mirrors passed."
+    },
+    {
+      "dex": 85,
+      "version": 1,
+      "status": "accepted and integrated v0.15.0",
+      "review": "v1 accepted, attempt1: native contact sheet reviewed. Exactly three brown crested heads, three connected necks, two legs and attached red tail feathers. Real alternating steps/three-head beak motions, three heads tucked into low closed-eye resting cluster in all sleep frames, compact triple-head forward lean and recovery. Complete connected bodies, no missing heads or wings."
+    },
+    {
+      "dex": 86,
+      "version": 1,
+      "status": "accepted and integrated v0.15.0",
+      "review": "v1 accepted, attempt1: native contact sheet reviewed. White seal, single horn, muzzle/tusks/pink tongue, two attached front flippers and forked rear tail. Eight real flipper/belly-scooting phases, no added walking legs; low lying closed-eye sleep throughout, compact head/front-flipper action and recovery. Movement labeled sliding."
+    }
+  ],
+  "previousStoppedTask": {
+    "nationalId": 78,
+    "version": 2,
+    "attempts": 6,
+    "httpStatuses": [
+      400,
+      500,
+      500,
+      500,
+      500,
+      500
+    ],
+    "log": "assets/prompts/animation-078/generation-v2.log"
+  },
+  "acceptedVersions": {
+    "77": 1,
+    "78": 3,
+    "79": 1,
+    "81": 1,
+    "83": 1,
+    "84": 1,
+    "85": 1,
+    "86": 1,
+    "80": 3,
+    "82": 2
+  },
+  "visualReview": "docs/gen1-077-086/visual-review.json"
+}

@@ -1,0 +1,15 @@
+{
+  "nationalId": 27,
+  "frames": 48,
+  "actions": 6,
+  "uniquePosesPerAction": 8,
+  "checks": [
+    "48 measured poses, binary alpha, <=16 opaque colors, connected native outline",
+    "exact mirrored right-facing frames",
+    "visual identity, action rows and closed-eye sleep"
+  ],
+  "acceptedVersion": 1,
+  "gameIntegrated": true,
+  "status": "accepted; shared LVGL smoke passed",
+  "firmwareVersion": "0.8.0"
+}

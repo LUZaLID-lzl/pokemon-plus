@@ -1,0 +1,257 @@
+{
+  "method": "Five pixel-exact original action bands plus eight complete AI-generated closed-eye sleep bodies, one uniform nearest-neighbor scale across the sleep row. No body-part deformation, painting, duplication or synthetic poses.",
+  "parts": [
+    {
+      "source": "assets/source/animation-048-master-v1.png",
+      "sourceBox": [
+        0,
+        26,
+        1448,
+        186
+      ],
+      "destination": [
+        0,
+        36
+      ],
+      "uniformScale": 1,
+      "action": "idle"
+    },
+    {
+      "source": "assets/source/animation-048-master-v1.png",
+      "sourceBox": [
+        0,
+        208,
+        1448,
+        373
+      ],
+      "destination": [
+        0,
+        252
+      ],
+      "uniformScale": 1,
+      "action": "walk"
+    },
+    {
+      "source": "assets/source/animation-048-master-v1.png",
+      "sourceBox": [
+        0,
+        389,
+        1448,
+        560
+      ],
+      "destination": [
+        0,
+        467
+      ],
+      "uniformScale": 1,
+      "action": "happy"
+    },
+    {
+      "source": "assets/source/animation-048-master-v1.png",
+      "sourceBox": [
+        0,
+        583,
+        1448,
+        738
+      ],
+      "destination": [
+        0,
+        704
+      ],
+      "uniformScale": 1,
+      "action": "eat"
+    },
+    {
+      "source": "assets/source/animation-048-sleep-v2.png",
+      "sourceBox": [
+        33,
+        251,
+        287,
+        528
+      ],
+      "destination": [
+        19,
+        924
+      ],
+      "destinationSize": [
+        143,
+        156
+      ],
+      "uniformScale": 0.5633802816901409,
+      "action": "sleep",
+      "frame": 0
+    },
+    {
+      "source": "assets/source/animation-048-sleep-v2.png",
+      "sourceBox": [
+        308,
+        239,
+        556,
+        528
+      ],
+      "destination": [
+        202,
+        917
+      ],
+      "destinationSize": [
+        140,
+        163
+      ],
+      "uniformScale": 0.5633802816901409,
+      "action": "sleep",
+      "frame": 1
+    },
+    {
+      "source": "assets/source/animation-048-sleep-v2.png",
+      "sourceBox": [
+        566,
+        237,
+        822,
+        528
+      ],
+      "destination": [
+        380,
+        916
+      ],
+      "destinationSize": [
+        144,
+        164
+      ],
+      "uniformScale": 0.5633802816901409,
+      "action": "sleep",
+      "frame": 2
+    },
+    {
+      "source": "assets/source/animation-048-sleep-v2.png",
+      "sourceBox": [
+        835,
+        219,
+        1086,
+        524
+      ],
+      "destination": [
+        563,
+        908
+      ],
+      "destinationSize": [
+        141,
+        172
+      ],
+      "uniformScale": 0.5633802816901409,
+      "action": "sleep",
+      "frame": 3
+    },
+    {
+      "source": "assets/source/animation-048-sleep-v2.png",
+      "sourceBox": [
+        1117,
+        238,
+        1355,
+        528
+      ],
+      "destination": [
+        748,
+        917
+      ],
+      "destinationSize": [
+        134,
+        163
+      ],
+      "uniformScale": 0.5633802816901409,
+      "action": "sleep",
+      "frame": 4
+    },
+    {
+      "source": "assets/source/animation-048-sleep-v2.png",
+      "sourceBox": [
+        1371,
+        239,
+        1612,
+        528
+      ],
+      "destination": [
+        928,
+        917
+      ],
+      "destinationSize": [
+        136,
+        163
+      ],
+      "uniformScale": 0.5633802816901409,
+      "action": "sleep",
+      "frame": 5
+    },
+    {
+      "source": "assets/source/animation-048-sleep-v2.png",
+      "sourceBox": [
+        1647,
+        251,
+        1890,
+        528
+      ],
+      "destination": [
+        1108,
+        924
+      ],
+      "destinationSize": [
+        137,
+        156
+      ],
+      "uniformScale": 0.5633802816901409,
+      "action": "sleep",
+      "frame": 6
+    },
+    {
+      "source": "assets/source/animation-048-sleep-v2.png",
+      "sourceBox": [
+        1905,
+        263,
+        2154,
+        528
+      ],
+      "destination": [
+        1288,
+        931
+      ],
+      "destinationSize": [
+        140,
+        149
+      ],
+      "uniformScale": 0.5633802816901409,
+      "action": "sleep",
+      "frame": 7
+    },
+    {
+      "source": "assets/source/animation-048-master-v1.png",
+      "sourceBox": [
+        0,
+        913,
+        1448,
+        1068
+      ],
+      "destination": [
+        0,
+        1146
+      ],
+      "uniformScale": 1,
+      "action": "attack"
+    }
+  ],
+  "sources": [
+    {
+      "path": "assets/source/animation-048-master-v1.png",
+      "sha256": "d71294ef6d583cf080c54520e8e0ea31f64735ddf0e6def74e02fb2c898be23e"
+    },
+    {
+      "path": "assets/source/animation-048-sleep-v2.png",
+      "sha256": "75c9c05c8ef394377e7532729bebe0c7fd97c4173566f97bdf36501f21887a9b"
+    }
+  ],
+  "outputSha256": "aaf5d4c48f5724e79d692a2fe9cf3d28afa70984d2fd784a9f97dcce1484fcdd",
+  "additionalProvenance": [
+    "assets/source/animation-048-master-v1.png",
+    "assets/source/animation-048-sleep-v2.png",
+    "assets/prompts/animation-048/master-v1.txt",
+    "assets/prompts/animation-048/generation-v1.log"
+  ]
+}

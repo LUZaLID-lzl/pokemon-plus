@@ -1,0 +1,11 @@
+Draw a transparent pixel-art animation sheet of 081 Magnemite, exactly the same friendly game creature as the attached approved reference. Preserve exact face, colors, proportions and connected anatomy: ONE spherical metallic gray body, ONE central white circular eye with black pupil, ONE screw on top, TWO small front screws, TWO side horseshoe magnets attached by their bases, red and blue pole tips; no feet or mouth.
+Layout: 8 columns by 6 rows, exactly48 separate COMPLETE whole-body poses. Spacious1536x1152 canvas. Every complete creature including all appendages occupies at most55% of cell width and65% of cell height. Generous fully transparent gutters in BOTH axes, no touching bodies or cropping, no detached components. Consistent left-facing camera, body volume, scale and baseline. Native48px pixel style with subject within40px, at most15 opaque colors plus transparency, crisp square pixels, thin continuous deep-navy contour. REAL transparent alpha, no text/ground/props/particles/checkerboard/shadows.
+Rows top to bottom:
+1. Idle: eight subtle breathing and blinking poses, seamless loop.
+2. Travel: eight genuine articulated in-place phases, seamless loop.
+3. Happy: eight small cheerful phases returning to neutral.
+4. Eat: eight gentle chewing or species-appropriate phases without extra food props.
+5. Sleep: eight LOW resting poses with ALL eyes CLOSED throughout, subtle breathing, seamless loop.
+6. Action: eight compact game-action phases: prepare, brace, lean, extend, peak, recoil, recover, neutral. No effects. Complete body and every appendage in each cell.
+Species motion: Floating metallic creature has no legs or mouth. Travel eight distinct in-place body tilts, attached side magnets turn gently with torso and top screw changes angle. Happy small eye squint/magnet lift. Eat indicated by eye and magnet pulses without a mouth or props. Sleep low floating rest with SINGLE central eyelid fully CLOSED in ALL eight poses. Action compact magnet lean/brace/recoil/recovery. Keep red/blue ends and all screws attached; no sparks.
+Every row must contain eight DISTINCT full-body poses with genuine joint/eye/mouth changes, not copies shifted or stretched. Fixed body volume, no cut-body assembly. Gentle phase spacing, no abrupt flips. Happy and action end at neutral. The approved reference is authoritative for identity.

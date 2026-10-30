@@ -1,0 +1,90 @@
+{
+  "scope": "117-126",
+  "generator": "mobiiot-imagegen",
+  "generated": [
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126
+  ],
+  "exported": [
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126
+  ],
+  "completed": true,
+  "status": "completed and integrated firmware/Web v0.19.0",
+  "runtimeIntegrated": true,
+  "identityCompletedNationalIds": [
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126
+  ],
+  "completedAnimationNationalIds": [
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126
+  ],
+  "pendingAnimationNationalIds": [],
+  "failedTask": null,
+  "failureLog": null,
+  "failedNationalId": null,
+  "identityMode": "per-species sources",
+  "identityAtlasFailures": [
+    {
+      "kind": "identity-atlas",
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/gen1-117-126-generation-v1.log"
+    },
+    {
+      "kind": "identity-atlas",
+      "version": 2,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/gen1-117-126-generation-v2.log"
+    }
+  ],
+  "activeTask": null,
+  "previousStoppedTasks": [
+    {
+      "kind": "identity",
+      "nationalId": 120,
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-120-generation-v1.log",
+      "prompt": "assets/prompts/identity-120-v1.txt",
+      "sourceImage": null
+    }
+  ],
+  "firmwareVersion": "v0.19.0"
+}

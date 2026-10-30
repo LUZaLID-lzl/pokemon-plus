@@ -1,0 +1,13 @@
+{
+  "name": "纯净之心",
+  "collectionId": 583,
+  "generator": "mobiiot-imagegen",
+  "model": "gpt-image-2.5-sunburst",
+  "attempts": 1,
+  "source": "source/pure-heart-v1.png",
+  "prompt": "prompts/pure-heart-v1.txt",
+  "sha256": "61d623499b099b6e8a2fbaeda7823e77bc8c84773a7b9eeab915a5d5c56bdcd8",
+  "export": "collection/pure-heart.png",
+  "derivation": "binary alpha threshold 200, transparent bounds, nearest-neighbor fit to 28px inside 32px canvas, 12 color quantization; 20px thumbnail",
+  "reward": "永久不进化决定与收藏位在同一存档事务保存"
+}

@@ -1,0 +1,42 @@
+{
+  "images": [
+    {
+      "service": "MobiIoT",
+      "model": "gpt-image-1.5",
+      "attempts": 1,
+      "reviewed": true,
+      "source": "source/training/scroll-v1.png",
+      "prompt": "prompts/training-scroll-v1.txt",
+      "sourceSha256": "e903b2aff3ba4b9dff3e330e16711d650a6fbd84f9b5c39738f775de530a5893"
+    },
+    {
+      "service": "MobiIoT",
+      "model": "gpt-image-1.5",
+      "attempts": 1,
+      "reviewed": true,
+      "source": "source/training/icon-v1.png",
+      "prompt": "prompts/training-icon-v1.txt",
+      "sourceSha256": "3286469cebfa19e56be08b7070ab17b5b29fb9ffc88932175105e9bcfde0ddf8"
+    }
+  ],
+  "source": "source/training/scroll-v1.png",
+  "sourceSha256": "e903b2aff3ba4b9dff3e330e16711d650a6fbd84f9b5c39738f775de530a5893",
+  "sceneCount": 6,
+  "teamSize": [
+    1,
+    3
+  ],
+  "imageSize": [
+    180,
+    180
+  ],
+  "panorama": [
+    0,
+    54,
+    180,
+    60
+  ],
+  "scale": 2,
+  "scrollPixelsPerSecond": 40,
+  "icon": "hud/training.png"
+}

@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {createEvolutionDemo} from '../web/evolution-choice.js';
+const data=new Map(),storage={getItem:k=>data.get(k)??null,setItem:(k,v)=>data.set(k,v)};
+const roster=[{id:0,nationalId:1,name:'妙蛙种子'}],make=()=>createEvolutionDemo({storage,roster,chains:[]});
+let demo=make();const a=demo.add(0),b=demo.add(0);demo.homeHit(b.id,3,5);
+assert.equal(demo.buyEssence(400),150);assert.equal(demo.state.treeEssences,1);
+const before=data.get('pokemon-plus.web-companions-v1');assert.throws(()=>demo.buyEssence(249),/金币不足/);assert.equal(data.get('pokemon-plus.web-companions-v1'),before);
+assert.throws(()=>demo.useEssence([]),/忙/);assert.equal(data.get('pokemon-plus.web-companions-v1'),before);
+const cured=demo.useEssence();assert.equal(cured.id,b.id);for(const key of ['food','clean','health','mood','energy'])assert.equal(cured[key],100);assert.equal(demo.state.treeEssences,0);assert.equal(demo.state.pets[0].health,100);
+assert.throws(()=>demo.useEssence(),/数量/);demo=make();assert.equal(demo.state.pets[1].mood,100);assert.equal(demo.state.treeEssences,0);
+demo.buyEssence(250);demo.homeHit(a.id,3,5);assert.throws(()=>demo.useEssence([b.id]),/已满/);
+let raw=JSON.parse(data.get('pokemon-plus.web-companions-v1'));raw.treeEssences=65535;storage.setItem('pokemon-plus.web-companions-v1',JSON.stringify(raw));demo=make();assert.throws(()=>demo.buyEssence(999),/已满/);
+const unchanged=data.get('pokemon-plus.web-companions-v1');storage.setItem=()=>{throw Error('存储失败')};assert.throws(()=>demo.useEssence(),/存储失败/);assert.equal(data.get('pokemon-plus.web-companions-v1'),unchanged);assert.equal(demo.state.treeEssences,65535);
+console.log('PASS: Web essence200, lowest total, eligible active IDs, all5 stats100, once-only stock, reload and atomic validation/storage failures');

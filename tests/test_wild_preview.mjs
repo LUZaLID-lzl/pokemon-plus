@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {createWildPreview,highestWildPartner} from '../web/wild-preview.mjs';
+let now=0,raw=null,fail=false;const storage={getItem:()=>raw,setItem:(k,v)=>{if(fail)throw Error('quota');raw=v}};
+const open=()=>createWildPreview({now:()=>now,random:()=>0,storage,onSpawn:()=>12});let wild=open();
+assert.equal(wild.stepsRemaining,400);assert(!wild.walk(399));assert(wild.walk(1));assert.equal(wild.encounter,12);assert.equal(wild.remaining,180);wild.walk(10000);assert.equal(wild.queue,3);
+for(let i=0;i<179;i++){now+=1000;wild.tick()}assert.equal(wild.remaining,1);wild=open();now+=1000;wild.tick({active:false});assert.equal(wild.remaining,1);now+=1000;wild.tick();assert.equal(wild.phase,'escaped');assert.equal(wild.queue,2);
+for(let i=0;i<61;i++){now+=1000;wild.tick()}assert.equal(wild.phase,'alert');assert(wild.reveal());now+=100000;wild.tick();assert.equal(wild.phase,'pending');assert(wild.confirm());wild.dismiss();assert.equal(wild.queue,1);
+const before=wild.snapshot();fail=true;assert.throws(()=>wild.walk(400),/quota/);assert.deepEqual(wild.snapshot(),before);fail=false;
+raw=null;wild=open();for(let i=0;i<1200;i++){now+=1000;wild.tick()}assert.equal(wild.phase,'alert');assert.equal(wild.queue,1);
+assert.equal(highestWildPartner([{level:1,health:30,energy:3},{level:20,energy:2}]),0);
+console.log('PASS: encounter thresholds/queue/visible-only expiry, opened persistence, delayed next, reload, storage rollback, activity fallback and fighter gates');

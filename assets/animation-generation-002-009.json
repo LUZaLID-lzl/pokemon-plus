@@ -1,0 +1,43 @@
+{
+  "scope": "002-009 reference-grounded animation masters",
+  "generated": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "status": "completed",
+  "completed": true,
+  "exported": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "integratedNationalIds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "newPoseCount": 384,
+  "totalPoseCount": 432,
+  "firmwareVersion": "0.6.8",
+  "firmware": "dist/pokemon-plus-all-in-one.zip",
+  "templates": "dist/001-009-animation-templates.zip",
+  "web": "/web/#animation",
+  "deviceFlashed": false
+}

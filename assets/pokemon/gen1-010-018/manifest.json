@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "kind": "single-pose art review",
+  "generator": "MobiIoT",
+  "model": "gpt-image-2.5-sunburst",
+  "attempts": 6,
+  "sourceAtlas": "../../source/gen1-010-018-v10.png",
+  "sourceSha256": "a2e78c01db8518b64476458528dda5e703cda58c9de80871a08a5322827141e9",
+  "prompt": "../../prompts/gen1-010-018-v10.txt",
+  "nativeCanvas": 48,
+  "upscale": 8,
+  "maxColors": 16,
+  "outlineColor": "#1b263a",
+  "alpha": "binary",
+  "outline": "one connected 4-neighbor boundary; local corner bridges",
+  "processing": "MobiIoT atlas split by measured source boxes, nearest-neighbor reduction, palette quantization and deterministic closed-outline repair",
+  "gameIntegrated": false,
+  "animationPosesPerSpecies": 1,
+  "items": [
+    {
+      "id": 10,
+      "name": "绿毛虫",
+      "english": "Caterpie",
+      "chain": 3,
+      "stage": 0,
+      "evolvesTo": 11,
+      "image": "010.png",
+      "preview": "010@8x.png",
+      "sourceBox": [
+        68,
+        71,
+        413,
+        367
+      ],
+      "outlinePixels": 166,
+      "source": "https://wiki.52poke.com/wiki/绿毛虫"
+    },
+    {
+      "id": 11,
+      "name": "铁甲蛹",
+      "english": "Metapod",
+      "chain": 3,
+      "stage": 1,
+      "evolvesTo": 12,
+      "image": "011.png",
+      "preview": "011@8x.png",
+      "sourceBox": [
+        524,
+        25,
+        808,
+        367
+      ],
+      "outlinePixels": 146,
+      "source": "https://wiki.52poke.com/wiki/铁甲蛹"
+    },
+    {
+      "id": 12,
+      "name": "巴大蝶",
+      "english": "Butterfree",
+      "chain": 3,
+      "stage": 2,
+      "evolvesTo": null,
+      "image": "012.png",
+      "preview": "012@8x.png",
+      "sourceBox": [
+        880,
+        35,
+        1318,
+        374
+      ],
+      "outlinePixels": 199,
+      "source": "https://wiki.52poke.com/wiki/巴大蝶"
+    },
+    {
+      "id": 13,
+      "name": "独角虫",
+      "english": "Weedle",
+      "chain": 4,
+      "stage": 0,
+      "evolvesTo": 14,
+      "image": "013.png",
+      "preview": "013@8x.png",
+      "sourceBox": [
+        60,
+        414,
+        386,
+        737
+      ],
+      "outlinePixels": 170,
+      "source": "https://wiki.52poke.com/wiki/独角虫"
+    },
+    {
+      "id": 14,
+      "name": "铁壳蛹",
+      "english": "Kakuna",
+      "chain": 4,
+      "stage": 1,
+      "evolvesTo": 15,
+      "image": "014.png",
+      "preview": "014@8x.png",
+      "sourceBox": [
+        539,
+        396,
+        756,
+        744
+      ],
+      "outlinePixels": 132,
+      "source": "https://wiki.52poke.com/wiki/铁壳蛹"
+    },
+    {
+      "id": 15,
+      "name": "大针蜂",
+      "english": "Beedrill",
+      "chain": 4,
+      "stage": 2,
+      "evolvesTo": null,
+      "image": "015.png",
+      "preview": "015@8x.png",
+      "sourceBox": [
+        893,
+        401,
+        1290,
+        744
+      ],
+      "outlinePixels": 254,
+      "source": "https://wiki.52poke.com/wiki/大针蜂"
+    },
+    {
+      "id": 16,
+      "name": "波波",
+      "english": "Pidgey",
+      "chain": 5,
+      "stage": 0,
+      "evolvesTo": 17,
+      "image": "016.png",
+      "preview": "016@8x.png",
+      "sourceBox": [
+        49,
+        792,
+        381,
+        1114
+      ],
+      "outlinePixels": 175,
+      "source": "https://wiki.52poke.com/wiki/波波"
+    },
+    {
+      "id": 17,
+      "name": "比比鸟",
+      "english": "Pidgeotto",
+      "chain": 5,
+      "stage": 1,
+      "evolvesTo": 18,
+      "image": "017.png",
+      "preview": "017@8x.png",
+      "sourceBox": [
+        470,
+        763,
+        825,
+        1121
+      ],
+      "outlinePixels": 201,
+      "source": "https://wiki.52poke.com/wiki/比比鸟"
+    },
+    {
+      "id": 18,
+      "name": "大比鸟",
+      "english": "Pidgeot",
+      "chain": 5,
+      "stage": 2,
+      "evolvesTo": null,
+      "image": "018.png",
+      "preview": "018@8x.png",
+      "sourceBox": [
+        895,
+        753,
+        1322,
+        1130
+      ],
+      "outlinePixels": 194,
+      "source": "https://wiki.52poke.com/wiki/大比鸟"
+    }
+  ]
+}

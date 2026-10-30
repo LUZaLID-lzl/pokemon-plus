@@ -1,0 +1,51 @@
+{
+  "identityReviewed": [
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66
+  ],
+  "animationReviewed": [
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66
+  ],
+  "acceptedVersions": {
+    "57": 1,
+    "58": 1,
+    "59": 1,
+    "60": 1,
+    "61": 1,
+    "62": 1,
+    "63": 1,
+    "64": 2,
+    "65": 3,
+    "66": 3
+  },
+  "notes": {
+    "identity": "Ten canonical complete identities reviewed at source and native48 preview; measured alpha boxes, protected hue palette; animation review pending.",
+    "57": "48 distinct whole-body poses, no tail, consistent cuffs; low closed-eye sleep, compact fist attack and alternating feet reviewed.",
+    "58": "Four-paw articulated cycle, connected tail/tuft, curled closed-eye sleep, head-dip eating and compact lunge reviewed.",
+    "59": "Four-paw movement with stable mane and tail; closed-eye curled sleep and compact forepaw lunge reviewed.",
+    "60": "Two feet with no arms, connected tail fin, visible belly spiral, low closed-eye sleep and small whole-body attack reviewed.",
+    "61": "Eight genuine phases per action, no tail, attached white mitten hands, stable spiral and completely closed-eye low rest reviewed.",
+    "62": "Stocky attached arms/white fists, compact fist attack, distinct alternating feet, stable spiral and closed-eye low rest reviewed.",
+    "63": "Eyes closed throughout all six actions, no spoon, tail attached; walking alternates articulated knees/feet and sleep curled low, distinct from meditating idle.",
+    "64": "v2 reviewed: one gripped spoon, attached tail/moustache, forehead star, eight distinct phases per action, closed-eye low sleep; v1 six-attempt service failure retained.",
+    "65": "v3 accepted: two gripped spoons, no tail or forehead star, attached moustache, eight genuine articulated phases/action and closed-eye tucked sleep. v2 exhausted six attempts, v3 success attempt5; logs retained.",
+    "66": "v3 accepted: three head ridges, red eyes, two attached arms/legs, attached tail, genuine articulated movement and eight closed-eye low sleep poses; success attempt2."
+  }
+}

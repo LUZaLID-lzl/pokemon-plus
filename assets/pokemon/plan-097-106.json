@@ -1,0 +1,237 @@
+{
+  "range": [
+    97,
+    106
+  ],
+  "status": "complete;integrated firmware/Web v0.17.0",
+  "runtimeIntegrated": true,
+  "actions": [
+    "idle",
+    "walk",
+    "happy",
+    "eat",
+    "sleep",
+    "attack"
+  ],
+  "framesPerAction": 8,
+  "items": [
+    {
+      "nationalId": 97,
+      "name": "引梦貘人",
+      "english": "Hypno",
+      "artId": 96,
+      "species": 41,
+      "stage": 1,
+      "anatomy": "yellow upright tapir-like companion, one short downward pointed nose, TWO pointed ears, TWO narrow eyes, white fluffy neck ruff, TWO connected arms and TWO short legs; one small pendulum coin held in the near hand on a short connected cord resting against the chest, no loose coin or floating props"
+    },
+    {
+      "nationalId": 98,
+      "name": "大钳蟹",
+      "english": "Krabby",
+      "artId": 97,
+      "species": 42,
+      "stage": 0,
+      "anatomy": "small orange crab, one orange upper shell and cream lower body, TWO short upright eyestalks, TWO attached orange claws with the near claw slightly larger, FOUR short bent walking legs visible as two pairs, no tail"
+    },
+    {
+      "nationalId": 99,
+      "name": "巨钳蟹",
+      "english": "Kingler",
+      "artId": 98,
+      "species": 42,
+      "stage": 1,
+      "anatomy": "broad orange crab with angular crown-like shell spikes and cream lower body, TWO upright eyestalks, TWO attached claws with ONE oversized near pincer and ONE smaller far pincer, FOUR short bent walking legs, keep the huge claw compact beside the shell"
+    },
+    {
+      "nationalId": 100,
+      "name": "霹雳电球",
+      "english": "Voltorb",
+      "artId": 99,
+      "species": 43,
+      "stage": 0,
+      "anatomy": "single round smooth sphere with RED upper hemisphere and WHITE lower hemisphere, thin black horizontal seam, TWO narrow white eyes with black pupils in red upper half; no mouth, arms or legs"
+    },
+    {
+      "nationalId": 101,
+      "name": "顽皮雷弹",
+      "english": "Electrode",
+      "artId": 100,
+      "species": 43,
+      "stage": 1,
+      "anatomy": "single round smooth sphere with WHITE upper hemisphere and RED lower hemisphere, TWO black eyes and arched dark eyebrows in white upper half and a broad cheerful dark mouth crossing the seam; no arms or legs"
+    },
+    {
+      "nationalId": 102,
+      "name": "蛋蛋",
+      "english": "Exeggcute",
+      "artId": 101,
+      "species": 44,
+      "stage": 0,
+      "anatomy": "exactly SIX pink egg heads in ONE compact overlapping cluster with naturally touching contours, each egg a complete oval shell; five visible small expressive faces, one rear egg with a cracked open crown and pale yellow interior; cracks are dark lines inside shell, no detached shell fragments, no arms or legs"
+    },
+    {
+      "nationalId": 103,
+      "name": "椰蛋树",
+      "english": "Exeggutor",
+      "artId": 102,
+      "species": 44,
+      "stage": 1,
+      "anatomy": "short tan palm-tree body with EXACTLY THREE attached yellow coconut heads around upper trunk and one connected crown of broad green palm leaves, THREE cheerful faces, TWO thick short tan legs with pale toes, no arms; every coconut touches trunk or neighboring coconut"
+    },
+    {
+      "nationalId": 104,
+      "name": "卡拉卡拉",
+      "english": "Cubone",
+      "artId": 103,
+      "species": 45,
+      "stage": 0,
+      "anatomy": "small brown upright biped with cream belly, ONE ivory skull helmet covering head with two short horns and visible dark eye sockets, TWO connected short arms and TWO short legs, small attached brown tail; ONE short ivory bone club firmly gripped by near hand and resting against side, no loose bones"
+    },
+    {
+      "nationalId": 105,
+      "name": "嘎啦嘎啦",
+      "english": "Marowak",
+      "artId": 104,
+      "species": 45,
+      "stage": 1,
+      "anatomy": "tan-brown upright biped with cream belly, ONE smooth ivory skull helmet with two short pointed horns and dark eye sockets, TWO connected arms and TWO short legs, one small attached tail; ONE ivory bone club gripped firmly and held compactly against body, no floating bones"
+    },
+    {
+      "nationalId": 106,
+      "name": "飞腿郎",
+      "english": "Hitmonlee",
+      "artId": 105,
+      "species": 46,
+      "stage": 0,
+      "anatomy": "tan-brown oval upright body with TWO narrow triangular white eyes and black pupils, no visible mouth or nose, TWO connected slim arms ending in three blunt fingers, TWO long segmented spring-like beige legs ending in brown three-toed feet; compact bent knees keep whole figure inside cell"
+    }
+  ],
+  "evolution": [
+    {
+      "species": 41,
+      "nationalIds": [
+        96,
+        97
+      ],
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 26
+        }
+      ]
+    },
+    {
+      "species": 42,
+      "nationalIds": [
+        98,
+        99
+      ],
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 28
+        }
+      ]
+    },
+    {
+      "species": 43,
+      "nationalIds": [
+        100,
+        101
+      ],
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "species": 44,
+      "nationalIds": [
+        102,
+        103
+      ],
+      "steps": [
+        {
+          "trigger": "leaf-stone",
+          "level": 0,
+          "item": "叶之石",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "species": 45,
+      "nationalIds": [
+        104,
+        105
+      ],
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 28
+        }
+      ]
+    }
+  ],
+  "pendingEvolution": [],
+  "previousStoppedTasks": [
+    {
+      "kind": "identity",
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/gen1-097-106-generation-v1.log",
+      "prompt": "assets/prompts/gen1-097-106-v1.txt"
+    },
+    {
+      "kind": "animation",
+      "dex": 100,
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "assets/prompts/animation-100/generation-v1.log",
+      "prompt": "assets/prompts/animation-100/master-v1.txt"
+    },
+    {
+      "kind": "animation",
+      "dex": 104,
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "assets/prompts/animation-104/generation-v1.log",
+      "prompt": "assets/prompts/animation-104/master-v1.txt"
+    }
+  ],
+  "identityVersion": 2,
+  "identityAttempts": 1,
+  "completedAnimationNationalIds": [
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106
+  ],
+  "pendingAnimationNationalIds": [],
+  "unrequestedAnimationNationalIds": [],
+  "acceptedVersions": {
+    "97": 1,
+    "98": 1,
+    "99": 1,
+    "100": 2,
+    "101": 1,
+    "102": 1,
+    "103": 1,
+    "104": 2,
+    "105": 1,
+    "106": 1
+  },
+  "failedNationalId": null,
+  "firmwareVersion": "v0.17.0"
+}

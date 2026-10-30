@@ -1,0 +1,137 @@
+{
+  "repository": "https://github.com/waveshareteam/ESP32-S3-Touch-LCD-1.85B",
+  "commit": "139e6db584f3737fcfc6a958ee83b79fb69d317c",
+  "example": "Examples/ESP-IDF-V5.5.3/02_lvgl_demo",
+  "files": [
+    {
+      "path": "components/waveshare__esp32_s3_touch_lcd_1_85B/.component_hash",
+      "upstream_sha256": "4b70f359cdd3b75ba5c571d5dbc55dd34a2dec417fd0f7f13406d66687e10f05",
+      "project_sha256": "4b70f359cdd3b75ba5c571d5dbc55dd34a2dec417fd0f7f13406d66687e10f05"
+    },
+    {
+      "path": "components/waveshare__esp32_s3_touch_lcd_1_85B/CHECKSUMS.json",
+      "upstream_sha256": "3e23f7008cc8ddf34df9df696499fc1723f5134399c50b2d542abc1ea56073e9",
+      "project_sha256": "3e23f7008cc8ddf34df9df696499fc1723f5134399c50b2d542abc1ea56073e9"
+    },
+    {
+      "path": "components/waveshare__esp32_s3_touch_lcd_1_85B/CMakeLists.txt",
+      "upstream_sha256": "dc09a1db2c18e5a4af722c46b3f89cc70a55f5e0fa071fbe2b283a644831c6cd",
+      "project_sha256": "dc09a1db2c18e5a4af722c46b3f89cc70a55f5e0fa071fbe2b283a644831c6cd"
+    },
+    {
+      "path": "components/waveshare__esp32_s3_touch_lcd_1_85B/Kconfig",
+      "upstream_sha256": "c45d85de055239bbf538468a5bfce23391b900b5e49a669c5793f16af9ed33db",
+      "project_sha256": "c45d85de055239bbf538468a5bfce23391b900b5e49a669c5793f16af9ed33db"
+    },
+    {
+      "path": "components/waveshare__esp32_s3_touch_lcd_1_85B/LICENSE",
+      "upstream_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "project_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "components/waveshare__esp32_s3_touch_lcd_1_85B/README.md",
+      "upstream_sha256": "d98e3428027b7b5ca52ad019b06aa8cc7a6f0d26fd6b7f5064e18560d9cab98e",
+      "project_sha256": "d98e3428027b7b5ca52ad019b06aa8cc7a6f0d26fd6b7f5064e18560d9cab98e"
+    },
+    {
+      "path": "components/waveshare__esp32_s3_touch_lcd_1_85B/esp32_s3_touch_lcd_1_85B.c",
+      "upstream_sha256": "4ae89756519e6f1551a2c755526baa959d814af7148423247f88961aa296fd95",
+      "project_sha256": "f8ee2933c0b3a8d9d98b639c8eef24364f9db92a25110c95eb13b587bafc5a8f"
+    },
+    {
+      "path": "components/waveshare__esp32_s3_touch_lcd_1_85B/idf_component.yml",
+      "upstream_sha256": "fca84a55db4c5a1976de4d8dd3df280004b1db22bb61e7f82ece258f2563e918",
+      "project_sha256": "fca84a55db4c5a1976de4d8dd3df280004b1db22bb61e7f82ece258f2563e918"
+    },
+    {
+      "path": "components/waveshare__esp32_s3_touch_lcd_1_85B/include/bsp/config.h",
+      "upstream_sha256": "9c2b3229543db1cebb75cdc9a1411f24480543b410cc12a6263553dcbfcc9dec",
+      "project_sha256": "9c2b3229543db1cebb75cdc9a1411f24480543b410cc12a6263553dcbfcc9dec"
+    },
+    {
+      "path": "components/waveshare__esp32_s3_touch_lcd_1_85B/include/bsp/display.h",
+      "upstream_sha256": "d84589551101fb05dae97ea609fecfd6dfc668a15ddee362b26b61464ecf757a",
+      "project_sha256": "d84589551101fb05dae97ea609fecfd6dfc668a15ddee362b26b61464ecf757a"
+    },
+    {
+      "path": "components/waveshare__esp32_s3_touch_lcd_1_85B/include/bsp/esp-bsp.h",
+      "upstream_sha256": "e384811a34b7997d32990cc20a99ead8a65a54a20159005a8c18dd02f4225b7e",
+      "project_sha256": "e384811a34b7997d32990cc20a99ead8a65a54a20159005a8c18dd02f4225b7e"
+    },
+    {
+      "path": "components/waveshare__esp32_s3_touch_lcd_1_85B/include/bsp/esp32_s3_touch_lcd_1_85B.h",
+      "upstream_sha256": "2da1ff091f34b2135bf4c37ff1535798dda40da3a20149392b8670e4b73433e4",
+      "project_sha256": "3ebe7553311b3f42628162bd19aea2ed52ca86763f95ba0720c1949b8cd6b1ef"
+    },
+    {
+      "path": "components/waveshare__esp32_s3_touch_lcd_1_85B/include/bsp/touch.h",
+      "upstream_sha256": "2ef0696ffe62f207e1cc6a2b9ec6988149451f2aa5f96e42a9aeac14008956ca",
+      "project_sha256": "2ef0696ffe62f207e1cc6a2b9ec6988149451f2aa5f96e42a9aeac14008956ca"
+    },
+    {
+      "path": "components/waveshare__esp32_s3_touch_lcd_1_85B/priv_include/bsp_err_check.h",
+      "upstream_sha256": "9270b22036dfca465fc493152099afec5ea455e45fea02c71b8d653723fecaa9",
+      "project_sha256": "9270b22036dfca465fc493152099afec5ea455e45fea02c71b8d653723fecaa9"
+    },
+    {
+      "path": "components/waveshare__qmi8658/.component_hash",
+      "upstream_sha256": "607a13903047165d3b11770fa5d4b147da030fbe6689d3cfc9f4130847376eb8",
+      "project_sha256": "607a13903047165d3b11770fa5d4b147da030fbe6689d3cfc9f4130847376eb8"
+    },
+    {
+      "path": "components/waveshare__qmi8658/CHECKSUMS.json",
+      "upstream_sha256": "8dac78a0c9693b408a0c2ebce105d5dae9dc140dc3af9f8b759ff05b1d1eb031",
+      "project_sha256": "8dac78a0c9693b408a0c2ebce105d5dae9dc140dc3af9f8b759ff05b1d1eb031"
+    },
+    {
+      "path": "components/waveshare__qmi8658/CMakeLists.txt",
+      "upstream_sha256": "048416cbab5ba722737a182950f5b102ace6368652d197b542c215f2f8f28298",
+      "project_sha256": "048416cbab5ba722737a182950f5b102ace6368652d197b542c215f2f8f28298"
+    },
+    {
+      "path": "components/waveshare__qmi8658/README.md",
+      "upstream_sha256": "2ca19178198a3c52ef94234c9ec837b172099d13337e20cbb9298308e3ec3c44",
+      "project_sha256": "2ca19178198a3c52ef94234c9ec837b172099d13337e20cbb9298308e3ec3c44"
+    },
+    {
+      "path": "components/waveshare__qmi8658/idf_component.yml",
+      "upstream_sha256": "c4c552a7d6787d6b24276aef1afac7ba6a424c3152d15d0ed619307800f74241",
+      "project_sha256": "c4c552a7d6787d6b24276aef1afac7ba6a424c3152d15d0ed619307800f74241"
+    },
+    {
+      "path": "components/waveshare__qmi8658/include/qmi8658.h",
+      "upstream_sha256": "c0849c28e4e90b3ba55645cc63ed79e07330b9121a7fb2d7f25e0f50d7df033e",
+      "project_sha256": "c0849c28e4e90b3ba55645cc63ed79e07330b9121a7fb2d7f25e0f50d7df033e"
+    },
+    {
+      "path": "components/waveshare__qmi8658/license.txt",
+      "upstream_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "project_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "components/waveshare__qmi8658/qmi8658.c",
+      "upstream_sha256": "74f022dda11d2aff0519e9a77a72e17c5a3bbd9050e0d9d7e935369698ae1ee0",
+      "project_sha256": "74f022dda11d2aff0519e9a77a72e17c5a3bbd9050e0d9d7e935369698ae1ee0"
+    },
+    {
+      "path": "components/waveshare__qmi8658/test_app/CMakeLists.txt",
+      "upstream_sha256": "b7992e76ef290c82c4ea387687f9d88258fca09bd557fbd987069c5fb2e23c4c",
+      "project_sha256": "b7992e76ef290c82c4ea387687f9d88258fca09bd557fbd987069c5fb2e23c4c"
+    },
+    {
+      "path": "components/waveshare__qmi8658/test_app/main/CMakeLists.txt",
+      "upstream_sha256": "654298a6d6447d11d6629801be1c0f2fb54e4f940e1dc27d4c39bf8dbf208171",
+      "project_sha256": "654298a6d6447d11d6629801be1c0f2fb54e4f940e1dc27d4c39bf8dbf208171"
+    },
+    {
+      "path": "components/waveshare__qmi8658/test_app/main/idf_component.yml",
+      "upstream_sha256": "68049c2809f9b9ce0f26c60cd685e4dfce31df01acc818da97dcd762fd2511b4",
+      "project_sha256": "68049c2809f9b9ce0f26c60cd685e4dfce31df01acc818da97dcd762fd2511b4"
+    },
+    {
+      "path": "components/waveshare__qmi8658/test_app/main/test_qmi8658.c",
+      "upstream_sha256": "ad746fcdb28ce11740ebf71b1878af7a80c520b4fe5a110ee4efa400754c558f",
+      "project_sha256": "ad746fcdb28ce11740ebf71b1878af7a80c520b4fe5a110ee4efa400754c558f"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+Redesign the attached 13 nest sprite atlas for a tiny handheld pixel game. The current art becomes unreadable after shrinking. Make every nest unmistakably a separate THREE-DIMENSIONAL WOVEN STRAW EGG NEST placed ON TOP of the ground, never a hole in the ground or patch of vegetation. Second reference shows actual game backgrounds; contrast against them. Preserve the exact 4 columns x 4 rows layout: first 13 cells occupied in reading order, last 3 empty, transparent background. No text, labels, eggs, creatures, floor or scenery.
+
+EXTREMELY SIMPLE COARSE PIXEL ART. Each complete sprite is designed on ONLY a 24 pixels wide x 14 pixels tall logical grid, enlarged with nearest neighbor. Each logical pixel must be a large solid square. About 8-10 solid colors per sprite. NO fine illustration, antialiasing, blur, gradients, tiny strands or detailed flowers. Use bold chunky pixel clusters. Wide blank space separates all cells. Same size, perspective and shape throughout.
+
+Shape: low oval basket bowl viewed from above at 3/4 angle. A distinct single dark navy-brown pixel outer outline encloses the entire silhouette. Bright warm honey straw on the thick raised BACK rim, VERY DARK EMPTY OVAL cavity in the center, strong lit straw lower FRONT rim with visible 3-4 broad diagonal weave marks. Visible dark sidewall under front rim gives height. A short detached-looking dark contact shadow immediately under the base belongs inside the sprite bounding box. Outline must remain visible at 24x14, including on busy backgrounds. Clear light/dark separation between raised rim, hollow and outer sidewall. All nests remain predominantly bright warm STRAW/GOLDEN TAN for recognition, with small environmental accents only. Not a stone platform. Not a flat ring. Not a grass mound. Interior unobstructed to seat one egg.
+
+Cell 1 morning yard: golden straw, two tiny green leaves on side.
+Cell 2 cherry yard: golden straw with two chunky light pink petals.
+Cell 3 beach: warm pale straw and one cream shell, dark brown outline to stand out on sand.
+Cell 4 town: honey wicker basket nest, broad golden weave.
+Cell 5 autumn woods: pale golden straw, two red leaves, stronger dark outline against orange ground.
+Cell 6 snowy town: golden straw, only two white snow pixels on outer back edge, warm dark hollow.
+Cell 7 crystal cave: bright honey straw with one small violet crystal on outer side.
+Cell 8 mushroom grove: golden straw, tiny red mushroom outside edge, NOT dark green moss.
+Cell 9 starry hill: pale golden straw with two tiny blue leaves, NOT blue nest.
+Cell 10 oasis: bright straw with two small sage palm leaf tips, dark outline against sand.
+Cell 11 rainy town: warm gold wicker straw, small green leaf outside rim, NOT dark green nest.
+Cell 12 sky island: warm golden straw with two white feather tips, NOT cyan nest.
+Cell 13 sacred blue tree roots: PALE GOLDEN WOVEN NEST resting between blue-gray tree roots, two blue root tips outside left/right edge, bright warm straw against blue ground, dark brown hollow, NOT blue root hole or blue altar.
+
+Priority: nests must be recognizable at thumbnail size. Use LARGE SIMPLE PIXEL BLOCKS and an unmistakable warm bright oval woven basket silhouette with raised front wall. Exactly thirteen isolated nests in cells 1-13 and empty cells 14-16.

@@ -1,0 +1,203 @@
+{
+  "range": [
+    137,
+    146
+  ],
+  "status": "All reviewed identities and 48-pose sets integrated; see runtime validation",
+  "runtimeIntegrated": true,
+  "actions": [
+    "idle",
+    "walk",
+    "happy",
+    "eat",
+    "sleep",
+    "attack"
+  ],
+  "framesPerAction": 8,
+  "items": [
+    {
+      "nationalId": 137,
+      "name": "多边兽",
+      "english": "Porygon",
+      "artId": 136,
+      "species": 68,
+      "stage": 0,
+      "anatomy": "compact low-poly duck companion with angular PINK head and body, short BLUE polygonal bill, TWO eyes, TWO attached broad BLUE feet and ONE short attached BLUE tail, all solid connected polygon shapes"
+    },
+    {
+      "nationalId": 138,
+      "name": "菊石兽",
+      "english": "Omanyte",
+      "artId": 137,
+      "species": 69,
+      "stage": 0,
+      "anatomy": "small BLUE mollusk with ONE cream spiral shell on back, TWO big eyes, a compact fringe of short attached blue tentacles beneath head, no separate limbs or props"
+    },
+    {
+      "nationalId": 139,
+      "name": "多刺菊石兽",
+      "english": "Omastar",
+      "artId": 138,
+      "species": 69,
+      "stage": 1,
+      "anatomy": "BLUE mollusk with ONE cream spiral shell with short attached cream spikes, TWO eyes, small circular beak opening and compact attached blue tentacles beneath head"
+    },
+    {
+      "nationalId": 140,
+      "name": "化石盔",
+      "english": "Kabuto",
+      "artId": 139,
+      "species": 70,
+      "stage": 0,
+      "anatomy": "small brown dome-shaped horseshoe crab, TWO small black marks on top shell, TWO RED eyes visible in dark underside, FOUR short cream hooked legs attached beneath shell; shell and limbs form one compact body"
+    },
+    {
+      "nationalId": 141,
+      "name": "镰刀盔",
+      "english": "Kabutops",
+      "artId": 140,
+      "species": 70,
+      "stage": 1,
+      "anatomy": "BROWN upright armored companion with wide flat head crest, TWO eyes, cream chest plates, TWO attached curved cream forearms, TWO brown legs and ONE attached pointed tail, forearms folded close"
+    },
+    {
+      "nationalId": 142,
+      "name": "化石翼龙",
+      "english": "Aerodactyl",
+      "artId": 141,
+      "species": 71,
+      "stage": 0,
+      "anatomy": "GRAY-purple small pterosaur with TWO pointed ears, TWO eyes, short long-snouted head, TWO attached wings with violet membranes, TWO small legs and ONE attached arrow-tip tail curled close; wings folded compactly"
+    },
+    {
+      "nationalId": 143,
+      "name": "卡比兽",
+      "english": "Snorlax",
+      "artId": 142,
+      "species": 72,
+      "stage": 0,
+      "anatomy": "round dark-TEAL bear companion with cream face and belly, TWO small ears, TWO naturally narrow eyes, TWO short arms, TWO cream feet with three small toes, compact seated posture"
+    },
+    {
+      "nationalId": 144,
+      "name": "急冻鸟",
+      "english": "Articuno",
+      "artId": 143,
+      "species": 73,
+      "stage": 0,
+      "anatomy": "light-BLUE bird with THREE short crest feathers, TWO eyes, white chest tuft, TWO attached folded blue wings, TWO short gray feet and ONE attached long blue ribbon-like tail curled close"
+    },
+    {
+      "nationalId": 145,
+      "name": "闪电鸟",
+      "english": "Zapdos",
+      "artId": 144,
+      "species": 74,
+      "stage": 0,
+      "anatomy": "YELLOW bird with compact jagged feather crest, TWO eyes, long orange bill, TWO attached angular yellow wings with black undersides folded close, TWO orange feet and ONE short attached black-and-yellow tail"
+    },
+    {
+      "nationalId": 146,
+      "name": "火焰鸟",
+      "english": "Moltres",
+      "artId": 145,
+      "species": 75,
+      "stage": 0,
+      "anatomy": "GOLDEN-orange bird with TWO eyes, short cream bill, TWO attached golden wings and TWO cream feet; flame-shaped RED-orange crest, wing fringes and tail remain physically attached to body, no floating flames"
+    }
+  ],
+  "evolution": [
+    {
+      "species": 69,
+      "nationalIds": [
+        138,
+        139
+      ],
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 40
+        }
+      ]
+    },
+    {
+      "species": 70,
+      "nationalIds": [
+        140,
+        141
+      ],
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 40
+        }
+      ]
+    }
+  ],
+  "pendingEvolution": [],
+  "failedTask": null,
+  "failedNationalId": null,
+  "failureLog": null,
+  "activeTask": null,
+  "identityCompletedNationalIds": [
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146
+  ],
+  "completedAnimationNationalIds": [
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146
+  ],
+  "pendingIdentityNationalIds": [],
+  "pendingAnimationNationalIds": [],
+  "identityMode": "per-species sources;see identity manifest and visual-review identitySources",
+  "continuationPreference": null,
+  "previousStoppedTasks": [
+    {
+      "kind": "identity",
+      "nationalId": 139,
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-139-generation-v1.log",
+      "prompt": "assets/prompts/identity-139-v1.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "animation",
+      "nationalId": 143,
+      "version": 1,
+      "log": "assets/prompts/animation-143/generation-v1.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/animation-143/master-v1.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 144,
+      "version": 1,
+      "log": "build/identity-144-generation-v1.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-144-v1.txt",
+      "sourceImage": null
+    }
+  ],
+  "artScopeCompleted": true
+}

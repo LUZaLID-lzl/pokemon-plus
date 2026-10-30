@@ -1,0 +1,41 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {webcrypto} from 'node:crypto';
+import {createEvolutionDemo} from '../web/evolution-choice.js';
+globalThis.crypto??=webcrypto;
+const m=JSON.parse(fs.readFileSync(new URL('../web/manifest.json',import.meta.url)));
+const data=new Map();let fail=false;
+const storage={getItem:k=>data.get(k)||null,setItem(k,v){if(fail)throw Error('quota');data.set(k,v)}};
+let demo=createEvolutionDemo({storage,roster:m.pets,chains:m.evolution.chains});
+for(let n=0;n<320;n++)demo.add(0,1+n%60);
+assert.equal(demo.state.pets.length,320);assert.equal(demo.state.active.length,5);
+assert.equal(demo.warehouse().length,320);assert.deepEqual(demo.warehouse().slice(0,5).map(p=>p.id),demo.state.active);
+const singleStore=new Map();const single=createEvolutionDemo({storage:{getItem:k=>singleStore.get(k)||null,setItem:(k,v)=>singleStore.set(k,v)},roster:m.pets,chains:m.evolution.chains});const only=single.add(0);assert.equal(single.warehouse().length,1);assert.equal(single.warehouse()[0].id,only.id);assert(single.state.active.includes(only.id));assert.throws(()=>single.setActive([]));
+const pet=demo.state.pets[300];assert.equal(pet.ivs.length,6);assert(pet.ivs.every(v=>v>=0&&v<=31));
+demo.rename(pet.id,'firelong');assert.equal(demo.state.pets[300].nickname,'firelong');
+for(const name of ['AbCdEfGh','FIRE','123456789','小火','Fire2','Fire long','NineChars','💫'])assert.throws(()=>demo.rename(pet.id,name));
+demo.rename(pet.id,'abcdefgh');assert.equal(demo.state.pets[300].nickname,'abcdefgh');demo.rename(pet.id,'');assert.equal(demo.state.pets[300].nickname,'');demo.rename(pet.id,'firelong');
+const before=JSON.stringify(demo.state);fail=true;assert.throws(()=>demo.rename(pet.id,'newname'),/quota/);assert.equal(JSON.stringify(demo.state),before);fail=false;
+demo=createEvolutionDemo({storage,roster:m.pets,chains:m.evolution.chains});assert.equal(demo.state.pets.length,320);assert.equal(demo.state.pets[300].nickname,'firelong');assert.equal(demo.state.pets[300].nature,pet.nature);assert.deepEqual(demo.state.pets[300].ivs,pet.ivs);
+assert.throws(()=>demo.release(demo.state.active[0]),/仓库/);demo.release(pet.id);assert.equal(demo.state.pets.length,319);
+const ids=[...demo.state.active];ids[0]=demo.state.pets[5].id;demo.setActive(ids);assert.deepEqual(demo.state.active,ids);
+console.log('PASS: single active pet visible in warehouse, all 320 Web individuals, migration, lowercase-only names, nature/IV persistence, physical quota rollback, warehouse release and active roster');
+
+// Fixed-slot replacement must leave three running participants at their original indices.
+const {createTrainingJob,trainingDurationMs}=await import('../web/training-job.mjs');
+const swappedStore=new Map();let swapFail=false;const swappedStorage={getItem:k=>swappedStore.get(k)||null,setItem(k,v){if(swapFail)throw Error('quota');swappedStore.set(k,v)}};
+let swapDemo=createEvolutionDemo({storage:swappedStorage,roster:m.pets,chains:m.evolution.chains,now:()=>0});
+for(let i=0;i<7;i++)swapDemo.add(i+1,12);
+const original=[...swapDemo.state.active],trainingIds=original.slice(0,3),incomingId=swapDemo.state.pets[5].id;
+let swapJob=createTrainingJob({manifest:m,getPets:()=>swapDemo.state.pets,getActiveIds:()=>swapDemo.state.active,commit:(s,r)=>swapDemo.trainingCommit(s,r),seed:123,now:()=>0});swapJob.start(0,trainingIds);
+for(let i=0;i<3;i++){const changed=[...original];changed[i]=incomingId;assert.throws(()=>swapDemo.setActive(changed),/只能替换空闲/)}
+assert.throws(()=>swapDemo.setActive(original.slice(0,4)),/只能替换空闲/);
+const swapped=[...original];swapped[4]=incomingId;const initial=structuredClone(swapDemo.state);
+swapFail=true;assert.throws(()=>swapDemo.setActive(swapped),/quota/);assert.deepEqual(swapDemo.state,initial);swapFail=false;
+swapDemo.setActive(swapped);assert.deepEqual(swapDemo.state.active,swapped);assert.deepEqual(swapDemo.state.training,initial.training);assert.deepEqual(swapDemo.state.pets,initial.pets);
+swapDemo=createEvolutionDemo({storage:swappedStorage,roster:m.pets,chains:m.evolution.chains,now:()=>0});
+swapJob=createTrainingJob({manifest:m,getPets:()=>swapDemo.state.pets,getActiveIds:()=>swapDemo.state.active,commit:(s,r)=>swapDemo.trainingCommit(s,r),saved:swapDemo.state.training,seed:123,now:()=>0});
+assert.deepEqual(swapDemo.state.active,swapped);for(const id of trainingIds)assert(swapDemo.trainingBusy(id));
+swapJob.advance(trainingDurationMs);assert.equal(swapJob.job.status,2);assert(swapJob.state.totalXp>0);assert.deepEqual(swapDemo.state.pets.find(p=>p.id===incomingId),{xpFraction:0,trainingBattles:0,...initial.pets.find(p=>p.id===incomingId)});
+assert.deepEqual(swapDemo.state.pets.find(p=>p.id===original[4]),{xpFraction:0,trainingBattles:0,...initial.pets.find(p=>p.id===original[4])});
+console.log('PASS: Web fixed-slot idle replacement during three-partner training, occupied slots/compaction protected, quota rollback and save/reload/full-hour identity and XP');

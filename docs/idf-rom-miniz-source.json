@@ -1,0 +1,8 @@
+{
+  "path": "main/pp_rom_miniz.h",
+  "source": "https://raw.githubusercontent.com/espressif/esp-idf/v5.5.3/components/esp_rom/include/miniz.h",
+  "version": "v5.5.3",
+  "license": "Apache-2.0",
+  "sha256": "c748ffeb54751a6e7a25b79f8c4c086ef07ee80c05329ff5f36f0b88383c84f3",
+  "note": "Unmodified official ESP32-S3 ROM miniz declarations. Project-local copy supplies the header missing from the local SDK. No inflater implementation or ROM symbols changed; no vendor/hardware parameters changed."
+}

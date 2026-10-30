@@ -1,0 +1,190 @@
+{
+  "version": 1,
+  "kind": "single-pose art review",
+  "generator": "MobiIoT",
+  "model": "gpt-image-2.5-sunburst",
+  "attempts": 3,
+  "sourceAtlas": "../../source/gen1-057-066-v1.png",
+  "sourceSha256": "f6515267174eee2351efbe8e6d0ac8095ba9bb8bd5fefcc3502d8119274c55ff",
+  "prompt": "../../prompts/gen1-057-066-v1.txt",
+  "nativeCanvas": 48,
+  "maxColors": 16,
+  "outlineColor": "#1b263a",
+  "alpha": "binary",
+  "gameIntegrated": true,
+  "animationPosesPerSpecies": 1,
+  "items": [
+    {
+      "id": 57,
+      "name": "火暴猴",
+      "english": "Primeape",
+      "chain": 23,
+      "stage": 1,
+      "image": "057.png",
+      "preview": "057@8x.png",
+      "sourceBox": [
+        16,
+        96,
+        346,
+        397
+      ],
+      "outlinePixels": 192,
+      "source": "https://wiki.52poke.com/wiki/火暴猴"
+    },
+    {
+      "id": 58,
+      "name": "卡蒂狗",
+      "english": "Growlithe",
+      "chain": 24,
+      "stage": 0,
+      "image": "058.png",
+      "preview": "058@8x.png",
+      "sourceBox": [
+        428,
+        73,
+        777,
+        392
+      ],
+      "outlinePixels": 197,
+      "source": "https://wiki.52poke.com/wiki/卡蒂狗"
+    },
+    {
+      "id": 59,
+      "name": "风速狗",
+      "english": "Arcanine",
+      "chain": 24,
+      "stage": 1,
+      "image": "059.png",
+      "preview": "059@8x.png",
+      "sourceBox": [
+        811,
+        30,
+        1215,
+        393
+      ],
+      "outlinePixels": 185,
+      "source": "https://wiki.52poke.com/wiki/风速狗"
+    },
+    {
+      "id": 60,
+      "name": "蚊香蝌蚪",
+      "english": "Poliwag",
+      "chain": 25,
+      "stage": 0,
+      "image": "060.png",
+      "preview": "060@8x.png",
+      "sourceBox": [
+        1261,
+        188,
+        1619,
+        392
+      ],
+      "outlinePixels": 154,
+      "source": "https://wiki.52poke.com/wiki/蚊香蝌蚪"
+    },
+    {
+      "id": 61,
+      "name": "蚊香君",
+      "english": "Poliwhirl",
+      "chain": 25,
+      "stage": 1,
+      "image": "061.png",
+      "preview": "061@8x.png",
+      "sourceBox": [
+        1645,
+        118,
+        1966,
+        394
+      ],
+      "outlinePixels": 178,
+      "source": "https://wiki.52poke.com/wiki/蚊香君"
+    },
+    {
+      "id": 62,
+      "name": "蚊香泳士",
+      "english": "Poliwrath",
+      "chain": 25,
+      "stage": 2,
+      "image": "062.png",
+      "preview": "062@8x.png",
+      "sourceBox": [
+        17,
+        445,
+        375,
+        756
+      ],
+      "outlinePixels": 180,
+      "source": "https://wiki.52poke.com/wiki/蚊香泳士"
+    },
+    {
+      "id": 63,
+      "name": "凯西",
+      "english": "Abra",
+      "chain": 26,
+      "stage": 0,
+      "image": "063.png",
+      "preview": "063@8x.png",
+      "sourceBox": [
+        441,
+        477,
+        766,
+        755
+      ],
+      "outlinePixels": 194,
+      "source": "https://wiki.52poke.com/wiki/凯西"
+    },
+    {
+      "id": 64,
+      "name": "勇基拉",
+      "english": "Kadabra",
+      "chain": 26,
+      "stage": 1,
+      "image": "064.png",
+      "preview": "064@8x.png",
+      "sourceBox": [
+        806,
+        445,
+        1174,
+        758
+      ],
+      "outlinePixels": 220,
+      "source": "https://wiki.52poke.com/wiki/勇基拉"
+    },
+    {
+      "id": 65,
+      "name": "胡地",
+      "english": "Alakazam",
+      "chain": 26,
+      "stage": 2,
+      "image": "065.png",
+      "preview": "065@8x.png",
+      "sourceBox": [
+        1235,
+        430,
+        1590,
+        764
+      ],
+      "outlinePixels": 239,
+      "source": "https://wiki.52poke.com/wiki/胡地"
+    },
+    {
+      "id": 66,
+      "name": "腕力",
+      "english": "Machop",
+      "chain": 27,
+      "stage": 0,
+      "image": "066.png",
+      "preview": "066@8x.png",
+      "sourceBox": [
+        1679,
+        441,
+        1956,
+        757
+      ],
+      "outlinePixels": 182,
+      "source": "https://wiki.52poke.com/wiki/腕力"
+    }
+  ],
+  "firmwareVersion": "v0.13.0",
+  "runtimeAnimationPosesPerSpecies": 48
+}

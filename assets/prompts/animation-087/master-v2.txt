@@ -1,0 +1,9 @@
+Create a pixel-art animation atlas of the white seal in the attached approved reference: one short forehead horn, two tiny tusks, two front flippers and a forked rear tail. White smooth rounded body; no walking legs.
+Transparent1536x1152 canvas. EXACTLY8columns and6rows,48 whole seals, one seal centered in EACH192x192 cell. Each complete silhouette including tail is at most85px wide and85px tall. Keep at least80px transparent gutters. Consistent left-facing camera and body volume. Native48px look,15 opaque colors, crisp square pixels, connected thin navy outline. No text/shadow/grid/props/effects.
+ROW1: EIGHT idle breathing/blinking phases.
+ROW2: EIGHT short front-flipper paddling/belly-sliding phases, drawn in place; flippers bend differently, tail counterbalances.
+ROW3: EIGHT cheerful small head/fin lifts ending at neutral.
+ROW4: EIGHT muzzle lowering/chewing phases ending neutral, no food props.
+ROW5: EIGHT LOW lying resting seals. BOTH EYES FULLY CLOSED in EVERY one of these eight poses. Dark closed eyelid lines, NO open eyeballs. Low head rests, fins relaxed; subtle breathing changes.
+ROW6: EIGHT compact front-flipper brace and head nod phases: prepare, brace, lean, peak, recoil, recover, settle, neutral. ALL EIGHT distinct complete seals.
+Six clearly separated horizontal rows, eight complete poses per row. Keep whole tail/flippers/horn visible and connected in all48 cells. Draw real joint/mouth/eye poses; no translated or stretched duplicates. Gentle loop boundaries. Do not omit the sixth row or mix awake frames into sleep row.

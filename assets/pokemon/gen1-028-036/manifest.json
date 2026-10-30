@@ -1,0 +1,184 @@
+{
+  "version": 1,
+  "kind": "single-pose art review",
+  "generator": "MobiIoT",
+  "model": "gpt-image-2.5-sunburst",
+  "attempts": 5,
+  "sourceAtlas": "../../source/gen1-028-036-v12.png",
+  "sourceSha256": "1313ef6d1c2751a806c756379a389e69ea0aa834fc6dce0e406395fcbc952118",
+  "prompt": "../../prompts/gen1-028-036-v12.txt",
+  "nativeCanvas": 48,
+  "upscale": 8,
+  "maxColors": 16,
+  "outlineColor": "#1b263a",
+  "alpha": "binary",
+  "outline": "one connected 4-neighbor boundary; local corner bridges",
+  "processing": "MobiIoT atlas split by measured source boxes, nearest-neighbor reduction, palette quantization and deterministic closed-outline repair",
+  "gameIntegrated": true,
+  "animationPosesPerSpecies": 1,
+  "items": [
+    {
+      "id": 28,
+      "name": "穿山王",
+      "english": "Sandslash",
+      "chain": 10,
+      "stage": 1,
+      "evolvesTo": null,
+      "image": "028.png",
+      "preview": "028@8x.png",
+      "sourceBox": [
+        79,
+        79,
+        440,
+        389
+      ],
+      "outlinePixels": 188,
+      "source": "https://wiki.52poke.com/wiki/穿山王"
+    },
+    {
+      "id": 29,
+      "name": "尼多兰",
+      "english": "Nidoran-female",
+      "chain": 11,
+      "stage": 0,
+      "evolvesTo": 30,
+      "image": "029.png",
+      "preview": "029@8x.png",
+      "sourceBox": [
+        500,
+        117,
+        766,
+        383
+      ],
+      "outlinePixels": 213,
+      "source": "https://wiki.52poke.com/wiki/尼多兰"
+    },
+    {
+      "id": 30,
+      "name": "尼多娜",
+      "english": "Nidorina",
+      "chain": 11,
+      "stage": 1,
+      "evolvesTo": 31,
+      "image": "030.png",
+      "preview": "030@8x.png",
+      "sourceBox": [
+        901,
+        79,
+        1204,
+        390
+      ],
+      "outlinePixels": 208,
+      "source": "https://wiki.52poke.com/wiki/尼多娜"
+    },
+    {
+      "id": 31,
+      "name": "尼多后",
+      "english": "Nidoqueen",
+      "chain": 11,
+      "stage": 2,
+      "evolvesTo": null,
+      "image": "031.png",
+      "preview": "031@8x.png",
+      "sourceBox": [
+        69,
+        432,
+        419,
+        785
+      ],
+      "outlinePixels": 188,
+      "source": "https://wiki.52poke.com/wiki/尼多后"
+    },
+    {
+      "id": 32,
+      "name": "尼多朗",
+      "english": "Nidoran-male",
+      "chain": 12,
+      "stage": 0,
+      "evolvesTo": 33,
+      "image": "032.png",
+      "preview": "032@8x.png",
+      "sourceBox": [
+        498,
+        500,
+        796,
+        782
+      ],
+      "outlinePixels": 206,
+      "source": "https://wiki.52poke.com/wiki/尼多朗"
+    },
+    {
+      "id": 33,
+      "name": "尼多力诺",
+      "english": "Nidorino",
+      "chain": 12,
+      "stage": 1,
+      "evolvesTo": 34,
+      "image": "033.png",
+      "preview": "033@8x.png",
+      "sourceBox": [
+        892,
+        490,
+        1214,
+        784
+      ],
+      "outlinePixels": 221,
+      "source": "https://wiki.52poke.com/wiki/尼多力诺"
+    },
+    {
+      "id": 34,
+      "name": "尼多王",
+      "english": "Nidoking",
+      "chain": 12,
+      "stage": 2,
+      "evolvesTo": null,
+      "image": "034.png",
+      "preview": "034@8x.png",
+      "sourceBox": [
+        59,
+        821,
+        446,
+        1193
+      ],
+      "outlinePixels": 206,
+      "source": "https://wiki.52poke.com/wiki/尼多王"
+    },
+    {
+      "id": 35,
+      "name": "皮皮",
+      "english": "Clefairy",
+      "chain": 13,
+      "stage": 0,
+      "evolvesTo": 36,
+      "image": "035.png",
+      "preview": "035@8x.png",
+      "sourceBox": [
+        518,
+        941,
+        800,
+        1189
+      ],
+      "outlinePixels": 176,
+      "source": "https://wiki.52poke.com/wiki/皮皮"
+    },
+    {
+      "id": 36,
+      "name": "皮可西",
+      "english": "Clefable",
+      "chain": 13,
+      "stage": 1,
+      "evolvesTo": null,
+      "image": "036.png",
+      "preview": "036@8x.png",
+      "sourceBox": [
+        893,
+        861,
+        1223,
+        1192
+      ],
+      "outlinePixels": 235,
+      "source": "https://wiki.52poke.com/wiki/皮可西"
+    }
+  ],
+  "animationTemplates": "../../animation-templates/028 through 036: six actions x eight frames"
+}

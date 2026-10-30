@@ -1,0 +1,28 @@
+{
+  "source": "assets/source/gyms/cinnabar-atlas-v1.png",
+  "alphaThreshold": 220,
+  "blaine": {
+    "box": [
+      127,
+      120,
+      547,
+      957
+    ]
+  },
+  "volcano": {
+    "box": [
+      920,
+      81,
+      1313,
+      511
+    ]
+  },
+  "stamp": {
+    "box": [
+      648,
+      578,
+      1492,
+      961
+    ]
+  }
+}

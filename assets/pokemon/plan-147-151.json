@@ -1,0 +1,346 @@
+{
+  "range": [
+    147,
+    151
+  ],
+  "status": "All reviewed identities and 48-pose sets integrated; see runtime validation",
+  "runtimeIntegrated": true,
+  "actions": [
+    "idle",
+    "walk",
+    "happy",
+    "eat",
+    "sleep",
+    "attack"
+  ],
+  "framesPerAction": 8,
+  "items": [
+    {
+      "nationalId": 147,
+      "name": "迷你龙",
+      "english": "Dratini",
+      "artId": 146,
+      "species": 76,
+      "stage": 0,
+      "anatomy": "small pale-BLUE serpentine dragon with cream snout and belly, TWO eyes, TWO attached white fin ears, ONE small white forehead horn and ONE connected curled tail, no arms or legs"
+    },
+    {
+      "nationalId": 148,
+      "name": "哈克龙",
+      "english": "Dragonair",
+      "artId": 147,
+      "species": 76,
+      "stage": 1,
+      "anatomy": "slender BLUE serpentine dragon coiled compactly, cream snout and underside, TWO eyes, ONE short cream forehead horn, TWO attached white wing-shaped ear fins, ONE blue orb at throat and TWO blue orbs attached near tail tip; no arms or legs"
+    },
+    {
+      "nationalId": 149,
+      "name": "快龙",
+      "english": "Dragonite",
+      "artId": 148,
+      "species": 76,
+      "stage": 2,
+      "anatomy": "round ORANGE upright dragon with cream segmented belly, TWO short antennae, TWO eyes, TWO attached short arms, TWO sturdy legs, TWO small attached green-membrane back wings and ONE thick orange tail"
+    },
+    {
+      "nationalId": 150,
+      "name": "超梦",
+      "english": "Mewtwo",
+      "artId": 149,
+      "species": 77,
+      "stage": 0,
+      "anatomy": "pale-LAVENDER upright feline companion with TWO short head ears, TWO purple eyes, rounded pale torso with purple belly patch, TWO attached three-finger hands, TWO digitigrade legs and ONE thick attached long PURPLE tail curling close"
+    },
+    {
+      "nationalId": 151,
+      "name": "梦幻",
+      "english": "Mew",
+      "artId": 150,
+      "species": 78,
+      "stage": 0,
+      "anatomy": "small pale-PINK floating feline companion with TWO short triangular ears, TWO blue eyes, TWO small arms, TWO large hind feet and ONE long thin attached pink tail curling close with a rounded tip"
+    }
+  ],
+  "evolution": [
+    {
+      "species": 76,
+      "nationalIds": [
+        147,
+        148,
+        149
+      ],
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 30
+        },
+        {
+          "trigger": "level",
+          "level": 55
+        }
+      ]
+    }
+  ],
+  "pendingEvolution": [],
+  "activeTask": null,
+  "failedTask": null,
+  "failedNationalId": null,
+  "failureLog": null,
+  "continuationPreference": null,
+  "identityCompletedNationalIds": [
+    147,
+    148,
+    149,
+    150,
+    151
+  ],
+  "completedAnimationNationalIds": [
+    147,
+    148,
+    149,
+    150,
+    151
+  ],
+  "pendingIdentityNationalIds": [],
+  "pendingAnimationNationalIds": [],
+  "identityMode": "per-species sources;see identity manifest and visual-review identitySources",
+  "previousStoppedTasks": [
+    {
+      "kind": "identity",
+      "nationalId": 149,
+      "version": 1,
+      "log": "build/identity-149-generation-v1.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy x1;HTTP500/unclassified x5",
+      "prompt": "assets/prompts/identity-149-v1.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 1,
+        "500": 5
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 149,
+      "version": 2,
+      "log": "build/identity-149-generation-v2.log",
+      "attempts": 6,
+      "category": "network/connection_refused",
+      "prompt": "assets/prompts/identity-149-v2.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {},
+      "networkErrorCounts": {
+        "connection_refused": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 149,
+      "version": 3,
+      "log": "build/identity-149-generation-v3.log",
+      "attempts": 6,
+      "category": "network/connection_refused",
+      "prompt": "assets/prompts/identity-149-v3.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {},
+      "networkErrorCounts": {
+        "connection_refused": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 149,
+      "version": 4,
+      "log": "build/identity-149-generation-v4.log",
+      "attempts": 6,
+      "category": "network/connection_refused",
+      "prompt": "assets/prompts/identity-149-v4.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {},
+      "networkErrorCounts": {
+        "connection_refused": 6
+      }
+    },
+    {
+      "kind": "service-model-discovery",
+      "nationalId": 149,
+      "version": null,
+      "attempts": 6,
+      "category": "no_gpt_image_model",
+      "baseUrl": "http://172.16.104.193:8317/v1",
+      "log": "build/mobiiot-models-172-16-104-193-check.log",
+      "sourceImage": null,
+      "note": "Captured output of installed imagegen.py models; no image generation endpoint invoked"
+    },
+    {
+      "kind": "identity",
+      "nationalId": 149,
+      "version": 5,
+      "log": "build/identity-149-generation-v5.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-149-v5.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 149,
+      "version": 6,
+      "log": "build/identity-149-generation-v6.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-149-v6.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 149,
+      "version": 7,
+      "log": "build/identity-149-generation-v7.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-149-v7.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 150,
+      "version": 1,
+      "log": "build/identity-150-generation-v1.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-150-v1.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "animation",
+      "nationalId": 150,
+      "version": 1,
+      "log": "assets/prompts/animation-150/generation-v1.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/animation-150/master-v1.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 151,
+      "version": 1,
+      "log": "build/identity-151-generation-v1.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-151-v1.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 151,
+      "version": 2,
+      "log": "build/identity-151-generation-v2.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-151-v2.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 151,
+      "version": 3,
+      "log": "build/identity-151-generation-v3.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-151-v3.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 151,
+      "version": 4,
+      "log": "build/identity-151-generation-v4.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-151-v4.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 151,
+      "version": 5,
+      "log": "build/identity-151-generation-v5.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-151-v5.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 151,
+      "version": 6,
+      "log": "build/identity-151-generation-v6.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-151-v6.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 151,
+      "version": 7,
+      "log": "build/identity-151-generation-v7.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-151-v7.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    },
+    {
+      "kind": "identity",
+      "nationalId": 151,
+      "version": 8,
+      "log": "build/identity-151-generation-v8.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-151-v8.txt",
+      "sourceImage": null,
+      "httpErrorCounts": {
+        "400": 6
+      }
+    }
+  ],
+  "artScopeCompleted": true
+}

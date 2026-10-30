@@ -1,0 +1,194 @@
+{
+  "range": [
+    57,
+    66
+  ],
+  "status": "complete; Web and firmware v0.13.0",
+  "runtimeIntegrated": true,
+  "actions": [
+    "idle",
+    "walk",
+    "happy",
+    "eat",
+    "sleep",
+    "attack"
+  ],
+  "framesPerAction": 8,
+  "items": [
+    {
+      "nationalId": 57,
+      "name": "火暴猴",
+      "english": "Primeape",
+      "artId": 56,
+      "species": 23,
+      "stage": 1
+    },
+    {
+      "nationalId": 58,
+      "name": "卡蒂狗",
+      "english": "Growlithe",
+      "artId": 57,
+      "species": 24,
+      "stage": 0
+    },
+    {
+      "nationalId": 59,
+      "name": "风速狗",
+      "english": "Arcanine",
+      "artId": 58,
+      "species": 24,
+      "stage": 1
+    },
+    {
+      "nationalId": 60,
+      "name": "蚊香蝌蚪",
+      "english": "Poliwag",
+      "artId": 59,
+      "species": 25,
+      "stage": 0
+    },
+    {
+      "nationalId": 61,
+      "name": "蚊香君",
+      "english": "Poliwhirl",
+      "artId": 60,
+      "species": 25,
+      "stage": 1
+    },
+    {
+      "nationalId": 62,
+      "name": "蚊香泳士",
+      "english": "Poliwrath",
+      "artId": 61,
+      "species": 25,
+      "stage": 2
+    },
+    {
+      "nationalId": 63,
+      "name": "凯西",
+      "english": "Abra",
+      "artId": 62,
+      "species": 26,
+      "stage": 0
+    },
+    {
+      "nationalId": 64,
+      "name": "勇基拉",
+      "english": "Kadabra",
+      "artId": 63,
+      "species": 26,
+      "stage": 1
+    },
+    {
+      "nationalId": 65,
+      "name": "胡地",
+      "english": "Alakazam",
+      "artId": 64,
+      "species": 26,
+      "stage": 2
+    },
+    {
+      "nationalId": 66,
+      "name": "腕力",
+      "english": "Machop",
+      "artId": 65,
+      "species": 27,
+      "stage": 0
+    }
+  ],
+  "evolution": [
+    {
+      "species": 23,
+      "nationalIds": [
+        56,
+        57
+      ],
+      "steps": [
+        {
+          "level": 28,
+          "trigger": "level"
+        }
+      ]
+    },
+    {
+      "species": 24,
+      "nationalIds": [
+        58,
+        59
+      ],
+      "steps": [
+        {
+          "level": 0,
+          "trigger": "fire-stone",
+          "item": "火之石",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "species": 25,
+      "nationalIds": [
+        60,
+        61,
+        62
+      ],
+      "steps": [
+        {
+          "level": 25,
+          "trigger": "level"
+        },
+        {
+          "level": 0,
+          "trigger": "water-stone",
+          "item": "水之石",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "species": 26,
+      "nationalIds": [
+        63,
+        64,
+        65
+      ],
+      "steps": [
+        {
+          "level": 16,
+          "trigger": "level"
+        },
+        {
+          "level": 0,
+          "trigger": "link-cord",
+          "item": "联系之绳",
+          "price": 200
+        }
+      ]
+    }
+  ],
+  "pendingEvolution": [
+    {
+      "species": 27,
+      "nationalIds": [
+        66,
+        67
+      ],
+      "level": 28,
+      "status": "067 not generated; no runtime evolution until next batch"
+    }
+  ],
+  "identityGenerationAttempts": 3,
+  "completedAnimationNationalIds": [
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66
+  ],
+  "pendingAnimationNationalIds": []
+}

@@ -1,0 +1,155 @@
+{
+  "identityReviewed": [
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126
+  ],
+  "animationReviewed": [
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126
+  ],
+  "runtimeIntegrated": true,
+  "acceptedVersions": {
+    "117": 1,
+    "118": 1,
+    "119": 1,
+    "120": 1,
+    "121": 1,
+    "122": 1,
+    "123": 1,
+    "124": 1,
+    "125": 1,
+    "126": 1
+  },
+  "note": "All ten raw/native identities and six-action/eight-frame animations accepted; core/Web/shared renderer and firmware build/bank validation passed.",
+  "failureLog": null,
+  "identitySources": {
+    "117": {
+      "sourceImage": "assets/source/identity-117-v1.png",
+      "sourceSha256": "2b9a1e73b9011d7b5c6c91f3230ec3cb06a811d40c004c983a89e3cd2d7b04d1",
+      "version": 1,
+      "attempts": 2,
+      "prompt": "assets/prompts/identity-117-v1.txt",
+      "generationLog": "build/identity-117-generation-v1.log"
+    },
+    "118": {
+      "sourceImage": "assets/source/identity-118-v1.png",
+      "sourceSha256": "d8a72807f7ceb7e2855401459614602cc2b7bab99c3cbe7fc03c7665830dcf79",
+      "version": 1,
+      "attempts": 1,
+      "prompt": "assets/prompts/identity-118-v1.txt",
+      "generationLog": "build/identity-118-generation-v1.log"
+    },
+    "119": {
+      "sourceImage": "assets/source/identity-119-v1.png",
+      "sourceSha256": "1253f7935b49e76c9a9e4af01232e4baf2f773ae6f942bb8035ef60df90acf63",
+      "version": 1,
+      "attempts": 1,
+      "prompt": "assets/prompts/identity-119-v1.txt",
+      "generationLog": "build/identity-119-generation-v1.log"
+    },
+    "120": {
+      "sourceImage": "assets/source/identity-120-v2.png",
+      "version": 2,
+      "attempts": 5,
+      "sourceSha256": "82da84a10d6583e1b8f108a6c3fcb146864306140a5c13055538df88174ae73f"
+    },
+    "121": {
+      "sourceImage": "assets/source/identity-121-v1.png",
+      "version": 1,
+      "attempts": 1,
+      "sourceSha256": "a2772638b9b2da6b1d18f7f3110740ad76dfbbd9ca08bcb1f9f34b938217fe21"
+    },
+    "122": {
+      "sourceImage": "assets/source/identity-122-v1.png",
+      "version": 1,
+      "attempts": 2,
+      "sourceSha256": "339fb29f524a7dafb883613152d18a97d12ef50d752d41b15abb747a8815a542"
+    },
+    "123": {
+      "sourceImage": "assets/source/identity-123-v1.png",
+      "version": 1,
+      "attempts": 3,
+      "sourceSha256": "b76653aaf4fa8b0ea0df6886ffa2bbba91aacc43225a3411673b7d25edad94b8"
+    },
+    "124": {
+      "sourceImage": "assets/source/identity-124-v1.png",
+      "version": 1,
+      "attempts": 1,
+      "sourceSha256": "36b32a14b5810c8138f52069433cfb2774eb7882d8fdf9cc7b84c45e50551afe"
+    },
+    "125": {
+      "sourceImage": "assets/source/identity-125-v1.png",
+      "version": 1,
+      "attempts": 1,
+      "sourceSha256": "671d87a22dd7431f3b29b58f3a726dbd16e687cf9a46cb4a3e43e44f3d028b8d"
+    },
+    "126": {
+      "sourceImage": "assets/source/identity-126-v1.png",
+      "version": 1,
+      "attempts": 3,
+      "sourceSha256": "63af8cee3469e81191c0871536668619e38d09bf57401fc66f8ee854a5049d02"
+    }
+  },
+  "notes": {
+    "117": "Raw identity and48 native poses visually reviewed: attached crown/snouted blue seahorse, fin phases and curled-tail bends, gentle recovery, all8 sleep low and closed-eye. Six unique8-frame actions/exact mirrors/source hashes verified. Identity second attempt; animation first attempt.",
+    "118": "Raw and native48 identity accepted: white-orange goldfish, one attached cream horn, flowing attached fins/tail, two eyes, no invented limbs. Animation pending.\nanimation: All48 native poses reviewed: horn and white-orange fins stay attached; true tail/fin swim phases; low closed-eye sleep in all8; compact awake recovery; exact mirrors,8 unique frames per action and palette/source hashes pass.",
+    "119": "identity: Raw/native48 accepted: orange fish with black patches, attached cream horn and white spotted fins/tail; evolved from118 reference, no invented limbs.\nanimation: All48 native poses accepted: attached horn/spotted tail and fins, actual swim phases, all8 low closed-eye rest, awake head/fin gestures and recovery;8 unique per action/exact mirrors/palette/source hashes pass.",
+    "120": "identity: Raw and native48 accepted: exactly five attached ochre star arms, gold central ring and one red jewel; no invented eyes/mouth; binary transparent margins. Identity-v2 attempt5 succeeded; v1 failure preserved.\nanimation: All48 raw/native poses accepted: five connected star arms and central jewel preserved, actual arm bends and gentle tilts, no eyes or mouth; all8 sleep poses lower/relax arms with muted dark-red jewel and no white shine; awake brace/recovery. First generation attempt.",
+    "121": "identity: Raw/native48 accepted: two attached overlapping five-point purple stars with ten outer tips, central gold setting and red jewel, no eyes or mouth. Derived from approved120 identity; first attempt succeeded.\nanimation: Raw/native48 all48 accepted: attached overlapping purple stars and central gold/red jewel preserved, genuine star-arm bends and relative angle changes; eight low relaxed sleep poses with dark muted jewel/no white shine; no invented eyes/mouth; awake recovery. First attempt.",
+    "122": "identity: Raw/native48 accepted: pink mime face with blue side hair, two eyes, round cheeks, white/red torso, two attached pink arms with white gloves and two legs with blue curled shoes; complete connected body, no props. Second attempt succeeded.\nanimation: All48 raw/native poses accepted: connected gloves/arms and two blue shoes, true alternating knees and palm gestures, eight low seated closed-eye rest poses, awake open-palm brace and recovery, no props or detached hands. First attempt.",
+    "123": "identity: Raw/native48 accepted: green mantis, two eyes and three head spikes, cream segmented belly, two attached curved forearm blades, two legs and two attached pale wings, compact complete body. Identity third attempt succeeded.\nanimation: All48 raw/native poses accepted: alternating legs, attached wing phases and curved forearm gestures, complete head/cream belly, all8 low crouched sleep with closed eyes/folded forearms, awake compact action recovery; no loose parts. First attempt.",
+    "124": "identity: Raw/native48 accepted: purple face with two eyes and pink lips, long attached blonde hair, full red robe/gold trim, two attached purple hands emerging from sleeves and small red-clad feet. Complete friendly mascot, no props. First attempt.\nanimation: All48 raw/native poses accepted: red robe stays complete, connected sleeves/hands and blonde hair follow small steps, happy/palm gestures and lip changes, all8 low seated closed-eye sleep with hands tucked, compact action recovery; no detached hair/hands or props. First attempt.",
+    "125": "identity: Raw/native48 accepted: yellow/black stripes and lightning chest marking, two rounded antennae, two eyes/cream muzzle, two arms with three blunt fingers, two legs and one attached striped tail; complete neutral mascot. First attempt.\nanimation: All48 raw/native accepted: yellow/black identity, antennae and attached striped tail preserved; real alternating knee/arm phases, small face gestures, all8 low seated closed-eye sleep with tail tucked, awake compact fist gesture/recovery. No sparks or loose elements. First attempt.",
+    "126": "identity: Raw/native48 accepted: red/yellow fire companion, two attached flame-shaped head bumps, two eyes and cream duck bill, two arms/legs with cream claws and one attached tail/flame tip; no floating flame. Third attempt succeeded.\nanimation: All48 raw/native accepted: connected head bumps/tail flame, actual leg/arm motion and bill expressions, all8 low seated closed-eye sleep, awake preparation/brace/recovery. All body parts stay inside canvas, no floating fire or sparks. First attempt."
+  },
+  "failedTask": null,
+  "status": "complete; integrated firmware/Web v0.19.0",
+  "identityMode": "per-species sources",
+  "identityAtlasFailures": [
+    {
+      "kind": "identity-atlas",
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/gen1-117-126-generation-v1.log"
+    },
+    {
+      "kind": "identity-atlas",
+      "version": 2,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/gen1-117-126-generation-v2.log"
+    }
+  ],
+  "failedNationalId": null,
+  "activeTask": null,
+  "previousStoppedTasks": [
+    {
+      "kind": "identity",
+      "nationalId": 120,
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-120-generation-v1.log",
+      "prompt": "assets/prompts/identity-120-v1.txt",
+      "sourceImage": null
+    }
+  ],
+  "firmwareVersion": "v0.19.0"
+}

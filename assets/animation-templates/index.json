@@ -1,0 +1,902 @@
+[
+  {
+    "nationalId": 1,
+    "name": "妙蛙种子",
+    "artId": 1,
+    "path": "../assets/animation-templates/001/"
+  },
+  {
+    "nationalId": 2,
+    "name": "妙蛙草",
+    "artId": 6,
+    "path": "../assets/animation-templates/002/"
+  },
+  {
+    "nationalId": 3,
+    "name": "妙蛙花",
+    "artId": 7,
+    "path": "../assets/animation-templates/003/"
+  },
+  {
+    "nationalId": 4,
+    "name": "小火龙",
+    "artId": 2,
+    "path": "../assets/animation-templates/004/"
+  },
+  {
+    "nationalId": 5,
+    "name": "火恐龙",
+    "artId": 4,
+    "path": "../assets/animation-templates/005/"
+  },
+  {
+    "nationalId": 6,
+    "name": "喷火龙",
+    "artId": 5,
+    "path": "../assets/animation-templates/006/"
+  },
+  {
+    "nationalId": 7,
+    "name": "杰尼龟",
+    "artId": 3,
+    "path": "../assets/animation-templates/007/"
+  },
+  {
+    "nationalId": 8,
+    "name": "卡咪龟",
+    "artId": 8,
+    "path": "../assets/animation-templates/008/"
+  },
+  {
+    "nationalId": 9,
+    "name": "水箭龟",
+    "artId": 9,
+    "path": "../assets/animation-templates/009/"
+  },
+  {
+    "nationalId": 10,
+    "name": "绿毛虫",
+    "artId": 10,
+    "path": "../assets/animation-templates/010/"
+  },
+  {
+    "nationalId": 11,
+    "name": "铁甲蛹",
+    "artId": 11,
+    "path": "../assets/animation-templates/011/"
+  },
+  {
+    "nationalId": 12,
+    "name": "巴大蝶",
+    "artId": 12,
+    "path": "../assets/animation-templates/012/"
+  },
+  {
+    "nationalId": 13,
+    "name": "独角虫",
+    "artId": 13,
+    "path": "../assets/animation-templates/013/"
+  },
+  {
+    "nationalId": 14,
+    "name": "铁壳蛹",
+    "artId": 14,
+    "path": "../assets/animation-templates/014/"
+  },
+  {
+    "nationalId": 15,
+    "name": "大针蜂",
+    "artId": 15,
+    "path": "../assets/animation-templates/015/"
+  },
+  {
+    "nationalId": 16,
+    "name": "波波",
+    "artId": 16,
+    "path": "../assets/animation-templates/016/"
+  },
+  {
+    "nationalId": 17,
+    "name": "比比鸟",
+    "artId": 17,
+    "path": "../assets/animation-templates/017/"
+  },
+  {
+    "nationalId": 18,
+    "name": "大比鸟",
+    "artId": 18,
+    "path": "../assets/animation-templates/018/"
+  },
+  {
+    "nationalId": 19,
+    "name": "小拉达",
+    "artId": 19,
+    "path": "../assets/animation-templates/019/"
+  },
+  {
+    "nationalId": 20,
+    "name": "拉达",
+    "artId": 20,
+    "path": "../assets/animation-templates/020/"
+  },
+  {
+    "nationalId": 21,
+    "name": "烈雀",
+    "artId": 21,
+    "path": "../assets/animation-templates/021/"
+  },
+  {
+    "nationalId": 22,
+    "name": "大嘴雀",
+    "artId": 22,
+    "path": "../assets/animation-templates/022/"
+  },
+  {
+    "nationalId": 23,
+    "name": "阿柏蛇",
+    "artId": 23,
+    "path": "../assets/animation-templates/023/"
+  },
+  {
+    "nationalId": 24,
+    "name": "阿柏怪",
+    "artId": 24,
+    "path": "../assets/animation-templates/024/"
+  },
+  {
+    "nationalId": 26,
+    "name": "雷丘",
+    "artId": 25,
+    "path": "../assets/animation-templates/026/"
+  },
+  {
+    "nationalId": 27,
+    "name": "穿山鼠",
+    "artId": 26,
+    "path": "../assets/animation-templates/027/"
+  },
+  {
+    "nationalId": 28,
+    "name": "穿山王",
+    "artId": 27,
+    "path": "../assets/animation-templates/028/"
+  },
+  {
+    "nationalId": 29,
+    "name": "尼多兰",
+    "artId": 28,
+    "path": "../assets/animation-templates/029/"
+  },
+  {
+    "nationalId": 30,
+    "name": "尼多娜",
+    "artId": 29,
+    "path": "../assets/animation-templates/030/"
+  },
+  {
+    "nationalId": 31,
+    "name": "尼多后",
+    "artId": 30,
+    "path": "../assets/animation-templates/031/"
+  },
+  {
+    "nationalId": 32,
+    "name": "尼多朗",
+    "artId": 31,
+    "path": "../assets/animation-templates/032/"
+  },
+  {
+    "nationalId": 33,
+    "name": "尼多力诺",
+    "artId": 32,
+    "path": "../assets/animation-templates/033/"
+  },
+  {
+    "nationalId": 34,
+    "name": "尼多王",
+    "artId": 33,
+    "path": "../assets/animation-templates/034/"
+  },
+  {
+    "nationalId": 35,
+    "name": "皮皮",
+    "artId": 34,
+    "path": "../assets/animation-templates/035/"
+  },
+  {
+    "nationalId": 36,
+    "name": "皮可西",
+    "artId": 35,
+    "path": "../assets/animation-templates/036/"
+  },
+  {
+    "nationalId": 37,
+    "name": "六尾",
+    "artId": 36,
+    "path": "../assets/animation-templates/037/"
+  },
+  {
+    "nationalId": 38,
+    "name": "九尾",
+    "artId": 37,
+    "path": "../assets/animation-templates/038/"
+  },
+  {
+    "nationalId": 39,
+    "name": "胖丁",
+    "artId": 38,
+    "path": "../assets/animation-templates/039/"
+  },
+  {
+    "nationalId": 40,
+    "name": "胖可丁",
+    "artId": 39,
+    "path": "../assets/animation-templates/040/"
+  },
+  {
+    "nationalId": 41,
+    "name": "超音蝠",
+    "artId": 40,
+    "path": "../assets/animation-templates/041/"
+  },
+  {
+    "nationalId": 42,
+    "name": "大嘴蝠",
+    "artId": 41,
+    "path": "../assets/animation-templates/042/"
+  },
+  {
+    "nationalId": 43,
+    "name": "走路草",
+    "artId": 42,
+    "path": "../assets/animation-templates/043/"
+  },
+  {
+    "nationalId": 44,
+    "name": "臭臭花",
+    "artId": 43,
+    "path": "../assets/animation-templates/044/"
+  },
+  {
+    "nationalId": 45,
+    "name": "霸王花",
+    "artId": 44,
+    "path": "../assets/animation-templates/045/"
+  },
+  {
+    "nationalId": 46,
+    "name": "派拉斯",
+    "artId": 45,
+    "path": "../assets/animation-templates/046/"
+  },
+  {
+    "nationalId": 47,
+    "name": "派拉斯特",
+    "artId": 46,
+    "path": "../assets/animation-templates/047/"
+  },
+  {
+    "nationalId": 48,
+    "name": "毛球",
+    "artId": 47,
+    "path": "../assets/animation-templates/048/"
+  },
+  {
+    "nationalId": 49,
+    "name": "摩鲁蛾",
+    "artId": 48,
+    "path": "../assets/animation-templates/049/"
+  },
+  {
+    "nationalId": 50,
+    "name": "地鼠",
+    "artId": 49,
+    "path": "../assets/animation-templates/050/"
+  },
+  {
+    "nationalId": 51,
+    "name": "三地鼠",
+    "artId": 50,
+    "path": "../assets/animation-templates/051/"
+  },
+  {
+    "nationalId": 52,
+    "name": "喵喵",
+    "artId": 51,
+    "path": "../assets/animation-templates/052/"
+  },
+  {
+    "nationalId": 53,
+    "name": "猫老大",
+    "artId": 52,
+    "path": "../assets/animation-templates/053/"
+  },
+  {
+    "nationalId": 54,
+    "name": "可达鸭",
+    "artId": 53,
+    "path": "../assets/animation-templates/054/"
+  },
+  {
+    "nationalId": 55,
+    "name": "哥达鸭",
+    "artId": 54,
+    "path": "../assets/animation-templates/055/"
+  },
+  {
+    "nationalId": 56,
+    "name": "猴怪",
+    "artId": 55,
+    "path": "../assets/animation-templates/056/"
+  },
+  {
+    "nationalId": 57,
+    "name": "火暴猴",
+    "artId": 56,
+    "path": "../assets/animation-templates/057/"
+  },
+  {
+    "nationalId": 58,
+    "name": "卡蒂狗",
+    "artId": 57,
+    "path": "../assets/animation-templates/058/"
+  },
+  {
+    "nationalId": 59,
+    "name": "风速狗",
+    "artId": 58,
+    "path": "../assets/animation-templates/059/"
+  },
+  {
+    "nationalId": 60,
+    "name": "蚊香蝌蚪",
+    "artId": 59,
+    "path": "../assets/animation-templates/060/"
+  },
+  {
+    "nationalId": 61,
+    "name": "蚊香君",
+    "artId": 60,
+    "path": "../assets/animation-templates/061/"
+  },
+  {
+    "nationalId": 62,
+    "name": "蚊香泳士",
+    "artId": 61,
+    "path": "../assets/animation-templates/062/"
+  },
+  {
+    "nationalId": 63,
+    "name": "凯西",
+    "artId": 62,
+    "path": "../assets/animation-templates/063/"
+  },
+  {
+    "nationalId": 64,
+    "name": "勇基拉",
+    "artId": 63,
+    "path": "../assets/animation-templates/064/"
+  },
+  {
+    "nationalId": 65,
+    "name": "胡地",
+    "artId": 64,
+    "path": "../assets/animation-templates/065/"
+  },
+  {
+    "nationalId": 66,
+    "name": "腕力",
+    "artId": 65,
+    "path": "../assets/animation-templates/066/"
+  },
+  {
+    "nationalId": 67,
+    "name": "豪力",
+    "artId": 66,
+    "path": "../assets/animation-templates/067/"
+  },
+  {
+    "nationalId": 68,
+    "name": "怪力",
+    "artId": 67,
+    "path": "../assets/animation-templates/068/"
+  },
+  {
+    "nationalId": 69,
+    "name": "喇叭芽",
+    "artId": 68,
+    "path": "../assets/animation-templates/069/"
+  },
+  {
+    "nationalId": 70,
+    "name": "口呆花",
+    "artId": 69,
+    "path": "../assets/animation-templates/070/"
+  },
+  {
+    "nationalId": 71,
+    "name": "大食花",
+    "artId": 70,
+    "path": "../assets/animation-templates/071/"
+  },
+  {
+    "nationalId": 72,
+    "name": "玛瑙水母",
+    "artId": 71,
+    "path": "../assets/animation-templates/072/"
+  },
+  {
+    "nationalId": 73,
+    "name": "毒刺水母",
+    "artId": 72,
+    "path": "../assets/animation-templates/073/"
+  },
+  {
+    "nationalId": 74,
+    "name": "小拳石",
+    "artId": 73,
+    "path": "../assets/animation-templates/074/"
+  },
+  {
+    "nationalId": 75,
+    "name": "隆隆石",
+    "artId": 74,
+    "path": "../assets/animation-templates/075/"
+  },
+  {
+    "nationalId": 76,
+    "name": "隆隆岩",
+    "artId": 75,
+    "path": "../assets/animation-templates/076/"
+  },
+  {
+    "nationalId": 77,
+    "name": "小火马",
+    "artId": 76,
+    "path": "../assets/animation-templates/077/"
+  },
+  {
+    "nationalId": 78,
+    "name": "烈焰马",
+    "artId": 77,
+    "path": "../assets/animation-templates/078/"
+  },
+  {
+    "nationalId": 79,
+    "name": "呆呆兽",
+    "artId": 78,
+    "path": "../assets/animation-templates/079/"
+  },
+  {
+    "nationalId": 80,
+    "name": "呆壳兽",
+    "artId": 79,
+    "path": "../assets/animation-templates/080/"
+  },
+  {
+    "nationalId": 81,
+    "name": "小磁怪",
+    "artId": 80,
+    "path": "../assets/animation-templates/081/"
+  },
+  {
+    "nationalId": 82,
+    "name": "三合一磁怪",
+    "artId": 81,
+    "path": "../assets/animation-templates/082/"
+  },
+  {
+    "nationalId": 83,
+    "name": "大葱鸭",
+    "artId": 82,
+    "path": "../assets/animation-templates/083/"
+  },
+  {
+    "nationalId": 84,
+    "name": "嘟嘟",
+    "artId": 83,
+    "path": "../assets/animation-templates/084/"
+  },
+  {
+    "nationalId": 85,
+    "name": "嘟嘟利",
+    "artId": 84,
+    "path": "../assets/animation-templates/085/"
+  },
+  {
+    "nationalId": 86,
+    "name": "小海狮",
+    "artId": 85,
+    "path": "../assets/animation-templates/086/"
+  },
+  {
+    "nationalId": 87,
+    "name": "白海狮",
+    "artId": 86,
+    "path": "../assets/animation-templates/087/"
+  },
+  {
+    "nationalId": 88,
+    "name": "臭泥",
+    "artId": 87,
+    "path": "../assets/animation-templates/088/"
+  },
+  {
+    "nationalId": 89,
+    "name": "臭臭泥",
+    "artId": 88,
+    "path": "../assets/animation-templates/089/"
+  },
+  {
+    "nationalId": 90,
+    "name": "大舌贝",
+    "artId": 89,
+    "path": "../assets/animation-templates/090/"
+  },
+  {
+    "nationalId": 91,
+    "name": "刺甲贝",
+    "artId": 90,
+    "path": "../assets/animation-templates/091/"
+  },
+  {
+    "nationalId": 92,
+    "name": "鬼斯",
+    "artId": 91,
+    "path": "../assets/animation-templates/092/"
+  },
+  {
+    "nationalId": 93,
+    "name": "鬼斯通",
+    "artId": 92,
+    "path": "../assets/animation-templates/093/"
+  },
+  {
+    "nationalId": 94,
+    "name": "耿鬼",
+    "artId": 93,
+    "path": "../assets/animation-templates/094/"
+  },
+  {
+    "nationalId": 95,
+    "name": "大岩蛇",
+    "artId": 94,
+    "path": "../assets/animation-templates/095/"
+  },
+  {
+    "nationalId": 96,
+    "name": "催眠貘",
+    "artId": 95,
+    "path": "../assets/animation-templates/096/"
+  },
+  {
+    "nationalId": 97,
+    "name": "引梦貘人",
+    "artId": 96,
+    "path": "../assets/animation-templates/097/"
+  },
+  {
+    "nationalId": 98,
+    "name": "大钳蟹",
+    "artId": 97,
+    "path": "../assets/animation-templates/098/"
+  },
+  {
+    "nationalId": 99,
+    "name": "巨钳蟹",
+    "artId": 98,
+    "path": "../assets/animation-templates/099/"
+  },
+  {
+    "nationalId": 100,
+    "name": "霹雳电球",
+    "artId": 99,
+    "path": "../assets/animation-templates/100/"
+  },
+  {
+    "nationalId": 101,
+    "name": "顽皮雷弹",
+    "artId": 100,
+    "path": "../assets/animation-templates/101/"
+  },
+  {
+    "nationalId": 102,
+    "name": "蛋蛋",
+    "artId": 101,
+    "path": "../assets/animation-templates/102/"
+  },
+  {
+    "nationalId": 103,
+    "name": "椰蛋树",
+    "artId": 102,
+    "path": "../assets/animation-templates/103/"
+  },
+  {
+    "nationalId": 104,
+    "name": "卡拉卡拉",
+    "artId": 103,
+    "path": "../assets/animation-templates/104/"
+  },
+  {
+    "nationalId": 105,
+    "name": "嘎啦嘎啦",
+    "artId": 104,
+    "path": "../assets/animation-templates/105/"
+  },
+  {
+    "nationalId": 106,
+    "name": "飞腿郎",
+    "artId": 105,
+    "path": "../assets/animation-templates/106/"
+  },
+  {
+    "nationalId": 107,
+    "name": "艾比郎",
+    "artId": 106,
+    "path": "../assets/animation-templates/107/"
+  },
+  {
+    "nationalId": 108,
+    "name": "大舌头",
+    "artId": 107,
+    "path": "../assets/animation-templates/108/"
+  },
+  {
+    "nationalId": 109,
+    "name": "瓦斯弹",
+    "artId": 108,
+    "path": "../assets/animation-templates/109/"
+  },
+  {
+    "nationalId": 110,
+    "name": "双弹瓦斯",
+    "artId": 109,
+    "path": "../assets/animation-templates/110/"
+  },
+  {
+    "nationalId": 111,
+    "name": "独角犀牛",
+    "artId": 110,
+    "path": "../assets/animation-templates/111/"
+  },
+  {
+    "nationalId": 112,
+    "name": "钻角犀兽",
+    "artId": 111,
+    "path": "../assets/animation-templates/112/"
+  },
+  {
+    "nationalId": 113,
+    "name": "吉利蛋",
+    "artId": 112,
+    "path": "../assets/animation-templates/113/"
+  },
+  {
+    "nationalId": 114,
+    "name": "蔓藤怪",
+    "artId": 113,
+    "path": "../assets/animation-templates/114/"
+  },
+  {
+    "nationalId": 115,
+    "name": "袋兽",
+    "artId": 114,
+    "path": "../assets/animation-templates/115/"
+  },
+  {
+    "nationalId": 116,
+    "name": "墨海马",
+    "artId": 115,
+    "path": "../assets/animation-templates/116/"
+  },
+  {
+    "nationalId": 117,
+    "name": "海刺龙",
+    "artId": 116,
+    "path": "../assets/animation-templates/117/"
+  },
+  {
+    "nationalId": 118,
+    "name": "角金鱼",
+    "artId": 117,
+    "path": "../assets/animation-templates/118/"
+  },
+  {
+    "nationalId": 119,
+    "name": "金鱼王",
+    "artId": 118,
+    "path": "../assets/animation-templates/119/"
+  },
+  {
+    "nationalId": 120,
+    "name": "海星星",
+    "artId": 119,
+    "path": "../assets/animation-templates/120/"
+  },
+  {
+    "nationalId": 121,
+    "name": "宝石海星",
+    "artId": 120,
+    "path": "../assets/animation-templates/121/"
+  },
+  {
+    "nationalId": 122,
+    "name": "魔墙人偶",
+    "artId": 121,
+    "path": "../assets/animation-templates/122/"
+  },
+  {
+    "nationalId": 123,
+    "name": "飞天螳螂",
+    "artId": 122,
+    "path": "../assets/animation-templates/123/"
+  },
+  {
+    "nationalId": 124,
+    "name": "迷唇姐",
+    "artId": 123,
+    "path": "../assets/animation-templates/124/"
+  },
+  {
+    "nationalId": 125,
+    "name": "电击兽",
+    "artId": 124,
+    "path": "../assets/animation-templates/125/"
+  },
+  {
+    "nationalId": 126,
+    "name": "鸭嘴火兽",
+    "artId": 125,
+    "path": "../assets/animation-templates/126/"
+  },
+  {
+    "nationalId": 127,
+    "name": "凯罗斯",
+    "artId": 126,
+    "path": "../assets/animation-templates/127/"
+  },
+  {
+    "nationalId": 128,
+    "name": "肯泰罗",
+    "artId": 127,
+    "path": "../assets/animation-templates/128/"
+  },
+  {
+    "nationalId": 129,
+    "name": "鲤鱼王",
+    "artId": 128,
+    "path": "../assets/animation-templates/129/"
+  },
+  {
+    "nationalId": 130,
+    "name": "暴鲤龙",
+    "artId": 129,
+    "path": "../assets/animation-templates/130/"
+  },
+  {
+    "nationalId": 131,
+    "name": "拉普拉斯",
+    "artId": 130,
+    "path": "../assets/animation-templates/131/"
+  },
+  {
+    "nationalId": 132,
+    "name": "百变怪",
+    "artId": 131,
+    "path": "../assets/animation-templates/132/"
+  },
+  {
+    "nationalId": 133,
+    "name": "伊布",
+    "artId": 132,
+    "path": "../assets/animation-templates/133/"
+  },
+  {
+    "nationalId": 134,
+    "name": "水伊布",
+    "artId": 133,
+    "path": "../assets/animation-templates/134/"
+  },
+  {
+    "nationalId": 135,
+    "name": "雷伊布",
+    "artId": 134,
+    "path": "../assets/animation-templates/135/"
+  },
+  {
+    "nationalId": 136,
+    "name": "火伊布",
+    "artId": 135,
+    "path": "../assets/animation-templates/136/"
+  },
+  {
+    "nationalId": 137,
+    "name": "多边兽",
+    "artId": 136,
+    "path": "../assets/animation-templates/137/"
+  },
+  {
+    "nationalId": 138,
+    "name": "菊石兽",
+    "artId": 137,
+    "path": "../assets/animation-templates/138/"
+  },
+  {
+    "nationalId": 139,
+    "name": "多刺菊石兽",
+    "artId": 138,
+    "path": "../assets/animation-templates/139/"
+  },
+  {
+    "nationalId": 140,
+    "name": "化石盔",
+    "artId": 139,
+    "path": "../assets/animation-templates/140/"
+  },
+  {
+    "nationalId": 141,
+    "name": "镰刀盔",
+    "artId": 140,
+    "path": "../assets/animation-templates/141/"
+  },
+  {
+    "nationalId": 142,
+    "name": "化石翼龙",
+    "artId": 141,
+    "path": "../assets/animation-templates/142/"
+  },
+  {
+    "nationalId": 143,
+    "name": "卡比兽",
+    "artId": 142,
+    "path": "../assets/animation-templates/143/"
+  },
+  {
+    "nationalId": 144,
+    "name": "急冻鸟",
+    "artId": 143,
+    "path": "../assets/animation-templates/144/"
+  },
+  {
+    "nationalId": 145,
+    "name": "闪电鸟",
+    "artId": 144,
+    "path": "../assets/animation-templates/145/"
+  },
+  {
+    "nationalId": 146,
+    "name": "火焰鸟",
+    "artId": 145,
+    "path": "../assets/animation-templates/146/"
+  },
+  {
+    "nationalId": 147,
+    "name": "迷你龙",
+    "artId": 146,
+    "path": "../assets/animation-templates/147/"
+  },
+  {
+    "nationalId": 148,
+    "name": "哈克龙",
+    "artId": 147,
+    "path": "../assets/animation-templates/148/"
+  },
+  {
+    "nationalId": 149,
+    "name": "快龙",
+    "artId": 148,
+    "path": "../assets/animation-templates/149/"
+  },
+  {
+    "nationalId": 150,
+    "name": "超梦",
+    "artId": 149,
+    "path": "../assets/animation-templates/150/"
+  },
+  {
+    "nationalId": 151,
+    "name": "梦幻",
+    "artId": 150,
+    "path": "../assets/animation-templates/151/"
+  }
+]

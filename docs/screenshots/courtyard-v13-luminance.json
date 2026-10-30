@@ -1,0 +1,56 @@
+{
+  "clock": {
+    "bounds": [
+      130,
+      35,
+      230,
+      65
+    ],
+    "old": {
+      "meanLuma255": 156.2,
+      "stddev": 64.7,
+      "brightPixelFractionAbove160": 0.4527
+    },
+    "new": {
+      "meanLuma255": 48.1,
+      "stddev": 5.4,
+      "brightPixelFractionAbove160": 0.0
+    }
+  },
+  "coins": {
+    "bounds": [
+      150,
+      81,
+      226,
+      101
+    ],
+    "old": {
+      "meanLuma255": 137.9,
+      "stddev": 51.5,
+      "brightPixelFractionAbove160": 0.3092
+    },
+    "new": {
+      "meanLuma255": 55.1,
+      "stddev": 21.9,
+      "brightPixelFractionAbove160": 0.0
+    }
+  },
+  "hud": {
+    "bounds": [
+      120,
+      30,
+      242,
+      103
+    ],
+    "old": {
+      "meanLuma255": 147.6,
+      "stddev": 60.3,
+      "brightPixelFractionAbove160": 0.3796
+    },
+    "new": {
+      "meanLuma255": 51.6,
+      "stddev": 17.4,
+      "brightPixelFractionAbove160": 0.0007
+    }
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "method": "Five pixel-exact original row bands plus eight complete AI-generated attack bodies; one uniform nearest-neighbor scale for the entire attack row. No cut-body deformation or duplicated frames.",
+  "parts": [
+    {
+      "source": "assets/source/animation-046-master-v1.png",
+      "sourceBox": [
+        0,
+        75,
+        1448,
+        190
+      ],
+      "destination": [
+        0,
+        39
+      ],
+      "uniformScale": 1,
+      "action": "idle"
+    },
+    {
+      "source": "assets/source/animation-046-master-v1.png",
+      "sourceBox": [
+        0,
+        248,
+        1448,
+        366
+      ],
+      "destination": [
+        0,
+        236
+      ],
+      "uniformScale": 1,
+      "action": "walk"
+    },
+    {
+      "source": "assets/source/animation-046-master-v1.png",
+      "sourceBox": [
+        0,
+        406,
+        1448,
+        555
+      ],
+      "destination": [
+        0,
+        405
+      ],
+      "uniformScale": 1,
+      "action": "happy"
+    },
+    {
+      "source": "assets/source/animation-046-master-v1.png",
+      "sourceBox": [
+        0,
+        618,
+        1448,
+        736
+      ],
+      "destination": [
+        0,
+        636
+      ],
+      "uniformScale": 1,
+      "action": "eat"
+    },
+    {
+      "source": "assets/source/animation-046-master-v1.png",
+      "sourceBox": [
+        0,
+        800,
+        1448,
+        915
+      ],
+      "destination": [
+        0,
+        839
+      ],
+      "uniformScale": 1,
+      "action": "sleep"
+    },
+    {
+      "source": "assets/source/animation-046-attack-v3.png",
+      "sourceBox": [
+        28,
+        278,
+        264,
+        464
+      ],
+      "destination": [
+        24,
+        1044
+      ],
+      "destinationSize": [
+        134,
+        106
+      ],
+      "uniformScale": 0.5698924731182796,
+      "action": "attack",
+      "frame": 0
+    },
+    {
+      "source": "assets/source/animation-046-attack-v3.png",
+      "sourceBox": [
+        295,
+        278,
+        529,
+        464
+      ],
+      "destination": [
+        205,
+        1044
+      ],
+      "destinationSize": [
+        133,
+        106
+      ],
+      "uniformScale": 0.5698924731182796,
+      "action": "attack",
+      "frame": 1
+    },
+    {
+      "source": "assets/source/animation-046-attack-v3.png",
+      "sourceBox": [
+        541,
+        279,
+        815,
+        465
+      ],
+      "destination": [
+        374,
+        1044
+      ],
+      "destinationSize": [
+        156,
+        106
+      ],
+      "uniformScale": 0.5698924731182796,
+      "action": "attack",
+      "frame": 2
+    },
+    {
+      "source": "assets/source/animation-046-attack-v3.png",
+      "sourceBox": [
+        825,
+        278,
+        1066,
+        465
+      ],
+      "destination": [
+        565,
+        1043
+      ],
+      "destinationSize": [
+        137,
+        107
+      ],
+      "uniformScale": 0.5698924731182796,
+      "action": "attack",
+      "frame": 3
+    },
+    {
+      "source": "assets/source/animation-046-attack-v3.png",
+      "sourceBox": [
+        1077,
+        279,
+        1362,
+        465
+      ],
+      "destination": [
+        734,
+        1044
+      ],
+      "destinationSize": [
+        162,
+        106
+      ],
+      "uniformScale": 0.5698924731182796,
+      "action": "attack",
+      "frame": 4
+    },
+    {
+      "source": "assets/source/animation-046-attack-v3.png",
+      "sourceBox": [
+        1387,
+        279,
+        1619,
+        462
+      ],
+      "destination": [
+        930,
+        1046
+      ],
+      "destinationSize": [
+        132,
+        104
+      ],
+      "uniformScale": 0.5698924731182796,
+      "action": "attack",
+      "frame": 5
+    },
+    {
+      "source": "assets/source/animation-046-attack-v3.png",
+      "sourceBox": [
+        1657,
+        278,
+        1892,
+        465
+      ],
+      "destination": [
+        1110,
+        1043
+      ],
+      "destinationSize": [
+        134,
+        107
+      ],
+      "uniformScale": 0.5698924731182796,
+      "action": "attack",
+      "frame": 6
+    },
+    {
+      "source": "assets/source/animation-046-attack-v3.png",
+      "sourceBox": [
+        1916,
+        278,
+        2150,
+        465
+      ],
+      "destination": [
+        1291,
+        1043
+      ],
+      "destinationSize": [
+        133,
+        107
+      ],
+      "uniformScale": 0.5698924731182796,
+      "action": "attack",
+      "frame": 7
+    }
+  ],
+  "sources": [
+    {
+      "path": "assets/source/animation-046-master-v1.png",
+      "sha256": "57ec6752783653c7d9187197c1d0df6ac581195482b3c1ea788921cad44271f6"
+    },
+    {
+      "path": "assets/source/animation-046-attack-v3.png",
+      "sha256": "d25c9463a3bf048e3f28896fea5e41e3d34919ec324ffaa5892e27814ec05df2"
+    }
+  ],
+  "outputSha256": "97373e7b51fe47a338b560603aa5c9f2c01da83a59e56713fcd01fe5dec89ae3",
+  "additionalProvenance": [
+    "assets/source/animation-046-master-v1.png",
+    "assets/prompts/animation-046/master-v1.txt",
+    "assets/prompts/animation-046/generation-v1.log",
+    "assets/source/animation-046-attack-v3.png",
+    "assets/prompts/animation-046/attack-v3.txt"
+  ]
+}

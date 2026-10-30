@@ -1,0 +1,35 @@
+[
+  {
+    "scene": 3,
+    "clock": {
+      "mean": 40.71,
+      "brightFraction": 0.0
+    },
+    "coin": {
+      "mean": 42.91,
+      "brightFraction": 0.0
+    }
+  },
+  {
+    "scene": 6,
+    "clock": {
+      "mean": 23.52,
+      "brightFraction": 0.0
+    },
+    "coin": {
+      "mean": 28.19,
+      "brightFraction": 0.0
+    }
+  },
+  {
+    "scene": 11,
+    "clock": {
+      "mean": 42.4,
+      "brightFraction": 0.0
+    },
+    "coin": {
+      "mean": 81.76,
+      "brightFraction": 0.0
+    }
+  }
+]

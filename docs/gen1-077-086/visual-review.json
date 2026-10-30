@@ -1,0 +1,56 @@
+{
+  "identityReviewed": [
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86
+  ],
+  "animationReviewed": [
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86
+  ],
+  "acceptedVersions": {
+    "77": 1,
+    "78": 3,
+    "79": 1,
+    "81": 1,
+    "83": 1,
+    "84": 1,
+    "85": 1,
+    "86": 1,
+    "80": 3,
+    "82": 2
+  },
+  "notes": {
+    "identity": "Source and native48 ten-sprite contact sheet reviewed: four-legged horses and Rapidash horn; Slowpoke tail and Slowbro attached shell; one-eyed Magnemite and three connected Magneton units; held leek; Doduo two heads/Dodrio three heads; Seel flippers, horn and tusks. Native max40px silhouettes, binary alpha and connected navy outlines. Identity art only, not runtime integrated.",
+    "77": "v1 accepted, attempt1: four-legged cream horse/no horn, attached flame mane/tail. Genuine alternating travel/hop/brace/recovery poses, low closed-eye sleep throughout; legs may extend gently during sleep breathing. Six actions each eight distinct complete bodies and exact mirrors. Source/measurements/frame hashes retained. Not runtime integrated.",
+    "78-v1": "Generated successfully but rejected: neighboring flame/fringe silhouettes touch in several rows. Isolated component check failed. Full original and measured rejection report retained; not a template.",
+    "78-v2": "Meaningful layout revision with smaller bodies/wider transparent gutters/explicit persistent horn. Six service attempts failed: first HTTP400/content_policy, then five HTTP500, no image saved. Whole image batch stopped according to skill. No079-086 action request.",
+    "78": "v3 accepted, attempt1. Source and native contact sheet reviewed: compact cream four-legged horse, visible forehead horn, ears and attached orange mane/tail, true alternating steps and recovery; all eight sleep poses low with closed visible eye.48 separated complete source bodies; native silhouette<=40px. Prior v1 rejection/v2 six failures retained.",
+    "79": "v1 accepted, attempt1: source and native contact sheet reviewed. Four short legs, connected cream-tipped pink tail, consistent broad muzzle/ears. Distinct leg bends, hop, chewing and compact brace/recovery. Eight low resting sleep poses have closed eyes; tail relaxes to ground then raises at loop recovery. Native48px exact mirrors; no stretched duplicates.",
+    "81": "v1 accepted, attempt2: native contact sheet reviewed. One connected sphere/eye, attached top and front screws and two red-blue tipped magnets. Eight genuine tilt/magnet gestures, no legs or mouth; low hovering rest with single eye fully closed in all eight sleep frames. Movement labeled hovering. Source/frames distinct, exact mirrors.",
+    "83": "v1 accepted, attempt1: native contact sheet reviewed. Brown duck, forehead mark, beak, two attached wings and webbed feet; one leek held against near wing/body throughout all48 frames, including closed-eye low sitting sleep. Real steps, beak chewing and compact held-leek/head gestures with recovery; no detached prop.",
+    "84": "v1 accepted, attempt1: native contact sheet reviewed. Exactly two heads and two attached necks, two long legs in every pose, no wings. Alternating running steps, genuine beak/head/knee changes, both heads tuck into low seated sleep with all visible eyes closed; compact two-head lean and recovery. Native silhouettes and exact mirrors passed.",
+    "85": "v1 accepted, attempt1: native contact sheet reviewed. Exactly three brown crested heads, three connected necks, two legs and attached red tail feathers. Real alternating steps/three-head beak motions, three heads tucked into low closed-eye resting cluster in all sleep frames, compact triple-head forward lean and recovery. Complete connected bodies, no missing heads or wings.",
+    "86": "v1 accepted, attempt1: native contact sheet reviewed. White seal, single horn, muzzle/tusks/pink tongue, two attached front flippers and forked rear tail. Eight real flipper/belly-scooting phases, no added walking legs; low lying closed-eye sleep throughout, compact head/front-flipper action and recovery. Movement labeled sliding.",
+    "80-v1": "Five awake rows acceptable; sleep rejected because shell eyes remain open even when pink-body eyes are closed. Whole-body sleep revision required.",
+    "80-sleep-v2": "Generated attempt1 but rejected: shell still carries white eye/pupil spots; not used. Meaningful v3 repair removes every white highlight/eye spot on shell and increases gutters.",
+    "82-v1": "Five awake rows retain three connected units, but sleep row hides/flattens both lower spheres and is rejected. Need new complete resting clusters with all three round bodies and all three closed eyes visible.",
+    "80": "v3 accepted: source sleep row and native contact sheet reviewed. Five original complete action bands retained pixel-exactly; eight newly generated complete resting bodies assembled with one fixed uniform scale. Pink-body eyes closed; gray shell uses closed dark lines without white eyeballs/pupils. Attached shell/tail and limbs stay intact; one curled side-rest hides face naturally. Original v1 open-shell sleep and rejected sleep-v2 retained, assembly records/hash/boxes included. Sleep-v3 attempt1.",
+    "82": "Reviewed native48px contact sheet: all48 whole-cluster poses retain three visible round connected bodies and magnet arms; eight replacement sleep bodies have all three gray eyelids closed, retain volume and no invented legs. Original v1 flattened/hidden lower sleep spheres rejected. Whole-row assembly retains five original awake rows with measured source provenance."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "source": "assets/source/gyms/viridian-atlas-v1.png",
+  "alphaThreshold": 220,
+  "giovanni": {
+    "box": [
+      135,
+      103,
+      567,
+      965
+    ]
+  },
+  "earth": {
+    "box": [
+      945,
+      88,
+      1260,
+      510
+    ]
+  },
+  "stamp": {
+    "box": [
+      696,
+      574,
+      1478,
+      965
+    ]
+  }
+}

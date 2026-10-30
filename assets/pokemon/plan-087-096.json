@@ -1,0 +1,197 @@
+{
+  "range": [
+    87,
+    96
+  ],
+  "status": "complete;Web and firmware v0.16.0",
+  "runtimeIntegrated": true,
+  "actions": [
+    "idle",
+    "walk",
+    "happy",
+    "eat",
+    "sleep",
+    "attack"
+  ],
+  "framesPerAction": 8,
+  "items": [
+    {
+      "nationalId": 87,
+      "name": "白海狮",
+      "english": "Dewgong",
+      "artId": 86,
+      "species": 36,
+      "stage": 1,
+      "anatomy": "sleek white seal with a rounded head, ONE short forehead horn, small black eyes, cream muzzle with TWO small tusks, TWO connected front flippers and ONE connected forked rear tail; no walking legs"
+    },
+    {
+      "nationalId": 88,
+      "name": "臭泥",
+      "english": "Grimer",
+      "artId": 87,
+      "species": 37,
+      "stage": 0,
+      "anatomy": "small rounded violet slime creature, TWO attached short sludge arms with three rounded digits each, wide pale eyes and a broad dark mouth, low continuous puddle base with folded purple ridges, no legs or dripping detached blobs"
+    },
+    {
+      "nationalId": 89,
+      "name": "臭臭泥",
+      "english": "Muk",
+      "artId": 88,
+      "species": 37,
+      "stage": 1,
+      "anatomy": "broad dark-purple sludge creature with a rounded uneven head, TWO attached long sludge arms with rounded fingers, pale eyes and wide dark mouth, thick folded sludge body ending in one continuous low puddle base, no legs or detached drops"
+    },
+    {
+      "nationalId": 90,
+      "name": "大舌贝",
+      "english": "Shellder",
+      "artId": 89,
+      "species": 38,
+      "stage": 0,
+      "anatomy": "small purple bivalve shell with TWO hinged ridged shell halves forming one connected silhouette, dark inner face with TWO white eyes and ONE long pink tongue attached to mouth and touching lower shell, no arms or legs"
+    },
+    {
+      "nationalId": 91,
+      "name": "刺甲贝",
+      "english": "Cloyster",
+      "artId": 90,
+      "species": 38,
+      "stage": 1,
+      "anatomy": "compact purple spiked bivalve shell, TWO hinged outer shell halves with thick connected spikes, dark round inner face with two narrow pale eyes and a small smile, connected inner shell rim; no arms or legs"
+    },
+    {
+      "nationalId": 92,
+      "name": "鬼斯",
+      "english": "Gastly",
+      "artId": 91,
+      "species": 39,
+      "stage": 0,
+      "anatomy": "round dark-purple floating sphere face, TWO large pale eyes, small smiling mouth with TWO tiny white fangs, surrounded by one CONNECTED compact violet gaseous fringe touching the sphere; no detached gas flecks, limbs or floor shadow"
+    },
+    {
+      "nationalId": 93,
+      "name": "鬼斯通",
+      "english": "Haunter",
+      "artId": 92,
+      "species": 39,
+      "stage": 1,
+      "anatomy": "purple floating pointed-ear ghost head and short jagged lower body, TWO pale eyes and a broad toothy grin, TWO purple three-clawed hands held immediately against the cheeks or lower body so the COMPLETE silhouette stays connected by natural overlap, no legs or invented long arms"
+    },
+    {
+      "nationalId": 94,
+      "name": "耿鬼",
+      "english": "Gengar",
+      "artId": 93,
+      "species": 39,
+      "stage": 2,
+      "anatomy": "round dark-purple upright ghost creature with TWO pointed ears, short jagged back spikes, TWO short connected arms and TWO short legs, red eyes and broad white-toothed smile, small attached pointed tail"
+    },
+    {
+      "nationalId": 95,
+      "name": "大岩蛇",
+      "english": "Onix",
+      "artId": 94,
+      "species": 40,
+      "stage": 0,
+      "anatomy": "gray rock serpent, ONE large angular gray head with a single upright forehead horn, small pale eyes and a defined mouth, body made of a continuous connected chain of progressively smaller gray boulders ending in a pointed rock tail, coiled compactly beside and under the head, no arms or legs"
+    },
+    {
+      "nationalId": 96,
+      "name": "催眠貘",
+      "english": "Drowzee",
+      "artId": 95,
+      "species": 41,
+      "stage": 0,
+      "anatomy": "round yellow-and-brown tapir-like biped, yellow upper head and torso, brown lower belly/hips/legs separated by a soft wavy boundary, TWO rounded ears, ONE short downward-curving yellow trunk, small dark eyes, TWO short connected yellow arms and TWO short brown legs with pale toes"
+    }
+  ],
+  "evolution": [
+    {
+      "species": 36,
+      "nationalIds": [
+        86,
+        87
+      ],
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 34
+        }
+      ]
+    },
+    {
+      "species": 37,
+      "nationalIds": [
+        88,
+        89
+      ],
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 38
+        }
+      ]
+    },
+    {
+      "species": 38,
+      "nationalIds": [
+        90,
+        91
+      ],
+      "steps": [
+        {
+          "trigger": "water-stone",
+          "level": 0,
+          "item": "水之石",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "species": 39,
+      "nationalIds": [
+        92,
+        93,
+        94
+      ],
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 25
+        },
+        {
+          "trigger": "link-cord",
+          "level": 0,
+          "item": "联系之绳",
+          "price": 200
+        }
+      ]
+    }
+  ],
+  "pendingEvolution": [
+    {
+      "species": 41,
+      "nationalIds": [
+        96,
+        97
+      ],
+      "level": 26,
+      "status": "097 artwork not generated; unavailable"
+    }
+  ],
+  "identityGenerationAttempts": 1,
+  "completedAnimationNationalIds": [
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96
+  ],
+  "pendingAnimationNationalIds": []
+}

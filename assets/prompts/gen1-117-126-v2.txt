@@ -1,0 +1,17 @@
+Create ten recognizable friendly Kanto Pokemon companions as pixel sprites for a handheld pet game. Use the attached approved game sprites ONLY as the style reference: crisp uniform square pixels, compact complete bodies, a thin continuous deep-navy outline, a small flat palette. True transparent background. Exactly FIVE columns and TWO rows, ten isolated sprites, generous transparent gutters. No text, effects, shadows or extra objects. Each complete body is centered, left-facing three-quarter view, consistent native48x48 scale with a silhouette fitting40x40 and at most15 opaque colors. Keep all appendages attached.
+
+Top row, left to right:
+117 Seadra: blue seahorse, long tubular snout, short angular crown, reddish eyes, cream segmented belly, attached spiny dorsal fins, curled tail, no legs.
+118 Goldeen: white and orange goldfish, short cream forehead horn, eyes, pink mouth, attached white flowing fins and tail with orange edges.
+119 Seaking: orange fish with black patches, cream underside, short horn, attached white spotted fins and broad tail.
+120 Staryu: ochre FIVE-point starfish, gold central ring and ONE round red jewel, no face or eyes.
+121 Starmie: two connected overlapping five-point purple stars, TEN tips, gold central ring and ONE red jewel, no face or eyes.
+
+Bottom row, left to right:
+122 Mr. Mime: friendly pale pink mime, round white head, blue side hair, pink cheeks, white round torso with red circle, attached pink arms with white gloves, pink legs and blue curled shoes.
+123 Scyther: green mantis, cream segmented belly, two folded pale curved forearms, two green legs, two folded back wings, all attached, relaxed pose.
+124 Jynx: purple face, blonde hair, eyes and pink lips, full-length red dress with gold trim and sleeves, two purple hands resting against the dress, fully clothed compact game sprite.
+125 Electabuzz: yellow upright striped companion, black lightning marks, two antennae, cream muzzle, two arms, two legs, attached striped tail.
+126 Magmar: red and yellow duck-billed companion, cream bill, two rounded head bumps, yellow flame-pattern belly, two arms, two legs, attached tail with a small connected flame-shaped tip.
+
+Exactly ten complete independent silhouettes. Maintain the established gentle game style. Fish have fins rather than arms or legs. Starfish keep their proper tip counts and no invented eyes. All clothing and tails remain connected. Use ample empty transparent space around every sprite.

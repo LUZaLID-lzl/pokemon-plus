@@ -1,0 +1,181 @@
+{
+  "range": [
+    37,
+    46
+  ],
+  "status": "completed-art-and-animation; integrated Web/firmware v0.11.0",
+  "runtimeIntegrated": true,
+  "actions": [
+    "idle",
+    "walk",
+    "happy",
+    "eat",
+    "sleep",
+    "attack"
+  ],
+  "framesPerAction": 8,
+  "items": [
+    {
+      "nationalId": 37,
+      "name": "六尾",
+      "english": "Vulpix",
+      "artId": 36,
+      "species": 14,
+      "stage": 0
+    },
+    {
+      "nationalId": 38,
+      "name": "九尾",
+      "english": "Ninetales",
+      "artId": 37,
+      "species": 14,
+      "stage": 1
+    },
+    {
+      "nationalId": 39,
+      "name": "胖丁",
+      "english": "Jigglypuff",
+      "artId": 38,
+      "species": 15,
+      "stage": 0
+    },
+    {
+      "nationalId": 40,
+      "name": "胖可丁",
+      "english": "Wigglytuff",
+      "artId": 39,
+      "species": 15,
+      "stage": 1
+    },
+    {
+      "nationalId": 41,
+      "name": "超音蝠",
+      "english": "Zubat",
+      "artId": 40,
+      "species": 16,
+      "stage": 0
+    },
+    {
+      "nationalId": 42,
+      "name": "大嘴蝠",
+      "english": "Golbat",
+      "artId": 41,
+      "species": 16,
+      "stage": 1
+    },
+    {
+      "nationalId": 43,
+      "name": "走路草",
+      "english": "Oddish",
+      "artId": 42,
+      "species": 17,
+      "stage": 0
+    },
+    {
+      "nationalId": 44,
+      "name": "臭臭花",
+      "english": "Gloom",
+      "artId": 43,
+      "species": 17,
+      "stage": 1
+    },
+    {
+      "nationalId": 45,
+      "name": "霸王花",
+      "english": "Vileplume",
+      "artId": 44,
+      "species": 17,
+      "stage": 2
+    },
+    {
+      "nationalId": 46,
+      "name": "派拉斯",
+      "english": "Paras",
+      "artId": 45,
+      "species": 18,
+      "stage": 0
+    }
+  ],
+  "evolution": [
+    {
+      "species": 14,
+      "nationalIds": [
+        37,
+        38
+      ],
+      "steps": [
+        {
+          "item": "火之石",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "species": 15,
+      "nationalIds": [
+        39,
+        40
+      ],
+      "steps": [
+        {
+          "item": "月之石",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "species": 16,
+      "nationalIds": [
+        41,
+        42
+      ],
+      "steps": [
+        {
+          "level": 22
+        }
+      ]
+    },
+    {
+      "species": 17,
+      "nationalIds": [
+        43,
+        44,
+        45
+      ],
+      "steps": [
+        {
+          "level": 21
+        },
+        {
+          "item": "叶之石",
+          "price": 200
+        }
+      ]
+    }
+  ],
+  "pendingEvolution": [
+    {
+      "species": 18,
+      "nationalIds": [
+        46,
+        47
+      ],
+      "level": 24,
+      "status": "047 not generated; no runtime evolution until next batch"
+    }
+  ],
+  "identityGenerationAttempts": 3,
+  "completedAnimationNationalIds": [
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "pendingAnimationNationalIds": []
+}

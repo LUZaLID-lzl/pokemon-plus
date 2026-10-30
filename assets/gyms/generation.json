@@ -1,0 +1,724 @@
+{
+  "provider": "mobiiot-imagegen",
+  "model": "gpt-image-2.5-sunburst",
+  "atlasAttempts": 1,
+  "atlas": "assets/source/gyms/pewter-atlas-v1.png",
+  "prompt": "assets/prompts/gyms/pewter-atlas-v1.txt",
+  "measuredCropBoxes": [
+    [
+      100,
+      5,
+      550,
+      438
+    ],
+    [
+      740,
+      60,
+      1100,
+      405
+    ],
+    [
+      55,
+      510,
+      565,
+      770
+    ],
+    [
+      645,
+      448,
+      1188,
+      803
+    ],
+    [
+      50,
+      794,
+      600,
+      1245
+    ],
+    [
+      626,
+      818,
+      1248,
+      1243
+    ]
+  ],
+  "opponentArt": "Runtime enemies use integrated complete 074/075/095 templates; atlas draft enemy sprites are unused.",
+  "runtimeEnemies": {
+    "74": 73,
+    "75": 74,
+    "95": 94
+  },
+  "unusedAtlasEnemySprites": "Historical first draft; not exported. Runtime uses complete reviewed 074/075/095 templates.",
+  "map": {
+    "source": "assets/source/gyms/pewter-city-v2.png",
+    "prompt": "assets/prompts/gyms/pewter-city-v2.txt",
+    "attempts": 1,
+    "log": "build/gym-city-v2-generation.log",
+    "nativeSize": [
+      180,
+      84
+    ],
+    "runtimeSize": [
+      360,
+      168
+    ],
+    "position": [
+      0,
+      100
+    ],
+    "physicalRadius": 180,
+    "recipe": "tools/gym_art.py",
+    "composition": "Pewter city with central Rock gym, granite cliffs and town streets extending to both panel edges",
+    "paletteColors": 48,
+    "contrast": 1.08
+  },
+  "arena": {
+    "source": "assets/source/gyms/pewter-arena-v1.png",
+    "prompt": "assets/prompts/gyms/pewter-arena-v1.txt"
+  },
+  "sourceHashes": {
+    "pokemon-plus/assets/source/gyms/pewter-atlas-v1.png": "b85b7fc97b23bf277bc59428bc344c876bac6b8698a9d2a3c4424d88985297d1",
+    "pokemon-plus/assets/source/gyms/kanto-route-v1.png": "9dd8757509165c6fa797cb1caeff2e10b83967890258193a9a9ef28a6f2becdc",
+    "pokemon-plus/assets/source/gyms/pewter-arena-v1.png": "46f4911382f1873165bc3e7b70317d09a27dd80583c99ecfd8115252accd2b06",
+    "pokemon-plus/assets/source/gyms/pewter-city-v2.png": "0fb4aadd09fc93a0de500e7b7cc1017692deb7e9599647ead1de161d490166d7",
+    "pokemon-plus/assets/source/gyms/cerulean-atlas-v1.png": "08320fec50d37d71cad2d2b778761784cfd54afb96f829f1211976375f3575a9",
+    "pokemon-plus/assets/source/gyms/cerulean-city-v1.png": "a2c912a819ba7b60925a801d6de8b8e6ca8f23ce81b77cc7247755a1716377bb",
+    "pokemon-plus/assets/source/gyms/cerulean-arena-v1.png": "b299963739eb036d33c20587a6116b7f127e0726fc1dd3f17b5524beb335be51"
+  },
+  "previousMaps": [
+    {
+      "source": "assets/source/gyms/kanto-route-v1.png",
+      "prompt": "assets/prompts/gyms/kanto-route-v1.txt",
+      "attempts": 1,
+      "log": "build/gym-map-generation.log"
+    }
+  ],
+  "cerulean": {
+    "provider": "mobiiot-imagegen",
+    "model": "gpt-image-2.5-sunburst",
+    "recipe": "tools/cerulean_art.py",
+    "atlas": {
+      "source": "assets/source/gyms/cerulean-atlas-v1.png",
+      "prompt": "assets/prompts/gyms/cerulean-atlas-v1.txt",
+      "attempts": 3,
+      "log": "build/cerulean-atlas-generation.log",
+      "extraction": "Measured polygon silhouettes, arm holes and binary alpha; source has opaque glow, not transparency",
+      "slices": "assets/gyms/cerulean-slices.json",
+      "sizes": [
+        64,
+        48
+      ],
+      "paletteColors": 32
+    },
+    "map": {
+      "source": "assets/source/gyms/cerulean-city-v1.png",
+      "prompt": "assets/prompts/gyms/cerulean-city-v1.txt",
+      "attempts": 1,
+      "log": "build/cerulean-city-generation.log",
+      "nativeSize": [
+        180,
+        84
+      ],
+      "runtimeSize": [
+        360,
+        168
+      ],
+      "position": [
+        0,
+        100
+      ],
+      "physicalRadius": 180,
+      "paletteColors": 48
+    },
+    "arena": {
+      "source": "assets/source/gyms/cerulean-arena-v1.png",
+      "prompt": "assets/prompts/gyms/cerulean-arena-v1.txt",
+      "attempts": 1,
+      "log": "build/cerulean-arena-generation.log",
+      "nativeSize": [
+        120,
+        38
+      ],
+      "runtimeSize": [
+        360,
+        112
+      ],
+      "brightness": 0.8,
+      "radius": 173
+    },
+    "runtimeEnemies": {
+      "54": 53,
+      "120": 119,
+      "121": 120
+    }
+  },
+  "vermilion": {
+    "provider": "mobiiot-imagegen",
+    "model": "gpt-image-2.5-sunburst",
+    "recipe": "tools/vermilion_art.py",
+    "runtimeEnemies": {
+      "100": 99,
+      "25": 0,
+      "26": 25
+    },
+    "atlas": {
+      "source": "assets/source/gyms/vermilion-atlas-v1.png",
+      "prompt": "assets/prompts/gyms/vermilion-atlas-v1.txt",
+      "attempts": 1,
+      "log": "build/vermilion-atlas-generation.log",
+      "sha256": "a3ae93252baa3e18c975cb22b6e1f99f588c740e1543ffde7c2dbbd2ef31f255",
+      "slices": "assets/gyms/vermilion-slices.json",
+      "extraction": "Source RGBA alpha threshold220, independent crops,32 colors,binary alpha; no runtime processing",
+      "sizes": [
+        64,
+        48
+      ]
+    },
+    "map": {
+      "source": "assets/source/gyms/vermilion-city-v1.png",
+      "prompt": "assets/prompts/gyms/vermilion-city-v1.txt",
+      "attempts": 1,
+      "log": "build/vermilion-city-generation.log",
+      "sha256": "ba66a127a8274071ca71fb2d336776d9d0bb7f8e4dcb5d8a40910fbe47ee3035",
+      "nativeSize": [
+        180,
+        84
+      ],
+      "runtimeSize": [
+        360,
+        168
+      ],
+      "position": [
+        0,
+        100
+      ],
+      "physicalRadius": 180,
+      "paletteColors": 48
+    },
+    "arena": {
+      "source": "assets/source/gyms/vermilion-arena-v1.png",
+      "prompt": "assets/prompts/gyms/vermilion-arena-v1.txt",
+      "attempts": 1,
+      "log": "build/vermilion-arena-generation.log",
+      "sha256": "634d390cde44e96db82feeddd538120b8c130d23b903fdc236c0f858404b75a1",
+      "nativeSize": [
+        120,
+        38
+      ],
+      "runtimeSize": [
+        360,
+        112
+      ],
+      "brightness": 0.8,
+      "radius": 173
+    }
+  },
+  "defeatedStamp": {
+    "provider": "mobiiot-imagegen",
+    "model": "gpt-image-2.5-sunburst",
+    "source": "assets/source/gyms/defeated-stamp-v1.png",
+    "prompt": "assets/prompts/gyms/defeated-stamp-v1.txt",
+    "attempts": 1,
+    "log": "build/gym-stamp-generation.log",
+    "sourceSha256": "1e64d4bb92e3905156dd2e83264f347dc5f84191096d34d50de957282ee034e8",
+    "recipe": "tools/gym_stamp_art.py",
+    "sourceAlpha": "RGBA threshold220; quantized32colors; binary transparency",
+    "nativeSize": [
+      68,
+      24
+    ],
+    "runtimeSize": [
+      136,
+      48
+    ],
+    "position": [
+      112,
+      86
+    ],
+    "condition": "Selected gym badge bit; persistent existing save v8; map only",
+    "status": "Initial typography reference; retained, no longer exported to runtime"
+  },
+  "themedDefeatedStamps": {
+    "provider": "mobiiot-imagegen",
+    "model": "gpt-image-2.5-sunburst",
+    "source": "assets/source/gyms/defeated-themed-atlas-v1.png",
+    "reference": "assets/source/gyms/defeated-stamp-v1.png",
+    "prompt": "assets/prompts/gyms/defeated-themed-atlas-v1.txt",
+    "attempts": 1,
+    "log": "build/gym-themed-stamp-generation.log",
+    "sourceSha256": "1076246dcc3386cabf1cb6ffb0be8150fbc511cfbee3f386671c4d54c5fb9553",
+    "recipe": "tools/gym_stamp_art.py",
+    "slices": "assets/gyms/defeated-themed-slices.json",
+    "alphaThreshold": 220,
+    "nativeSize": [
+      68,
+      24
+    ],
+    "runtimeSize": [
+      136,
+      48
+    ],
+    "position": [
+      112,
+      86
+    ],
+    "themes": [
+      "gray carved rock with chips",
+      "aqua waves and splash",
+      "golden electricity and lightning"
+    ],
+    "condition": "Selected gym badge bit; existing save v8; map only"
+  },
+  "doorLeaders": {
+    "source": "assets/source/gyms/door-leaders-atlas-v1.png",
+    "sourceSha256": "b4a658f39ab19568c5078fb00b66a40091fda88823a92d9ebc919af6d14bc560",
+    "model": "gpt-image-2.5-sunburst",
+    "attempts": 4,
+    "failedAttempts": 3,
+    "references": [
+      "assets/gyms/brock.png",
+      "assets/gyms/misty.png",
+      "assets/gyms/surge.png"
+    ],
+    "prompt": "assets/prompts/gyms/door-leaders-atlas-v1.txt",
+    "log": "build/gym-door-leaders-generation.log",
+    "recipe": "assets/gyms/door-team-slices.json",
+    "status": "source retained; terrain-aware alpha-cropped 32/34px trainers larger than 14/18px defenders, individually grounded and depth sorted",
+    "reusePets": "existing roster source images; no new pet art",
+    "referenceSha256": {
+      "assets/gyms/brock.png": "ad8618b575836572017806cfd8ac1793ddf6868596462cd530f8877494dca75a",
+      "assets/gyms/misty.png": "a2278565130187d5e64440530094730aba59eb58665589f003a0fde5bcece5c0",
+      "assets/gyms/surge.png": "6a7b6d05ca3522fbf2f264b9c737de5e2d797c1127071ca305881469d173fa0b"
+    },
+    "outputSha256": {
+      "assets/gyms/door-team-0.png": "70f1764e7c5d337bfb26c03ca1749fb0d5d92537497cd9697b2185bd6571c773",
+      "assets/gyms/door-team-1.png": "1689434060e675529b2e86ef568ff1d1f642e96ee2a99b994df85d7a2ba6416e",
+      "assets/gyms/door-team-2.png": "8061fcddc41e2fd3ee14cf140fe691251886039c57e9eb1e155bae9402e26149"
+    },
+    "layoutRecipe": "assets/gyms/door-team-slices.json",
+    "layoutValidation": "build/gym-door-ground-layout.json"
+  },
+  "celadon": {
+    "provider": "mobiiot-imagegen",
+    "model": "gpt-image-2.5",
+    "sourceHashes": {
+      "assets/source/gyms/celadon-city-v1.png": "bdae415364a27a68ea312323d901b76c422e034ff923972a2344cce18fe78d13",
+      "assets/source/gyms/celadon-atlas-v1.png": "69e1954cdc009898ec08caeb2b08b8d436b917e55f3c0e8a6a2a4958e6ad503c",
+      "assets/source/gyms/celadon-arena-v1.png": "c80c420d2b6e5cd97fdc03f3a2831cd7a2a68e343b0ecfb4d5d1901e96daa746"
+    },
+    "tasks": [
+      {
+        "source": "assets/source/gyms/celadon-city-v1.png",
+        "prompt": "assets/prompts/gyms/celadon-city-v1.txt",
+        "log": "build/celadon-city-generation-v1.log",
+        "attempts": 1,
+        "reference": "assets/source/gyms/vermilion-city-v1.png"
+      },
+      {
+        "source": "assets/source/gyms/celadon-atlas-v1.png",
+        "prompt": "assets/prompts/gyms/celadon-atlas-v1.txt",
+        "log": "build/celadon-atlas-generation-v1.log",
+        "attempts": 1,
+        "references": [
+          "assets/source/gyms/vermilion-atlas-v1.png",
+          "assets/source/gyms/defeated-themed-atlas-v1.png"
+        ]
+      },
+      {
+        "source": "assets/source/gyms/celadon-arena-v1.png",
+        "prompt": "assets/prompts/gyms/celadon-arena-v1.txt",
+        "log": "build/celadon-arena-generation-v1.log",
+        "attempts": 1,
+        "reference": "assets/source/gyms/vermilion-arena-v1.png"
+      }
+    ],
+    "referenceHashes": {
+      "assets/source/gyms/vermilion-city-v1.png": "ba66a127a8274071ca71fb2d336776d9d0bb7f8e4dcb5d8a40910fbe47ee3035",
+      "assets/source/gyms/vermilion-atlas-v1.png": "a3ae93252baa3e18c975cb22b6e1f99f588c740e1543ffde7c2dbbd2ef31f255",
+      "assets/source/gyms/defeated-themed-atlas-v1.png": "1076246dcc3386cabf1cb6ffb0be8150fbc511cfbee3f386671c4d54c5fb9553",
+      "assets/source/gyms/vermilion-arena-v1.png": "634d390cde44e96db82feeddd538120b8c130d23b903fdc236c0f858404b75a1"
+    },
+    "recipes": [
+      "tools/celadon_art.py",
+      "assets/gyms/celadon-slices.json",
+      "assets/gyms/door-team-slices.json"
+    ],
+    "outputHashes": {
+      "assets/gyms/erika.png": "e50cdce2d3b19cfe525f9c4238df3083e6d2bc4bce00133e1cf485c3683a51a8",
+      "assets/gyms/rainbow.png": "c5f26bc6c1182b72672de84c5e8aa994985e61124e6d570139fc2ce01e433d05",
+      "assets/gyms/rainbow-display.png": "d02a9e0a113cb04270f6735dfaf2a5a9adcd518152f750228cd12d65d46d45c6",
+      "assets/gyms/celadon-map.png": "df4c4006cf5f415735751d68083c5237a41e5290009b221911ee7b0fdf8a019a",
+      "assets/gyms/celadon-arena.png": "3b6364f469b7ea8cb21f6c18e29896f9fc478fbad65a3933c16f93c38611ef06",
+      "assets/gyms/defeated-grass.png": "3a0349cf44c201b4d04abadaa0181919a9f42dff73d7d9d780efc77478da5832",
+      "assets/gyms/door-team-3.png": "e583b59d6f7b2f994d155483b7ffc2385fd62789b08b53254571bb7f459a9c3e"
+    },
+    "runtimeStorage": "lossless native I4/I8, no additional runtime decompression, static descriptors preloaded",
+    "map": {
+      "nativeSize": [
+        180,
+        84
+      ],
+      "runtimeSize": [
+        360,
+        168
+      ],
+      "position": [
+        0,
+        100
+      ],
+      "physicalRadius": 180
+    },
+    "door": {
+      "position": [
+        116,
+        188
+      ],
+      "size": [
+        128,
+        72
+      ],
+      "leaderMaxHeight": 34,
+      "petMaxHeight": 18,
+      "dryFloorValidation": "build/gym-door-ground-layout.json",
+      "condition": "no selected gym badge"
+    },
+    "status": "source and downsampled crops visually reviewed; generated in three successful first attempts; existing 114/071/045 pet art reused"
+  },
+  "fuchsia": {
+    "provider": "mobiiot-imagegen",
+    "tasks": [
+      {
+        "source": "assets/source/gyms/fuchsia-city-v1.png",
+        "prompt": "assets/prompts/gyms/fuchsia-city-v1.txt",
+        "log": "build/fuchsia-city-generation-v1.log",
+        "attempts": 1,
+        "model": "gpt-image-1.5",
+        "reference": "assets/source/gyms/celadon-city-v1.png"
+      },
+      {
+        "source": "assets/source/gyms/fuchsia-atlas-v1.png",
+        "prompt": "assets/prompts/gyms/fuchsia-atlas-v1.txt",
+        "log": "build/fuchsia-atlas-generation-v1.log",
+        "attempts": 1,
+        "model": "gpt-image-1.5",
+        "reference": "assets/source/gyms/celadon-atlas-v1.png"
+      },
+      {
+        "source": "assets/source/gyms/fuchsia-arena-v1.png",
+        "prompt": "assets/prompts/gyms/fuchsia-arena-v1.txt",
+        "log": "build/fuchsia-arena-generation-v1.log",
+        "attempts": 1,
+        "model": "gpt-image-1.5",
+        "reference": "assets/source/gyms/celadon-arena-v1.png"
+      }
+    ],
+    "sourceHashes": {
+      "assets/source/gyms/fuchsia-city-v1.png": "d69b16f670873537d9db40a3e9410c0552b2b810f44eabc63f12410b8caeb95d",
+      "assets/source/gyms/fuchsia-atlas-v1.png": "89d0215c0136a8d64f45f143417af32c4c83c5cfa2ea9fe37748e3eff8908de1",
+      "assets/source/gyms/fuchsia-arena-v1.png": "4be9beda5eaacefdd4eaf909d9bbd893f12682c9251cd2d86a52ce1037aa79fb"
+    },
+    "referenceHashes": {
+      "assets/source/gyms/celadon-city-v1.png": "bdae415364a27a68ea312323d901b76c422e034ff923972a2344cce18fe78d13",
+      "assets/source/gyms/celadon-atlas-v1.png": "69e1954cdc009898ec08caeb2b08b8d436b917e55f3c0e8a6a2a4958e6ad503c",
+      "assets/source/gyms/celadon-arena-v1.png": "c80c420d2b6e5cd97fdc03f3a2831cd7a2a68e343b0ecfb4d5d1901e96daa746"
+    },
+    "recipes": [
+      "tools/fuchsia_art.py",
+      "assets/gyms/fuchsia-slices.json",
+      "assets/gyms/door-team-slices.json"
+    ],
+    "outputHashes": {
+      "assets/gyms/koga.png": "dc72d44b3dcd3a26d608b40c03f58392b91fa31ac4c3a62b4c2efeadc1b7e09f",
+      "assets/gyms/soul.png": "25eef8caa690c76d8073cc37080d94038496bb00e56267e37a6a9b9aa982694d",
+      "assets/gyms/soul-display.png": "401ddad64702a5ddafef4a636a8ca9296dcd46a75590aa947e2d725188d27404",
+      "assets/gyms/fuchsia-map.png": "84b96e0cfecc6b5566831773aef5ad088906ae2d1b6cba7bbe11dd812fd4fdc3",
+      "assets/gyms/fuchsia-arena.png": "8da87b7dbd0e3dfa538049365484ee4930f8a714fcdd3014cea378f50f15403d",
+      "assets/gyms/defeated-poison.png": "ba299329e11d137a950b9c23dcf304b1803b8c8f7d7bf671be08713cb54f650f",
+      "assets/gyms/door-team-4.png": "80026490dcbf29c9833b34ed9993ec268e1e4070e2a451a5d079a70cb0a7f9e1",
+      "assets/gyms/fuchsia-leader-cutout.png": "be0c9c0c784ecc791885a87cbb5d64d8c9a67e370b46637a56f99d46192a4287"
+    },
+    "runtimeEnemies": {
+      "109": 108,
+      "89": 88,
+      "110": 109
+    },
+    "runtimeStorage": "native lossless I4/I8, preloaded fixed descriptors; no runtime decompression",
+    "door": {
+      "position": [
+        116,
+        188
+      ],
+      "size": [
+        128,
+        72
+      ],
+      "leaderMaxHeight": 34,
+      "petMaxHeight": 18,
+      "feetY": [
+        236,
+        255,
+        255,
+        255
+      ],
+      "dryFloorValidation": "build/gym-door-ground-layout.json"
+    },
+    "status": "three first-attempt successes, actual RGBA transparency inspected on solid backdrop; full-body connected silhouette isolated from nearby stamp particles; measured dry foreground"
+  },
+  "saffron": {
+    "provider": "mobiiot-imagegen",
+    "tasks": [
+      {
+        "source": "assets/source/gyms/saffron-city-v1.png",
+        "prompt": "assets/prompts/gyms/saffron-city-v1.txt",
+        "log": "build/saffron-city-generation-v1.log",
+        "attempts": 1,
+        "model": "gpt-image-1.5",
+        "reference": "assets/source/gyms/fuchsia-city-v1.png"
+      },
+      {
+        "source": "assets/source/gyms/saffron-atlas-v1.png",
+        "prompt": "assets/prompts/gyms/saffron-atlas-v1.txt",
+        "log": "build/saffron-atlas-generation-v1.log",
+        "attempts": 1,
+        "model": "gpt-image-1.5",
+        "reference": "assets/source/gyms/celadon-atlas-v1.png"
+      },
+      {
+        "source": "assets/source/gyms/saffron-arena-v1.png",
+        "prompt": "assets/prompts/gyms/saffron-arena-v1.txt",
+        "log": "build/saffron-arena-generation-v1.log",
+        "attempts": 1,
+        "model": "gpt-image-1.5",
+        "reference": "assets/source/gyms/fuchsia-arena-v1.png"
+      }
+    ],
+    "sourceHashes": {
+      "assets/source/gyms/saffron-city-v1.png": "ae76e6564dfcc5648ceea090af6810191edde40515eac71e5bf341468cb71d47",
+      "assets/source/gyms/saffron-atlas-v1.png": "60115d31dee96157070558047839e1590283f4d3544faee078eff52c10b3ba9e",
+      "assets/source/gyms/saffron-arena-v1.png": "fe0f8d19c550abf6755c525517917c8c3ec2854227ccb6f2c3ce53111020319a"
+    },
+    "referenceHashes": {
+      "assets/source/gyms/fuchsia-city-v1.png": "d69b16f670873537d9db40a3e9410c0552b2b810f44eabc63f12410b8caeb95d",
+      "assets/source/gyms/celadon-atlas-v1.png": "69e1954cdc009898ec08caeb2b08b8d436b917e55f3c0e8a6a2a4958e6ad503c",
+      "assets/source/gyms/fuchsia-arena-v1.png": "4be9beda5eaacefdd4eaf909d9bbd893f12682c9251cd2d86a52ce1037aa79fb"
+    },
+    "recipes": [
+      "tools/saffron_art.py",
+      "assets/gyms/saffron-slices.json",
+      "assets/gyms/door-team-slices.json"
+    ],
+    "outputHashes": {
+      "assets/gyms/sabrina.png": "bbca773d7eeed60699291ad600dcd6bb29baf0d24d32abd88bc1ad7d9f0a0535",
+      "assets/gyms/marsh.png": "4a53926fdaf2eb2b546079a0d452513ed3881ca47bd9b44523e6fa7273447ad0",
+      "assets/gyms/marsh-display.png": "cc3fcac46b84894311dabecda8f96c868c95a309052f3a98013a21514d79710d",
+      "assets/gyms/saffron-map.png": "58262c42b22395e9e72ae184decbd1500f30789bbc421452be56d640a6d27169",
+      "assets/gyms/saffron-arena.png": "84f4aa701c466fcdf94e38d8c95379d40dce4e7a1431299ad9417dd807c7eaf9",
+      "assets/gyms/defeated-psychic.png": "99b40a8fb0303d0ec48b05e014aa49fb6c581ada71181610e346a341b0b75f61",
+      "assets/gyms/door-team-5.png": "1d9a88c3531668d56c5786352b26dd6dd643562c0cb5795955ebd4e4df7d61a6"
+    },
+    "runtimeEnemies": {
+      "122": 121,
+      "64": 63,
+      "65": 64
+    },
+    "runtimeStorage": "native lossless I4/I8, preloaded fixed descriptors; no runtime decompression",
+    "door": {
+      "position": [
+        116,
+        188
+      ],
+      "size": [
+        128,
+        72
+      ],
+      "leaderMaxHeight": 34,
+      "petMaxHeight": 18,
+      "feetY": [
+        236,
+        255,
+        255,
+        255
+      ],
+      "dryFloorValidation": "build/gym-door-ground-layout.json"
+    },
+    "status": "three first-attempt successes; actual RGBA transparency and measured crops visually reviewed; dry plaza floor with complete trainer and pet silhouettes"
+  },
+  "cinnabar": {
+    "provider": "mobiiot-imagegen",
+    "tasks": [
+      {
+        "source": "assets/source/gyms/cinnabar-city-v1.png",
+        "prompt": "assets/prompts/gyms/cinnabar-city-v1.txt",
+        "log": "build/cinnabar-city-generation-v1.log",
+        "attempts": 1,
+        "model": "gpt-image-1.5",
+        "reference": "assets/source/gyms/saffron-city-v1.png"
+      },
+      {
+        "source": "assets/source/gyms/cinnabar-atlas-v1.png",
+        "prompt": "assets/prompts/gyms/cinnabar-atlas-v1.txt",
+        "log": "build/cinnabar-atlas-generation-v1.log",
+        "attempts": 1,
+        "model": "gpt-image-1.5",
+        "reference": "assets/source/gyms/fuchsia-atlas-v1.png"
+      },
+      {
+        "source": "assets/source/gyms/cinnabar-arena-v1.png",
+        "prompt": "assets/prompts/gyms/cinnabar-arena-v1.txt",
+        "log": "build/cinnabar-arena-generation-v1.log",
+        "attempts": 1,
+        "model": "gpt-image-1.5",
+        "reference": "assets/source/gyms/saffron-arena-v1.png"
+      }
+    ],
+    "sourceHashes": {
+      "assets/source/gyms/cinnabar-city-v1.png": "213f04dfe9466f0dc345186ffd306704643bf25cc7294e3fa2383b3567316d97",
+      "assets/source/gyms/cinnabar-atlas-v1.png": "4613185f60d5ccd5e2ef8ee47698c54c98dcbd6f4df11adc62bfbc3bc81dd1b4",
+      "assets/source/gyms/cinnabar-arena-v1.png": "68f0d0213ec7e0c7c23dbd5413572710807d86a1299b363cc764c869504889f6"
+    },
+    "referenceHashes": {
+      "assets/source/gyms/saffron-city-v1.png": "ae76e6564dfcc5648ceea090af6810191edde40515eac71e5bf341468cb71d47",
+      "assets/source/gyms/fuchsia-atlas-v1.png": "89d0215c0136a8d64f45f143417af32c4c83c5cfa2ea9fe37748e3eff8908de1",
+      "assets/source/gyms/saffron-arena-v1.png": "fe0f8d19c550abf6755c525517917c8c3ec2854227ccb6f2c3ce53111020319a"
+    },
+    "recipes": [
+      "tools/cinnabar_art.py",
+      "assets/gyms/cinnabar-slices.json",
+      "assets/gyms/door-team-slices.json"
+    ],
+    "outputHashes": {
+      "assets/gyms/blaine.png": "0320c7ae7df20fee7bc25275293f87a8ee4173e47744799af8db246aabea710d",
+      "assets/gyms/volcano.png": "c1bcd87e5c4f4753439505adb314be90248c381439e04d90bd9becda919b4cc9",
+      "assets/gyms/volcano-display.png": "28cb74d27007077f0cbca63f64a5b88171a3a4045b45f9d72b6bfde80685c88a",
+      "assets/gyms/cinnabar-map.png": "be8dd9f2e89553dfc4f6f020d0b325fa1e5d3cff0602d01c31e270f35572cc44",
+      "assets/gyms/cinnabar-arena.png": "d7411c2c7d4bc937b483c1577a0e397029cae8e3517f83f5ae20262349d87e60",
+      "assets/gyms/defeated-fire.png": "abb44c54f6520acd67b9b588eb671dd269fef2e0d69f3bfde91f242fac0c273d",
+      "assets/gyms/door-team-6.png": "5eddc3ddc1609aede73c6ab23f474fa94cb87b14b8ab4d1497b6691db06620a9"
+    },
+    "runtimeEnemies": {
+      "38": 37,
+      "78": 77,
+      "59": 58
+    },
+    "runtimeStorage": "native lossless I4/I8, preloaded fixed descriptors; no runtime decompression",
+    "door": {
+      "position": [
+        116,
+        188
+      ],
+      "size": [
+        128,
+        72
+      ],
+      "leaderMaxHeight": 34,
+      "petMaxHeight": 18,
+      "feetY": [
+        236,
+        255,
+        255,
+        255
+      ],
+      "dryFloorValidation": "build/gym-door-ground-layout.json"
+    },
+    "status": "three first-attempt successes; actual RGBA threshold on solid backdrop and complete measured silhouettes reviewed; dry volcanic plaza with trainer and three pets",
+    "promptHashes": {
+      "assets/prompts/gyms/cinnabar-city-v1.txt": "0248d378cb4598b97ea1247901887adbca70894775513dcda8c126a71c83b29f",
+      "assets/prompts/gyms/cinnabar-atlas-v1.txt": "b27d377bf7c7b42bf64f8e972a840ef25aca90ca943981ab07baaa74826f399c",
+      "assets/prompts/gyms/cinnabar-arena-v1.txt": "f8dd9ab255c21bc42c695bf9ca21edf15a7e1306972e80a634c24d4e3f90dd71"
+    },
+    "logHashes": {
+      "build/cinnabar-city-generation-v1.log": "f9feb0fa8bc4fda68bc1dbd689356740b290292a71af3c5108e05384a09b923d",
+      "build/cinnabar-atlas-generation-v1.log": "fd7a04ddcbd009d990ade13bc1f303f33e90d829539e4abdd1a3609eb0eeb8e7",
+      "build/cinnabar-arena-generation-v1.log": "09c3d25b35bc4ad05a7f1028979fedc21b42f446050ba146dc34810f99ae0046"
+    }
+  },
+  "viridian": {
+    "service": "MobiIoT",
+    "tasks": [
+      {
+        "source": "assets/source/gyms/viridian-city-v1.png",
+        "prompt": "assets/prompts/gyms/viridian-city-v1.txt",
+        "log": "build/viridian-city-generation-v1.log",
+        "attempts": 1,
+        "model": "gpt-image-1.5",
+        "reference": "assets/source/gyms/celadon-city-v1.png"
+      },
+      {
+        "source": "assets/source/gyms/viridian-atlas-v1.png",
+        "prompt": "assets/prompts/gyms/viridian-atlas-v1.txt",
+        "log": "build/viridian-atlas-generation-v1.log",
+        "attempts": 1,
+        "model": "gpt-image-1.5",
+        "reference": "assets/source/gyms/cinnabar-atlas-v1.png"
+      },
+      {
+        "source": "assets/source/gyms/viridian-arena-v1.png",
+        "prompt": "assets/prompts/gyms/viridian-arena-v1.txt",
+        "log": "build/viridian-arena-generation-v1.log",
+        "attempts": 1,
+        "model": "gpt-image-1.5",
+        "reference": "assets/source/gyms/cinnabar-arena-v1.png"
+      }
+    ],
+    "recipes": [
+      "tools/viridian_art.py",
+      "assets/gyms/viridian-slices.json",
+      "assets/gyms/door-team-slices.json"
+    ],
+    "runtimeEnemies": {
+      "31": 30,
+      "34": 33,
+      "112": 111
+    },
+    "runtimeStorage": "native lossless I4/I8, fixed preloaded descriptors; no new decompression",
+    "door": {
+      "position": [
+        116,
+        188
+      ],
+      "size": [
+        128,
+        72
+      ],
+      "leaderMaxHeight": 34,
+      "petMaxHeight": 18,
+      "feetY": [
+        236,
+        255,
+        255,
+        255
+      ],
+      "dryFloorValidation": "build/gym-door-ground-layout.json"
+    },
+    "status": "three first-attempt successes, actual threshold220 RGBA on solid backdrop reviewed; complete silhouettes, dry limestone plaza",
+    "sourceHashes": {
+      "assets/source/gyms/viridian-city-v1.png": "4e1d693086aad46f9e6deda359e7b7f9e8b832527aa843b7a38a5c2a5837f25d",
+      "assets/source/gyms/viridian-atlas-v1.png": "d7ca70ede11d91fcf68350940acd5d6f2cb40b73167174d0e6e4fccc419c182e",
+      "assets/source/gyms/viridian-arena-v1.png": "5175ad6d866f9b3ec33dc1a120c3df0a7842b42a98a971842b47148e73e32140"
+    },
+    "referenceHashes": {
+      "assets/source/gyms/celadon-city-v1.png": "bdae415364a27a68ea312323d901b76c422e034ff923972a2344cce18fe78d13",
+      "assets/source/gyms/cinnabar-atlas-v1.png": "4613185f60d5ccd5e2ef8ee47698c54c98dcbd6f4df11adc62bfbc3bc81dd1b4",
+      "assets/source/gyms/cinnabar-arena-v1.png": "68f0d0213ec7e0c7c23dbd5413572710807d86a1299b363cc764c869504889f6"
+    },
+    "promptHashes": {
+      "assets/prompts/gyms/viridian-city-v1.txt": "36d0f66efc0bc621722d665f9ace9085262014c2e696746977e8e14bf6258274",
+      "assets/prompts/gyms/viridian-atlas-v1.txt": "713c633a6843379d8c20bb7543308823946412094ce938a215aa377b6bdab30a",
+      "assets/prompts/gyms/viridian-arena-v1.txt": "011d963168fb542b92169f80a8c296119e78526c2a7502fc113c36fcc331ab00"
+    },
+    "logHashes": {
+      "build/viridian-city-generation-v1.log": "86ab467a067c08e0327667068aafe91105e6b61ea8000bd777d2fc87370304dd",
+      "build/viridian-atlas-generation-v1.log": "147bc6da337808909d8f998878bb3438c438d1f0b18c2518cbb59eb7655e55f0",
+      "build/viridian-arena-generation-v1.log": "3bdf775b6f50951c935cef462f974605b6d8d61e61e0eab16c185b5680c98492"
+    },
+    "outputHashes": {
+      "assets/gyms/giovanni.png": "230f115f28d47fa40302b6917cd891cc976e03a96ce2b950060002f3f6d87605",
+      "assets/gyms/earth.png": "1eb50f2a7bd6618af1640eda2a4c1c1e2c921782015e4dfc32cd55603959b8fc",
+      "assets/gyms/earth-display.png": "6879c9499fff658f53de284f6d9e18b9bd27adcd015616ea5ef930ecb5b8b0cf",
+      "assets/gyms/viridian-map.png": "11c047cf1e7aa9e874ebc8b33f3104ed8f89e639e1a00e6577c8af0f096cfb1c",
+      "assets/gyms/viridian-arena.png": "65c500f7899930b82c2fbf0afb3178c9b6c70bdd78cd2f3e15660dab84a2bd00",
+      "assets/gyms/defeated-ground.png": "9773384216b934e2a016b5ed86a9aff4996c5d06da7ce87d311cfbb731c892d7",
+      "assets/gyms/door-team-7.png": "7a84ab7200d4acd8799369f9ad1e25263004e5cb29ceb7973bacfa5b88b7485a"
+    }
+  }
+}

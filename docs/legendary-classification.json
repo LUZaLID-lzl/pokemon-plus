@@ -1,0 +1,61 @@
+{
+  "source": "https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/pokemon_species.csv",
+  "rows": [
+    {
+      "id": "59",
+      "identifier": "arcanine",
+      "generation_id": "1",
+      "is_legendary": "0",
+      "is_mythical": "0"
+    },
+    {
+      "id": "132",
+      "identifier": "ditto",
+      "generation_id": "1",
+      "is_legendary": "0",
+      "is_mythical": "0"
+    },
+    {
+      "id": "144",
+      "identifier": "articuno",
+      "generation_id": "1",
+      "is_legendary": "1",
+      "is_mythical": "0"
+    },
+    {
+      "id": "145",
+      "identifier": "zapdos",
+      "generation_id": "1",
+      "is_legendary": "1",
+      "is_mythical": "0"
+    },
+    {
+      "id": "146",
+      "identifier": "moltres",
+      "generation_id": "1",
+      "is_legendary": "1",
+      "is_mythical": "0"
+    },
+    {
+      "id": "149",
+      "identifier": "dragonite",
+      "generation_id": "1",
+      "is_legendary": "0",
+      "is_mythical": "0"
+    },
+    {
+      "id": "150",
+      "identifier": "mewtwo",
+      "generation_id": "1",
+      "is_legendary": "1",
+      "is_mythical": "0"
+    },
+    {
+      "id": "151",
+      "identifier": "mew",
+      "generation_id": "1",
+      "is_legendary": "0",
+      "is_mythical": "1"
+    }
+  ]
+}

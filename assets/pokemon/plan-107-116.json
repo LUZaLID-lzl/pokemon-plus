@@ -1,0 +1,182 @@
+{
+  "range": [
+    107,
+    116
+  ],
+  "status": "complete;integrated firmware/Web v0.18.0",
+  "runtimeIntegrated": true,
+  "actions": [
+    "idle",
+    "walk",
+    "happy",
+    "eat",
+    "sleep",
+    "attack"
+  ],
+  "framesPerAction": 8,
+  "items": [
+    {
+      "nationalId": 107,
+      "name": "艾比郎",
+      "english": "Hitmonchan",
+      "artId": 106,
+      "species": 47,
+      "stage": 0,
+      "anatomy": "tan humanoid boxer with a short crown of five blunt head ridges, TWO eyes, purple sleeveless tunic with short skirt, TWO connected arms wearing RED boxing gloves, TWO short legs wearing purple shoes; no tail"
+    },
+    {
+      "nationalId": 108,
+      "name": "大舌头",
+      "english": "Lickitung",
+      "artId": 107,
+      "species": 48,
+      "stage": 0,
+      "anatomy": "round PINK upright lizard with cream belly and cream oval markings, TWO small eyes, wide mouth and ONE broad pink tongue resting against chest, TWO short arms and TWO legs, ONE thick attached curled tail; tongue is connected to mouth and overlaps body"
+    },
+    {
+      "nationalId": 109,
+      "name": "瓦斯弹",
+      "english": "Koffing",
+      "artId": 108,
+      "species": 49,
+      "stage": 0,
+      "anatomy": "ONE purple spherical floating body with small attached blunt round bumps, TWO small eyes, broad smile with TWO tiny upper fangs, cream skull-and-crossbones marking on lower front; no arms or legs, no smoke, no detached bubbles"
+    },
+    {
+      "nationalId": 110,
+      "name": "双弹瓦斯",
+      "english": "Weezing",
+      "artId": 109,
+      "species": 49,
+      "stage": 1,
+      "anatomy": "TWO connected purple spherical heads, ONE large near head and ONE smaller upper-rear head joined by ONE short thick visible purple neck; both heads have faces and attached blunt bumps, larger head has cream skull marking, smaller head has cream ring marking; no limbs, smoke or floating bubbles"
+    },
+    {
+      "nationalId": 111,
+      "name": "独角犀牛",
+      "english": "Rhyhorn",
+      "artId": 110,
+      "species": 50,
+      "stage": 0,
+      "anatomy": "GRAY armored QUADRUPED rhinoceros with ONE short cream nose horn, angular head plates, TWO pointed ears, TWO eyes, ridged gray back armor, FOUR short sturdy legs with white toes and ONE short attached tail; keep quadruped anatomy"
+    },
+    {
+      "nationalId": 112,
+      "name": "钻角犀兽",
+      "english": "Rhydon",
+      "artId": 111,
+      "species": 50,
+      "stage": 1,
+      "anatomy": "GRAY upright rhinoceros biped with ONE cream spiral nose horn, TWO pointed ears, TWO eyes, segmented cream belly, TWO connected arms with blunt white claws, TWO sturdy legs and ONE thick attached gray tail"
+    },
+    {
+      "nationalId": 113,
+      "name": "吉利蛋",
+      "english": "Chansey",
+      "artId": 112,
+      "species": 51,
+      "stage": 0,
+      "anatomy": "round PINK egg-shaped companion with TWO small eyes and smiling mouth, three short hair tufts on each side of head, TWO short arms, TWO small pink feet, ONE cream egg seated securely inside front belly pouch; egg touches pouch with no floating props, ONE short attached tail"
+    },
+    {
+      "nationalId": 114,
+      "name": "蔓藤怪",
+      "english": "Tangela",
+      "artId": 113,
+      "species": 52,
+      "stage": 0,
+      "anatomy": "compact round body covered in BLUE curling vines with a deep black central face opening containing exactly TWO white eyes, TWO small RED shoes attached at bottom; all vines stay connected in one compact silhouette, no visible arms or mouth"
+    },
+    {
+      "nationalId": 115,
+      "name": "袋兽",
+      "english": "Kangaskhan",
+      "artId": 114,
+      "species": 53,
+      "stage": 0,
+      "anatomy": "brown upright kangaroo-like dinosaur mother with cream belly pouch, TWO ears, TWO eyes, short cream snout, TWO connected arms and TWO sturdy legs with white toes, ONE thick attached brown tail; ONE small purple baby seated securely inside belly pouch with TWO visible baby eyes and TWO small ears, baby remains connected by natural overlap"
+    },
+    {
+      "nationalId": 116,
+      "name": "墨海马",
+      "english": "Horsea",
+      "artId": 115,
+      "species": 54,
+      "stage": 0,
+      "anatomy": "small BLUE seahorse with rounded head, TWO reddish eyes, short tubular blue snout, cream ridged belly, ONE attached pale-blue dorsal fin and ONE curled blue tail; no arms or legs, fin and tail remain attached"
+    }
+  ],
+  "evolution": [
+    {
+      "species": 49,
+      "nationalIds": [
+        109,
+        110
+      ],
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 35
+        }
+      ]
+    },
+    {
+      "species": 50,
+      "nationalIds": [
+        111,
+        112
+      ],
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 42
+        }
+      ]
+    }
+  ],
+  "pendingEvolution": [
+    {
+      "species": 54,
+      "nationalIds": [
+        116,
+        117
+      ],
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 32
+        }
+      ],
+      "status": "117 full resources pending; do not enable",
+      "level": 32
+    }
+  ],
+  "identityVersion": 1,
+  "identityAttempts": 1,
+  "firmwareVersion": "v0.18.0",
+  "completedAnimationNationalIds": [
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116
+  ],
+  "pendingAnimationNationalIds": [],
+  "acceptedVersions": {
+    "107": 1,
+    "108": 1,
+    "109": 1,
+    "110": 1,
+    "111": 1,
+    "112": 1,
+    "113": 1,
+    "114": 1,
+    "115": 1,
+    "116": 1
+  }
+}

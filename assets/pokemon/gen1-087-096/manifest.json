@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "kind": "single-pose art review",
+  "generator": "MobiIoT",
+  "model": "gpt-image-2.5-sunburst",
+  "attempts": 1,
+  "sourceAtlas": "../../source/gen1-087-096-v1.png",
+  "sourceSha256": "acbdc78fb503dfbea18680027b0af989f18c5899a019c580ccd61bd1c18d555b",
+  "prompt": "../../prompts/gen1-087-096-v1.txt",
+  "nativeCanvas": 48,
+  "maxColors": 16,
+  "outlineColor": "#1b263a",
+  "alpha": "binary",
+  "gameIntegrated": true,
+  "animationPosesPerSpecies": 1,
+  "items": [
+    {
+      "id": 87,
+      "name": "白海狮",
+      "english": "Dewgong",
+      "chain": 36,
+      "stage": 1,
+      "image": "087.png",
+      "preview": "087@8x.png",
+      "sourceBox": [
+        25,
+        160,
+        348,
+        443
+      ],
+      "outlinePixels": 190,
+      "source": "https://wiki.52poke.com/wiki/白海狮"
+    },
+    {
+      "id": 88,
+      "name": "臭泥",
+      "english": "Grimer",
+      "chain": 37,
+      "stage": 0,
+      "image": "088.png",
+      "preview": "088@8x.png",
+      "sourceBox": [
+        370,
+        194,
+        693,
+        443
+      ],
+      "outlinePixels": 150,
+      "source": "https://wiki.52poke.com/wiki/臭泥"
+    },
+    {
+      "id": 89,
+      "name": "臭臭泥",
+      "english": "Muk",
+      "chain": 37,
+      "stage": 1,
+      "image": "089.png",
+      "preview": "089@8x.png",
+      "sourceBox": [
+        695,
+        160,
+        1096,
+        441
+      ],
+      "outlinePixels": 148,
+      "source": "https://wiki.52poke.com/wiki/臭臭泥"
+    },
+    {
+      "id": 90,
+      "name": "大舌贝",
+      "english": "Shellder",
+      "chain": 38,
+      "stage": 0,
+      "image": "090.png",
+      "preview": "090@8x.png",
+      "sourceBox": [
+        1122,
+        226,
+        1386,
+        444
+      ],
+      "outlinePixels": 170,
+      "source": "https://wiki.52poke.com/wiki/大舌贝"
+    },
+    {
+      "id": 91,
+      "name": "刺甲贝",
+      "english": "Cloyster",
+      "chain": 38,
+      "stage": 1,
+      "image": "091.png",
+      "preview": "091@8x.png",
+      "sourceBox": [
+        1422,
+        99,
+        1749,
+        445
+      ],
+      "outlinePixels": 243,
+      "source": "https://wiki.52poke.com/wiki/刺甲贝"
+    },
+    {
+      "id": 92,
+      "name": "鬼斯",
+      "english": "Gastly",
+      "chain": 39,
+      "stage": 0,
+      "image": "092.png",
+      "preview": "092@8x.png",
+      "sourceBox": [
+        28,
+        498,
+        335,
+        819
+      ],
+      "outlinePixels": 209,
+      "source": "https://wiki.52poke.com/wiki/鬼斯"
+    },
+    {
+      "id": 93,
+      "name": "鬼斯通",
+      "english": "Haunter",
+      "chain": 39,
+      "stage": 1,
+      "image": "093.png",
+      "preview": "093@8x.png",
+      "sourceBox": [
+        364,
+        509,
+        688,
+        820
+      ],
+      "outlinePixels": 220,
+      "source": "https://wiki.52poke.com/wiki/鬼斯通"
+    },
+    {
+      "id": 94,
+      "name": "耿鬼",
+      "english": "Gengar",
+      "chain": 39,
+      "stage": 2,
+      "image": "094.png",
+      "preview": "094@8x.png",
+      "sourceBox": [
+        709,
+        509,
+        1050,
+        828
+      ],
+      "outlinePixels": 197,
+      "source": "https://wiki.52poke.com/wiki/耿鬼"
+    },
+    {
+      "id": 95,
+      "name": "大岩蛇",
+      "english": "Onix",
+      "chain": 40,
+      "stage": 0,
+      "image": "095.png",
+      "preview": "095@8x.png",
+      "sourceBox": [
+        1086,
+        479,
+        1432,
+        827
+      ],
+      "outlinePixels": 168,
+      "source": "https://wiki.52poke.com/wiki/大岩蛇"
+    },
+    {
+      "id": 96,
+      "name": "催眠貘",
+      "english": "Drowzee",
+      "chain": 41,
+      "stage": 0,
+      "image": "096.png",
+      "preview": "096@8x.png",
+      "sourceBox": [
+        1454,
+        520,
+        1740,
+        828
+      ],
+      "outlinePixels": 174,
+      "source": "https://wiki.52poke.com/wiki/催眠貘"
+    }
+  ],
+  "firmwareVersion": "v0.16.0"
+}

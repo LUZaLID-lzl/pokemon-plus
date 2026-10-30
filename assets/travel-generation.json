@@ -1,0 +1,116 @@
+{
+  "generator": "mobiiot-imagegen",
+  "items": [
+    {
+      "id": 0,
+      "name": "晨雾竹林",
+      "source": "source/travel-v1/00.png",
+      "prompt": "prompts/travel-v1/00.txt",
+      "log": "prompts/travel-v1/00.log",
+      "status": "reviewed-and-integrated",
+      "sha256": "f071d2febc1afec047b116e6c8df1badb0efe2e8f5557456d3c026ab4a698fec",
+      "runtimeImage": "travel-scenes/0.png",
+      "review": "Source theme/composition and 360x112 native-grid round-screen strip visually reviewed; no characters/text; foreground pet lane retained."
+    },
+    {
+      "id": 1,
+      "name": "碧海沙湾",
+      "source": "source/travel-v1/01.png",
+      "prompt": "prompts/travel-v1/01.txt",
+      "log": "prompts/travel-v1/01.log",
+      "status": "reviewed-and-integrated",
+      "sha256": "34f17bed05c58af6c311b2b7f551f027e6becaee4c9551f39529c291d6c93616",
+      "runtimeImage": "travel-scenes/1.png",
+      "review": "Source theme/composition and 360x112 native-grid round-screen strip visually reviewed; no characters/text; foreground pet lane retained."
+    },
+    {
+      "id": 2,
+      "name": "赤岩峡谷",
+      "source": "source/travel-v1/02.png",
+      "prompt": "prompts/travel-v1/02.txt",
+      "log": "prompts/travel-v1/02.log",
+      "status": "reviewed-and-integrated",
+      "sha256": "3577612466e258b80834661626c59569ea993766f2bd03431f2ea7e1240eab45",
+      "runtimeImage": "travel-scenes/2.png",
+      "review": "Source theme/composition and 360x112 native-grid round-screen strip visually reviewed; no characters/text; foreground pet lane retained."
+    },
+    {
+      "id": 3,
+      "name": "极光雪原",
+      "source": "source/travel-v1/03.png",
+      "prompt": "prompts/travel-v1/03.txt",
+      "log": "prompts/travel-v1/03.log",
+      "status": "reviewed-and-integrated",
+      "sha256": "c52ca2e58d904a49df8139e4ffcd5244b50625253990eb17bf8b11c1cb276343",
+      "runtimeImage": "travel-scenes/3.png",
+      "review": "Source theme/composition and 360x112 native-grid round-screen strip visually reviewed; no characters/text; foreground pet lane retained."
+    },
+    {
+      "id": 4,
+      "name": "萤火湿地",
+      "source": "source/travel-v1/04.png",
+      "prompt": "prompts/travel-v1/04.txt",
+      "log": "prompts/travel-v1/04.log",
+      "status": "reviewed-and-integrated",
+      "sha256": "7923e0b64472604bdac9dacc7ee3cdfeeb87f8db2faca93962fba0f85fc4b8e6",
+      "runtimeImage": "travel-scenes/4.png",
+      "review": "Source theme/composition and 360x112 native-grid round-screen strip visually reviewed; no characters/text; foreground pet lane retained."
+    },
+    {
+      "id": 5,
+      "name": "浮云群岛",
+      "source": "source/travel-v1/05.png",
+      "prompt": "prompts/travel-v1/05.txt",
+      "log": "prompts/travel-v1/05.log",
+      "status": "reviewed-and-integrated",
+      "sha256": "9dfaaa87710f06bafab16dd045b8e2f4c2b854d573fd1ca6479bff9506023843",
+      "runtimeImage": "travel-scenes/5.png",
+      "review": "Source theme/composition and 360x112 native-grid round-screen strip visually reviewed; no characters/text; foreground pet lane retained."
+    },
+    {
+      "id": 6,
+      "name": "金色麦田",
+      "source": "source/travel-v1/06.png",
+      "prompt": "prompts/travel-v1/06.txt",
+      "log": "prompts/travel-v1/06.log",
+      "status": "reviewed-and-integrated",
+      "sha256": "2b0ef6fd977ee8f1ab3c204a07a3f0c948f69f42b044cecee2ab274fa315ac14",
+      "runtimeImage": "travel-scenes/6.png",
+      "review": "Source theme/composition and 360x112 native-grid round-screen strip visually reviewed; no characters/text; foreground pet lane retained."
+    },
+    {
+      "id": 7,
+      "name": "古树遗迹",
+      "source": "source/travel-v1/07.png",
+      "prompt": "prompts/travel-v1/07.txt",
+      "log": "prompts/travel-v1/07.log",
+      "status": "reviewed-and-integrated",
+      "sha256": "d7af77b4d8f0f9857b19f3490f52c3c3864b51aef72a31b2bae8756c2121ed5e",
+      "runtimeImage": "travel-scenes/7.png",
+      "review": "Source theme/composition and 360x112 native-grid round-screen strip visually reviewed; no characters/text; foreground pet lane retained."
+    },
+    {
+      "id": 8,
+      "name": "熔岩山径",
+      "source": "source/travel-v1/08.png",
+      "prompt": "prompts/travel-v1/08.txt",
+      "log": "prompts/travel-v1/08.log",
+      "status": "reviewed-and-integrated",
+      "sha256": "6432917b9c40720099f537d0c6038ec6a7a3cc15ca5c9e6916eff90a47b180b9",
+      "runtimeImage": "travel-scenes/8.png",
+      "review": "Source theme/composition and 360x112 native-grid round-screen strip visually reviewed; no characters/text; foreground pet lane retained."
+    },
+    {
+      "id": 9,
+      "name": "薰衣花丘",
+      "source": "source/travel-v1/09.png",
+      "prompt": "prompts/travel-v1/09.txt",
+      "log": "prompts/travel-v1/09.log",
+      "status": "reviewed-and-integrated",
+      "sha256": "8c4bc5d217df7383eda01fb827dca2246c3fd66f26482cce9eb9648da685a386",
+      "runtimeImage": "travel-scenes/9.png",
+      "review": "Source theme/composition and 360x112 native-grid round-screen strip visually reviewed; no characters/text; foreground pet lane retained."
+    }
+  ],
+  "qaContactSheet": "docs/screenshots/travel-backgrounds.png"
+}

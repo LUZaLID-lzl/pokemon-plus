@@ -1,0 +1,34 @@
+{
+  "pets": {
+    "rows": [
+      0,
+      348,
+      635,
+      914,
+      1246
+    ],
+    "columns": [
+      0,
+      315,
+      631,
+      946,
+      1262
+    ]
+  },
+  "scenes": {
+    "rows": [
+      0,
+      337,
+      709,
+      1062,
+      1448
+    ],
+    "columns": [
+      0,
+      362,
+      724,
+      1086
+    ]
+  },
+  "note": "Measured from generated source alpha gaps and scene seam boundaries; do not assume model obeyed uniform grid."
+}

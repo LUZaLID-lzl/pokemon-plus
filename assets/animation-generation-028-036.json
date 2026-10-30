@@ -1,0 +1,97 @@
+{
+  "scope": "028-036",
+  "generator": "mobiiot-imagegen",
+  "generated": [
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36
+  ],
+  "exported": [
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36
+  ],
+  "completed": true,
+  "status": "all nine templates reviewed and integrated; core/resource/shared-renderer validation passed",
+  "failedNationalId": null,
+  "note": "035 v5 succeeded on attempt 2; 036 v5 succeeded on attempt 6. Historical failures retained.",
+  "visualReviewedNationalIds": [
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36
+  ],
+  "validatedNationalIds": [
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36
+  ],
+  "pendingNationalIds": [],
+  "runtimeIntegrated": true,
+  "failedAttempts": 0,
+  "failure": null,
+  "acceptedVersions": {
+    "28": 1,
+    "29": 1,
+    "30": 1,
+    "31": 1,
+    "32": 1,
+    "33": 1,
+    "34": 2,
+    "35": 5,
+    "36": 5
+  },
+  "generationFailures": [
+    {
+      "nationalId": 34,
+      "version": 1,
+      "attempts": 6,
+      "error": "HTTP 400",
+      "outputReceived": false
+    },
+    {
+      "nationalId": 35,
+      "version": 2,
+      "attempts": 6,
+      "error": "HTTP 400",
+      "outputReceived": false
+    },
+    {
+      "nationalId": 35,
+      "version": 3,
+      "attempts": 6,
+      "error": "HTTP 400",
+      "outputReceived": false
+    },
+    {
+      "nationalId": 35,
+      "version": 4,
+      "attempts": 6,
+      "error": "HTTP 400",
+      "outputReceived": false
+    }
+  ]
+}

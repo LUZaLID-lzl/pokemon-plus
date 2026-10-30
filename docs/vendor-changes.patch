@@ -1,0 +1,69 @@
+--- upstream/components/waveshare__esp32_s3_touch_lcd_1_85B/esp32_s3_touch_lcd_1_85B.c
++++ components/waveshare__esp32_s3_touch_lcd_1_85B/esp32_s3_touch_lcd_1_85B.c
+@@ -1,3 +1,4 @@
++/* Modified for pokemon-window: fail closed on unknown LCD ID, propagate panel errors, release probe IO. Hardware parameters unchanged. */
+ #include <string.h>
+ #include <sys/unistd.h>
+ #include <sys/stat.h>
+@@ -849,7 +850,7 @@
+     /*-----------------  Read the screen version and select initialization parameters based on the version  -----------------*/
+     //read id
+     int lcd_cmd = 0x04;
+-    uint8_t register_data[4]; 
++    uint8_t register_data[4] = {0}; 
+     size_t param_size = sizeof(register_data);
+     lcd_cmd &= 0xff;
+     lcd_cmd <<= 8;
+@@ -859,8 +860,12 @@
+         printf("Register 0x04 data: %02x %02x %02x %02x\n", register_data[0], register_data[1], register_data[2], register_data[3]);
+     } else {
+         printf("Failed to read register 0x04, error code: %d\n", ret);
++        goto err;
+     } 
+ 
++    // Release the temporary low-speed ID probe before opening the display IO.
++    ESP_RETURN_ON_ERROR(esp_lcd_panel_io_del(*ret_io), TAG, "Delete probe IO failed");
++    *ret_io = NULL;
+     // reconfig spi bus
+     io_config.pclk_hz = 80*1000*1000;
+     ESP_RETURN_ON_ERROR(esp_lcd_new_panel_io_spi((esp_lcd_spi_bus_handle_t)BSP_LCD_SPI_NUM, &io_config, ret_io), TAG, "New panel IO failed");
+@@ -876,6 +881,11 @@
+         vendor_config.init_cmds_size = sizeof(vendor_specific_init_version_2) / sizeof(st77916_lcd_init_cmd_t);
+         printf("Vendor-specific initialization for case 2.\n");
+     }
++    else {
++        ESP_LOGE(TAG, "LCD ID cannot be confirmed; stopping without fallback parameters");
++        ret = ESP_ERR_NOT_SUPPORTED;
++        goto err;
++    }
+     /*-----------------------------------------------------------------------------------------------------------------------*/
+ 
+     esp_lcd_panel_dev_config_t panel_config={
+@@ -887,11 +897,11 @@
+         },                                                            
+         .vendor_config = (void *) &vendor_config,                                  
+     };
+-    esp_lcd_new_panel_st77916(*ret_io, &panel_config, ret_panel);
+-
+-    esp_lcd_panel_reset(*ret_panel);
+-    esp_lcd_panel_init(*ret_panel);
+-    esp_lcd_panel_disp_on_off(*ret_panel, true);
++    ESP_GOTO_ON_ERROR(esp_lcd_new_panel_st77916(*ret_io, &panel_config, ret_panel), err, TAG, "Create ST77916 failed");
++
++    ESP_GOTO_ON_ERROR(esp_lcd_panel_reset(*ret_panel), err, TAG, "Panel initialization failed");
++    ESP_GOTO_ON_ERROR(esp_lcd_panel_init(*ret_panel), err, TAG, "Panel initialization failed");
++    ESP_GOTO_ON_ERROR(esp_lcd_panel_disp_on_off(*ret_panel, true), err, TAG, "Panel initialization failed");
+ 
+     //esp_lcd_panel_swap_xy(*ret_panel, true);
+     //esp_lcd_panel_mirror(*ret_panel,true,false);
+--- upstream/components/waveshare__esp32_s3_touch_lcd_1_85B/include/bsp/esp32_s3_touch_lcd_1_85B.h
++++ components/waveshare__esp32_s3_touch_lcd_1_85B/include/bsp/esp32_s3_touch_lcd_1_85B.h
+@@ -40,7 +40,7 @@
+  *  @brief BSP Board Name
+  *  @{
+  */
+-#define ESP32-S3-TOUCH-LCD-1_85B
++#define ESP32_S3_TOUCH_LCD_1_85B 1 /* Modified: legal C macro name; no pin changes. */
+ /** @} */ // end of boardname
+ 
+ /**************************************************************************************************

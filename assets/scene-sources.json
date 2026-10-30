@@ -1,0 +1,28 @@
+{
+  "version": "v24-waterfall-altar",
+  "generator": "mobiiot-imagegen",
+  "logicalSize": 120,
+  "colors": 48,
+  "scale": 3,
+  "sources": [
+    "source/scene-nest-terrain-v2/00-native.png",
+    "source/scene-nest-terrain-v2/01-native.png",
+    "source/scene-nest-terrain-v2/02-native.png",
+    "source/scene-nest-terrain-v3/03-native.png",
+    "source/scene-nest-terrain-v2/04-native.png",
+    "source/scene-nest-terrain-v2/05-native.png",
+    "source/scene-nest-terrain-v2/06-native.png",
+    "source/scene-nest-terrain-v2/07-native.png",
+    "source/scene-nest-terrain-v2/08-native.png",
+    "source/scene-nest-terrain-v2/09-native.png",
+    "source/scene-nest-terrain-v2/10-native.png",
+    "source/scene-nest-terrain-v2/11-native.png",
+    "source/scene-nest-terrain-v3/12-native.png"
+  ],
+  "hudBounds": [
+    120,
+    30,
+    242,
+    103
+  ]
+}

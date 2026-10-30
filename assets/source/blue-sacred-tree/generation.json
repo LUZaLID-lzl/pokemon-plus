@@ -1,0 +1,21 @@
+{
+  "title": "蓝色神树秘境",
+  "status": "generated-scene-draft",
+  "runtimeIntegrated": false,
+  "generatedOn": "2026-10-24",
+  "generator": "mobiiot-imagegen",
+  "model": "gpt-image-1.5",
+  "attempts": 1,
+  "reference": "assets/source/scenes-hud-v14/08.png",
+  "prompt": "assets/prompts/blue-sacred-tree/01.txt",
+  "logicalSize": [
+    120,
+    120
+  ],
+  "colorsBeforeContrast": 48,
+  "scale": 3,
+  "contrast": 0.84,
+  "composition": "中央蓝色神树，四周连通草地活动区；亮色装饰集中外围；上方暗色树荫。",
+  "source": "assets/source/blue-sacred-tree/01-original.png",
+  "sha256": "3effdc55813d383a1bd17b9a5c2820a11c1fc8ef3875951198466c3232e07154"
+}

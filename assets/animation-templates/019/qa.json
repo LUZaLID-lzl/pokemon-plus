@@ -1,0 +1,19 @@
+{
+  "nationalId": 19,
+  "acceptedVersion": 3,
+  "status": "accepted; shared LVGL smoke passed",
+  "frames": 48,
+  "actions": 6,
+  "uniquePosesPerAction": 8,
+  "gameIntegrated": true,
+  "checks": [
+    "measured 48 separated master components",
+    "48px canvas and 40px maximum silhouette",
+    "binary alpha",
+    "reference palette",
+    "connected outline",
+    "exact mirrored right-facing frames",
+    "visual six action rows and closed-eye sleep"
+  ],
+  "firmwareVersion": "0.8.0"
+}

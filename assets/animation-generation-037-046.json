@@ -1,0 +1,69 @@
+{
+  "scope": "037-046",
+  "generator": "mobiiot-imagegen",
+  "generated": [
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "exported": [
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "completed": true,
+  "status": "complete; Web and firmware v0.11.0; no device flash",
+  "runtimeIntegrated": true,
+  "rejectedSources": [
+    {
+      "nationalId": 46,
+      "version": 1,
+      "reason": "Only 40 bodies across five rows; missing full attack row. Not exported."
+    },
+    {
+      "nationalId": 46,
+      "version": 2,
+      "reason": "Only five action rows; missing attack and final sleep pose not closed. Not exported."
+    }
+  ],
+  "visualReviewedNationalIds": [
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "acceptedVersions": {
+    "37": 1,
+    "38": 1,
+    "39": 1,
+    "40": 1,
+    "41": 1,
+    "42": 1,
+    "43": 1,
+    "44": 1,
+    "45": 1,
+    "46": 3
+  },
+  "sourceAssembly046": "assets/source/animation-046-master-v3-assembly.json",
+  "firmwareVersion": "v0.11.0"
+}
