@@ -1,0 +1,29 @@
+{
+  "service": "MobiIoT",
+  "edits": {
+    "12": {
+      "scene": 12,
+      "success": true,
+      "attempts": 1,
+      "prompt": "prompts/scene-nest-terrain-v3/12.txt",
+      "references": [
+        "reference/scene-nest-terrain-v3/12.png",
+        "reference/scene-nest-terrain-v3/12-context.png"
+      ],
+      "output": "source/scene-nest-terrain-v3/12-edit.png",
+      "model": "gpt-image-2.5"
+    },
+    "3": {
+      "scene": 3,
+      "success": true,
+      "attempts": 1,
+      "prompt": "prompts/scene-nest-terrain-v3/03.txt",
+      "references": [
+        "reference/scene-nest-terrain-v3/03.png",
+        "reference/scene-nest-terrain-v3/03-context.png"
+      ],
+      "output": "source/scene-nest-terrain-v3/03-edit.png",
+      "model": "gpt-image-2.5"
+    }
+  }
+}

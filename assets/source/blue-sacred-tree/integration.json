@@ -1,0 +1,64 @@
+{
+  "title": "神树镜湖",
+  "sceneId": 12,
+  "displayNumber": 13,
+  "status": "integrated",
+  "source": "assets/source/blue-sacred-tree/09-curved-cherry-reference-original.png",
+  "sourceSha256": "66c58cc5c5140bf90c8923a6c5b1023e9b727b60a24af84c32f92cdf7a132907",
+  "generator": "mobiiot-imagegen",
+  "prompt": "assets/prompts/blue-sacred-tree/09-curved-cherry-reference.txt",
+  "earlierDraftRecord": "assets/source/blue-sacred-tree/generation.json",
+  "composition": "User-reference cherry silhouette: thick S-curved blue-grey trunk, exposed horizontal boughs, layered sky-blue crowns high on the right, separated left branch tiers; daytime mountains, mirror lake and root-wrapped altar retained.",
+  "nativePixels": [
+    120,
+    120
+  ],
+  "colorsBeforeContrast": 48,
+  "contrast": 0.84,
+  "scale": 3,
+  "foreground": "scene-fronts/12.png",
+  "foregroundDerivation": "tools/sacred_lake_art.py unions reviewed native crown, exposed branches, S-trunk, outer blue leaf tufts and roots; water gaps remain transparent. Runtime colors follow the animated background.",
+  "patrolMs": 24000,
+  "depthRule": "sprite feet y+42 >=254 in front; 12-segment24s patrol descends outside root bounds before crossing at sprite top y214",
+  "effects": [
+    "canopy sway",
+    "water flow",
+    "expanding lake rings",
+    "blue falling leaves with landing rings"
+  ],
+  "saveVersion": 12,
+  "flashed": false,
+  "supersedesSource": "assets/source/blue-sacred-tree/08-taller-mountain-depth-original.png",
+  "unselectedDrafts": [
+    {
+      "source": "assets/source/blue-sacred-tree/06-larger-canopy-original.png",
+      "prompt": "assets/prompts/blue-sacred-tree/06-larger-canopy.txt",
+      "reason": "Wider canopy superseded by user clarification to increase tree height."
+    },
+    {
+      "source": "assets/source/blue-sacred-tree/07-larger-hud-layout-original.png",
+      "prompt": "assets/prompts/blue-sacred-tree/07-larger-hud-layout.txt",
+      "reason": "Layout draft not selected after taller-tree clarification."
+    }
+  ],
+  "reference": "assets/reference/blue-sacred-tree/curved-cherry-20261025.png",
+  "referenceSha256": "516a3004790e01b1f227ff84de2d910bf274d4bc40462039b59dd5b43f1d0515",
+  "generation": {
+    "model": "gpt-image-1.5",
+    "attempts": 1,
+    "log": "build/sacred-tree-cherry-generation.log"
+  },
+  "collisionBounds": {
+    "left": 86,
+    "right": 274,
+    "top": 204,
+    "bottom": 253,
+    "footHalfWidth": 6
+  },
+  "shoreX": [
+    44,
+    60,
+    268,
+    284
+  ]
+}

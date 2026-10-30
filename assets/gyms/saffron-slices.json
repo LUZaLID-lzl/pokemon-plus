@@ -1,0 +1,28 @@
+{
+  "source": "assets/source/gyms/saffron-atlas-v1.png",
+  "alphaThreshold": 220,
+  "sabrina": {
+    "box": [
+      165,
+      75,
+      562,
+      984
+    ]
+  },
+  "marsh": {
+    "box": [
+      933,
+      150,
+      1269,
+      487
+    ]
+  },
+  "stamp": {
+    "box": [
+      642,
+      621,
+      1510,
+      964
+    ]
+  }
+}
