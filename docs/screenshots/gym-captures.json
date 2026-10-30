@@ -1,0 +1,90 @@
+[
+  {
+    "name": "map",
+    "source": "shared LVGL",
+    "size": [
+      360,
+      360
+    ]
+  },
+  {
+    "name": "cleared",
+    "source": "shared LVGL",
+    "size": [
+      360,
+      360
+    ]
+  },
+  {
+    "name": "detail",
+    "source": "shared LVGL",
+    "size": [
+      360,
+      360
+    ]
+  },
+  {
+    "name": "team",
+    "source": "shared LVGL",
+    "size": [
+      360,
+      360
+    ]
+  },
+  {
+    "name": "empty",
+    "source": "shared LVGL",
+    "size": [
+      360,
+      360
+    ]
+  },
+  {
+    "name": "battle",
+    "source": "shared LVGL",
+    "size": [
+      360,
+      360
+    ]
+  },
+  {
+    "name": "faint",
+    "source": "shared LVGL",
+    "size": [
+      360,
+      360
+    ]
+  },
+  {
+    "name": "win",
+    "source": "shared LVGL",
+    "size": [
+      360,
+      360
+    ]
+  },
+  {
+    "name": "loss",
+    "source": "shared LVGL",
+    "size": [
+      360,
+      360
+    ]
+  },
+  {
+    "name": "rematch",
+    "source": "shared LVGL",
+    "size": [
+      360,
+      360
+    ]
+  },
+  {
+    "name": "badges",
+    "source": "shared LVGL",
+    "size": [
+      360,
+      360
+    ]
+  }
+]

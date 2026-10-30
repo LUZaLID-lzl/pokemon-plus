@@ -1,0 +1,22 @@
+{
+  "service": "MobiIoT",
+  "model": "gpt-image-1.5",
+  "attempts": 1,
+  "source": "source/hatch-boost-v1.png",
+  "prompt": "prompts/items/hatch-boost-v1.txt",
+  "log": "build/hatch-icon-generation-v1.log",
+  "references": [
+    "sdcard/pokemon-plus/icons/2.png",
+    "sdcard/pokemon-plus/icons/5.png"
+  ],
+  "sourceSha256": "743a6a468eb0986af4bedd1c876a78f863bc658be98da986e62be6d60b2d950e",
+  "output": "items/hatch-boost.png",
+  "sha256": "d8288ef691d06ea541588e520a77d83c3e65fbff83392fd19a7f1f9356a788ab",
+  "recipe": {
+    "alphaThreshold": 200,
+    "maxSilhouette": 29,
+    "canvas": 32,
+    "resampling": "nearest",
+    "quantizeColors": 15
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "kind": "single-pose art review",
+  "generator": "MobiIoT",
+  "model": "gpt-image-2.5-sunburst",
+  "attempts": 1,
+  "sourceAtlas": "../../source/gen1-107-116-v1.png",
+  "sourceSha256": "aa3c39a37284fac7ad0af4bc4dad6013f4a14c5765b7f5c0a82b253b18fd724b",
+  "prompt": "../../prompts/gen1-107-116-v1.txt",
+  "nativeCanvas": 48,
+  "maxColors": 16,
+  "outlineColor": "#1b263a",
+  "alpha": "binary",
+  "gameIntegrated": true,
+  "animationPosesPerSpecies": 1,
+  "items": [
+    {
+      "id": 107,
+      "name": "艾比郎",
+      "english": "Hitmonchan",
+      "chain": 47,
+      "stage": 0,
+      "image": "107.png",
+      "preview": "107@8x.png",
+      "sourceBox": [
+        48,
+        65,
+        307,
+        380
+      ],
+      "outlinePixels": 202,
+      "source": "https://wiki.52poke.com/wiki/艾比郎"
+    },
+    {
+      "id": 108,
+      "name": "大舌头",
+      "english": "Lickitung",
+      "chain": 48,
+      "stage": 0,
+      "image": "108.png",
+      "preview": "108@8x.png",
+      "sourceBox": [
+        434,
+        85,
+        770,
+        380
+      ],
+      "outlinePixels": 158,
+      "source": "https://wiki.52poke.com/wiki/大舌头"
+    },
+    {
+      "id": 109,
+      "name": "瓦斯弹",
+      "english": "Koffing",
+      "chain": 49,
+      "stage": 0,
+      "image": "109.png",
+      "preview": "109@8x.png",
+      "sourceBox": [
+        852,
+        105,
+        1110,
+        365
+      ],
+      "outlinePixels": 166,
+      "source": "https://wiki.52poke.com/wiki/瓦斯弹"
+    },
+    {
+      "id": 110,
+      "name": "双弹瓦斯",
+      "english": "Weezing",
+      "chain": 49,
+      "stage": 1,
+      "image": "110.png",
+      "preview": "110@8x.png",
+      "sourceBox": [
+        1202,
+        77,
+        1572,
+        375
+      ],
+      "outlinePixels": 157,
+      "source": "https://wiki.52poke.com/wiki/双弹瓦斯"
+    },
+    {
+      "id": 111,
+      "name": "独角犀牛",
+      "english": "Rhyhorn",
+      "chain": 50,
+      "stage": 0,
+      "image": "111.png",
+      "preview": "111@8x.png",
+      "sourceBox": [
+        1635,
+        106,
+        1945,
+        380
+      ],
+      "outlinePixels": 184,
+      "source": "https://wiki.52poke.com/wiki/独角犀牛"
+    },
+    {
+      "id": 112,
+      "name": "钻角犀兽",
+      "english": "Rhydon",
+      "chain": 50,
+      "stage": 1,
+      "image": "112.png",
+      "preview": "112@8x.png",
+      "sourceBox": [
+        32,
+        426,
+        374,
+        755
+      ],
+      "outlinePixels": 207,
+      "source": "https://wiki.52poke.com/wiki/钻角犀兽"
+    },
+    {
+      "id": 113,
+      "name": "吉利蛋",
+      "english": "Chansey",
+      "chain": 51,
+      "stage": 0,
+      "image": "113.png",
+      "preview": "113@8x.png",
+      "sourceBox": [
+        435,
+        475,
+        750,
+        748
+      ],
+      "outlinePixels": 164,
+      "source": "https://wiki.52poke.com/wiki/吉利蛋"
+    },
+    {
+      "id": 114,
+      "name": "蔓藤怪",
+      "english": "Tangela",
+      "chain": 52,
+      "stage": 0,
+      "image": "114.png",
+      "preview": "114@8x.png",
+      "sourceBox": [
+        847,
+        488,
+        1123,
+        747
+      ],
+      "outlinePixels": 174,
+      "source": "https://wiki.52poke.com/wiki/蔓藤怪"
+    },
+    {
+      "id": 115,
+      "name": "袋兽",
+      "english": "Kangaskhan",
+      "chain": 53,
+      "stage": 0,
+      "image": "115.png",
+      "preview": "115@8x.png",
+      "sourceBox": [
+        1225,
+        420,
+        1578,
+        755
+      ],
+      "outlinePixels": 188,
+      "source": "https://wiki.52poke.com/wiki/袋兽"
+    },
+    {
+      "id": 116,
+      "name": "墨海马",
+      "english": "Horsea",
+      "chain": 54,
+      "stage": 0,
+      "image": "116.png",
+      "preview": "116@8x.png",
+      "sourceBox": [
+        1675,
+        474,
+        1915,
+        739
+      ],
+      "outlinePixels": 174,
+      "source": "https://wiki.52poke.com/wiki/墨海马"
+    }
+  ],
+  "firmwareVersion": "v0.18.0"
+}
