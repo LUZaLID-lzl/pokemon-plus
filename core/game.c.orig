@@ -1,0 +1,978 @@
+#include "game.h"
+#include "legacy_game_v1.h"
+#include "legacy_game_v2.h"
+#include "legacy_game_v3.h"
+#include "legacy_game_v4.h"
+#include "legacy_game_v5.h"
+#include "moves.h"
+#include "collection_catalog.h"
+#include <limits.h>
+#include <stddef.h>
+#include <stdio.h>
+#include <string.h>
+const pp_dex_entry pp_pokedex[PP_DEX_COUNT] = { PP_DEX_ENTRIES };
+const char *const pp_pet_names[] = {"皮卡丘", "妙蛙种子", "小火龙", "杰尼龟", "绿毛虫", "独角虫", "波波", "小拉达", "烈雀", "阿柏蛇", "穿山鼠"};
+const char *const pp_scene_names[] = {
+    "清晨庭院", "樱花小院", "晴日海岸", "城镇", "秋日木林", "雪落小镇",
+    "水晶洞穴", "蘑菇秘境", "星空山丘", "沙漠绿洲", "雨中村庄", "天空岛"};
+const char *const pp_tarot_names[] = {
+    "太阳 · 活力", "星星 · 希望", "月亮 · 想象", "世界 · 圆满",
+    "力量 · 勇气", "恋人 · 陪伴", "节制 · 平衡", "命运 · 惊喜"};
+const char *const pp_tarot_effects[] = {
+  "精力消耗减半", "每百步经验 +1", "睡眠精力恢复 +2",
+  "旅行金币 +20%", "挑战伤害 +20%", "摸头心情 +4 · 经验 +2",
+  "道具恢复 +25%", "每百步金币 +2"
+};
+bool pp_tarot_active(const pp_game *g, unsigned card) {
+  return g->clock_ready && g->day && g->tarot_effect_day == g->day &&
+         g->tarot_day == g->day && g->tarot_card == card;
+}
+static unsigned travel_coins(const pp_game *g) {
+  unsigned coins=50+g->travel_reward;
+  return coins+(pp_tarot_active(g,3)?coins/5:0);
+}
+static unsigned recovery(const pp_game *g, unsigned value) {
+  return value+(pp_tarot_active(g,6)?(value+3)/4:0);
+}
+const pp_item pp_items[] = {
+    {"树果", 12, 24, 0, 0, 2},     {"肥皂", 18, 0, 35, 0, 2},
+    {"药水", 30, 0, 0, 35, 0},     {"玩具", 25, 0, 0, 0, 30},
+    {"精力饼干", 20, 12, 0, 0, 5}, {"宠物蛋", 180, 0, 0, 0, 0},
+    {"即孵蛋", 300, 0, 0, 0, 0}};
+static uint32_t random_next(pp_game *g) {
+  uint32_t x = g->rng;
+  x ^= x << 13;
+  x ^= x >> 17;
+  x ^= x << 5;
+  return g->rng = x ? x : 1;
+}
+static uint8_t add(uint8_t a, unsigned b) {
+  return a + b > 100 ? 100 : (uint8_t)(a + b);
+}
+static uint8_t sub(uint8_t a, unsigned b) { return a > b ? a - b : 0; }
+static void log_line(pp_game *g, const char *text) {
+  memmove(g->log[0], g->log[1], sizeof(g->log[0]) * 3);
+  snprintf(g->log[3], 96, "%s", text);
+  g->revision++;
+}
+static void new_pet(pp_pet *p, unsigned species) {
+  *p = (pp_pet){.species = species,
+                .food = 80,
+                .clean = 85,
+                .health = 100,
+                .mood = 80,
+                .energy = 85};
+}
+/* Eggs unlock missing base species first; evolution stays level-driven. */
+static unsigned hatch_species(pp_game *g) {
+  bool owned[PP_SPECIES] = {0};
+  for (unsigned i=0; i<g->count; i++) owned[g->pets[i].species] = true;
+  for (unsigned i=0;i<g->reserve_count;i++) owned[g->reserves[i].species]=true;
+  unsigned missing[PP_SPECIES], count=0;
+  for (unsigned s=0; s<PP_SPECIES; s++) if (!owned[s]) missing[count++]=s;
+  return count ? missing[random_next(g)%count] : random_next(g)%PP_SPECIES;
+}
+bool pp_dex_owned(const pp_game *g, unsigned entry) {
+  if (entry>=PP_DEX_COUNT || pp_needs_starter(g)) return false;
+  const pp_dex_entry *e=&pp_pokedex[entry];
+  for (unsigned p=0; p<g->count; p++)
+    if (g->pets[p].species==e->species && g->growth[p].stage>=e->stage) return true;
+  for (unsigned p=0;p<g->reserve_count;p++)
+    if(g->reserves[p].species==e->species && g->reserve_growth[p].stage>=e->stage) return true;
+  return false;
+}
+unsigned pp_dex_count(const pp_game *g) {
+  unsigned n=0;
+  for (unsigned i=0;i<PP_DEX_COUNT;i++) n+=pp_dex_owned(g,i);
+  return n;
+}
+void pp_dex_order(const pp_game *g, unsigned order[PP_DEX_COUNT]) {
+  unsigned n=0;
+  for (unsigned owned=1; owned<=2; owned++)
+    for (unsigned i=0;i<PP_DEX_COUNT;i++)
+      if (pp_dex_owned(g,i)==(owned==1)) order[n++]=i;
+}
+void pp_init(pp_game *g, uint32_t seed) {
+  memset(g, 0, sizeof(*g));
+  g->magic = 0x504b504c;
+  g->version = PP_VERSION;
+  g->rng = seed ? seed : 1;
+  g->coins = 240;
+  g->count = 1;
+  g->traveler = -1;
+  g->scenes = 1;
+  for (unsigned i = 0; i < PP_PETS; i++)
+    g->growth[i].level = 1;
+  g->inventory[0] = 3;
+  g->inventory[1] = 2;
+  g->inventory[2] = 1;
+  new_pet(&g->pets[0], 0);
+  log_line(g, "欢迎回家，今天也一起生活吧。");
+}
+bool pp_needs_starter(const pp_game *g) {
+  return !g->reserve_count && g->count == 1 && g->pets[0].species == 0 && !g->growth[0].stage;
+}
+pp_result pp_choose_starter(pp_game *g, unsigned national_id) {
+  unsigned species = national_id == 1 ? 1 : national_id == 4 ? 2 : national_id == 7 ? 3 : 0;
+  if (!species || !pp_needs_starter(g))
+    return PP_INVALID;
+  if (g->battling || g->drop_active || g->traveler >= 0)
+    return PP_BUSY;
+  new_pet(&g->pets[0], species);
+  g->growth[0] = (pp_growth){.level = 1};
+  g->revision++;
+  return PP_OK;
+}
+static void cap_legacy_levels(pp_game *g) {
+  for(unsigned i=0;i<PP_PETS+g->reserve_count && i<PP_PETS+PP_RESERVES;i++) {
+    pp_growth *p=i<PP_PETS?&g->growth[i]:&g->reserve_growth[i-PP_PETS];
+    if(p->level>=PP_MAX_LEVEL && p->level<=100) {p->level=PP_MAX_LEVEL;p->xp=0;}
+  }
+}
+static unsigned pp_stage_level(unsigned species, unsigned stage) {
+  unsigned minimum=1;bool exists=false;
+  for (unsigned i=0;i<PP_EVOLUTIONS;i++)
+    if (pp_evolutions[i].species==species && pp_evolutions[i].from_stage+1<=stage) {
+      if(pp_evolutions[i].from_stage+1==stage)exists=true;
+      if(pp_evolutions[i].level>minimum)minimum=pp_evolutions[i].level;
+    }
+  return exists?minimum:101;
+}
+unsigned pp_base_art(unsigned species) {
+  for (unsigned i=0;i<PP_DEX_COUNT;i++)
+    if(pp_pokedex[i].species==species && !pp_pokedex[i].stage) return pp_pokedex[i].art;
+  return 0;
+}
+bool pp_valid(const pp_game *g) {
+  if (g->magic != 0x504b504c || g->version != PP_VERSION || !g->rng ||
+      g->reserve_count>PP_RESERVES || g->random_scene>1 ||
+      (g->reserve_declined & ~((1u<<g->reserve_count)-1)) ||
+      (g->reserve_declined && !pp_has(g,PP_PURE_HEART)) ||
+      g->random_scene_day>g->day || g->tarot_effect_day>g->day ||
+      !g->count || g->count > PP_PETS || g->scene >= PP_SCENES ||
+      !(g->scenes & 1) || !(g->scenes & (1u << g->scene)) || g->traveler < -1 ||
+      g->traveler >= (int)g->count || g->tarot_card >= 8 || g->digs_today > 6 ||
+      g->dig_lives > 3 || g->dig_depth > 20 || g->clock_ready > 1 ||
+      g->care_remainder >= 600 || g->steps_today > g->total_steps ||
+      g->steps_rewarded > g->steps_today / 100u ||
+      (g->evolution_declined & ~((1ULL << g->count) - 1)) ||
+      (g->evolution_declined && !pp_has(g, PP_PURE_HEART)))
+    return false;
+  if (g->battling &&
+      (g->battle_pet >= g->count || ((!g->gym.mode) && (g->battle_hp <= 0 || g->enemy_hp <= 0))))
+    return false;
+  if (g->gym.badges & ~1ULL || g->gym.mode>1 || g->gym.result>2 || g->gym.first_clear>1) return false;
+  if (g->gym.mode) {
+    if (g->gym.ally>=3 || g->gym.enemy>=3 || (g->gym.entered & ~7u) ||
+        (g->battling && g->gym.result) || g->gym.reward_item>=PP_TRAVEL_COLLECTION) return false;
+    for(unsigned i=0;i<3;i++) {
+      if(g->gym.team[i]>=g->count || g->gym.hp[i]<0 || g->gym.hp[i]>g->gym.max_hp[i] ||
+         g->gym.max_hp[i]<=0 || g->gym.enemy_hp[i]<0 || g->gym.enemy_hp[i]>g->gym.enemy_max[i] ||
+         g->gym.enemy_max[i]!=pp_pewter_team[i].hp) return false;
+      for(unsigned j=0;j<i;j++) if(g->gym.team[i]==g->gym.team[j])return false;
+    }
+    if(g->battle_pet!=g->gym.team[g->gym.ally] || g->battle_hp!=g->gym.hp[g->gym.ally] ||
+       g->enemy_hp!=g->gym.enemy_hp[g->gym.enemy])return false;
+  }
+  if (g->drop_active &&
+      (g->drop_item >= PP_ITEMS - 1 || g->drop_target >= g->count ||
+       g->drop_active > PP_DROP_SPOTS + 1))
+    return false;
+  for (unsigned i = 0; i < PP_PETS+g->reserve_count; i++) {
+    const pp_pet *p = i<PP_PETS? &g->pets[i]: &g->reserves[i-PP_PETS];
+    const pp_growth *growth = i<PP_PETS? &g->growth[i]: &g->reserve_growth[i-PP_PETS];
+    if (!growth->level || growth->level > PP_MAX_LEVEL || growth->stage > 2 ||
+        (growth->stage && growth->level < pp_stage_level(p->species, growth->stage)) ||
+        growth->xp >= pp_xp_needed(growth->level) ||
+        (growth->level == PP_MAX_LEVEL && growth->xp))
+      return false;
+    if (p->species >= PP_SPECIES || p->food > 100 || p->clean > 100 ||
+        p->health > 100 || p->mood > 100 || p->energy > 100 || p->sleeping > 1)
+      return false;
+  }
+  for (unsigned i = 0; i < 4; i++)
+    if (!memchr(g->log[i], 0, 96))
+      return false;
+  return true;
+}
+uint32_t pp_checksum(const pp_game *g) {
+  const uint8_t *p = (const uint8_t *)g;
+  uint32_t h = 2166136261u;
+  for (unsigned i = 0; i < sizeof(*g); i++)
+    h = (h ^ p[i]) * 16777619u;
+  return h;
+}
+const char *pp_message(pp_result r) {
+  static const char *s[] = {
+      "完成啦",           "金币不足",     "背包里没有了",
+      "伙伴栏已经满啦",   "它正忙着呢",   "至少两只宠物才能旅行",
+      "今天的次数用完啦", "还没到时间哦", "当前无法操作", "已选择永久不进化", "请选择三只可出战伙伴"};
+  return (unsigned)r <= PP_NEED_THREE ? s[r] : s[PP_INVALID];
+}
+bool pp_has(const pp_game *g, unsigned id) {
+  return id < PP_COLLECTION && (g->collected[id / 8] & (1u << (id % 8)));
+}
+unsigned pp_collected(const pp_game *g) {
+  unsigned n = 0;
+  for (unsigned i = 0; i < PP_COLLECTION; i++)
+    n += pp_has(g, i);
+  return n;
+}
+unsigned pp_collection_total(unsigned quality) {
+  if (quality == PP_QUALITY_ALL) return PP_COLLECTION;
+  return quality < PP_QUALITY_COUNT ? pp_qualities[quality].count : 0;
+}
+unsigned pp_collection_owned(const pp_game *g, unsigned quality) {
+  unsigned count = 0;
+  for (unsigned i=0; i<PP_COLLECTION; i++)
+    if ((quality==PP_QUALITY_ALL || pp_collectibles[i].quality==quality) && pp_has(g,i)) count++;
+  return count;
+}
+unsigned pp_collection_id(unsigned quality, unsigned index) {
+  if (quality > PP_QUALITY_ALL) return PP_COLLECTION;
+  /* The special gift leads only the ALL tab, preserving existing UI ordering. */
+  for (unsigned slot=0; slot<PP_COLLECTION; slot++) {
+    unsigned id=slot ? slot-1 : PP_PURE_HEART;
+    if (quality!=PP_QUALITY_ALL && pp_collectibles[id].quality!=quality) continue;
+    if (!index--) return id;
+  }
+  return PP_COLLECTION;
+}
+pp_result pp_pat(pp_game *g, unsigned p) {
+  if (p >= g->count)
+    return PP_INVALID;
+  if ((int)p == g->traveler)
+    return PP_BUSY;
+  g->pets[p].mood = add(g->pets[p].mood, pp_tarot_active(g,5)?4:2);
+  if (g->coins < UINT32_MAX)
+    g->coins++;
+  pp_gain_xp(g, p, pp_tarot_active(g,5)?2:1);
+  log_line(g, "摸摸头，心情 +2，金币 +1。");
+  return PP_OK;
+}
+unsigned pp_pat_all(pp_game *g) {
+  if(pp_needs_starter(g)) return 0;
+  unsigned n=0;
+  for(unsigned i=0;i<g->count;i++) if(pp_pat(g,i)==PP_OK) n++;
+  return n;
+}
+static bool roster_busy(const pp_game *g) {
+  return pp_needs_starter(g)||g->traveler>=0||g->battling||g->drop_active;
+}
+pp_result pp_replace_pet(pp_game *g,unsigned slot,unsigned reserve) {
+  if(slot>g->count||slot>=PP_PETS||reserve>=g->reserve_count) return PP_INVALID;
+  if(roster_busy(g)) return PP_BUSY;
+  if(slot==g->count) {
+    g->pets[slot]=g->reserves[reserve];g->growth[slot]=g->reserve_growth[reserve];
+    if((g->reserve_declined>>reserve)&1)g->evolution_declined|=1ULL<<slot;
+    for(unsigned i=reserve;i+1<g->reserve_count;i++){g->reserves[i]=g->reserves[i+1];g->reserve_growth[i]=g->reserve_growth[i+1];}
+    g->reserve_declined=(g->reserve_declined&((1u<<reserve)-1))|((g->reserve_declined>>(reserve+1))<<reserve);
+    g->reserve_count--;g->count++;log_line(g,"伙伴已加入庭院。");return PP_OK;
+  }
+  pp_pet p=g->pets[slot]; g->pets[slot]=g->reserves[reserve];g->reserves[reserve]=p;
+  pp_growth growth=g->growth[slot];g->growth[slot]=g->reserve_growth[reserve];g->reserve_growth[reserve]=growth;
+  bool a=(g->evolution_declined>>slot)&1,b=(g->reserve_declined>>reserve)&1;
+  g->evolution_declined=(g->evolution_declined&~(1ULL<<slot))|((uint64_t)b<<slot);
+  g->reserve_declined=(g->reserve_declined&~(1u<<reserve))|((unsigned)a<<reserve);
+  log_line(g,"伙伴已换上场，成长与状态保留。");return PP_OK;
+}
+pp_result pp_reserve_pet(pp_game *g,unsigned slot) {
+  if(slot>=g->count) return PP_INVALID;
+  if(roster_busy(g)) return PP_BUSY;
+  if(g->count<=1||g->reserve_count>=PP_RESERVES) return PP_FULL;
+  unsigned n=g->reserve_count++;
+  g->reserves[n]=g->pets[slot];g->reserve_growth[n]=g->growth[slot];
+  if((g->evolution_declined>>slot)&1) g->reserve_declined|=1u<<n;
+  for(unsigned i=slot;i+1<g->count;i++) {g->pets[i]=g->pets[i+1];g->growth[i]=g->growth[i+1];}
+  uint64_t low=g->evolution_declined&((1ULL<<slot)-1);
+  g->evolution_declined=low|((g->evolution_declined>>(slot+1))<<slot);
+  g->count--;memset(&g->pets[g->count],0,sizeof(pp_pet));g->growth[g->count]=(pp_growth){.level=1};
+  log_line(g,"伙伴回候补栏休息啦。");return PP_OK;
+}
+static void hatch_pet(pp_game *g) {
+  unsigned species=hatch_species(g);
+  if(g->count<PP_PETS) {new_pet(&g->pets[g->count],species);g->growth[g->count++]=(pp_growth){.level=1};}
+  else {new_pet(&g->reserves[g->reserve_count],species);g->reserve_growth[g->reserve_count++]=(pp_growth){.level=1};}
+}
+pp_result pp_buy(pp_game *g, unsigned item) {
+  if (item >= PP_SHOP_ITEMS)
+    return PP_INVALID;
+  if (item == PP_INSTANT_EGG) {
+    if (pp_needs_starter(g) || g->battling) return PP_BUSY;
+    /* Reserve the last pet slot for an already incubating egg. */
+    if (g->count + g->reserve_count + (g->egg_end ? 1u : 0u) >= PP_PETS+PP_RESERVES) return PP_FULL;
+    if (g->coins < pp_items[item].price) return PP_NO_COINS;
+    hatch_pet(g);
+    g->coins -= pp_items[item].price;
+    log_line(g, "蛋孵化啦！新的伙伴加入了庭院。");
+    return PP_OK;
+  }
+  if (g->coins < pp_items[item].price)
+    return PP_NO_COINS;
+  if (g->inventory[item] == UINT16_MAX)
+    return PP_FULL;
+  g->coins -= pp_items[item].price;
+  g->inventory[item]++;
+  g->revision++;
+  return PP_OK;
+}
+pp_result pp_use(pp_game *g, unsigned item, unsigned p) {
+  if (item >= PP_ITEMS || p >= g->count)
+    return PP_INVALID;
+  if (!g->inventory[item])
+    return PP_EMPTY;
+  if (item == 5) {
+    if (g->count+g->reserve_count >= PP_PETS+PP_RESERVES)
+      return PP_FULL;
+    if (g->egg_end)
+      return PP_BUSY;
+    g->egg_end = g->seconds + PP_EGG_MIN_SECONDS + (random_next(g) % 121u) * 60u;
+    g->egg_shakes = 0;
+    log_line(g, "蛋已放进庭院，摇一摇，等待孵化。");
+  } else {
+    if (g->drop_active || g->traveler == (int)p || g->battling)
+      return PP_BUSY;
+    g->drop_active = 2 + random_next(g) % PP_DROP_SPOTS;
+    g->drop_item = item;
+    g->drop_target = p;
+    g->drop_end = g->seconds + 4;
+    log_line(g, "道具放在地上，宠物正在走过来。");
+  }
+  g->inventory[item]--;
+  g->revision++;
+  return PP_OK;
+}
+void pp_drop_position(const pp_game *g, int *x, int *y) {
+  if (g->drop_active < 2 || g->drop_active > PP_DROP_SPOTS + 1) {
+    *x = 164; *y = 234; /* Existing v1-v3 in-flight drops keep their position. */
+    return;
+  }
+  unsigned spot = g->drop_active - 2;
+  *x = 70 + (int)(spot % 6) * 40;
+  *y = 145 + (int)(spot / 6) * 22;
+}
+void pp_egg_position(const pp_game *g, int *x, int *y) {
+  /* The randomly chosen hatch deadline also seeds a stable saved lawn spot. */
+  uint32_t h = (uint32_t)g->egg_end ^ (uint32_t)(g->egg_end >> 32);
+  h ^= h >> 16; h *= 0x7feb352du; h ^= h >> 15; h *= 0x846ca68bu; h ^= h >> 16;
+  unsigned spot = h % PP_DROP_SPOTS;
+  *x = 70 + (int)(spot % 6) * 40;
+  *y = 145 + (int)(spot / 6) * 14;
+}
+/* Destination is a stable pseudorandom function of the persisted trip deadline.
+ * It never follows courtyard changes, advances RNG, or needs a save migration. */
+typedef struct { const char *name, *activities[3], *encounters[2]; } pp_travel_theme;
+static const pp_travel_theme travel_themes[PP_TRAVEL_DESTINATIONS]={PP_TRAVEL_THEME_ENTRIES};
+unsigned pp_travel_destination(const pp_game *g) {
+  uint64_t h=g->travel_end+UINT64_C(0x9e3779b97f4a7c15);
+  h=(h^(h>>30))*UINT64_C(0xbf58476d1ce4e5b9);
+  h=(h^(h>>27))*UINT64_C(0x94d049bb133111eb);
+  return (unsigned)((h^(h>>31))%PP_TRAVEL_DESTINATIONS);
+}
+const char *pp_travel_name(unsigned destination) {
+  return travel_themes[destination<PP_TRAVEL_DESTINATIONS?destination:0].name;
+}
+pp_travel_status pp_travel_describe(const pp_game *g) {
+  if (g->traveler < 0 || g->traveler >= (int)g->count)
+    return (pp_travel_status){0};
+  unsigned scene = pp_travel_destination(g);
+  uint64_t remaining = g->travel_end > g->seconds ? g->travel_end - g->seconds : 0;
+  if (remaining > PP_TRAVEL_SECONDS) remaining = PP_TRAVEL_SECONDS;
+  unsigned elapsed = PP_TRAVEL_SECONDS - (unsigned)remaining;
+  unsigned phase = elapsed / 300 % 3;
+  return (pp_travel_status){.active=true, .ready=!remaining,
+    .walking=remaining && phase==0, .remaining=(unsigned)remaining,
+    .events=g->travel_events, .pending_coins=travel_coins(g),
+    .activity=remaining ? travel_themes[scene].activities[phase] : "结束旅行回来了",
+    .event=g->travel_events ? travel_themes[scene].encounters[(g->travel_events-1)%2] : NULL};
+}
+pp_result pp_travel(pp_game *g, unsigned p) {
+  if (p >= g->count)
+    return PP_INVALID;
+  if (g->count < 2)
+    return PP_NEED_TWO;
+  if (g->traveler >= 0 || g->battling || g->drop_active)
+    return PP_BUSY;
+  g->traveler = p;
+  g->travel_end = g->seconds + PP_TRAVEL_SECONDS;
+  g->travel_events = 0;
+  g->travel_reward = 0;
+  log_line(g, "背上小包出发，三小时后见！");
+  return PP_OK;
+}
+pp_result pp_claim(pp_game *g) {
+  if (g->traveler < 0)
+    return PP_INVALID;
+  if (g->seconds < g->travel_end)
+    return PP_NOT_READY;
+  unsigned missing=0,id=PP_TRAVEL_COLLECTION;
+  for (unsigned i=0;i<PP_TRAVEL_COLLECTION;i++) missing+=!pp_has(g,i);
+  if (missing) {
+    /* Uniform among missing travel items; an empty pool consumes no RNG. */
+    uint32_t roll,limit=UINT32_MAX-(UINT32_MAX % missing);
+    do {roll=random_next(g)-1u;} while (roll>=limit);
+    unsigned pick=roll % missing;
+    for (unsigned i=0;i<PP_TRAVEL_COLLECTION;i++) if (!pp_has(g,i)) {
+      if (!pick--) {id=i;break;}
+    }
+    g->collected[id / 8] |= 1u << (id % 8);
+  }
+  g->coins += travel_coins(g);
+  pp_gain_xp(g, g->traveler, 20);
+  g->pets[g->traveler].mood = add(g->pets[g->traveler].mood, 10);
+  g->traveler = -1;
+  g->travel_end = 0;
+  char message[96];
+  if (id<PP_TRAVEL_COLLECTION)
+    snprintf(message,sizeof(message),"新收藏 · %s · %s",pp_qualities[pp_collectibles[id].quality].name,pp_collectibles[id].name);
+  else snprintf(message,sizeof(message),"旅行藏品已集齐，获得金币和经验。");
+  log_line(g,message);
+  return PP_OK;
+}
+pp_result pp_battle(pp_game *g, unsigned p) {
+  if (p >= g->count)
+    return PP_INVALID;
+  if (g->battling || g->traveler == (int)p || g->drop_active)
+    return PP_BUSY;
+  g->gym.mode = 0;
+  g->battling = 1;
+  g->battle_round = 0;
+  g->battle_pet = p;
+  g->battle_hp = 60 + g->pets[p].health / 2 + g->growth[p].stage * 10;
+  g->enemy_hp = 60 + (g->stage % 20) * 6;
+  g->battle_max_hp = g->battle_hp;
+  g->enemy_max_hp = g->enemy_hp;
+  g->battle_next = g->seconds + 2;
+  log_line(g, "挑战开始，宠物将自动使用技能。");
+  return PP_OK;
+}
+/* First gym is deliberately fixed: rematches never scale above level 12. */
+const pp_gym_enemy pp_pewter_team[3] = {
+  {"小拳石",10,124,48,48}, {"隆隆石",11,142,53,55}, {"大岩蛇",12,164,57,64}
+};
+static const pp_move gym_moves[4] = {
+  {"落石","岩石","投掷岩石",PP_ROCK}, {"撞击","一般","撞向对手",PP_NORMAL},
+  {"岩石封锁","岩石","封锁对手",PP_ROCK}, {"挖洞","地面","钻地攻击",PP_GROUND}
+};
+const pp_move *pp_battle_move(const pp_game *g,unsigned side,unsigned slot) {
+  return g->gym.mode && side ? &gym_moves[slot%4] : pp_move_at(g->pets[g->battle_pet].species,slot%4);
+}
+unsigned pp_gym_hp(const pp_game *g,unsigned p) {
+  return p<g->count ? 64+6*g->growth[p].level+6*g->growth[p].stage : 0;
+}
+unsigned pp_gym_damage(const pp_game *g,bool enemy,unsigned slot,unsigned variance) {
+  unsigned p=g->battle_pet,l=g->growth[p].level,stage=g->growth[p].stage;
+  const pp_gym_enemy *foe=&pp_pewter_team[g->gym.enemy];
+  unsigned atk=enemy?foe->attack:22+3*l+4*stage;
+  unsigned def=enemy?16+2*l+3*stage:foe->defense;
+  unsigned level=enemy?foe->level:l;
+  unsigned damage=(12+level)*atk/(3*def)+4;
+  pp_move_type type=pp_battle_move(g,enemy,slot)->type;
+  unsigned percent=100;
+  if(!enemy) {
+    if(type==PP_ELECTRIC) percent=0; /* All three are Rock/Ground. */
+    else if(type==PP_WATER || type==PP_GRASS) percent=200;
+    else if(type==PP_GROUND)percent=150;
+    else if(type==PP_FIRE || type==PP_NORMAL || type==PP_FLYING || type==PP_POISON)percent=65;
+  } else {
+    unsigned species=g->pets[p].species;
+    if(type==PP_ROCK) {
+      if(species==2 || species==4 || species==5 || species==6 || species==8)percent=150;
+      if(species==10)percent=65;
+    } else if(type==PP_GROUND) {
+      if(species==6 || species==8)percent=0;
+      else if(species==0 || species==2 || species==9)percent=150;
+      else if(species==1 || species==4)percent=65;
+    }
+  }
+  damage=damage*percent*(90+variance%11)/10000;
+  if(!enemy && pp_tarot_active(g,4))damage+=(damage+4)/5;
+  return percent && !damage?1:damage;
+}
+pp_result pp_gym_start(pp_game *g,const unsigned team[3]) {
+  if(!team)return PP_INVALID;
+  if(g->battling || g->drop_active || g->traveler>=0 || pp_needs_starter(g))return PP_BUSY;
+  if(g->count<3)return PP_NEED_THREE;
+  for(unsigned i=0;i<3;i++) {
+    if(team[i]>=g->count)return PP_INVALID;
+    for(unsigned j=0;j<i;j++)if(team[i]==team[j])return PP_INVALID;
+    if(g->pets[team[i]].sleeping || !g->pets[team[i]].health || g->pets[team[i]].energy<10)return PP_NOT_READY;
+  }
+  pp_gym_state *b=&g->gym;
+  uint64_t badges=b->badges;uint32_t wins=b->wins;
+  memset(b,0,sizeof(*b));b->badges=badges;b->wins=wins;b->mode=1;b->entered=1;
+  for(unsigned i=0;i<3;i++) {
+    b->team[i]=team[i];b->hp[i]=b->max_hp[i]=pp_gym_hp(g,team[i]);
+    b->enemy_hp[i]=b->enemy_max[i]=pp_pewter_team[i].hp;
+    g->pets[team[i]].energy=sub(g->pets[team[i]].energy,10);
+  }
+  g->battle_pet=team[0];g->battle_hp=b->hp[0];g->battle_max_hp=b->max_hp[0];
+  g->enemy_hp=b->enemy_hp[0];g->enemy_max_hp=b->enemy_max[0];
+  g->battle_round=0;g->battle_next=g->seconds+3;g->battling=1;
+  log_line(g,"尼比道馆 · 小刚派出了小拳石！");return PP_OK;
+}
+void pp_gym_leave(pp_game *g) { if(!g->battling)g->gym.mode=0; }
+static void gym_finish(pp_game *g,bool win) {
+  pp_gym_state *b=&g->gym;g->battling=0;b->result=win?1:2;
+  b->reward_xp=win?120:30;
+  for(unsigned i=0;i<3;i++)if(b->entered&(1u<<i))pp_gain_xp(g,b->team[i],b->reward_xp);
+  if(win) {
+    b->first_clear=!(b->badges&1);b->badges|=1;b->wins++;
+    b->reward_coins=b->first_clear?300:80;
+    g->coins=UINT32_MAX-g->coins<b->reward_coins?UINT32_MAX:g->coins+b->reward_coins;
+    unsigned roll=random_next(g)%100,quality=roll<75?2:roll<95?3:4;
+    unsigned n=pp_collection_total(quality),index=random_next(g)%n;
+    /* Rejection sampling avoids modulo bias within the chosen quality. */
+    uint32_t limit=UINT32_MAX-(UINT32_MAX%n),r;
+    do {r=random_next(g);}while(r>=limit);
+    index=r%n;b->reward_item=pp_collection_id(quality,index);
+    g->collected[b->reward_item/8]|=1u<<(b->reward_item%8);
+    log_line(g,b->first_clear?"首通成功！灰色徽章 · 金币 +300":"道馆再胜！金币 +80");
+    char line[96];snprintf(line,sizeof(line),"%s · %s",pp_qualities[quality].name,pp_collectibles[b->reward_item].name);log_line(g,line);
+  } else log_line(g,"挑战惜败 · 已出场伙伴经验 +30");
+}
+static void gym_tick(pp_game *g) {
+  pp_gym_state *b=&g->gym;
+  /* At most one visible turn per call: offline catch-up cannot skip the roster. */
+  if(!g->battling || g->seconds<g->battle_next)return;
+  g->battle_next=g->seconds+3;
+  if(!g->battle_hp || !g->enemy_hp) {
+    if(!g->enemy_hp) b->enemy++;
+    if(!g->battle_hp) b->ally++;
+    g->battle_pet=b->team[b->ally];b->entered|=1u<<b->ally;
+    g->battle_hp=b->hp[b->ally];g->battle_max_hp=b->max_hp[b->ally];
+    g->enemy_hp=b->enemy_hp[b->enemy];g->enemy_max_hp=b->enemy_max[b->enemy];
+    log_line(g,"新的伙伴上场！");return;
+  }
+  unsigned slot=g->battle_round++%4;
+  unsigned hit=pp_gym_damage(g,false,slot,random_next(g));
+  g->enemy_hp=g->enemy_hp>(int)hit?g->enemy_hp-hit:0;b->enemy_hp[b->enemy]=g->enemy_hp;
+  if(!g->enemy_hp) {
+    log_line(g,"对方伙伴倒下了！");
+    if(b->enemy==2)gym_finish(g,true);
+    return;
+  }
+  hit=pp_gym_damage(g,true,slot,random_next(g));
+  g->battle_hp=g->battle_hp>(int)hit?g->battle_hp-hit:0;b->hp[b->ally]=g->battle_hp;
+  g->revision++;
+  if(!g->battle_hp) {
+    log_line(g,"伙伴倒下了，下一位准备上场！");
+    if(b->ally==2)gym_finish(g,false);
+  }
+}
+pp_result pp_dig_start(pp_game *g) {
+  if (!g->clock_ready)
+    return PP_NOT_READY;
+  if (g->digging)
+    return PP_BUSY;
+  if (g->digs_today >= 6)
+    return PP_DAILY_LIMIT;
+  g->digs_today++;
+  g->digging = 1;
+  g->dig_lives = 3;
+  g->dig_depth = 0;
+  g->dig_reward = 0;
+  g->revision++;
+  return PP_OK;
+}
+pp_result pp_dig_stop(pp_game *g) {
+  if (!g->digging)
+    return PP_INVALID;
+  g->coins += g->dig_reward;
+  g->digging = 0;
+  log_line(g, "挖宝结束，金币已收入背包。");
+  return PP_OK;
+}
+pp_result pp_shake(pp_game *g) {
+  bool changed = false;
+  if (g->egg_end) {
+    if (g->egg_shakes < 10)
+      g->egg_shakes++;
+    changed = true;
+  }
+  if (g->digging) {
+    if (random_next(g) % 4 == 0) {
+      g->dig_lives--;
+      log_line(g, "遇到塌方，生命 -1。");
+    } else {
+      g->dig_depth++;
+      g->dig_reward += 5 + g->dig_depth * 2;
+      log_line(g, "又深一层，宝藏更多啦！");
+    }
+    if (!g->dig_lives || g->dig_depth >= 20)
+      pp_dig_stop(g);
+    changed = true;
+  }
+  if (changed) {
+    g->revision++;
+    return PP_OK;
+  }
+  return PP_INVALID;
+}
+pp_result pp_tarot(pp_game *g) {
+  if (!g->clock_ready)
+    return PP_NOT_READY;
+  if (g->tarot_day == g->day)
+    return PP_DAILY_LIMIT;
+  g->tarot_day = g->day;
+  g->tarot_card = random_next(g) % 8;
+  g->tarot_effect_day = g->day;
+  g->coins += 10;
+  log_line(g, pp_tarot_effects[g->tarot_card]);
+  return PP_OK;
+}
+pp_result pp_scene(pp_game *g, unsigned s) {
+  if (s >= PP_SCENES)
+    return PP_INVALID;
+  if (!(g->scenes & (1u << s))) {
+    unsigned price = 100 + s * 20;
+    if (g->coins < price)
+      return PP_NO_COINS;
+    g->coins -= price;
+    g->scenes |= 1u << s;
+  }
+  g->scene = s;
+  g->revision++;
+  return PP_OK;
+}
+static void daily_scene(pp_game *g) {
+  if(!g->random_scene||!g->clock_ready||!g->day||g->random_scene_day>=g->day) return;
+  unsigned choices[PP_SCENES],n=0;
+  for(unsigned i=0;i<PP_SCENES;i++) if((g->scenes&(1u<<i)) && i!=g->scene) choices[n++]=i;
+  if(n) g->scene=choices[random_next(g)%n];
+  g->random_scene_day=g->day;g->revision++;
+}
+pp_result pp_random_scene(pp_game *g,bool enabled) {
+  g->random_scene=enabled;daily_scene(g);g->revision++;return PP_OK;
+}
+void pp_tick(pp_game *g, uint32_t dt, uint32_t day) {
+  g->clock_ready = day != 0 && day >= g->day;
+  if (day && day > g->day) {
+    if (g->day) {
+      g->steps_today = g->steps_rewarded = g->steps_coins = g->steps_xp = 0;
+    }
+    g->day = day;
+    g->digs_today = 0;
+    g->revision++;
+  }
+  daily_scene(g);
+  if (!dt)
+    return;
+  g->seconds += dt;
+  uint64_t total = (uint64_t)g->care_remainder + dt;
+  unsigned steps = (unsigned)(total / 600);
+  g->care_remainder = total % 600;
+  if (steps) {
+    for (unsigned i = 0; i < g->count; i++) {
+      pp_pet *p = &g->pets[i];
+      p->food = sub(p->food, steps);
+      p->clean = sub(p->clean, steps);
+      p->mood = sub(p->mood, steps);
+      if (p->food < 20 || p->clean < 20)
+        p->health = sub(p->health, steps);
+      if (p->sleeping) {
+        p->energy = add(p->energy, steps * (pp_tarot_active(g,2)?6:4));
+        if (p->energy >= 90)
+          p->sleeping = 0;
+      } else {
+        p->energy = sub(p->energy, pp_tarot_active(g,0)?steps/2+((steps&1)&&!(g->seconds/600&1)):steps);
+        if (p->energy < 20)
+          p->sleeping = 1;
+      }
+    }
+    g->revision++;
+  }
+  if (g->drop_active && g->seconds >= g->drop_end) {
+    pp_pet *p = &g->pets[g->drop_target];
+    const pp_item *item = &pp_items[g->drop_item];
+    p->food = add(p->food, recovery(g,item->food));
+    p->clean = add(p->clean, recovery(g,item->clean));
+    p->health = add(p->health, recovery(g,item->health));
+    p->mood = add(p->mood, recovery(g,item->mood));
+    if (g->drop_item == 4)
+      p->energy = add(p->energy, recovery(g,30));
+    pp_gain_xp(g, g->drop_target, 6);
+    g->drop_active = 0;
+    log_line(g, "宠物使用了道具，状态恢复啦。");
+  }
+  if (g->egg_end && g->seconds >= g->egg_end && g->egg_shakes >= 1 &&
+      g->count+g->reserve_count < PP_PETS+PP_RESERVES) {
+    hatch_pet(g);
+    g->egg_end = 0;
+    log_line(g, "蛋孵化啦！新的伙伴加入了庭院。");
+  }
+  if (g->traveler >= 0) {
+    uint64_t start = g->travel_end - PP_TRAVEL_SECONDS;
+    unsigned e = (unsigned)((g->seconds > g->travel_end ? PP_TRAVEL_SECONDS
+                                                        : g->seconds - start) /
+                            1800);
+    if (e > g->travel_events) {
+      unsigned gained = (e - g->travel_events) * 5;
+      g->travel_reward += gained;
+      g->travel_events = e;
+      g->pets[g->traveler].energy = add(g->pets[g->traveler].energy, 1);
+      char line[96];
+      snprintf(line,sizeof(line),"%s · 旅途金币 +%u",pp_travel_describe(g).event,gained);
+      log_line(g, line);
+    }
+  }
+  if (g->gym.mode) { gym_tick(g); return; }
+  unsigned turns = 0;
+  while (g->battling && g->seconds >= g->battle_next && turns++ < 60) {
+    g->battle_next += 2;
+    unsigned slot = g->battle_round++ % PP_MOVE_SLOTS;
+    unsigned hit = 9 + random_next(g) % 12 + g->growth[g->battle_pet].stage * 2;
+    if(pp_tarot_active(g,4)) hit+=(hit+4)/5;
+    g->enemy_hp -= hit;
+    char line[96];
+    snprintf(line, sizeof(line), "%s使用%s，造成 %u HP 伤害",
+             pp_pet_names[g->pets[g->battle_pet].species],
+             pp_move_at(g->pets[g->battle_pet].species, slot)->name, hit);
+    log_line(g, line);
+    if (g->enemy_hp <= 0) {
+      g->enemy_hp = 0;
+      g->battling = 0;
+      g->stage++;
+      g->coins += 25;
+      pp_gain_xp(g, g->battle_pet, 30);
+      log_line(g, "挑战成功！金币 +25，下一关已解锁。");
+      break;
+    }
+    g->battle_hp -= 5 + random_next(g) % 12;
+    if (g->battle_hp <= 0) {
+      g->battle_hp = 0;
+      g->battling = 0;
+      log_line(g, "这次惜败，照顾好伙伴再来挑战吧。");
+    }
+  }
+}
+
+unsigned pp_xp_needed(unsigned level) { return level >= PP_MAX_LEVEL ? 1 : 20 * level; }
+void pp_gain_xp(pp_game *g, unsigned pet, unsigned xp) {
+  if (pet >= g->count || !xp)
+    return;
+  pp_growth *p = &g->growth[pet];
+  if (p->level >= PP_MAX_LEVEL)
+    return;
+  uint64_t total = (uint64_t)p->xp + xp;
+  while (p->level < PP_MAX_LEVEL && total >= pp_xp_needed(p->level)) {
+    total -= pp_xp_needed(p->level);
+    p->level++;
+  }
+  p->xp = p->level == PP_MAX_LEVEL ? 0 : total;
+  g->revision++;
+}
+const pp_evolution_template pp_evolutions[PP_EVOLUTIONS] = {{2, 16, 0, 4, "火恐龙"},
+                                                {2, 36, 1, 5, "喷火龙"},
+ {1,16,0,6,"妙蛙草"}, {1,32,1,7,"妙蛙花"},
+ {3,16,0,8,"卡咪龟"}, {3,36,1,9,"水箭龟"},
+ {4,7,0,11,"铁甲蛹"}, {4,10,1,12,"巴大蝶"},
+ {5,7,0,14,"铁壳蛹"}, {5,10,1,15,"大针蜂"},
+ {6,18,0,17,"比比鸟"}, {6,36,1,18,"大比鸟"},
+ {7,20,0,20,"拉达"}, {8,20,0,22,"大嘴雀"},
+ {9,22,0,24,"阿柏怪"}, {0,0,0,25,"雷丘"}};
+unsigned pp_evolution_level(const pp_game *g, unsigned pet) {
+  if (pet >= g->count || pp_evolution_locked(g, pet))
+    return 0;
+  for (unsigned i = 0; i < PP_EVOLUTIONS; i++) {
+    const pp_evolution_template *t = &pp_evolutions[i];
+    if (t->species == g->pets[pet].species &&
+        t->from_stage == g->growth[pet].stage)
+      return t->level;
+  }
+  return 0;
+}
+bool pp_evolution_locked(const pp_game *g, unsigned pet) {
+  return pet < g->count && (g->evolution_declined & (1ULL << pet));
+}
+/* Check the current form and activity before either irreversible choice. */
+pp_result pp_evolution_offer(const pp_game *g, unsigned pet) {
+  if (pet >= g->count || pp_needs_starter(g)) return PP_INVALID;
+  if (pp_evolution_locked(g, pet)) return PP_EVOLUTION_LOCKED;
+  bool stone = g->pets[pet].species == 0 && !g->growth[pet].stage;
+  unsigned gate = pp_evolution_level(g, pet);
+  if (!gate && !stone) return PP_INVALID;
+  if (g->traveler == (int)pet || (g->battling && g->battle_pet == pet) ||
+      (g->drop_active && g->drop_target == pet)) return PP_BUSY;
+  if (gate && g->growth[pet].level < gate) return PP_NOT_READY;
+  return PP_OK;
+}
+pp_result pp_decline_evolution(pp_game *g, unsigned pet) {
+  pp_result result = pp_evolution_offer(g, pet);
+  if (result != PP_OK) return result;
+  /* One transaction: no coin cost, and repeated calls cannot grant again. */
+  g->evolution_declined |= 1ULL << pet;
+  g->collected[PP_PURE_HEART / 8] |= 1u << (PP_PURE_HEART % 8);
+  log_line(g, "守护最初的自己，获得收藏品：纯净之心。");
+  return PP_OK;
+}
+pp_result pp_evolve(pp_game *g, unsigned pet) {
+  pp_result result = pp_evolution_offer(g, pet);
+  if (result != PP_OK) return result;
+  if (!pp_evolution_level(g, pet)) return PP_INVALID; /* Stone never auto-evolves. */
+  g->growth[pet].stage++;
+  char s[96];
+  snprintf(s, sizeof(s), "突破成功，进化为%s！", pp_form_name(g, pet));
+  log_line(g, s);
+  return PP_OK;
+}
+pp_result pp_evolve_thunder_stone(pp_game *g, unsigned pet) {
+  if (pet >= g->count || g->pets[pet].species != 0 || g->growth[pet].stage) return PP_INVALID;
+  pp_result result = pp_evolution_offer(g, pet);
+  if (result != PP_OK) return result;
+  if (g->coins < PP_THUNDER_STONE_PRICE) return PP_NO_COINS;
+  g->coins -= PP_THUNDER_STONE_PRICE;
+  g->growth[pet].stage++;
+  log_line(g, "使用雷之石，进化为雷丘！");
+  return PP_OK;
+}
+const char *pp_form_name(const pp_game *g, unsigned pet) {
+  if (pet >= g->count)
+    return "";
+  for (unsigned i=0;i<PP_EVOLUTIONS;i++)
+    if (pp_evolutions[i].species==g->pets[pet].species &&
+        pp_evolutions[i].from_stage+1==g->growth[pet].stage)
+      return pp_evolutions[i].name;
+  return pp_pet_names[g->pets[pet].species];
+}
+unsigned pp_art_id(const pp_game *g, unsigned pet) {
+  if (pet >= g->count) return 0;
+  for (unsigned i=0;i<PP_EVOLUTIONS;i++)
+    if (pp_evolutions[i].species==g->pets[pet].species &&
+        pp_evolutions[i].from_stage+1==g->growth[pet].stage)
+      return pp_evolutions[i].art;
+  return pp_base_art(g->pets[pet].species);
+}
+bool pp_import_v1(pp_game *dest, const void *data, unsigned bytes,
+                  uint32_t checksum) {
+  if (bytes != sizeof(pp_game_v1))
+    return false;
+  const unsigned char *raw = data;
+  uint32_t hash = 2166136261u;
+  for (unsigned i = 0; i < bytes; i++)
+    hash = (hash ^ raw[i]) * 16777619u;
+  if (hash != checksum)
+    return false;
+  pp_game_v1 old;
+  memcpy(&old, data, sizeof(old));
+  if (old.version != 1)
+    return false;
+  pp_game candidate;
+  memset(&candidate, 0, sizeof(candidate));
+  memcpy(&candidate, &old, offsetof(pp_game, growth));
+  candidate.version = PP_VERSION;
+  candidate.digging = 0;
+  candidate.collected[PP_PURE_HEART / 8] &= ~(1u << (PP_PURE_HEART % 8));
+  if (candidate.egg_end>candidate.seconds && candidate.egg_end-candidate.seconds>PP_EGG_MAX_SECONDS)
+    candidate.egg_end=candidate.seconds+PP_EGG_MAX_SECONDS;
+  for (unsigned i = 0; i < PP_PETS; i++)
+    candidate.growth[i].level = 1;
+  cap_legacy_levels(&candidate);
+  if (!pp_valid(&candidate))
+    return false;
+  *dest = candidate;
+  return true;
+}
+
+/* Automatic hundred-step milestones, paid once as part of the same save. */
+static uint32_t sat_add(uint32_t a, uint64_t b) {
+  return b > UINT32_MAX-a ? UINT32_MAX : a+(uint32_t)b;
+}
+static uint64_t walk_total(unsigned chunks, bool xp) {
+  unsigned first=chunks<9?chunks:9;
+  unsigned second=chunks>9?chunks-9:0;
+  if (second>40) second=40;
+  unsigned third=chunks>49?chunks-49:0;
+  return (uint64_t)first*(xp?3:5)+(uint64_t)second*(xp?4:8)+(uint64_t)third*(xp?6:12);
+}
+unsigned pp_step_coin_rate(const pp_game *g) {
+  return (g->steps_today>=4900?12:g->steps_today>=900?8:5)+(pp_tarot_active(g,7)?2:0);
+}
+unsigned pp_step_xp_rate(const pp_game *g) {
+  return (g->steps_today>=4900?6:g->steps_today>=900?4:3)+(pp_tarot_active(g,1)?1:0);
+}
+void pp_record_steps(pp_game *g, unsigned steps) {
+  if (!steps || pp_needs_starter(g)) return;
+  unsigned room=UINT32_MAX-g->steps_today;
+  if (steps>room) steps=room;
+  if (UINT64_MAX-g->total_steps<steps) return;
+  g->total_steps+=steps;
+  g->steps_today+=steps;
+  unsigned chunks=g->steps_today/100;
+  uint64_t coins=walk_total(chunks,false)-walk_total(g->steps_rewarded,false);
+  uint64_t xp=walk_total(chunks,true)-walk_total(g->steps_rewarded,true);
+  if(pp_tarot_active(g,7)) coins+=(uint64_t)(chunks-g->steps_rewarded)*2;
+  if(pp_tarot_active(g,1)) xp+=chunks-g->steps_rewarded;
+  g->coins=sat_add(g->coins,coins);
+  g->steps_coins=sat_add(g->steps_coins,coins);
+  g->steps_xp=sat_add(g->steps_xp,xp);
+  for (unsigned i=0;i<g->count;i++) pp_gain_xp(g,i,(unsigned)xp);
+  g->steps_rewarded=chunks;
+  g->revision++;
+}
+bool pp_import_v2(pp_game *dest,const void *data,unsigned bytes,uint32_t checksum) {
+  _Static_assert(offsetof(pp_game,total_steps)==sizeof(pp_game_v2),"Frozen v2 prefix changed");
+  if (bytes!=sizeof(pp_game_v2)) return false;
+  const uint8_t *raw=data;
+  uint32_t hash=2166136261u;
+  for (unsigned i=0;i<bytes;i++) hash=(hash^raw[i])*16777619u;
+  if (hash!=checksum) return false;
+  pp_game_v2 old; memcpy(&old,data,sizeof(old));
+  if (old.version!=2) return false;
+  pp_game candidate={0}; memcpy(&candidate,&old,sizeof(old));
+  candidate.version=PP_VERSION;
+  candidate.digging=0;
+  candidate.collected[PP_PURE_HEART / 8] &= ~(1u << (PP_PURE_HEART % 8));
+  if (candidate.egg_end>candidate.seconds && candidate.egg_end-candidate.seconds>PP_EGG_MAX_SECONDS)
+    candidate.egg_end=candidate.seconds+PP_EGG_MAX_SECONDS;
+  cap_legacy_levels(&candidate);
+  if (!pp_valid(&candidate)) return false;
+  *dest=candidate; return true;
+}
+
+bool pp_import_v3(pp_game *dest, const void *data, unsigned bytes, uint32_t checksum) {
+  _Static_assert(offsetof(pp_game, evolution_declined) == sizeof(pp_game_v3), "Frozen v3 prefix changed");
+  if (bytes != sizeof(pp_game_v3)) return false;
+  const uint8_t *raw = data;
+  uint32_t hash = 2166136261u;
+  for (unsigned i = 0; i < bytes; i++) hash = (hash ^ raw[i]) * 16777619u;
+  if (hash != checksum) return false;
+  pp_game_v3 old; memcpy(&old, data, sizeof(old));
+  if (old.version != 3) return false;
+  pp_game candidate = {0}; memcpy(&candidate, &old, sizeof(old));
+  candidate.version = PP_VERSION;
+  candidate.digging = 0;
+  candidate.collected[PP_PURE_HEART / 8] &= ~(1u << (PP_PURE_HEART % 8));
+  cap_legacy_levels(&candidate);
+  if (!pp_valid(&candidate)) return false;
+  *dest = candidate;
+  return true;
+}
+
+bool pp_import_v4(pp_game *dest,const void *data,unsigned bytes,uint32_t checksum) {
+  _Static_assert(offsetof(pp_game,reserves)==sizeof(pp_game_v4),"Frozen v4 prefix changed");
+  if(bytes!=sizeof(pp_game_v4)) return false;
+  const uint8_t *raw=data;uint32_t hash=2166136261u;
+  for(unsigned i=0;i<bytes;i++) hash=(hash^raw[i])*16777619u;
+  if(hash!=checksum) return false;
+  pp_game_v4 old;memcpy(&old,data,sizeof(old));if(old.version!=4)return false;
+  pp_game candidate={0};memcpy(&candidate,&old,sizeof(old));candidate.version=PP_VERSION;
+  /* Dig is retired; preserve the old blob without continuing its activity. */
+  candidate.digging=0;
+  cap_legacy_levels(&candidate);
+  if(!pp_valid(&candidate))return false;
+  *dest=candidate;return true;
+}
+
+bool pp_import_v5(pp_game *dest,const void *data,unsigned bytes,uint32_t checksum) {
+  _Static_assert(offsetof(pp_game,gym)==sizeof(pp_game_v5),"Frozen v5 prefix changed");
+  if(bytes!=sizeof(pp_game_v5))return false;
+  const uint8_t *raw=data;uint32_t hash=2166136261u;
+  for(unsigned i=0;i<bytes;i++)hash=(hash^raw[i])*16777619u;
+  if(hash!=checksum)return false;
+  pp_game_v5 old;memcpy(&old,data,sizeof(old));if(old.version!=5)return false;
+  pp_game candidate={0};memcpy(&candidate,&old,sizeof(old));candidate.version=PP_VERSION;
+  cap_legacy_levels(&candidate);
+  if(!pp_valid(&candidate))return false;
+  *dest=candidate;return true;
+}

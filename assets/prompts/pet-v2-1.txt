@@ -1,0 +1,9 @@
+Create a production 4-column × 6-row sprite sheet of Bulbasaur: mint turquoise squat quadruped with a green plant bulb on its back.
+Use the attached round-screen photo ONLY as reference for the MINIATURE, CHUNKY PIXEL character art. Do not draw the device, scene, interface, numbers or text. Only one species repeated in 24 separate equal cells. Transparent PNG, generous empty padding. Every cell same scale, baseline, identity and fixed camera. The design is EXTRA CUTE CHIBI: big rounded head, tiny compact body, tiny paws, simple expressive eyes, 2-3 shades per material, dark navy 1-native-pixel outline. Very low-resolution 20x20-to-24x24 sprite aesthetic, clearly visible square pixels. NOT smooth illustration, NOT detailed high-res sprite, NOT 3D, NO antialiasing or soft shadows. Silhouette is compact; preserve all identifying parts. All poses remain front / 3/4 view.
+Row 1 idle breathing loop, four subtle sequential frames; gently breathe, blink once; feet anchored.
+Row 2 walking loop, four real distinct frames; left step, passing, right step, passing. Fixed body scale, actual feet change.
+Row 3 happy hop loop, four sequential frames; crouch, rise arms up, hop apex, land.
+Row 4 eating loop, four sequential frames; head dips, nibble, cheeks puff, swallow. No food prop outside sprite.
+Row 5 sleeping loop, four sequential frames; curled up eyes shut, slow breath. Same orientation.
+Row 6 playful attack loop, four sequential frames; anticipation, lean forward, release, recover. No particles outside sprite.
+Exactly 24 cells, FOUR COLUMNS and SIX ROWS, row-major. No cell labels, no lines, no extra species, no duplicated layout panels. Keep moving parts inside central 65% of each cell. All frames fit a reusable 40x40 device canvas; actual character will be approximately 28-32 pixels tall. Crisp and charming like the tiny Pikachu in the reference.

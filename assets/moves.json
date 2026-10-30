@@ -1,0 +1,6487 @@
+{
+  "version": 3,
+  "checked": "2026-10-22",
+  "moves": [
+    {
+      "id": 0,
+      "slot": 0,
+      "species": "皮卡丘",
+      "name": "电击",
+      "english": "Thunder Shock",
+      "type": "电",
+      "description": "释放电流攻击",
+      "visual": "锯齿电流与闪光",
+      "source": "https://wiki.52poke.com/zh-hans/电击（招式）",
+      "power": 28
+    },
+    {
+      "id": 1,
+      "slot": 0,
+      "species": "妙蛙种子",
+      "name": "藤鞭",
+      "english": "Vine Whip",
+      "type": "草",
+      "description": "挥动细长藤蔓抽打",
+      "visual": "双藤伸展与抽打",
+      "source": "https://wiki.52poke.com/wiki/藤鞭",
+      "power": 32
+    },
+    {
+      "id": 2,
+      "slot": 0,
+      "species": "小火龙",
+      "name": "火花",
+      "english": "Ember",
+      "type": "火",
+      "description": "发射小火焰攻击",
+      "visual": "火团与火星",
+      "source": "https://wiki.52poke.com/zh-hans/火花（招式）",
+      "power": 28
+    },
+    {
+      "id": 3,
+      "slot": 0,
+      "species": "杰尼龟",
+      "name": "水枪",
+      "english": "Water Gun",
+      "type": "水",
+      "description": "喷射强劲水流",
+      "visual": "水流与飞溅",
+      "source": "https://wiki.52poke.com/zh-hans/水枪（招式）",
+      "power": 28
+    },
+    {
+      "id": 4,
+      "slot": 1,
+      "species": "皮卡丘",
+      "name": "电光一闪",
+      "english": "Quick Attack",
+      "type": "一般",
+      "description": "快速接近对手撞击",
+      "visual": "高速冲刺与命中闪光",
+      "source": "https://wiki.52poke.com/zh-hans/电光一闪（招式）",
+      "power": 44
+    },
+    {
+      "id": 5,
+      "slot": 1,
+      "species": "妙蛙种子",
+      "name": "飞叶快刀",
+      "english": "Razor Leaf",
+      "type": "草",
+      "description": "飞射锋利的叶片",
+      "visual": "飞叶与叶片散开",
+      "source": "https://wiki.52poke.com/zh-hans/飞叶快刀（招式）",
+      "power": 44
+    },
+    {
+      "id": 6,
+      "slot": 1,
+      "species": "小火龙",
+      "name": "抓",
+      "english": "Scratch",
+      "type": "一般",
+      "description": "用尖锐的爪子抓击",
+      "visual": "爪痕与命中闪光",
+      "source": "https://wiki.52poke.com/zh-hans/抓（招式）",
+      "power": 40
+    },
+    {
+      "id": 7,
+      "slot": 1,
+      "species": "杰尼龟",
+      "name": "撞击",
+      "english": "Tackle",
+      "type": "一般",
+      "description": "用身体撞击对手",
+      "visual": "冲刺与命中闪光",
+      "source": "https://wiki.52poke.com/zh-hans/撞击（招式）",
+      "power": 40
+    },
+    {
+      "id": 8,
+      "slot": 2,
+      "species": "皮卡丘",
+      "name": "电球",
+      "english": "Electro Ball",
+      "type": "电",
+      "description": "投掷电气团攻击",
+      "visual": "电气团与电火花",
+      "source": "https://wiki.52poke.com/zh-hans/电球（招式）",
+      "power": 58
+    },
+    {
+      "id": 9,
+      "slot": 2,
+      "species": "妙蛙种子",
+      "name": "撞击",
+      "english": "Tackle",
+      "type": "一般",
+      "description": "用身体撞击对手",
+      "visual": "冲刺与命中闪光",
+      "source": "https://wiki.52poke.com/zh-hans/撞击（招式）",
+      "power": 54
+    },
+    {
+      "id": 10,
+      "slot": 2,
+      "species": "小火龙",
+      "name": "火焰牙",
+      "english": "Fire Fang",
+      "type": "火",
+      "description": "用带有火焰的牙齿咬击",
+      "visual": "近身火焰与咬击闪光",
+      "source": "https://wiki.52poke.com/zh-hans/火焰牙（招式）",
+      "power": 58
+    },
+    {
+      "id": 11,
+      "slot": 2,
+      "species": "杰尼龟",
+      "name": "泡沫",
+      "english": "Bubble",
+      "type": "水",
+      "description": "放出大量泡泡攻击",
+      "visual": "泡泡与水滴",
+      "source": "https://wiki.52poke.com/zh-hans/泡沫（招式）",
+      "power": 54
+    },
+    {
+      "id": 12,
+      "slot": 3,
+      "species": "皮卡丘",
+      "name": "十万伏特",
+      "english": "Thunderbolt",
+      "type": "电",
+      "description": "释放强大电流攻击",
+      "visual": "电流与强光",
+      "source": "https://wiki.52poke.com/zh-hans/十万伏特（招式）",
+      "power": 82
+    },
+    {
+      "id": 13,
+      "slot": 3,
+      "species": "妙蛙种子",
+      "name": "种子炸弹",
+      "english": "Seed Bomb",
+      "type": "草",
+      "description": "发射坚硬的种子攻击",
+      "visual": "种子团与散开粒子",
+      "source": "https://wiki.52poke.com/zh-hans/种子炸弹（招式）",
+      "power": 74
+    },
+    {
+      "id": 14,
+      "slot": 3,
+      "species": "小火龙",
+      "name": "喷射火焰",
+      "english": "Flamethrower",
+      "type": "火",
+      "description": "喷射猛烈火焰攻击",
+      "visual": "火焰喷射与火星",
+      "source": "https://wiki.52poke.com/zh-hans/喷射火焰（招式）",
+      "power": 82
+    },
+    {
+      "id": 15,
+      "slot": 3,
+      "species": "杰尼龟",
+      "name": "水之波动",
+      "english": "Water Pulse",
+      "type": "水",
+      "description": "用水的震动攻击",
+      "visual": "水波与散开水滴",
+      "source": "https://wiki.52poke.com/zh-hans/水之波动（招式）",
+      "power": 74
+    },
+    {
+      "id": 16,
+      "slot": 0,
+      "species": "绿毛虫",
+      "name": "撞击",
+      "english": "撞击",
+      "type": "一般",
+      "description": "用身体撞击对手",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/撞击",
+      "power": 28
+    },
+    {
+      "id": 17,
+      "slot": 0,
+      "species": "独角虫",
+      "name": "毒针",
+      "english": "毒针",
+      "type": "毒",
+      "description": "射出毒针攻击",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/毒针",
+      "power": 28
+    },
+    {
+      "id": 18,
+      "slot": 0,
+      "species": "波波",
+      "name": "起风",
+      "english": "起风",
+      "type": "飞行",
+      "description": "挥动翅膀卷起风",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/起风",
+      "power": 32
+    },
+    {
+      "id": 19,
+      "slot": 1,
+      "species": "绿毛虫",
+      "name": "吐丝",
+      "english": "吐丝",
+      "type": "虫",
+      "description": "吐出细丝缠绕对手",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/吐丝",
+      "power": 0
+    },
+    {
+      "id": 20,
+      "slot": 1,
+      "species": "独角虫",
+      "name": "吐丝",
+      "english": "吐丝",
+      "type": "虫",
+      "description": "吐出细丝缠绕对手",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/吐丝",
+      "power": 0
+    },
+    {
+      "id": 21,
+      "slot": 1,
+      "species": "波波",
+      "name": "电光一闪",
+      "english": "电光一闪",
+      "type": "一般",
+      "description": "快速接近对手撞击",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/电光一闪",
+      "power": 44
+    },
+    {
+      "id": 22,
+      "slot": 2,
+      "species": "绿毛虫",
+      "name": "虫咬",
+      "english": "虫咬",
+      "type": "虫",
+      "description": "用牙齿咬住对手",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/虫咬",
+      "power": 58
+    },
+    {
+      "id": 23,
+      "slot": 2,
+      "species": "独角虫",
+      "name": "虫咬",
+      "english": "虫咬",
+      "type": "虫",
+      "description": "用牙齿咬住对手",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/虫咬",
+      "power": 58
+    },
+    {
+      "id": 24,
+      "slot": 2,
+      "species": "波波",
+      "name": "翅膀攻击",
+      "english": "翅膀攻击",
+      "type": "飞行",
+      "description": "张开翅膀攻击",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/翅膀攻击",
+      "power": 58
+    },
+    {
+      "id": 25,
+      "slot": 3,
+      "species": "绿毛虫",
+      "name": "撞击",
+      "english": "撞击",
+      "type": "一般",
+      "description": "用身体撞击对手",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/撞击",
+      "power": 70
+    },
+    {
+      "id": 26,
+      "slot": 3,
+      "species": "独角虫",
+      "name": "毒针",
+      "english": "毒针",
+      "type": "毒",
+      "description": "射出毒针攻击",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/毒针",
+      "power": 70
+    },
+    {
+      "id": 27,
+      "slot": 3,
+      "species": "波波",
+      "name": "空气斩",
+      "english": "空气斩",
+      "type": "飞行",
+      "description": "发射空气之刃",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/空气斩",
+      "power": 74
+    },
+    {
+      "id": 28,
+      "slot": 0,
+      "species": "小拉达",
+      "name": "撞击",
+      "english": "Tackle",
+      "type": "一般",
+      "description": "快速命中对手",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/撞击",
+      "power": 28
+    },
+    {
+      "id": 29,
+      "slot": 0,
+      "species": "烈雀",
+      "name": "啄",
+      "english": "Peck",
+      "type": "飞行",
+      "description": "用尖锐的喙啄击",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/啄",
+      "power": 28
+    },
+    {
+      "id": 30,
+      "slot": 0,
+      "species": "阿柏蛇",
+      "name": "毒针",
+      "english": "Poison Sting",
+      "type": "毒",
+      "description": "快速命中对手",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/毒针",
+      "power": 28
+    },
+    {
+      "id": 31,
+      "slot": 0,
+      "species": "穿山鼠",
+      "name": "抓",
+      "english": "Scratch",
+      "type": "一般",
+      "description": "快速命中对手",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/抓",
+      "power": 28
+    },
+    {
+      "id": 32,
+      "slot": 1,
+      "species": "小拉达",
+      "name": "电光一闪",
+      "english": "Quick Attack",
+      "type": "一般",
+      "description": "快速命中对手",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/电光一闪",
+      "power": 44
+    },
+    {
+      "id": 33,
+      "slot": 1,
+      "species": "烈雀",
+      "name": "乱击",
+      "english": "Fury Attack",
+      "type": "一般",
+      "description": "快速命中对手",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/乱击",
+      "power": 44
+    },
+    {
+      "id": 34,
+      "slot": 1,
+      "species": "阿柏蛇",
+      "name": "咬住",
+      "english": "Bite",
+      "type": "一般",
+      "description": "快速命中对手",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/咬住",
+      "power": 44
+    },
+    {
+      "id": 35,
+      "slot": 1,
+      "species": "穿山鼠",
+      "name": "拨沙",
+      "english": "Sand Attack",
+      "type": "地面",
+      "description": "扬起沙土",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/拨沙",
+      "power": 0
+    },
+    {
+      "id": 36,
+      "slot": 2,
+      "species": "小拉达",
+      "name": "咬住",
+      "english": "Bite",
+      "type": "一般",
+      "description": "快速命中对手",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/咬住",
+      "power": 58
+    },
+    {
+      "id": 37,
+      "slot": 2,
+      "species": "烈雀",
+      "name": "翅膀攻击",
+      "english": "Wing Attack",
+      "type": "飞行",
+      "description": "快速命中对手",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/翅膀攻击",
+      "power": 58
+    },
+    {
+      "id": 38,
+      "slot": 2,
+      "species": "阿柏蛇",
+      "name": "溶解液",
+      "english": "Acid",
+      "type": "毒",
+      "description": "喷出酸液攻击",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/溶解液",
+      "power": 58
+    },
+    {
+      "id": 39,
+      "slot": 2,
+      "species": "穿山鼠",
+      "name": "挖洞",
+      "english": "Dig",
+      "type": "地面",
+      "description": "钻地后突袭对手",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/挖洞",
+      "power": 58
+    },
+    {
+      "id": 40,
+      "slot": 3,
+      "species": "小拉达",
+      "name": "必杀门牙",
+      "english": "Super Fang",
+      "type": "一般",
+      "description": "用门牙咬击",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/必杀门牙",
+      "power": 74
+    },
+    {
+      "id": 41,
+      "slot": 3,
+      "species": "烈雀",
+      "name": "啄钻",
+      "english": "Drill Peck",
+      "type": "飞行",
+      "description": "旋转尖喙攻击",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/啄钻",
+      "power": 74
+    },
+    {
+      "id": 42,
+      "slot": 3,
+      "species": "阿柏蛇",
+      "name": "酸液炸弹",
+      "english": "Acid Spray",
+      "type": "毒",
+      "description": "发射酸液团",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/酸液炸弹",
+      "power": 74
+    },
+    {
+      "id": 43,
+      "slot": 3,
+      "species": "穿山鼠",
+      "name": "地震",
+      "english": "Earthquake",
+      "type": "地面",
+      "description": "震动地面攻击",
+      "visual": "原生粒子与命中闪光",
+      "source": "https://wiki.52poke.com/wiki/地震",
+      "power": 82
+    },
+    {
+      "id": 44,
+      "slot": 0,
+      "species": "尼多兰",
+      "name": "毒针",
+      "english": "Poison Sting",
+      "type": "毒",
+      "description": "射出毒针攻击",
+      "visual": "紫色毒针",
+      "source": "https://wiki.52poke.com/wiki/毒针（招式）",
+      "power": 28
+    },
+    {
+      "id": 45,
+      "slot": 0,
+      "species": "尼多朗",
+      "name": "啄",
+      "english": "Peck",
+      "type": "飞行",
+      "description": "用尖锐的喙啄击",
+      "visual": "短促前冲与风刃",
+      "source": "https://wiki.52poke.com/wiki/啄（招式）",
+      "power": 28
+    },
+    {
+      "id": 46,
+      "slot": 0,
+      "species": "皮皮",
+      "name": "拍击",
+      "english": "Pound",
+      "type": "一般",
+      "description": "用前肢拍击对手",
+      "visual": "短促拍击",
+      "source": "https://wiki.52poke.com/wiki/拍击（招式）",
+      "power": 28
+    },
+    {
+      "id": 47,
+      "slot": 1,
+      "species": "尼多兰",
+      "name": "咬住",
+      "english": "Bite",
+      "type": "一般",
+      "description": "用牙齿咬住对手",
+      "visual": "咬击轨迹",
+      "source": "https://wiki.52poke.com/wiki/咬住（招式）",
+      "power": 44
+    },
+    {
+      "id": 48,
+      "slot": 1,
+      "species": "尼多朗",
+      "name": "角撞",
+      "english": "Horn Attack",
+      "type": "一般",
+      "description": "用尖角撞击对手",
+      "visual": "尖角前冲",
+      "source": "https://wiki.52poke.com/wiki/角撞（招式）",
+      "power": 44
+    },
+    {
+      "id": 49,
+      "slot": 1,
+      "species": "皮皮",
+      "name": "魅惑之声",
+      "english": "Disarming Voice",
+      "type": "妖精",
+      "description": "用妖精之声攻击",
+      "visual": "粉色星芒与声波",
+      "source": "https://wiki.52poke.com/wiki/魅惑之声（招式）",
+      "power": 44
+    },
+    {
+      "id": 50,
+      "slot": 2,
+      "species": "尼多兰",
+      "name": "毒液冲击",
+      "english": "Venoshock",
+      "type": "毒",
+      "description": "将毒液泼向对手",
+      "visual": "紫色毒液",
+      "source": "https://wiki.52poke.com/wiki/毒液冲击（招式）",
+      "power": 58
+    },
+    {
+      "id": 51,
+      "slot": 2,
+      "species": "尼多朗",
+      "name": "毒针",
+      "english": "Poison Sting",
+      "type": "毒",
+      "description": "射出毒针攻击",
+      "visual": "紫色毒针",
+      "source": "https://wiki.52poke.com/wiki/毒针（招式）",
+      "power": 54
+    },
+    {
+      "id": 52,
+      "slot": 2,
+      "species": "皮皮",
+      "name": "巨声",
+      "english": "Hyper Voice",
+      "type": "一般",
+      "description": "用响亮的声音攻击",
+      "visual": "扩散声波",
+      "source": "https://wiki.52poke.com/wiki/巨声（招式）",
+      "power": 66
+    },
+    {
+      "id": 53,
+      "slot": 3,
+      "species": "尼多兰",
+      "name": "毒击",
+      "english": "Poison Jab",
+      "type": "毒",
+      "description": "用带毒的肢体刺击",
+      "visual": "紫色刺击",
+      "source": "https://wiki.52poke.com/wiki/毒击（招式）",
+      "power": 74
+    },
+    {
+      "id": 54,
+      "slot": 3,
+      "species": "尼多朗",
+      "name": "毒击",
+      "english": "Poison Jab",
+      "type": "毒",
+      "description": "用带毒的肢体刺击",
+      "visual": "紫色刺击",
+      "source": "https://wiki.52poke.com/wiki/毒击（招式）",
+      "power": 74
+    },
+    {
+      "id": 55,
+      "slot": 3,
+      "species": "皮皮",
+      "name": "月亮之力",
+      "english": "Moonblast",
+      "type": "妖精",
+      "description": "借助月亮的力量攻击",
+      "visual": "粉色月光星芒",
+      "source": "https://wiki.52poke.com/wiki/月亮之力（招式）",
+      "power": 82
+    },
+    {
+      "id": 56,
+      "slot": 0,
+      "species": "六尾",
+      "name": "火花",
+      "english": "Ember",
+      "type": "火",
+      "description": "发射小火苗攻击",
+      "visual": "橙色火花",
+      "source": "https://wiki.52poke.com/wiki/火花（招式）",
+      "power": 28
+    },
+    {
+      "id": 57,
+      "slot": 0,
+      "species": "胖丁",
+      "name": "拍击",
+      "english": "Pound",
+      "type": "一般",
+      "description": "用前肢拍击对手",
+      "visual": "短促拍击",
+      "source": "https://wiki.52poke.com/wiki/拍击（招式）",
+      "power": 28
+    },
+    {
+      "id": 58,
+      "slot": 0,
+      "species": "超音蝠",
+      "name": "吸血",
+      "english": "Leech Life",
+      "type": "虫",
+      "description": "用尖牙吸取对手体力",
+      "visual": "虫系短促冲击",
+      "source": "https://wiki.52poke.com/wiki/吸血（招式）",
+      "power": 32
+    },
+    {
+      "id": 59,
+      "slot": 0,
+      "species": "走路草",
+      "name": "吸取",
+      "english": "Absorb",
+      "type": "草",
+      "description": "吸取对手体力",
+      "visual": "绿色能量轨迹",
+      "source": "https://wiki.52poke.com/wiki/吸取（招式）",
+      "power": 28
+    },
+    {
+      "id": 60,
+      "slot": 0,
+      "species": "派拉斯",
+      "name": "抓",
+      "english": "Scratch",
+      "type": "一般",
+      "description": "用爪子抓向对手",
+      "visual": "短促爪击",
+      "source": "https://wiki.52poke.com/wiki/抓（招式）",
+      "power": 28
+    },
+    {
+      "id": 61,
+      "slot": 1,
+      "species": "六尾",
+      "name": "电光一闪",
+      "english": "Quick Attack",
+      "type": "一般",
+      "description": "快速冲向对手",
+      "visual": "快速前冲",
+      "source": "https://wiki.52poke.com/wiki/电光一闪（招式）",
+      "power": 44
+    },
+    {
+      "id": 62,
+      "slot": 1,
+      "species": "胖丁",
+      "name": "魅惑之声",
+      "english": "Disarming Voice",
+      "type": "妖精",
+      "description": "用妖精之声攻击",
+      "visual": "粉色星芒与声波",
+      "source": "https://wiki.52poke.com/wiki/魅惑之声（招式）",
+      "power": 44
+    },
+    {
+      "id": 63,
+      "slot": 1,
+      "species": "超音蝠",
+      "name": "咬住",
+      "english": "Bite",
+      "type": "一般",
+      "description": "用牙齿咬住对手",
+      "visual": "咬击轨迹",
+      "source": "https://wiki.52poke.com/wiki/咬住（招式）",
+      "power": 44
+    },
+    {
+      "id": 64,
+      "slot": 1,
+      "species": "走路草",
+      "name": "溶解液",
+      "english": "Acid",
+      "type": "毒",
+      "description": "用酸液攻击对手",
+      "visual": "紫色液滴",
+      "source": "https://wiki.52poke.com/wiki/溶解液（招式）",
+      "power": 44
+    },
+    {
+      "id": 65,
+      "slot": 1,
+      "species": "派拉斯",
+      "name": "吸取",
+      "english": "Absorb",
+      "type": "草",
+      "description": "吸取对手体力",
+      "visual": "绿色能量轨迹",
+      "source": "https://wiki.52poke.com/wiki/吸取（招式）",
+      "power": 40
+    },
+    {
+      "id": 66,
+      "slot": 2,
+      "species": "六尾",
+      "name": "火焰旋涡",
+      "english": "Fire Spin",
+      "type": "火",
+      "description": "用旋转火焰攻击",
+      "visual": "旋转火星",
+      "source": "https://wiki.52poke.com/wiki/火焰旋涡（招式）",
+      "power": 58
+    },
+    {
+      "id": 67,
+      "slot": 2,
+      "species": "胖丁",
+      "name": "巨声",
+      "english": "Hyper Voice",
+      "type": "一般",
+      "description": "用响亮的声音攻击",
+      "visual": "扩散声波",
+      "source": "https://wiki.52poke.com/wiki/巨声（招式）",
+      "power": 66
+    },
+    {
+      "id": 68,
+      "slot": 2,
+      "species": "超音蝠",
+      "name": "空气利刃",
+      "english": "Air Cutter",
+      "type": "飞行",
+      "description": "发出锐利气流攻击",
+      "visual": "短促风刃",
+      "source": "https://wiki.52poke.com/wiki/空气利刃（招式）",
+      "power": 58
+    },
+    {
+      "id": 69,
+      "slot": 2,
+      "species": "走路草",
+      "name": "超级吸取",
+      "english": "Mega Drain",
+      "type": "草",
+      "description": "用更强能量吸取体力",
+      "visual": "绿色能量轨迹",
+      "source": "https://wiki.52poke.com/wiki/超级吸取（招式）",
+      "power": 58
+    },
+    {
+      "id": 70,
+      "slot": 2,
+      "species": "派拉斯",
+      "name": "连斩",
+      "english": "Fury Cutter",
+      "type": "虫",
+      "description": "用锋利前肢斩击",
+      "visual": "虫系斩击",
+      "source": "https://wiki.52poke.com/wiki/连斩（招式）",
+      "power": 58
+    },
+    {
+      "id": 71,
+      "slot": 3,
+      "species": "六尾",
+      "name": "喷射火焰",
+      "english": "Flamethrower",
+      "type": "火",
+      "description": "喷射强烈火焰攻击",
+      "visual": "橙色火焰",
+      "source": "https://wiki.52poke.com/wiki/喷射火焰（招式）",
+      "power": 82
+    },
+    {
+      "id": 72,
+      "slot": 3,
+      "species": "胖丁",
+      "name": "月亮之力",
+      "english": "Moonblast",
+      "type": "妖精",
+      "description": "借助月亮的力量攻击",
+      "visual": "粉色月光星芒",
+      "source": "https://wiki.52poke.com/wiki/月亮之力（招式）",
+      "power": 82
+    },
+    {
+      "id": 73,
+      "slot": 3,
+      "species": "超音蝠",
+      "name": "毒液冲击",
+      "english": "Venoshock",
+      "type": "毒",
+      "description": "将毒液泼向对手",
+      "visual": "紫色毒液",
+      "source": "https://wiki.52poke.com/wiki/毒液冲击（招式）",
+      "power": 74
+    },
+    {
+      "id": 74,
+      "slot": 3,
+      "species": "走路草",
+      "name": "花瓣舞",
+      "english": "Petal Dance",
+      "type": "草",
+      "description": "用花瓣般的能量攻击",
+      "visual": "绿色叶片轨迹",
+      "source": "https://wiki.52poke.com/wiki/花瓣舞（招式）",
+      "power": 82
+    },
+    {
+      "id": 75,
+      "slot": 3,
+      "species": "派拉斯",
+      "name": "十字剪",
+      "english": "X-Scissor",
+      "type": "虫",
+      "description": "交叉前肢斩向对手",
+      "visual": "虫系交叉斩击",
+      "source": "https://wiki.52poke.com/wiki/十字剪（招式）",
+      "power": 74
+    },
+    {
+      "id": 76,
+      "slot": 0,
+      "species": "毛球",
+      "name": "撞击",
+      "english": "Tackle",
+      "type": "一般",
+      "description": "用身体撞击对手",
+      "visual": "短促撞击",
+      "source": "https://wiki.52poke.com/wiki/撞击（招式）",
+      "power": 28
+    },
+    {
+      "id": 77,
+      "slot": 0,
+      "species": "地鼠",
+      "name": "抓",
+      "english": "Scratch",
+      "type": "一般",
+      "description": "用尖锐的爪子抓击",
+      "visual": "短促爪击",
+      "source": "https://wiki.52poke.com/wiki/抓（招式）",
+      "power": 28
+    },
+    {
+      "id": 78,
+      "slot": 0,
+      "species": "喵喵",
+      "name": "抓",
+      "english": "Scratch",
+      "type": "一般",
+      "description": "用尖锐的爪子抓击",
+      "visual": "短促爪击",
+      "source": "https://wiki.52poke.com/wiki/抓（招式）",
+      "power": 28
+    },
+    {
+      "id": 79,
+      "slot": 0,
+      "species": "可达鸭",
+      "name": "水枪",
+      "english": "Water Gun",
+      "type": "水",
+      "description": "喷射强劲水流",
+      "visual": "蓝色水流",
+      "source": "https://wiki.52poke.com/wiki/水枪（招式）",
+      "power": 28
+    },
+    {
+      "id": 80,
+      "slot": 0,
+      "species": "猴怪",
+      "name": "抓",
+      "english": "Scratch",
+      "type": "一般",
+      "description": "用尖锐的爪子抓击",
+      "visual": "短促爪击",
+      "source": "https://wiki.52poke.com/wiki/抓（招式）",
+      "power": 28
+    },
+    {
+      "id": 81,
+      "slot": 1,
+      "species": "毛球",
+      "name": "吸血",
+      "english": "Leech Life",
+      "type": "虫",
+      "description": "用尖牙攻击对手",
+      "visual": "虫系短促冲击",
+      "source": "https://wiki.52poke.com/wiki/吸血（招式）",
+      "power": 44
+    },
+    {
+      "id": 82,
+      "slot": 1,
+      "species": "地鼠",
+      "name": "掷泥",
+      "english": "Mud-Slap",
+      "type": "地面",
+      "description": "向对手投掷泥土",
+      "visual": "棕色泥土轨迹",
+      "source": "https://wiki.52poke.com/wiki/掷泥（招式）",
+      "power": 40
+    },
+    {
+      "id": 83,
+      "slot": 1,
+      "species": "喵喵",
+      "name": "咬住",
+      "english": "Bite",
+      "type": "一般",
+      "description": "用牙齿咬住对手",
+      "visual": "短促咬击",
+      "source": "https://wiki.52poke.com/wiki/咬住（招式）",
+      "power": 44
+    },
+    {
+      "id": 84,
+      "slot": 1,
+      "species": "可达鸭",
+      "name": "抓",
+      "english": "Scratch",
+      "type": "一般",
+      "description": "用尖锐的爪子抓击",
+      "visual": "短促爪击",
+      "source": "https://wiki.52poke.com/wiki/抓（招式）",
+      "power": 40
+    },
+    {
+      "id": 85,
+      "slot": 1,
+      "species": "猴怪",
+      "name": "踢倒",
+      "english": "Low Kick",
+      "type": "格斗",
+      "description": "用腿扫向对手",
+      "visual": "橙红色短促踢击",
+      "source": "https://wiki.52poke.com/wiki/踢倒（招式）",
+      "power": 44
+    },
+    {
+      "id": 86,
+      "slot": 2,
+      "species": "毛球",
+      "name": "幻象光线",
+      "english": "Psybeam",
+      "type": "超能力",
+      "description": "发出神秘的光线攻击",
+      "visual": "紫粉色同心光环",
+      "source": "https://wiki.52poke.com/wiki/幻象光线（招式）",
+      "power": 58
+    },
+    {
+      "id": 87,
+      "slot": 2,
+      "species": "地鼠",
+      "name": "挖洞",
+      "english": "Dig",
+      "type": "地面",
+      "description": "钻地后突袭对手",
+      "visual": "棕色地面冲击",
+      "source": "https://wiki.52poke.com/wiki/挖洞（招式）",
+      "power": 58
+    },
+    {
+      "id": 88,
+      "slot": 2,
+      "species": "喵喵",
+      "name": "乱抓",
+      "english": "Fury Swipes",
+      "type": "一般",
+      "description": "用爪子连续抓击",
+      "visual": "短促连续爪击",
+      "source": "https://wiki.52poke.com/wiki/乱抓（招式）",
+      "power": 58
+    },
+    {
+      "id": 89,
+      "slot": 2,
+      "species": "可达鸭",
+      "name": "水之波动",
+      "english": "Water Pulse",
+      "type": "水",
+      "description": "用水的震动攻击",
+      "visual": "蓝色水波",
+      "source": "https://wiki.52poke.com/wiki/水之波动（招式）",
+      "power": 58
+    },
+    {
+      "id": 90,
+      "slot": 2,
+      "species": "猴怪",
+      "name": "空手劈",
+      "english": "Karate Chop",
+      "type": "格斗",
+      "description": "用手刀劈向对手",
+      "visual": "橙红色短促劈击",
+      "source": "https://wiki.52poke.com/wiki/空手劈（招式）",
+      "power": 58
+    },
+    {
+      "id": 91,
+      "slot": 3,
+      "species": "毛球",
+      "name": "虫鸣",
+      "english": "Bug Buzz",
+      "type": "虫",
+      "description": "用振动发出声波攻击",
+      "visual": "虫系扩散声波",
+      "source": "https://wiki.52poke.com/wiki/虫鸣（招式）",
+      "power": 74
+    },
+    {
+      "id": 92,
+      "slot": 3,
+      "species": "地鼠",
+      "name": "地震",
+      "english": "Earthquake",
+      "type": "地面",
+      "description": "震动地面攻击",
+      "visual": "棕色震动冲击",
+      "source": "https://wiki.52poke.com/wiki/地震（招式）",
+      "power": 82
+    },
+    {
+      "id": 93,
+      "slot": 3,
+      "species": "喵喵",
+      "name": "劈开",
+      "english": "Slash",
+      "type": "一般",
+      "description": "用利爪劈向对手",
+      "visual": "短促利爪斩击",
+      "source": "https://wiki.52poke.com/wiki/劈开（招式）",
+      "power": 74
+    },
+    {
+      "id": 94,
+      "slot": 3,
+      "species": "可达鸭",
+      "name": "念力",
+      "english": "Confusion",
+      "type": "超能力",
+      "description": "用念力攻击对手",
+      "visual": "紫粉色同心光环",
+      "source": "https://wiki.52poke.com/wiki/念力（招式）",
+      "power": 74
+    },
+    {
+      "id": 95,
+      "slot": 3,
+      "species": "猴怪",
+      "name": "十字劈",
+      "english": "Cross Chop",
+      "type": "格斗",
+      "description": "交叉双手劈向对手",
+      "visual": "橙红色交叉劈击",
+      "source": "https://wiki.52poke.com/wiki/十字劈（招式）",
+      "power": 74
+    },
+    {
+      "id": 96,
+      "slot": 0,
+      "species": "卡蒂狗",
+      "name": "火花",
+      "english": "Ember",
+      "type": "火",
+      "description": "发射小火焰攻击",
+      "visual": "橙色火花",
+      "source": "https://wiki.52poke.com/wiki/火花（招式）",
+      "power": 28
+    },
+    {
+      "id": 97,
+      "slot": 0,
+      "species": "蚊香蝌蚪",
+      "name": "水枪",
+      "english": "Water Gun",
+      "type": "水",
+      "description": "喷射强劲水流",
+      "visual": "蓝色水流",
+      "source": "https://wiki.52poke.com/wiki/水枪（招式）",
+      "power": 28
+    },
+    {
+      "id": 98,
+      "slot": 0,
+      "species": "凯西",
+      "name": "念力",
+      "english": "Confusion",
+      "type": "超能力",
+      "description": "用念力攻击对手",
+      "visual": "紫粉色同心光环",
+      "source": "https://wiki.52poke.com/wiki/念力（招式）",
+      "power": 32
+    },
+    {
+      "id": 99,
+      "slot": 0,
+      "species": "腕力",
+      "name": "踢倒",
+      "english": "Low Kick",
+      "type": "格斗",
+      "description": "用腿扫向对手",
+      "visual": "橙红色短促踢击",
+      "source": "https://wiki.52poke.com/wiki/踢倒（招式）",
+      "power": 32
+    },
+    {
+      "id": 100,
+      "slot": 1,
+      "species": "卡蒂狗",
+      "name": "咬住",
+      "english": "Bite",
+      "type": "一般",
+      "description": "用牙齿咬住对手",
+      "visual": "短促咬击",
+      "source": "https://wiki.52poke.com/wiki/咬住（招式）",
+      "power": 44
+    },
+    {
+      "id": 101,
+      "slot": 1,
+      "species": "蚊香蝌蚪",
+      "name": "拍击",
+      "english": "Pound",
+      "type": "一般",
+      "description": "用前肢拍击对手",
+      "visual": "短促拍击",
+      "source": "https://wiki.52poke.com/wiki/拍击（招式）",
+      "power": 40
+    },
+    {
+      "id": 102,
+      "slot": 1,
+      "species": "凯西",
+      "name": "幻象光线",
+      "english": "Psybeam",
+      "type": "超能力",
+      "description": "发出神秘的光线攻击",
+      "visual": "紫粉色同心光环",
+      "source": "https://wiki.52poke.com/wiki/幻象光线（招式）",
+      "power": 44
+    },
+    {
+      "id": 103,
+      "slot": 1,
+      "species": "腕力",
+      "name": "空手劈",
+      "english": "Karate Chop",
+      "type": "格斗",
+      "description": "用手刀劈向对手",
+      "visual": "橙红色短促劈击",
+      "source": "https://wiki.52poke.com/wiki/空手劈（招式）",
+      "power": 44
+    },
+    {
+      "id": 104,
+      "slot": 2,
+      "species": "卡蒂狗",
+      "name": "火焰牙",
+      "english": "Fire Fang",
+      "type": "火",
+      "description": "用带有火焰的牙齿咬击",
+      "visual": "橙红色火焰",
+      "source": "https://wiki.52poke.com/wiki/火焰牙（招式）",
+      "power": 58
+    },
+    {
+      "id": 105,
+      "slot": 2,
+      "species": "蚊香蝌蚪",
+      "name": "泡沫光线",
+      "english": "Bubble Beam",
+      "type": "水",
+      "description": "发射泡沫光线攻击",
+      "visual": "蓝色泡沫水流",
+      "source": "https://wiki.52poke.com/wiki/泡沫光线（招式）",
+      "power": 58
+    },
+    {
+      "id": 106,
+      "slot": 2,
+      "species": "凯西",
+      "name": "精神利刃",
+      "english": "Psycho Cut",
+      "type": "超能力",
+      "description": "用精神利刃劈向对手",
+      "visual": "紫粉色光刃",
+      "source": "https://wiki.52poke.com/wiki/精神利刃（招式）",
+      "power": 58
+    },
+    {
+      "id": 107,
+      "slot": 2,
+      "species": "腕力",
+      "name": "劈瓦",
+      "english": "Brick Break",
+      "type": "格斗",
+      "description": "用手刀劈击对手",
+      "visual": "橙红色短促劈击",
+      "source": "https://wiki.52poke.com/wiki/劈瓦（招式）",
+      "power": 58
+    },
+    {
+      "id": 108,
+      "slot": 3,
+      "species": "卡蒂狗",
+      "name": "喷射火焰",
+      "english": "Flamethrower",
+      "type": "火",
+      "description": "喷射猛烈火焰攻击",
+      "visual": "橙红色火焰",
+      "source": "https://wiki.52poke.com/wiki/喷射火焰（招式）",
+      "power": 82
+    },
+    {
+      "id": 109,
+      "slot": 3,
+      "species": "蚊香蝌蚪",
+      "name": "水之波动",
+      "english": "Water Pulse",
+      "type": "水",
+      "description": "用水的震动攻击",
+      "visual": "蓝色水波",
+      "source": "https://wiki.52poke.com/wiki/水之波动（招式）",
+      "power": 74
+    },
+    {
+      "id": 110,
+      "slot": 3,
+      "species": "凯西",
+      "name": "精神强念",
+      "english": "Psychic",
+      "type": "超能力",
+      "description": "用强大的念力攻击",
+      "visual": "紫粉色同心光环",
+      "source": "https://wiki.52poke.com/wiki/精神强念（招式）",
+      "power": 82
+    },
+    {
+      "id": 111,
+      "slot": 3,
+      "species": "腕力",
+      "name": "十字劈",
+      "english": "Cross Chop",
+      "type": "格斗",
+      "description": "交叉双手劈向对手",
+      "visual": "橙红色交叉劈击",
+      "source": "https://wiki.52poke.com/wiki/十字劈（招式）",
+      "power": 74
+    },
+    {
+      "id": 112,
+      "slot": 0,
+      "species": "喇叭芽",
+      "name": "藤鞭",
+      "english": "Vine Whip",
+      "type": "草",
+      "description": "挥动细长藤蔓抽打",
+      "visual": "绿色藤蔓",
+      "source": "https://wiki.52poke.com/wiki/藤鞭（招式）",
+      "power": 32
+    },
+    {
+      "id": 113,
+      "slot": 0,
+      "species": "玛瑙水母",
+      "name": "毒针",
+      "english": "Poison Sting",
+      "type": "毒",
+      "description": "射出毒针攻击",
+      "visual": "紫色针状光点",
+      "source": "https://wiki.52poke.com/wiki/毒针（招式）",
+      "power": 28
+    },
+    {
+      "id": 114,
+      "slot": 0,
+      "species": "小拳石",
+      "name": "撞击",
+      "english": "Tackle",
+      "type": "一般",
+      "description": "用身体撞击对手",
+      "visual": "短促撞击",
+      "source": "https://wiki.52poke.com/wiki/撞击（招式）",
+      "power": 28
+    },
+    {
+      "id": 115,
+      "slot": 1,
+      "species": "喇叭芽",
+      "name": "溶解液",
+      "english": "Acid",
+      "type": "毒",
+      "description": "用酸液攻击对手",
+      "visual": "紫色酸液光团",
+      "source": "https://wiki.52poke.com/wiki/溶解液（招式）",
+      "power": 44
+    },
+    {
+      "id": 116,
+      "slot": 1,
+      "species": "玛瑙水母",
+      "name": "溶解液",
+      "english": "Acid",
+      "type": "毒",
+      "description": "用酸液攻击对手",
+      "visual": "紫色酸液光团",
+      "source": "https://wiki.52poke.com/wiki/溶解液（招式）",
+      "power": 44
+    },
+    {
+      "id": 117,
+      "slot": 1,
+      "species": "小拳石",
+      "name": "落石",
+      "english": "Rock Throw",
+      "type": "岩石",
+      "description": "投掷岩石攻击",
+      "visual": "棕灰色岩石",
+      "source": "https://wiki.52poke.com/wiki/落石（招式）",
+      "power": 44
+    },
+    {
+      "id": 118,
+      "slot": 2,
+      "species": "喇叭芽",
+      "name": "飞叶快刀",
+      "english": "Razor Leaf",
+      "type": "草",
+      "description": "飞射锋利的叶片",
+      "visual": "绿色飞叶",
+      "source": "https://wiki.52poke.com/wiki/飞叶快刀（招式）",
+      "power": 58
+    },
+    {
+      "id": 119,
+      "slot": 2,
+      "species": "玛瑙水母",
+      "name": "泡沫光线",
+      "english": "Bubble Beam",
+      "type": "水",
+      "description": "发射泡沫光线攻击",
+      "visual": "蓝色泡沫水流",
+      "source": "https://wiki.52poke.com/wiki/泡沫光线（招式）",
+      "power": 58
+    },
+    {
+      "id": 120,
+      "slot": 2,
+      "species": "小拳石",
+      "name": "岩崩",
+      "english": "Rock Slide",
+      "type": "岩石",
+      "description": "用岩石攻击对手",
+      "visual": "棕灰色岩石",
+      "source": "https://wiki.52poke.com/wiki/岩崩（招式）",
+      "power": 58
+    },
+    {
+      "id": 121,
+      "slot": 3,
+      "species": "喇叭芽",
+      "name": "种子炸弹",
+      "english": "Seed Bomb",
+      "type": "草",
+      "description": "发射坚硬的种子攻击",
+      "visual": "绿色种子光团",
+      "source": "https://wiki.52poke.com/wiki/种子炸弹（招式）",
+      "power": 74
+    },
+    {
+      "id": 122,
+      "slot": 3,
+      "species": "玛瑙水母",
+      "name": "水炮",
+      "english": "Hydro Pump",
+      "type": "水",
+      "description": "喷射猛烈水流攻击",
+      "visual": "蓝色水流",
+      "source": "https://wiki.52poke.com/wiki/水炮（招式）",
+      "power": 82
+    },
+    {
+      "id": 123,
+      "slot": 3,
+      "species": "小拳石",
+      "name": "地震",
+      "english": "Earthquake",
+      "type": "地面",
+      "description": "震动地面攻击",
+      "visual": "土黄色地面震纹",
+      "source": "https://wiki.52poke.com/wiki/地震（招式）",
+      "power": 82
+    },
+    {
+      "id": 124,
+      "slot": 0,
+      "species": "小火马",
+      "name": "火花",
+      "english": "Ember",
+      "type": "火",
+      "description": "发射小火焰攻击",
+      "visual": "火团与火星",
+      "source": "https://wiki.52poke.com/wiki/火花（招式）",
+      "power": 28
+    },
+    {
+      "id": 125,
+      "slot": 0,
+      "species": "呆呆兽",
+      "name": "撞击",
+      "english": "Tackle",
+      "type": "一般",
+      "description": "用身体撞击对手",
+      "visual": "短促撞击",
+      "source": "https://wiki.52poke.com/wiki/撞击（招式）",
+      "power": 28
+    },
+    {
+      "id": 126,
+      "slot": 0,
+      "species": "小磁怪",
+      "name": "电击",
+      "english": "Thunder Shock",
+      "type": "电",
+      "description": "释放电流攻击",
+      "visual": "锯齿电流",
+      "source": "https://wiki.52poke.com/wiki/电击（招式）",
+      "power": 28
+    },
+    {
+      "id": 127,
+      "slot": 0,
+      "species": "大葱鸭",
+      "name": "啄",
+      "english": "Peck",
+      "type": "飞行",
+      "description": "用尖喙啄击",
+      "visual": "白色冲刺气流",
+      "source": "https://wiki.52poke.com/wiki/啄（招式）",
+      "power": 28
+    },
+    {
+      "id": 128,
+      "slot": 0,
+      "species": "嘟嘟",
+      "name": "啄",
+      "english": "Peck",
+      "type": "飞行",
+      "description": "用尖喙啄击",
+      "visual": "白色冲刺气流",
+      "source": "https://wiki.52poke.com/wiki/啄（招式）",
+      "power": 28
+    },
+    {
+      "id": 129,
+      "slot": 0,
+      "species": "小海狮",
+      "name": "头锤",
+      "english": "Headbutt",
+      "type": "一般",
+      "description": "用头部撞击对手",
+      "visual": "短促撞击",
+      "source": "https://wiki.52poke.com/wiki/头锤（招式）",
+      "power": 32
+    },
+    {
+      "id": 130,
+      "slot": 1,
+      "species": "小火马",
+      "name": "踩踏",
+      "english": "Stomp",
+      "type": "一般",
+      "description": "抬起前蹄踩踏",
+      "visual": "短促撞击",
+      "source": "https://wiki.52poke.com/wiki/踩踏（招式）",
+      "power": 44
+    },
+    {
+      "id": 131,
+      "slot": 1,
+      "species": "呆呆兽",
+      "name": "水枪",
+      "english": "Water Gun",
+      "type": "水",
+      "description": "喷射水流攻击",
+      "visual": "蓝色水流",
+      "source": "https://wiki.52poke.com/wiki/水枪（招式）",
+      "power": 40
+    },
+    {
+      "id": 132,
+      "slot": 1,
+      "species": "小磁怪",
+      "name": "电光",
+      "english": "Spark",
+      "type": "电",
+      "description": "释放电光冲击",
+      "visual": "电流与闪光",
+      "source": "https://wiki.52poke.com/wiki/电光（招式）",
+      "power": 40
+    },
+    {
+      "id": 133,
+      "slot": 1,
+      "species": "大葱鸭",
+      "name": "连斩",
+      "english": "Fury Cutter",
+      "type": "虫",
+      "description": "用大葱连续挥击",
+      "visual": "绿色斩击",
+      "source": "https://wiki.52poke.com/wiki/连斩（招式）",
+      "power": 44
+    },
+    {
+      "id": 134,
+      "slot": 1,
+      "species": "嘟嘟",
+      "name": "乱击",
+      "english": "Fury Attack",
+      "type": "一般",
+      "description": "用尖喙连续攻击",
+      "visual": "短促连击",
+      "source": "https://wiki.52poke.com/wiki/乱击（招式）",
+      "power": 44
+    },
+    {
+      "id": 135,
+      "slot": 1,
+      "species": "小海狮",
+      "name": "冰砾",
+      "english": "Ice Shard",
+      "type": "冰",
+      "description": "发射冰块攻击",
+      "visual": "浅蓝冰晶",
+      "source": "https://wiki.52poke.com/wiki/冰砾（招式）",
+      "power": 44
+    },
+    {
+      "id": 136,
+      "slot": 2,
+      "species": "小火马",
+      "name": "火焰轮",
+      "english": "Flame Wheel",
+      "type": "火",
+      "description": "以火焰包裹身体冲击",
+      "visual": "火焰冲刺",
+      "source": "https://wiki.52poke.com/wiki/火焰轮（招式）",
+      "power": 58
+    },
+    {
+      "id": 137,
+      "slot": 2,
+      "species": "呆呆兽",
+      "name": "念力",
+      "english": "Confusion",
+      "type": "超能力",
+      "description": "使用念力攻击",
+      "visual": "紫粉光环",
+      "source": "https://wiki.52poke.com/wiki/念力（招式）",
+      "power": 58
+    },
+    {
+      "id": 138,
+      "slot": 2,
+      "species": "小磁怪",
+      "name": "加农光炮",
+      "english": "Flash Cannon",
+      "type": "钢",
+      "description": "聚集光芒发射",
+      "visual": "银白光束",
+      "source": "https://wiki.52poke.com/wiki/加农光炮（招式）",
+      "power": 58
+    },
+    {
+      "id": 139,
+      "slot": 2,
+      "species": "大葱鸭",
+      "name": "劈开",
+      "english": "Slash",
+      "type": "一般",
+      "description": "挥动大葱劈击",
+      "visual": "白色斩痕",
+      "source": "https://wiki.52poke.com/wiki/劈开（招式）",
+      "power": 58
+    },
+    {
+      "id": 140,
+      "slot": 2,
+      "species": "嘟嘟",
+      "name": "三重攻击",
+      "english": "Tri Attack",
+      "type": "一般",
+      "description": "由三个方向同时攻击",
+      "visual": "三道冲击光",
+      "source": "https://wiki.52poke.com/wiki/三重攻击（招式）",
+      "power": 58
+    },
+    {
+      "id": 141,
+      "slot": 2,
+      "species": "小海狮",
+      "name": "极光束",
+      "english": "Aurora Beam",
+      "type": "冰",
+      "description": "发射极光攻击",
+      "visual": "浅蓝冰光",
+      "source": "https://wiki.52poke.com/wiki/极光束（招式）",
+      "power": 58
+    },
+    {
+      "id": 142,
+      "slot": 3,
+      "species": "小火马",
+      "name": "喷射火焰",
+      "english": "Flamethrower",
+      "type": "火",
+      "description": "喷射猛烈火焰攻击",
+      "visual": "火焰喷射",
+      "source": "https://wiki.52poke.com/wiki/喷射火焰（招式）",
+      "power": 82
+    },
+    {
+      "id": 143,
+      "slot": 3,
+      "species": "呆呆兽",
+      "name": "精神强念",
+      "english": "Psychic",
+      "type": "超能力",
+      "description": "释放强大念力攻击",
+      "visual": "紫粉光环",
+      "source": "https://wiki.52poke.com/wiki/精神强念（招式）",
+      "power": 82
+    },
+    {
+      "id": 144,
+      "slot": 3,
+      "species": "小磁怪",
+      "name": "十万伏特",
+      "english": "Thunderbolt",
+      "type": "电",
+      "description": "释放强大电流攻击",
+      "visual": "电流与强光",
+      "source": "https://wiki.52poke.com/wiki/十万伏特（招式）",
+      "power": 82
+    },
+    {
+      "id": 145,
+      "slot": 3,
+      "species": "大葱鸭",
+      "name": "空气斩",
+      "english": "Air Slash",
+      "type": "飞行",
+      "description": "发射空气利刃攻击",
+      "visual": "白色风刃",
+      "source": "https://wiki.52poke.com/wiki/空气斩（招式）",
+      "power": 74
+    },
+    {
+      "id": 146,
+      "slot": 3,
+      "species": "嘟嘟",
+      "name": "啄钻",
+      "english": "Drill Peck",
+      "type": "飞行",
+      "description": "旋转尖喙攻击",
+      "visual": "白色旋转气流",
+      "source": "https://wiki.52poke.com/wiki/啄钻（招式）",
+      "power": 74
+    },
+    {
+      "id": 147,
+      "slot": 3,
+      "species": "小海狮",
+      "name": "冰冻光束",
+      "english": "Ice Beam",
+      "type": "冰",
+      "description": "发射冰冷光束攻击",
+      "visual": "浅蓝冰束",
+      "source": "https://wiki.52poke.com/wiki/冰冻光束（招式）",
+      "power": 82
+    },
+    {
+      "id": 148,
+      "slot": 0,
+      "species": "臭泥",
+      "name": "拍击",
+      "english": "Pound",
+      "type": "一般",
+      "description": "用身体拍打对手",
+      "visual": "短促撞击",
+      "source": "https://wiki.52poke.com/wiki/拍击（招式）",
+      "power": 28
+    },
+    {
+      "id": 149,
+      "slot": 0,
+      "species": "大舌贝",
+      "name": "撞击",
+      "english": "Tackle",
+      "type": "一般",
+      "description": "用贝壳撞击对手",
+      "visual": "短促撞击",
+      "source": "https://wiki.52poke.com/wiki/撞击（招式）",
+      "power": 28
+    },
+    {
+      "id": 150,
+      "slot": 0,
+      "species": "鬼斯",
+      "name": "舌舔",
+      "english": "Lick",
+      "type": "幽灵",
+      "description": "用舌头攻击对手",
+      "visual": "紫色幽光",
+      "source": "https://wiki.52poke.com/wiki/舌舔（招式）",
+      "power": 28
+    },
+    {
+      "id": 151,
+      "slot": 0,
+      "species": "大岩蛇",
+      "name": "撞击",
+      "english": "Tackle",
+      "type": "一般",
+      "description": "用身体撞击对手",
+      "visual": "短促撞击",
+      "source": "https://wiki.52poke.com/wiki/撞击（招式）",
+      "power": 28
+    },
+    {
+      "id": 152,
+      "slot": 0,
+      "species": "催眠貘",
+      "name": "拍击",
+      "english": "Pound",
+      "type": "一般",
+      "description": "用手拍打对手",
+      "visual": "短促撞击",
+      "source": "https://wiki.52poke.com/wiki/拍击（招式）",
+      "power": 28
+    },
+    {
+      "id": 153,
+      "slot": 1,
+      "species": "臭泥",
+      "name": "污泥攻击",
+      "english": "Sludge",
+      "type": "毒",
+      "description": "投掷污泥攻击",
+      "visual": "紫色毒团",
+      "source": "https://wiki.52poke.com/wiki/污泥攻击（招式）",
+      "power": 44
+    },
+    {
+      "id": 154,
+      "slot": 1,
+      "species": "大舌贝",
+      "name": "冰砾",
+      "english": "Ice Shard",
+      "type": "冰",
+      "description": "发射冰块攻击",
+      "visual": "浅蓝冰晶",
+      "source": "https://wiki.52poke.com/wiki/冰砾（招式）",
+      "power": 44
+    },
+    {
+      "id": 155,
+      "slot": 1,
+      "species": "鬼斯",
+      "name": "祸不单行",
+      "english": "Hex",
+      "type": "幽灵",
+      "description": "释放幽光攻击",
+      "visual": "紫色幽光环",
+      "source": "https://wiki.52poke.com/wiki/祸不单行（招式）",
+      "power": 44
+    },
+    {
+      "id": 156,
+      "slot": 1,
+      "species": "大岩蛇",
+      "name": "落石",
+      "english": "Rock Throw",
+      "type": "岩石",
+      "description": "投掷岩石攻击",
+      "visual": "褐色碎岩",
+      "source": "https://wiki.52poke.com/wiki/落石（招式）",
+      "power": 44
+    },
+    {
+      "id": 157,
+      "slot": 1,
+      "species": "催眠貘",
+      "name": "念力",
+      "english": "Confusion",
+      "type": "超能力",
+      "description": "使用念力攻击",
+      "visual": "紫粉光环",
+      "source": "https://wiki.52poke.com/wiki/念力（招式）",
+      "power": 44
+    },
+    {
+      "id": 158,
+      "slot": 2,
+      "species": "臭泥",
+      "name": "污泥炸弹",
+      "english": "Sludge Bomb",
+      "type": "毒",
+      "description": "发射污泥团攻击",
+      "visual": "紫色毒团",
+      "source": "https://wiki.52poke.com/wiki/污泥炸弹（招式）",
+      "power": 58
+    },
+    {
+      "id": 159,
+      "slot": 2,
+      "species": "大舌贝",
+      "name": "极光束",
+      "english": "Aurora Beam",
+      "type": "冰",
+      "description": "发射极光攻击",
+      "visual": "浅蓝冰光",
+      "source": "https://wiki.52poke.com/wiki/极光束（招式）",
+      "power": 58
+    },
+    {
+      "id": 160,
+      "slot": 2,
+      "species": "鬼斯",
+      "name": "暗影球",
+      "english": "Shadow Ball",
+      "type": "幽灵",
+      "description": "发射暗影球攻击",
+      "visual": "紫色暗影团",
+      "source": "https://wiki.52poke.com/wiki/暗影球（招式）",
+      "power": 66
+    },
+    {
+      "id": 161,
+      "slot": 2,
+      "species": "大岩蛇",
+      "name": "岩崩",
+      "english": "Rock Slide",
+      "type": "岩石",
+      "description": "用岩石压击对手",
+      "visual": "褐色碎岩",
+      "source": "https://wiki.52poke.com/wiki/岩崩（招式）",
+      "power": 58
+    },
+    {
+      "id": 162,
+      "slot": 2,
+      "species": "催眠貘",
+      "name": "精神利刃",
+      "english": "Psycho Cut",
+      "type": "超能力",
+      "description": "释放念力利刃攻击",
+      "visual": "紫粉光刃",
+      "source": "https://wiki.52poke.com/wiki/精神利刃（招式）",
+      "power": 58
+    },
+    {
+      "id": 163,
+      "slot": 3,
+      "species": "臭泥",
+      "name": "毒击",
+      "english": "Poison Jab",
+      "type": "毒",
+      "description": "用毒性身体刺击",
+      "visual": "紫色冲击",
+      "source": "https://wiki.52poke.com/wiki/毒击（招式）",
+      "power": 74
+    },
+    {
+      "id": 164,
+      "slot": 3,
+      "species": "大舌贝",
+      "name": "冰冻光束",
+      "english": "Ice Beam",
+      "type": "冰",
+      "description": "发射冰冷光束攻击",
+      "visual": "浅蓝冰束",
+      "source": "https://wiki.52poke.com/wiki/冰冻光束（招式）",
+      "power": 82
+    },
+    {
+      "id": 165,
+      "slot": 3,
+      "species": "鬼斯",
+      "name": "暗影爪",
+      "english": "Shadow Claw",
+      "type": "幽灵",
+      "description": "用暗影利爪攻击",
+      "visual": "紫色爪痕",
+      "source": "https://wiki.52poke.com/wiki/暗影爪（招式）",
+      "power": 74
+    },
+    {
+      "id": 166,
+      "slot": 3,
+      "species": "大岩蛇",
+      "name": "地震",
+      "english": "Earthquake",
+      "type": "地面",
+      "description": "震动地面攻击",
+      "visual": "沙色地面冲击",
+      "source": "https://wiki.52poke.com/wiki/地震（招式）",
+      "power": 82
+    },
+    {
+      "id": 167,
+      "slot": 3,
+      "species": "催眠貘",
+      "name": "精神强念",
+      "english": "Psychic",
+      "type": "超能力",
+      "description": "释放强大念力攻击",
+      "visual": "紫粉光环",
+      "source": "https://wiki.52poke.com/wiki/精神强念（招式）",
+      "power": 82
+    },
+    {
+      "id": 168,
+      "slot": 0,
+      "species": "大钳蟹",
+      "name": "夹住",
+      "english": "Vice Grip",
+      "type": "一般",
+      "description": "用双钳夹住对手",
+      "visual": "短促夹击",
+      "source": "https://wiki.52poke.com/wiki/夹住（招式）",
+      "power": 32
+    },
+    {
+      "id": 169,
+      "slot": 0,
+      "species": "霹雳电球",
+      "name": "撞击",
+      "english": "Tackle",
+      "type": "一般",
+      "description": "用身体撞击对手",
+      "visual": "短促撞击",
+      "source": "https://wiki.52poke.com/wiki/撞击（招式）",
+      "power": 28
+    },
+    {
+      "id": 170,
+      "slot": 0,
+      "species": "蛋蛋",
+      "name": "撞击",
+      "english": "Tackle",
+      "type": "一般",
+      "description": "用身体撞击对手",
+      "visual": "短促撞击",
+      "source": "https://wiki.52poke.com/wiki/撞击（招式）",
+      "power": 28
+    },
+    {
+      "id": 171,
+      "slot": 0,
+      "species": "卡拉卡拉",
+      "name": "拍击",
+      "english": "Pound",
+      "type": "一般",
+      "description": "用手拍打对手",
+      "visual": "短促撞击",
+      "source": "https://wiki.52poke.com/wiki/拍击（招式）",
+      "power": 28
+    },
+    {
+      "id": 172,
+      "slot": 0,
+      "species": "飞腿郎",
+      "name": "踢倒",
+      "english": "Low Kick",
+      "type": "格斗",
+      "description": "压低身体踢击",
+      "visual": "橙色冲击",
+      "source": "https://wiki.52poke.com/wiki/踢倒（招式）",
+      "power": 32
+    },
+    {
+      "id": 173,
+      "slot": 1,
+      "species": "大钳蟹",
+      "name": "泡沫光线",
+      "english": "Bubble Beam",
+      "type": "水",
+      "description": "发射泡沫攻击",
+      "visual": "浅蓝泡沫",
+      "source": "https://wiki.52poke.com/wiki/泡沫光线（招式）",
+      "power": 44
+    },
+    {
+      "id": 174,
+      "slot": 1,
+      "species": "霹雳电球",
+      "name": "电击",
+      "english": "Thunder Shock",
+      "type": "电",
+      "description": "释放电流攻击",
+      "visual": "金色电弧",
+      "source": "https://wiki.52poke.com/wiki/电击（招式）",
+      "power": 40
+    },
+    {
+      "id": 175,
+      "slot": 1,
+      "species": "蛋蛋",
+      "name": "种子机关枪",
+      "english": "Bullet Seed",
+      "type": "草",
+      "description": "发射种子攻击",
+      "visual": "绿色种子",
+      "source": "https://wiki.52poke.com/wiki/种子机关枪（招式）",
+      "power": 44
+    },
+    {
+      "id": 176,
+      "slot": 1,
+      "species": "卡拉卡拉",
+      "name": "骨棒",
+      "english": "Bone Club",
+      "type": "地面",
+      "description": "用骨棒挥击",
+      "visual": "沙色冲击",
+      "source": "https://wiki.52poke.com/wiki/骨棒（招式）",
+      "power": 44
+    },
+    {
+      "id": 177,
+      "slot": 1,
+      "species": "飞腿郎",
+      "name": "二连踢",
+      "english": "Double Kick",
+      "type": "格斗",
+      "description": "快速踢击两次",
+      "visual": "橙色连击",
+      "source": "https://wiki.52poke.com/wiki/二连踢（招式）",
+      "power": 44
+    },
+    {
+      "id": 178,
+      "slot": 2,
+      "species": "大钳蟹",
+      "name": "蟹钳锤",
+      "english": "Crabhammer",
+      "type": "水",
+      "description": "用巨钳挥击",
+      "visual": "蓝色水浪",
+      "source": "https://wiki.52poke.com/wiki/蟹钳锤（招式）",
+      "power": 58
+    },
+    {
+      "id": 179,
+      "slot": 2,
+      "species": "霹雳电球",
+      "name": "电光",
+      "english": "Spark",
+      "type": "电",
+      "description": "用电光冲击",
+      "visual": "金色闪光",
+      "source": "https://wiki.52poke.com/wiki/电光（招式）",
+      "power": 54
+    },
+    {
+      "id": 180,
+      "slot": 2,
+      "species": "蛋蛋",
+      "name": "念力",
+      "english": "Confusion",
+      "type": "超能力",
+      "description": "使用念力攻击",
+      "visual": "紫粉光环",
+      "source": "https://wiki.52poke.com/wiki/念力（招式）",
+      "power": 58
+    },
+    {
+      "id": 181,
+      "slot": 2,
+      "species": "卡拉卡拉",
+      "name": "骨头回力镖",
+      "english": "Bonemerang",
+      "type": "地面",
+      "description": "投出回旋骨棒攻击",
+      "visual": "沙色回旋",
+      "source": "https://wiki.52poke.com/wiki/骨头回力镖（招式）",
+      "power": 58
+    },
+    {
+      "id": 182,
+      "slot": 2,
+      "species": "飞腿郎",
+      "name": "飞踢",
+      "english": "Jump Kick",
+      "type": "格斗",
+      "description": "跃起踢击对手",
+      "visual": "橙色飞踢",
+      "source": "https://wiki.52poke.com/wiki/飞踢（招式）",
+      "power": 58
+    },
+    {
+      "id": 183,
+      "slot": 3,
+      "species": "大钳蟹",
+      "name": "十字剪",
+      "english": "X-Scissor",
+      "type": "虫",
+      "description": "双钳交叉挥击",
+      "visual": "绿色交叉",
+      "source": "https://wiki.52poke.com/wiki/十字剪（招式）",
+      "power": 74
+    },
+    {
+      "id": 184,
+      "slot": 3,
+      "species": "霹雳电球",
+      "name": "十万伏特",
+      "english": "Thunderbolt",
+      "type": "电",
+      "description": "释放强力电流",
+      "visual": "金色雷电",
+      "source": "https://wiki.52poke.com/wiki/十万伏特（招式）",
+      "power": 82
+    },
+    {
+      "id": 185,
+      "slot": 3,
+      "species": "蛋蛋",
+      "name": "精神强念",
+      "english": "Psychic",
+      "type": "超能力",
+      "description": "释放强大念力",
+      "visual": "紫粉光环",
+      "source": "https://wiki.52poke.com/wiki/精神强念（招式）",
+      "power": 82
+    },
+    {
+      "id": 186,
+      "slot": 3,
+      "species": "卡拉卡拉",
+      "name": "骨棒乱打",
+      "english": "Bone Rush",
+      "type": "地面",
+      "description": "挥舞骨棒攻击",
+      "visual": "沙色连击",
+      "source": "https://wiki.52poke.com/wiki/骨棒乱打（招式）",
+      "power": 74
+    },
+    {
+      "id": 187,
+      "slot": 3,
+      "species": "飞腿郎",
+      "name": "百万吨重踢",
+      "english": "Mega Kick",
+      "type": "一般",
+      "description": "使出强力踢击",
+      "visual": "白色重击",
+      "source": "https://wiki.52poke.com/wiki/百万吨重踢（招式）",
+      "power": 74
+    },
+    {
+      "id": 188,
+      "slot": 0,
+      "species": "艾比郎",
+      "name": "音速拳",
+      "english": "Mach Punch",
+      "type": "格斗",
+      "description": "快速挥拳攻击",
+      "visual": "橙色冲击",
+      "source": "https://wiki.52poke.com/wiki/音速拳（招式）",
+      "power": 32
+    },
+    {
+      "id": 189,
+      "slot": 0,
+      "species": "大舌头",
+      "name": "舌舔",
+      "english": "Lick",
+      "type": "幽灵",
+      "description": "用舌头舔击对手",
+      "visual": "紫色幽光",
+      "source": "https://wiki.52poke.com/wiki/舌舔（招式）",
+      "power": 28
+    },
+    {
+      "id": 190,
+      "slot": 0,
+      "species": "瓦斯弹",
+      "name": "浊雾",
+      "english": "Smog",
+      "type": "毒",
+      "description": "喷出浊雾攻击",
+      "visual": "紫色雾点",
+      "source": "https://wiki.52poke.com/wiki/浊雾（招式）",
+      "power": 32
+    },
+    {
+      "id": 191,
+      "slot": 0,
+      "species": "独角犀牛",
+      "name": "角撞",
+      "english": "Horn Attack",
+      "type": "一般",
+      "description": "用角撞击对手",
+      "visual": "白色撞击",
+      "source": "https://wiki.52poke.com/wiki/角撞（招式）",
+      "power": 32
+    },
+    {
+      "id": 192,
+      "slot": 0,
+      "species": "吉利蛋",
+      "name": "拍击",
+      "english": "Pound",
+      "type": "一般",
+      "description": "用手拍打对手",
+      "visual": "短促拍击",
+      "source": "https://wiki.52poke.com/wiki/拍击（招式）",
+      "power": 28
+    },
+    {
+      "id": 193,
+      "slot": 0,
+      "species": "蔓藤怪",
+      "name": "吸取",
+      "english": "Absorb",
+      "type": "草",
+      "description": "吸取对手的能量",
+      "visual": "绿色光点",
+      "source": "https://wiki.52poke.com/wiki/吸取（招式）",
+      "power": 28
+    },
+    {
+      "id": 194,
+      "slot": 0,
+      "species": "袋兽",
+      "name": "拍击",
+      "english": "Pound",
+      "type": "一般",
+      "description": "用手拍打对手",
+      "visual": "短促拍击",
+      "source": "https://wiki.52poke.com/wiki/拍击（招式）",
+      "power": 28
+    },
+    {
+      "id": 195,
+      "slot": 0,
+      "species": "墨海马",
+      "name": "水枪",
+      "english": "Water Gun",
+      "type": "水",
+      "description": "喷射水流攻击",
+      "visual": "蓝色水流",
+      "source": "https://wiki.52poke.com/wiki/水枪（招式）",
+      "power": 28
+    },
+    {
+      "id": 196,
+      "slot": 1,
+      "species": "艾比郎",
+      "name": "雷电拳",
+      "english": "Thunder Punch",
+      "type": "电",
+      "description": "用带电的拳头攻击",
+      "visual": "金色电流",
+      "source": "https://wiki.52poke.com/wiki/雷电拳（招式）",
+      "power": 44
+    },
+    {
+      "id": 197,
+      "slot": 1,
+      "species": "大舌头",
+      "name": "踩踏",
+      "english": "Stomp",
+      "type": "一般",
+      "description": "用脚踩踏对手",
+      "visual": "白色冲击",
+      "source": "https://wiki.52poke.com/wiki/踩踏（招式）",
+      "power": 44
+    },
+    {
+      "id": 198,
+      "slot": 1,
+      "species": "瓦斯弹",
+      "name": "撞击",
+      "english": "Tackle",
+      "type": "一般",
+      "description": "用身体撞击对手",
+      "visual": "短促撞击",
+      "source": "https://wiki.52poke.com/wiki/撞击（招式）",
+      "power": 40
+    },
+    {
+      "id": 199,
+      "slot": 1,
+      "species": "独角犀牛",
+      "name": "岩石爆击",
+      "english": "Rock Blast",
+      "type": "岩石",
+      "description": "投射岩石攻击",
+      "visual": "岩色碎块",
+      "source": "https://wiki.52poke.com/wiki/岩石爆击（招式）",
+      "power": 44
+    },
+    {
+      "id": 200,
+      "slot": 1,
+      "species": "吉利蛋",
+      "name": "连环巴掌",
+      "english": "Double Slap",
+      "type": "一般",
+      "description": "连续拍打对手",
+      "visual": "白色连击",
+      "source": "https://wiki.52poke.com/wiki/连环巴掌（招式）",
+      "power": 44
+    },
+    {
+      "id": 201,
+      "slot": 1,
+      "species": "蔓藤怪",
+      "name": "藤鞭",
+      "english": "Vine Whip",
+      "type": "草",
+      "description": "用藤蔓抽打对手",
+      "visual": "绿色藤蔓",
+      "source": "https://wiki.52poke.com/wiki/藤鞭（招式）",
+      "power": 44
+    },
+    {
+      "id": 202,
+      "slot": 1,
+      "species": "袋兽",
+      "name": "二连击",
+      "english": "Double Hit",
+      "type": "一般",
+      "description": "连续撞击两次",
+      "visual": "白色连击",
+      "source": "https://wiki.52poke.com/wiki/二连击（招式）",
+      "power": 44
+    },
+    {
+      "id": 203,
+      "slot": 1,
+      "species": "墨海马",
+      "name": "泡沫光线",
+      "english": "Bubble Beam",
+      "type": "水",
+      "description": "发射泡沫攻击",
+      "visual": "浅蓝泡沫",
+      "source": "https://wiki.52poke.com/wiki/泡沫光线（招式）",
+      "power": 44
+    },
+    {
+      "id": 204,
+      "slot": 2,
+      "species": "艾比郎",
+      "name": "冰冻拳",
+      "english": "Ice Punch",
+      "type": "冰",
+      "description": "用冰冷的拳头攻击",
+      "visual": "蓝白冰晶",
+      "source": "https://wiki.52poke.com/wiki/冰冻拳（招式）",
+      "power": 58
+    },
+    {
+      "id": 205,
+      "slot": 2,
+      "species": "大舌头",
+      "name": "摔打",
+      "english": "Slam",
+      "type": "一般",
+      "description": "用身体或尾巴摔打",
+      "visual": "白色重击",
+      "source": "https://wiki.52poke.com/wiki/摔打（招式）",
+      "power": 58
+    },
+    {
+      "id": 206,
+      "slot": 2,
+      "species": "瓦斯弹",
+      "name": "污泥攻击",
+      "english": "Sludge",
+      "type": "毒",
+      "description": "投射污泥攻击",
+      "visual": "紫色飞点",
+      "source": "https://wiki.52poke.com/wiki/污泥攻击（招式）",
+      "power": 58
+    },
+    {
+      "id": 207,
+      "slot": 2,
+      "species": "独角犀牛",
+      "name": "重踏",
+      "english": "Bulldoze",
+      "type": "地面",
+      "description": "踏地震动攻击",
+      "visual": "沙色震波",
+      "source": "https://wiki.52poke.com/wiki/重踏（招式）",
+      "power": 58
+    },
+    {
+      "id": 208,
+      "slot": 2,
+      "species": "吉利蛋",
+      "name": "炸蛋",
+      "english": "Egg Bomb",
+      "type": "一般",
+      "description": "投出蛋状物攻击",
+      "visual": "白色冲击",
+      "source": "https://wiki.52poke.com/wiki/炸蛋（招式）",
+      "power": 58
+    },
+    {
+      "id": 209,
+      "slot": 2,
+      "species": "蔓藤怪",
+      "name": "超级吸取",
+      "english": "Mega Drain",
+      "type": "草",
+      "description": "吸取更多能量",
+      "visual": "绿色光点",
+      "source": "https://wiki.52poke.com/wiki/超级吸取（招式）",
+      "power": 58
+    },
+    {
+      "id": 210,
+      "slot": 2,
+      "species": "袋兽",
+      "name": "百万吨重拳",
+      "english": "Mega Punch",
+      "type": "一般",
+      "description": "使出强力拳击",
+      "visual": "白色重击",
+      "source": "https://wiki.52poke.com/wiki/百万吨重拳（招式）",
+      "power": 58
+    },
+    {
+      "id": 211,
+      "slot": 2,
+      "species": "墨海马",
+      "name": "盐水",
+      "english": "Brine",
+      "type": "水",
+      "description": "用盐水冲击对手",
+      "visual": "蓝色水浪",
+      "source": "https://wiki.52poke.com/wiki/盐水（招式）",
+      "power": 58
+    },
+    {
+      "id": 212,
+      "slot": 3,
+      "species": "艾比郎",
+      "name": "火焰拳",
+      "english": "Fire Punch",
+      "type": "火",
+      "description": "用带火的拳头攻击",
+      "visual": "橙红火星",
+      "source": "https://wiki.52poke.com/wiki/火焰拳（招式）",
+      "power": 74
+    },
+    {
+      "id": 213,
+      "slot": 3,
+      "species": "大舌头",
+      "name": "强力鞭打",
+      "english": "Power Whip",
+      "type": "草",
+      "description": "用长舌强力挥击",
+      "visual": "绿色挥击",
+      "source": "https://wiki.52poke.com/wiki/强力鞭打（招式）",
+      "power": 82
+    },
+    {
+      "id": 214,
+      "slot": 3,
+      "species": "瓦斯弹",
+      "name": "污泥炸弹",
+      "english": "Sludge Bomb",
+      "type": "毒",
+      "description": "发射污泥团攻击",
+      "visual": "紫色爆点",
+      "source": "https://wiki.52poke.com/wiki/污泥炸弹（招式）",
+      "power": 74
+    },
+    {
+      "id": 215,
+      "slot": 3,
+      "species": "独角犀牛",
+      "name": "地震",
+      "english": "Earthquake",
+      "type": "地面",
+      "description": "震动地面攻击",
+      "visual": "沙色震波",
+      "source": "https://wiki.52poke.com/wiki/地震（招式）",
+      "power": 82
+    },
+    {
+      "id": 216,
+      "slot": 3,
+      "species": "吉利蛋",
+      "name": "舍身冲撞",
+      "english": "Double-Edge",
+      "type": "一般",
+      "description": "全力撞击对手",
+      "visual": "白色强光",
+      "source": "https://wiki.52poke.com/wiki/舍身冲撞（招式）",
+      "power": 82
+    },
+    {
+      "id": 217,
+      "slot": 3,
+      "species": "蔓藤怪",
+      "name": "强力鞭打",
+      "english": "Power Whip",
+      "type": "草",
+      "description": "用藤蔓强力挥击",
+      "visual": "绿色挥击",
+      "source": "https://wiki.52poke.com/wiki/强力鞭打（招式）",
+      "power": 82
+    },
+    {
+      "id": 218,
+      "slot": 3,
+      "species": "袋兽",
+      "name": "迷昏拳",
+      "english": "Dizzy Punch",
+      "type": "一般",
+      "description": "挥拳使对手晕眩",
+      "visual": "白色旋转冲击",
+      "source": "https://wiki.52poke.com/wiki/迷昏拳（招式）",
+      "power": 74
+    },
+    {
+      "id": 219,
+      "slot": 3,
+      "species": "墨海马",
+      "name": "水炮",
+      "english": "Hydro Pump",
+      "type": "水",
+      "description": "喷射猛烈水流",
+      "visual": "蓝色水柱",
+      "source": "https://wiki.52poke.com/wiki/水炮（招式）",
+      "power": 82
+    },
+    {
+      "id": 220,
+      "slot": 0,
+      "species": "角金鱼",
+      "name": "啄",
+      "english": "Peck",
+      "type": "飞行",
+      "description": "用尖端轻啄对手",
+      "visual": "浅色风痕",
+      "source": "https://wiki.52poke.com/wiki/啄（招式）",
+      "power": 28
+    },
+    {
+      "id": 221,
+      "slot": 0,
+      "species": "海星星",
+      "name": "水枪",
+      "english": "Water Gun",
+      "type": "水",
+      "description": "喷射水流攻击",
+      "visual": "蓝色水流",
+      "source": "https://wiki.52poke.com/wiki/水枪（招式）",
+      "power": 28
+    },
+    {
+      "id": 222,
+      "slot": 0,
+      "species": "魔墙人偶",
+      "name": "念力",
+      "english": "Confusion",
+      "type": "超能",
+      "description": "用念力攻击对手",
+      "visual": "紫色光环",
+      "source": "https://wiki.52poke.com/wiki/念力（招式）",
+      "power": 32
+    },
+    {
+      "id": 223,
+      "slot": 0,
+      "species": "飞天螳螂",
+      "name": "电光一闪",
+      "english": "Quick Attack",
+      "type": "一般",
+      "description": "快速接近并撞击",
+      "visual": "白色闪光",
+      "source": "https://wiki.52poke.com/wiki/电光一闪（招式）",
+      "power": 32
+    },
+    {
+      "id": 224,
+      "slot": 0,
+      "species": "迷唇姐",
+      "name": "细雪",
+      "english": "Powder Snow",
+      "type": "冰",
+      "description": "吹出冰冷细雪",
+      "visual": "蓝白雪点",
+      "source": "https://wiki.52poke.com/wiki/细雪（招式）",
+      "power": 28
+    },
+    {
+      "id": 225,
+      "slot": 0,
+      "species": "电击兽",
+      "name": "电击",
+      "english": "Thunder Shock",
+      "type": "电",
+      "description": "放出电流攻击",
+      "visual": "金色电流",
+      "source": "https://wiki.52poke.com/wiki/电击（招式）",
+      "power": 28
+    },
+    {
+      "id": 226,
+      "slot": 0,
+      "species": "鸭嘴火兽",
+      "name": "火花",
+      "english": "Ember",
+      "type": "火",
+      "description": "喷出小火焰攻击",
+      "visual": "橙红火星",
+      "source": "https://wiki.52poke.com/wiki/火花（招式）",
+      "power": 28
+    },
+    {
+      "id": 227,
+      "slot": 1,
+      "species": "角金鱼",
+      "name": "水之波动",
+      "english": "Water Pulse",
+      "type": "水",
+      "description": "用水的波动攻击",
+      "visual": "蓝色波纹",
+      "source": "https://wiki.52poke.com/wiki/水之波动（招式）",
+      "power": 44
+    },
+    {
+      "id": 228,
+      "slot": 1,
+      "species": "海星星",
+      "name": "高速星星",
+      "english": "Swift",
+      "type": "一般",
+      "description": "射出星形能量攻击",
+      "visual": "白色星点",
+      "source": "https://wiki.52poke.com/wiki/高速星星（招式）",
+      "power": 44
+    },
+    {
+      "id": 229,
+      "slot": 1,
+      "species": "魔墙人偶",
+      "name": "魔法叶",
+      "english": "Magical Leaf",
+      "type": "草",
+      "description": "发射叶片攻击",
+      "visual": "绿色叶片",
+      "source": "https://wiki.52poke.com/wiki/魔法叶（招式）",
+      "power": 44
+    },
+    {
+      "id": 230,
+      "slot": 1,
+      "species": "飞天螳螂",
+      "name": "连斩",
+      "english": "Fury Cutter",
+      "type": "虫",
+      "description": "连续挥动前臂攻击",
+      "visual": "黄绿弧光",
+      "source": "https://wiki.52poke.com/wiki/连斩（招式）",
+      "power": 44
+    },
+    {
+      "id": 231,
+      "slot": 1,
+      "species": "迷唇姐",
+      "name": "冰冻拳",
+      "english": "Ice Punch",
+      "type": "冰",
+      "description": "用冰冷的拳头攻击",
+      "visual": "蓝白冰晶",
+      "source": "https://wiki.52poke.com/wiki/冰冻拳（招式）",
+      "power": 44
+    },
+    {
+      "id": 232,
+      "slot": 1,
+      "species": "电击兽",
+      "name": "电光一闪",
+      "english": "Quick Attack",
+      "type": "一般",
+      "description": "快速接近并撞击",
+      "visual": "白色闪光",
+      "source": "https://wiki.52poke.com/wiki/电光一闪（招式）",
+      "power": 44
+    },
+    {
+      "id": 233,
+      "slot": 1,
+      "species": "鸭嘴火兽",
+      "name": "浊雾",
+      "english": "Smog",
+      "type": "毒",
+      "description": "喷出浊雾攻击",
+      "visual": "紫色雾点",
+      "source": "https://wiki.52poke.com/wiki/浊雾（招式）",
+      "power": 44
+    },
+    {
+      "id": 234,
+      "slot": 2,
+      "species": "角金鱼",
+      "name": "角撞",
+      "english": "Horn Attack",
+      "type": "一般",
+      "description": "用角撞击对手",
+      "visual": "白色撞击",
+      "source": "https://wiki.52poke.com/wiki/角撞（招式）",
+      "power": 58
+    },
+    {
+      "id": 235,
+      "slot": 2,
+      "species": "海星星",
+      "name": "力量宝石",
+      "english": "Power Gem",
+      "type": "岩石",
+      "description": "发出宝石般的光芒",
+      "visual": "岩色光点",
+      "source": "https://wiki.52poke.com/wiki/力量宝石（招式）",
+      "power": 58
+    },
+    {
+      "id": 236,
+      "slot": 2,
+      "species": "魔墙人偶",
+      "name": "幻象光线",
+      "english": "Psybeam",
+      "type": "超能",
+      "description": "发出念力光线攻击",
+      "visual": "紫色光线",
+      "source": "https://wiki.52poke.com/wiki/幻象光线（招式）",
+      "power": 58
+    },
+    {
+      "id": 237,
+      "slot": 2,
+      "species": "飞天螳螂",
+      "name": "翅膀攻击",
+      "english": "Wing Attack",
+      "type": "飞行",
+      "description": "用翅膀攻击对手",
+      "visual": "浅色风痕",
+      "source": "https://wiki.52poke.com/wiki/翅膀攻击（招式）",
+      "power": 58
+    },
+    {
+      "id": 238,
+      "slot": 2,
+      "species": "迷唇姐",
+      "name": "精神强念",
+      "english": "Psychic",
+      "type": "超能",
+      "description": "用强大念力攻击",
+      "visual": "紫色光环",
+      "source": "https://wiki.52poke.com/wiki/精神强念（招式）",
+      "power": 66
+    },
+    {
+      "id": 239,
+      "slot": 2,
+      "species": "电击兽",
+      "name": "雷电拳",
+      "english": "Thunder Punch",
+      "type": "电",
+      "description": "用带电的拳头攻击",
+      "visual": "金色电流",
+      "source": "https://wiki.52poke.com/wiki/雷电拳（招式）",
+      "power": 58
+    },
+    {
+      "id": 240,
+      "slot": 2,
+      "species": "鸭嘴火兽",
+      "name": "火焰拳",
+      "english": "Fire Punch",
+      "type": "火",
+      "description": "用带火的拳头攻击",
+      "visual": "橙红火星",
+      "source": "https://wiki.52poke.com/wiki/火焰拳（招式）",
+      "power": 58
+    },
+    {
+      "id": 241,
+      "slot": 3,
+      "species": "角金鱼",
+      "name": "攀瀑",
+      "english": "Waterfall",
+      "type": "水",
+      "description": "用强劲水流冲击",
+      "visual": "蓝色水浪",
+      "source": "https://wiki.52poke.com/wiki/攀瀑（招式）",
+      "power": 74
+    },
+    {
+      "id": 242,
+      "slot": 3,
+      "species": "海星星",
+      "name": "水炮",
+      "english": "Hydro Pump",
+      "type": "水",
+      "description": "喷射猛烈水流",
+      "visual": "蓝色水柱",
+      "source": "https://wiki.52poke.com/wiki/水炮（招式）",
+      "power": 82
+    },
+    {
+      "id": 243,
+      "slot": 3,
+      "species": "魔墙人偶",
+      "name": "精神强念",
+      "english": "Psychic",
+      "type": "超能",
+      "description": "用强大念力攻击",
+      "visual": "紫色光环",
+      "source": "https://wiki.52poke.com/wiki/精神强念（招式）",
+      "power": 82
+    },
+    {
+      "id": 244,
+      "slot": 3,
+      "species": "飞天螳螂",
+      "name": "十字剪",
+      "english": "X-Scissor",
+      "type": "虫",
+      "description": "交叉挥动前臂攻击",
+      "visual": "黄绿交叉弧",
+      "source": "https://wiki.52poke.com/wiki/十字剪（招式）",
+      "power": 74
+    },
+    {
+      "id": 245,
+      "slot": 3,
+      "species": "迷唇姐",
+      "name": "暴风雪",
+      "english": "Blizzard",
+      "type": "冰",
+      "description": "卷起冰冷风雪攻击",
+      "visual": "蓝白冰晶",
+      "source": "https://wiki.52poke.com/wiki/暴风雪（招式）",
+      "power": 82
+    },
+    {
+      "id": 246,
+      "slot": 3,
+      "species": "电击兽",
+      "name": "打雷",
+      "english": "Thunder",
+      "type": "电",
+      "description": "落下强劲雷电攻击",
+      "visual": "金色雷光",
+      "source": "https://wiki.52poke.com/wiki/打雷（招式）",
+      "power": 82
+    },
+    {
+      "id": 247,
+      "slot": 3,
+      "species": "鸭嘴火兽",
+      "name": "喷射火焰",
+      "english": "Flamethrower",
+      "type": "火",
+      "description": "喷射持续火焰攻击",
+      "visual": "橙红火流",
+      "source": "https://wiki.52poke.com/wiki/喷射火焰（招式）",
+      "power": 82
+    },
+    {
+      "id": 248,
+      "slot": 0,
+      "species": "凯罗斯",
+      "name": "夹住",
+      "english": "Vise Grip",
+      "type": "一般",
+      "description": "用双角夹住对手",
+      "visual": "白色夹击",
+      "source": "https://wiki.52poke.com/wiki/夹住（招式）",
+      "power": 32
+    },
+    {
+      "id": 249,
+      "slot": 0,
+      "species": "肯泰罗",
+      "name": "撞击",
+      "english": "Tackle",
+      "type": "一般",
+      "description": "用身体撞击对手",
+      "visual": "白色冲击",
+      "source": "https://wiki.52poke.com/wiki/撞击（招式）",
+      "power": 28
+    },
+    {
+      "id": 250,
+      "slot": 0,
+      "species": "鲤鱼王",
+      "name": "跃起",
+      "english": "Splash",
+      "type": "一般",
+      "description": "轻轻跃起摆动身体",
+      "visual": "浅色跳跃",
+      "source": "https://wiki.52poke.com/wiki/跃起（招式）",
+      "power": 0
+    },
+    {
+      "id": 251,
+      "slot": 0,
+      "species": "拉普拉斯",
+      "name": "水枪",
+      "english": "Water Gun",
+      "type": "水",
+      "description": "喷射水流攻击",
+      "visual": "蓝色水流",
+      "source": "https://wiki.52poke.com/wiki/水枪（招式）",
+      "power": 28
+    },
+    {
+      "id": 252,
+      "slot": 0,
+      "species": "百变怪",
+      "name": "变身",
+      "english": "Transform",
+      "type": "一般",
+      "description": "模仿对手的姿态",
+      "visual": "浅色光环",
+      "source": "https://wiki.52poke.com/wiki/变身（招式）",
+      "power": 0
+    },
+    {
+      "id": 253,
+      "slot": 1,
+      "species": "凯罗斯",
+      "name": "地球上投",
+      "english": "Seismic Toss",
+      "type": "格斗",
+      "description": "抓起对手后投掷",
+      "visual": "橙色冲击",
+      "source": "https://wiki.52poke.com/wiki/地球上投（招式）",
+      "power": 44
+    },
+    {
+      "id": 254,
+      "slot": 1,
+      "species": "肯泰罗",
+      "name": "角撞",
+      "english": "Horn Attack",
+      "type": "一般",
+      "description": "用头角撞击对手",
+      "visual": "白色角痕",
+      "source": "https://wiki.52poke.com/wiki/角撞（招式）",
+      "power": 44
+    },
+    {
+      "id": 255,
+      "slot": 1,
+      "species": "鲤鱼王",
+      "name": "撞击",
+      "english": "Tackle",
+      "type": "一般",
+      "description": "用身体撞击对手",
+      "visual": "白色冲击",
+      "source": "https://wiki.52poke.com/wiki/撞击（招式）",
+      "power": 40
+    },
+    {
+      "id": 256,
+      "slot": 1,
+      "species": "拉普拉斯",
+      "name": "冰砾",
+      "english": "Ice Shard",
+      "type": "冰",
+      "description": "释放冰砾攻击",
+      "visual": "蓝白冰晶",
+      "source": "https://wiki.52poke.com/wiki/冰砾（招式）",
+      "power": 44
+    },
+    {
+      "id": 257,
+      "slot": 1,
+      "species": "百变怪",
+      "name": "撞击",
+      "english": "Tackle",
+      "type": "一般",
+      "description": "用身体撞击对手",
+      "visual": "白色冲击",
+      "source": "https://wiki.52poke.com/wiki/撞击（招式）",
+      "power": 40
+    },
+    {
+      "id": 258,
+      "slot": 2,
+      "species": "凯罗斯",
+      "name": "劈开",
+      "english": "Slash",
+      "type": "一般",
+      "description": "挥动前肢劈击",
+      "visual": "白色爪痕",
+      "source": "https://wiki.52poke.com/wiki/劈开（招式）",
+      "power": 58
+    },
+    {
+      "id": 259,
+      "slot": 2,
+      "species": "肯泰罗",
+      "name": "意念头锤",
+      "english": "Zen Headbutt",
+      "type": "超能",
+      "description": "集中意念用头攻击",
+      "visual": "紫色念力",
+      "source": "https://wiki.52poke.com/wiki/意念头锤（招式）",
+      "power": 58
+    },
+    {
+      "id": 260,
+      "slot": 2,
+      "species": "鲤鱼王",
+      "name": "抓狂",
+      "english": "Flail",
+      "type": "一般",
+      "description": "摆动身体全力攻击",
+      "visual": "白色冲击",
+      "source": "https://wiki.52poke.com/wiki/抓狂（招式）",
+      "power": 58
+    },
+    {
+      "id": 261,
+      "slot": 2,
+      "species": "拉普拉斯",
+      "name": "水之波动",
+      "english": "Water Pulse",
+      "type": "水",
+      "description": "用水的波动攻击",
+      "visual": "蓝色波纹",
+      "source": "https://wiki.52poke.com/wiki/水之波动（招式）",
+      "power": 58
+    },
+    {
+      "id": 262,
+      "slot": 2,
+      "species": "百变怪",
+      "name": "高速星星",
+      "english": "Swift",
+      "type": "一般",
+      "description": "释放星形能量",
+      "visual": "白色星点",
+      "source": "https://wiki.52poke.com/wiki/高速星星（招式）",
+      "power": 58
+    },
+    {
+      "id": 263,
+      "slot": 3,
+      "species": "凯罗斯",
+      "name": "十字剪",
+      "english": "X-Scissor",
+      "type": "虫",
+      "description": "交叉挥动前肢攻击",
+      "visual": "绿色交叉斩",
+      "source": "https://wiki.52poke.com/wiki/十字剪（招式）",
+      "power": 74
+    },
+    {
+      "id": 264,
+      "slot": 3,
+      "species": "肯泰罗",
+      "name": "猛撞",
+      "english": "Take Down",
+      "type": "一般",
+      "description": "猛烈冲撞对手",
+      "visual": "白色冲击",
+      "source": "https://wiki.52poke.com/wiki/猛撞（招式）",
+      "power": 74
+    },
+    {
+      "id": 265,
+      "slot": 3,
+      "species": "鲤鱼王",
+      "name": "挣扎",
+      "english": "Struggle",
+      "type": "一般",
+      "description": "奋力挣扎攻击",
+      "visual": "白色冲击",
+      "source": "https://wiki.52poke.com/wiki/挣扎（招式）",
+      "power": 74
+    },
+    {
+      "id": 266,
+      "slot": 3,
+      "species": "拉普拉斯",
+      "name": "冰冻光束",
+      "english": "Ice Beam",
+      "type": "冰",
+      "description": "发射冰冷光束",
+      "visual": "蓝白光束",
+      "source": "https://wiki.52poke.com/wiki/冰冻光束（招式）",
+      "power": 82
+    },
+    {
+      "id": 267,
+      "slot": 3,
+      "species": "百变怪",
+      "name": "挣扎",
+      "english": "Struggle",
+      "type": "一般",
+      "description": "奋力挣扎攻击",
+      "visual": "白色冲击",
+      "source": "https://wiki.52poke.com/wiki/挣扎（招式）",
+      "power": 74
+    },
+    {
+      "id": 268,
+      "slot": 0,
+      "species": "伊布",
+      "name": "撞击",
+      "english": "Tackle",
+      "type": "一般",
+      "description": "用身体撞击对手",
+      "visual": "白色冲击",
+      "source": "https://wiki.52poke.com/wiki/撞击（招式）",
+      "power": 28
+    },
+    {
+      "id": 269,
+      "slot": 1,
+      "species": "伊布",
+      "name": "电光一闪",
+      "english": "Quick Attack",
+      "type": "一般",
+      "description": "迅速接近并撞击",
+      "visual": "白色闪光",
+      "source": "https://wiki.52poke.com/wiki/电光一闪（招式）",
+      "power": 44
+    },
+    {
+      "id": 270,
+      "slot": 2,
+      "species": "伊布",
+      "name": "猛撞",
+      "english": "Take Down",
+      "type": "一般",
+      "description": "猛烈冲撞对手",
+      "visual": "白色冲击",
+      "source": "https://wiki.52poke.com/wiki/猛撞（招式）",
+      "power": 58
+    },
+    {
+      "id": 271,
+      "slot": 3,
+      "species": "伊布",
+      "name": "高速星星",
+      "english": "Swift",
+      "type": "一般",
+      "description": "释放星形能量",
+      "visual": "白色星点",
+      "source": "https://wiki.52poke.com/wiki/高速星星（招式）",
+      "power": 74
+    },
+    {
+      "id": 272,
+      "slot": 0,
+      "species": "多边兽",
+      "name": "撞击",
+      "english": "Tackle",
+      "type": "一般",
+      "description": "用身体撞击对手",
+      "visual": "白色冲击",
+      "source": "https://wiki.52poke.com/wiki/撞击（招式）",
+      "power": 28
+    },
+    {
+      "id": 273,
+      "slot": 0,
+      "species": "菊石兽",
+      "name": "水枪",
+      "english": "Water Gun",
+      "type": "水",
+      "description": "喷射水流攻击",
+      "visual": "蓝色水流",
+      "source": "https://wiki.52poke.com/wiki/水枪（招式）",
+      "power": 28
+    },
+    {
+      "id": 274,
+      "slot": 0,
+      "species": "化石盔",
+      "name": "抓",
+      "english": "Scratch",
+      "type": "一般",
+      "description": "用爪抓击对手",
+      "visual": "白色抓痕",
+      "source": "https://wiki.52poke.com/wiki/抓（招式）",
+      "power": 28
+    },
+    {
+      "id": 275,
+      "slot": 0,
+      "species": "化石翼龙",
+      "name": "翅膀攻击",
+      "english": "Wing Attack",
+      "type": "飞行",
+      "description": "用翅膀拍击对手",
+      "visual": "浅蓝羽风",
+      "source": "https://wiki.52poke.com/wiki/翅膀攻击（招式）",
+      "power": 32
+    },
+    {
+      "id": 276,
+      "slot": 0,
+      "species": "卡比兽",
+      "name": "撞击",
+      "english": "Tackle",
+      "type": "一般",
+      "description": "用身体撞击对手",
+      "visual": "白色冲击",
+      "source": "https://wiki.52poke.com/wiki/撞击（招式）",
+      "power": 28
+    },
+    {
+      "id": 277,
+      "slot": 0,
+      "species": "急冻鸟",
+      "name": "起风",
+      "english": "Gust",
+      "type": "飞行",
+      "description": "掀起气流攻击",
+      "visual": "浅蓝羽风",
+      "source": "https://wiki.52poke.com/wiki/起风（招式）",
+      "power": 32
+    },
+    {
+      "id": 278,
+      "slot": 0,
+      "species": "闪电鸟",
+      "name": "啄",
+      "english": "Peck",
+      "type": "飞行",
+      "description": "用尖喙啄击对手",
+      "visual": "浅蓝羽风",
+      "source": "https://wiki.52poke.com/wiki/啄（招式）",
+      "power": 28
+    },
+    {
+      "id": 279,
+      "slot": 0,
+      "species": "火焰鸟",
+      "name": "翅膀攻击",
+      "english": "Wing Attack",
+      "type": "飞行",
+      "description": "用翅膀拍击对手",
+      "visual": "浅蓝羽风",
+      "source": "https://wiki.52poke.com/wiki/翅膀攻击（招式）",
+      "power": 32
+    },
+    {
+      "id": 280,
+      "slot": 0,
+      "species": "迷你龙",
+      "name": "紧束",
+      "english": "Wrap",
+      "type": "一般",
+      "description": "用身体缠绕攻击",
+      "visual": "白色冲击",
+      "source": "https://wiki.52poke.com/wiki/紧束（招式）",
+      "power": 28
+    },
+    {
+      "id": 281,
+      "slot": 0,
+      "species": "超梦",
+      "name": "念力",
+      "english": "Confusion",
+      "type": "超能",
+      "description": "集中念力攻击",
+      "visual": "紫色念力环",
+      "source": "https://wiki.52poke.com/wiki/念力（招式）",
+      "power": 32
+    },
+    {
+      "id": 282,
+      "slot": 0,
+      "species": "梦幻",
+      "name": "拍击",
+      "english": "Pound",
+      "type": "一般",
+      "description": "拍打对手",
+      "visual": "白色冲击",
+      "source": "https://wiki.52poke.com/wiki/拍击（招式）",
+      "power": 28
+    },
+    {
+      "id": 283,
+      "slot": 1,
+      "species": "多边兽",
+      "name": "幻象光线",
+      "english": "Psybeam",
+      "type": "超能",
+      "description": "发射奇异光线攻击",
+      "visual": "紫色念力环",
+      "source": "https://wiki.52poke.com/wiki/幻象光线（招式）",
+      "power": 44
+    },
+    {
+      "id": 284,
+      "slot": 1,
+      "species": "菊石兽",
+      "name": "滚动",
+      "english": "Rollout",
+      "type": "岩石",
+      "description": "蜷起身体滚动撞击",
+      "visual": "碎岩冲击",
+      "source": "https://wiki.52poke.com/wiki/滚动（招式）",
+      "power": 44
+    },
+    {
+      "id": 285,
+      "slot": 1,
+      "species": "化石盔",
+      "name": "水流喷射",
+      "english": "Aqua Jet",
+      "type": "水",
+      "description": "包裹水流冲向对手",
+      "visual": "蓝色水流",
+      "source": "https://wiki.52poke.com/wiki/水流喷射（招式）",
+      "power": 44
+    },
+    {
+      "id": 286,
+      "slot": 1,
+      "species": "化石翼龙",
+      "name": "岩崩",
+      "english": "Rock Slide",
+      "type": "岩石",
+      "description": "投下岩石攻击",
+      "visual": "碎岩冲击",
+      "source": "https://wiki.52poke.com/wiki/岩崩（招式）",
+      "power": 44
+    },
+    {
+      "id": 287,
+      "slot": 1,
+      "species": "卡比兽",
+      "name": "舔",
+      "english": "Lick",
+      "type": "幽灵",
+      "description": "用长舌舔击对手",
+      "visual": "紫色幽光",
+      "source": "https://wiki.52poke.com/wiki/舔（招式）",
+      "power": 40
+    },
+    {
+      "id": 288,
+      "slot": 1,
+      "species": "急冻鸟",
+      "name": "冰砾",
+      "english": "Ice Shard",
+      "type": "冰",
+      "description": "释放冰砾攻击",
+      "visual": "蓝白冰晶",
+      "source": "https://wiki.52poke.com/wiki/冰砾（招式）",
+      "power": 44
+    },
+    {
+      "id": 289,
+      "slot": 1,
+      "species": "闪电鸟",
+      "name": "电击",
+      "english": "Thunder Shock",
+      "type": "电",
+      "description": "释放电流攻击",
+      "visual": "黄色电流",
+      "source": "https://wiki.52poke.com/wiki/电击（招式）",
+      "power": 40
+    },
+    {
+      "id": 290,
+      "slot": 1,
+      "species": "火焰鸟",
+      "name": "火花",
+      "english": "Ember",
+      "type": "火",
+      "description": "释放小火焰攻击",
+      "visual": "橙色火焰",
+      "source": "https://wiki.52poke.com/wiki/火花（招式）",
+      "power": 40
+    },
+    {
+      "id": 291,
+      "slot": 1,
+      "species": "迷你龙",
+      "name": "龙卷风",
+      "english": "Twister",
+      "type": "龙",
+      "description": "掀起龙之旋风攻击",
+      "visual": "蓝紫旋风",
+      "source": "https://wiki.52poke.com/wiki/龙卷风（招式）",
+      "power": 44
+    },
+    {
+      "id": 292,
+      "slot": 1,
+      "species": "超梦",
+      "name": "精神利刃",
+      "english": "Psycho Cut",
+      "type": "超能",
+      "description": "凝聚精神力量斩击",
+      "visual": "紫色念力环",
+      "source": "https://wiki.52poke.com/wiki/精神利刃（招式）",
+      "power": 44
+    },
+    {
+      "id": 293,
+      "slot": 1,
+      "species": "梦幻",
+      "name": "高速星星",
+      "english": "Swift",
+      "type": "一般",
+      "description": "释放星形能量攻击",
+      "visual": "白色冲击",
+      "source": "https://wiki.52poke.com/wiki/高速星星（招式）",
+      "power": 44
+    },
+    {
+      "id": 294,
+      "slot": 2,
+      "species": "多边兽",
+      "name": "放电",
+      "english": "Discharge",
+      "type": "电",
+      "description": "释放电流攻击",
+      "visual": "黄色电流",
+      "source": "https://wiki.52poke.com/wiki/放电（招式）",
+      "power": 58
+    },
+    {
+      "id": 295,
+      "slot": 2,
+      "species": "菊石兽",
+      "name": "原始之力",
+      "english": "Ancient Power",
+      "type": "岩石",
+      "description": "释放原始岩石能量",
+      "visual": "碎岩冲击",
+      "source": "https://wiki.52poke.com/wiki/原始之力（招式）",
+      "power": 58
+    },
+    {
+      "id": 296,
+      "slot": 2,
+      "species": "化石盔",
+      "name": "原始之力",
+      "english": "Ancient Power",
+      "type": "岩石",
+      "description": "释放原始岩石能量",
+      "visual": "碎岩冲击",
+      "source": "https://wiki.52poke.com/wiki/原始之力（招式）",
+      "power": 58
+    },
+    {
+      "id": 297,
+      "slot": 2,
+      "species": "化石翼龙",
+      "name": "咬碎",
+      "english": "Crunch",
+      "type": "恶",
+      "description": "用利齿咬击对手",
+      "visual": "深紫咬击",
+      "source": "https://wiki.52poke.com/wiki/咬碎（招式）",
+      "power": 58
+    },
+    {
+      "id": 298,
+      "slot": 2,
+      "species": "卡比兽",
+      "name": "泰山压顶",
+      "english": "Body Slam",
+      "type": "一般",
+      "description": "用身体压向对手",
+      "visual": "白色冲击",
+      "source": "https://wiki.52poke.com/wiki/泰山压顶（招式）",
+      "power": 58
+    },
+    {
+      "id": 299,
+      "slot": 2,
+      "species": "急冻鸟",
+      "name": "冰冻光束",
+      "english": "Ice Beam",
+      "type": "冰",
+      "description": "发射冰冷光束",
+      "visual": "蓝白冰晶",
+      "source": "https://wiki.52poke.com/wiki/冰冻光束（招式）",
+      "power": 66
+    },
+    {
+      "id": 300,
+      "slot": 2,
+      "species": "闪电鸟",
+      "name": "放电",
+      "english": "Discharge",
+      "type": "电",
+      "description": "释放电流攻击",
+      "visual": "黄色电流",
+      "source": "https://wiki.52poke.com/wiki/放电（招式）",
+      "power": 58
+    },
+    {
+      "id": 301,
+      "slot": 2,
+      "species": "火焰鸟",
+      "name": "喷射火焰",
+      "english": "Flamethrower",
+      "type": "火",
+      "description": "喷出火焰攻击",
+      "visual": "橙色火焰",
+      "source": "https://wiki.52poke.com/wiki/喷射火焰（招式）",
+      "power": 66
+    },
+    {
+      "id": 302,
+      "slot": 2,
+      "species": "迷你龙",
+      "name": "龙之波动",
+      "english": "Dragon Pulse",
+      "type": "龙",
+      "description": "释放龙之能量攻击",
+      "visual": "蓝紫旋风",
+      "source": "https://wiki.52poke.com/wiki/龙之波动（招式）",
+      "power": 58
+    },
+    {
+      "id": 303,
+      "slot": 2,
+      "species": "超梦",
+      "name": "精神强念",
+      "english": "Psychic",
+      "type": "超能",
+      "description": "释放强大念力攻击",
+      "visual": "紫色念力环",
+      "source": "https://wiki.52poke.com/wiki/精神强念（招式）",
+      "power": 66
+    },
+    {
+      "id": 304,
+      "slot": 2,
+      "species": "梦幻",
+      "name": "波导弹",
+      "english": "Aura Sphere",
+      "type": "格斗",
+      "description": "释放波导能量攻击",
+      "visual": "橙色冲击",
+      "source": "https://wiki.52poke.com/wiki/波导弹（招式）",
+      "power": 58
+    },
+    {
+      "id": 305,
+      "slot": 3,
+      "species": "多边兽",
+      "name": "三重攻击",
+      "english": "Tri Attack",
+      "type": "一般",
+      "description": "释放三束能量攻击",
+      "visual": "浅色冲击",
+      "source": "https://wiki.52poke.com/wiki/三重攻击（招式）",
+      "power": 74
+    },
+    {
+      "id": 306,
+      "slot": 3,
+      "species": "菊石兽",
+      "name": "水炮",
+      "english": "Hydro Pump",
+      "type": "水",
+      "description": "喷出强劲水流攻击",
+      "visual": "蓝色水环",
+      "source": "https://wiki.52poke.com/wiki/水炮（招式）",
+      "power": 82
+    },
+    {
+      "id": 307,
+      "slot": 3,
+      "species": "化石盔",
+      "name": "劈开",
+      "english": "Slash",
+      "type": "一般",
+      "description": "挥动前肢劈击",
+      "visual": "白色斩击",
+      "source": "https://wiki.52poke.com/wiki/劈开（招式）",
+      "power": 74
+    },
+    {
+      "id": 308,
+      "slot": 3,
+      "species": "化石翼龙",
+      "name": "尖石攻击",
+      "english": "Stone Edge",
+      "type": "岩石",
+      "description": "用尖锐岩石攻击",
+      "visual": "碎岩冲击",
+      "source": "https://wiki.52poke.com/wiki/尖石攻击（招式）",
+      "power": 82
+    },
+    {
+      "id": 309,
+      "slot": 3,
+      "species": "卡比兽",
+      "name": "终极冲击",
+      "english": "Giga Impact",
+      "type": "一般",
+      "description": "全力冲撞对手",
+      "visual": "白色冲击",
+      "source": "https://wiki.52poke.com/wiki/终极冲击（招式）",
+      "power": 82
+    },
+    {
+      "id": 310,
+      "slot": 3,
+      "species": "急冻鸟",
+      "name": "暴风雪",
+      "english": "Blizzard",
+      "type": "冰",
+      "description": "掀起猛烈冰雪攻击",
+      "visual": "蓝白冰晶",
+      "source": "https://wiki.52poke.com/wiki/暴风雪（招式）",
+      "power": 82
+    },
+    {
+      "id": 311,
+      "slot": 3,
+      "species": "闪电鸟",
+      "name": "打雷",
+      "english": "Thunder",
+      "type": "电",
+      "description": "召下雷电攻击",
+      "visual": "黄色电流",
+      "source": "https://wiki.52poke.com/wiki/打雷（招式）",
+      "power": 82
+    },
+    {
+      "id": 312,
+      "slot": 3,
+      "species": "火焰鸟",
+      "name": "热风",
+      "english": "Heat Wave",
+      "type": "火",
+      "description": "吹出炽热气流攻击",
+      "visual": "橙色火焰",
+      "source": "https://wiki.52poke.com/wiki/热风（招式）",
+      "power": 82
+    },
+    {
+      "id": 313,
+      "slot": 3,
+      "species": "迷你龙",
+      "name": "逆鳞",
+      "english": "Outrage",
+      "type": "龙",
+      "description": "以龙之力量猛烈攻击",
+      "visual": "蓝紫旋风",
+      "source": "https://wiki.52poke.com/wiki/逆鳞（招式）",
+      "power": 82
+    },
+    {
+      "id": 314,
+      "slot": 3,
+      "species": "超梦",
+      "name": "精神击破",
+      "english": "Psystrike",
+      "type": "超能",
+      "description": "凝聚精神冲击攻击",
+      "visual": "紫色念力环",
+      "source": "https://wiki.52poke.com/wiki/精神击破（招式）",
+      "power": 82
+    },
+    {
+      "id": 315,
+      "slot": 3,
+      "species": "梦幻",
+      "name": "精神强念",
+      "english": "Psychic",
+      "type": "超能",
+      "description": "释放强大念力攻击",
+      "visual": "紫色念力环",
+      "source": "https://wiki.52poke.com/wiki/精神强念（招式）",
+      "power": 82
+    }
+  ],
+  "scope": "第一代79家庭固定四槽；001–136正式运行，137–151技能目录和共享渲染预览就绪、宠物运行接入待完成。普通挑战轻量伤害，道馆按既有属性关系；无正作学习表、异常状态、吸血或变身复制。",
+  "maxMovesPerPet": 4,
+  "families": [
+    {
+      "species": 0,
+      "name": "皮卡丘",
+      "nationalIds": [
+        25,
+        26
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 1,
+      "name": "妙蛙种子",
+      "nationalIds": [
+        1,
+        2,
+        3
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 2,
+      "name": "小火龙",
+      "nationalIds": [
+        4,
+        5,
+        6
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 3,
+      "name": "杰尼龟",
+      "nationalIds": [
+        7,
+        8,
+        9
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 4,
+      "name": "绿毛虫",
+      "nationalIds": [
+        10,
+        11,
+        12
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 5,
+      "name": "独角虫",
+      "nationalIds": [
+        13,
+        14,
+        15
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 6,
+      "name": "波波",
+      "nationalIds": [
+        16,
+        17,
+        18
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 7,
+      "name": "小拉达",
+      "nationalIds": [
+        19,
+        20
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 8,
+      "name": "烈雀",
+      "nationalIds": [
+        21,
+        22
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 9,
+      "name": "阿柏蛇",
+      "nationalIds": [
+        23,
+        24
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 10,
+      "name": "穿山鼠",
+      "nationalIds": [
+        27,
+        28
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 11,
+      "name": "尼多兰",
+      "nationalIds": [
+        29,
+        30,
+        31
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 12,
+      "name": "尼多朗",
+      "nationalIds": [
+        32,
+        33,
+        34
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 13,
+      "name": "皮皮",
+      "nationalIds": [
+        35,
+        36
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 14,
+      "name": "六尾",
+      "nationalIds": [
+        37,
+        38
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 15,
+      "name": "胖丁",
+      "nationalIds": [
+        39,
+        40
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 16,
+      "name": "超音蝠",
+      "nationalIds": [
+        41,
+        42
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 17,
+      "name": "走路草",
+      "nationalIds": [
+        43,
+        44,
+        45
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 18,
+      "name": "派拉斯",
+      "nationalIds": [
+        46,
+        47
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 19,
+      "name": "毛球",
+      "nationalIds": [
+        48,
+        49
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 20,
+      "name": "地鼠",
+      "nationalIds": [
+        50,
+        51
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 21,
+      "name": "喵喵",
+      "nationalIds": [
+        52,
+        53
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 22,
+      "name": "可达鸭",
+      "nationalIds": [
+        54,
+        55
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 23,
+      "name": "猴怪",
+      "nationalIds": [
+        56,
+        57
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 24,
+      "name": "卡蒂狗",
+      "nationalIds": [
+        58,
+        59
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 25,
+      "name": "蚊香蝌蚪",
+      "nationalIds": [
+        60,
+        61,
+        62
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 26,
+      "name": "凯西",
+      "nationalIds": [
+        63,
+        64,
+        65
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 27,
+      "name": "腕力",
+      "nationalIds": [
+        66,
+        67,
+        68
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 28,
+      "name": "喇叭芽",
+      "nationalIds": [
+        69,
+        70,
+        71
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 29,
+      "name": "玛瑙水母",
+      "nationalIds": [
+        72,
+        73
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 30,
+      "name": "小拳石",
+      "nationalIds": [
+        74,
+        75,
+        76
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 31,
+      "name": "小火马",
+      "nationalIds": [
+        77,
+        78
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 32,
+      "name": "呆呆兽",
+      "nationalIds": [
+        79,
+        80
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 33,
+      "name": "小磁怪",
+      "nationalIds": [
+        81,
+        82
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 34,
+      "name": "大葱鸭",
+      "nationalIds": [
+        83
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 35,
+      "name": "嘟嘟",
+      "nationalIds": [
+        84,
+        85
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 36,
+      "name": "小海狮",
+      "nationalIds": [
+        86,
+        87
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 37,
+      "name": "臭泥",
+      "nationalIds": [
+        88,
+        89
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 38,
+      "name": "大舌贝",
+      "nationalIds": [
+        90,
+        91
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 39,
+      "name": "鬼斯",
+      "nationalIds": [
+        92,
+        93,
+        94
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 40,
+      "name": "大岩蛇",
+      "nationalIds": [
+        95
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 41,
+      "name": "催眠貘",
+      "nationalIds": [
+        96,
+        97
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 42,
+      "name": "大钳蟹",
+      "nationalIds": [
+        98,
+        99
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 43,
+      "name": "霹雳电球",
+      "nationalIds": [
+        100,
+        101
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 44,
+      "name": "蛋蛋",
+      "nationalIds": [
+        102,
+        103
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 45,
+      "name": "卡拉卡拉",
+      "nationalIds": [
+        104,
+        105
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 46,
+      "name": "飞腿郎",
+      "nationalIds": [
+        106
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 47,
+      "name": "艾比郎",
+      "nationalIds": [
+        107
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 48,
+      "name": "大舌头",
+      "nationalIds": [
+        108
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 49,
+      "name": "瓦斯弹",
+      "nationalIds": [
+        109,
+        110
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 50,
+      "name": "独角犀牛",
+      "nationalIds": [
+        111,
+        112
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 51,
+      "name": "吉利蛋",
+      "nationalIds": [
+        113
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 52,
+      "name": "蔓藤怪",
+      "nationalIds": [
+        114
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 53,
+      "name": "袋兽",
+      "nationalIds": [
+        115
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 54,
+      "name": "墨海马",
+      "nationalIds": [
+        116,
+        117
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 55,
+      "name": "角金鱼",
+      "nationalIds": [
+        118,
+        119
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 56,
+      "name": "海星星",
+      "nationalIds": [
+        120,
+        121
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 57,
+      "name": "魔墙人偶",
+      "nationalIds": [
+        122
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 58,
+      "name": "飞天螳螂",
+      "nationalIds": [
+        123
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 59,
+      "name": "迷唇姐",
+      "nationalIds": [
+        124
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 60,
+      "name": "电击兽",
+      "nationalIds": [
+        125
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 61,
+      "name": "鸭嘴火兽",
+      "nationalIds": [
+        126
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 62,
+      "name": "凯罗斯",
+      "nationalIds": [
+        127
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 63,
+      "name": "肯泰罗",
+      "nationalIds": [
+        128
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 64,
+      "name": "鲤鱼王",
+      "nationalIds": [
+        129,
+        130
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 65,
+      "name": "拉普拉斯",
+      "nationalIds": [
+        131
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 66,
+      "name": "百变怪",
+      "nationalIds": [
+        132
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 67,
+      "name": "伊布",
+      "nationalIds": [
+        133,
+        134,
+        135,
+        136
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 68,
+      "name": "多边兽",
+      "nationalIds": [
+        137
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 69,
+      "name": "菊石兽",
+      "nationalIds": [
+        138,
+        139
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 70,
+      "name": "化石盔",
+      "nationalIds": [
+        140,
+        141
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 71,
+      "name": "化石翼龙",
+      "nationalIds": [
+        142
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 72,
+      "name": "卡比兽",
+      "nationalIds": [
+        143
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 73,
+      "name": "急冻鸟",
+      "nationalIds": [
+        144
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 74,
+      "name": "闪电鸟",
+      "nationalIds": [
+        145
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 75,
+      "name": "火焰鸟",
+      "nationalIds": [
+        146
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 76,
+      "name": "迷你龙",
+      "nationalIds": [
+        147,
+        148,
+        149
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 77,
+      "name": "超梦",
+      "nationalIds": [
+        150
+      ],
+      "runtimeIntegrated": true
+    },
+    {
+      "species": 78,
+      "name": "梦幻",
+      "nationalIds": [
+        151
+      ],
+      "runtimeIntegrated": true
+    }
+  ],
+  "formStats": [
+    {
+      "nationalId": 1,
+      "name": "妙蛙种子",
+      "species": 1,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        32,
+        44,
+        54,
+        74
+      ]
+    },
+    {
+      "nationalId": 2,
+      "name": "妙蛙草",
+      "species": 1,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        40,
+        55,
+        68,
+        93
+      ]
+    },
+    {
+      "nationalId": 3,
+      "name": "妙蛙花",
+      "species": 1,
+      "stage": 2,
+      "powerPercent": 155,
+      "powers": [
+        50,
+        68,
+        84,
+        115
+      ]
+    },
+    {
+      "nationalId": 4,
+      "name": "小火龙",
+      "species": 2,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        40,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 5,
+      "name": "火恐龙",
+      "species": 2,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        50,
+        73,
+        103
+      ]
+    },
+    {
+      "nationalId": 6,
+      "name": "喷火龙",
+      "species": 2,
+      "stage": 2,
+      "powerPercent": 155,
+      "powers": [
+        43,
+        62,
+        90,
+        127
+      ]
+    },
+    {
+      "nationalId": 7,
+      "name": "杰尼龟",
+      "species": 3,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        40,
+        54,
+        74
+      ]
+    },
+    {
+      "nationalId": 8,
+      "name": "卡咪龟",
+      "species": 3,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        50,
+        68,
+        93
+      ]
+    },
+    {
+      "nationalId": 9,
+      "name": "水箭龟",
+      "species": 3,
+      "stage": 2,
+      "powerPercent": 155,
+      "powers": [
+        43,
+        62,
+        84,
+        115
+      ]
+    },
+    {
+      "nationalId": 10,
+      "name": "绿毛虫",
+      "species": 4,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        0,
+        58,
+        70
+      ]
+    },
+    {
+      "nationalId": 11,
+      "name": "铁甲蛹",
+      "species": 4,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        0,
+        73,
+        88
+      ]
+    },
+    {
+      "nationalId": 12,
+      "name": "巴大蝶",
+      "species": 4,
+      "stage": 2,
+      "powerPercent": 155,
+      "powers": [
+        43,
+        0,
+        90,
+        109
+      ]
+    },
+    {
+      "nationalId": 13,
+      "name": "独角虫",
+      "species": 5,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        0,
+        58,
+        70
+      ]
+    },
+    {
+      "nationalId": 14,
+      "name": "铁壳蛹",
+      "species": 5,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        0,
+        73,
+        88
+      ]
+    },
+    {
+      "nationalId": 15,
+      "name": "大针蜂",
+      "species": 5,
+      "stage": 2,
+      "powerPercent": 155,
+      "powers": [
+        43,
+        0,
+        90,
+        109
+      ]
+    },
+    {
+      "nationalId": 16,
+      "name": "波波",
+      "species": 6,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        32,
+        44,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 17,
+      "name": "比比鸟",
+      "species": 6,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        40,
+        55,
+        73,
+        93
+      ]
+    },
+    {
+      "nationalId": 18,
+      "name": "大比鸟",
+      "species": 6,
+      "stage": 2,
+      "powerPercent": 155,
+      "powers": [
+        50,
+        68,
+        90,
+        115
+      ]
+    },
+    {
+      "nationalId": 19,
+      "name": "小拉达",
+      "species": 7,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 20,
+      "name": "拉达",
+      "species": 7,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        73,
+        93
+      ]
+    },
+    {
+      "nationalId": 21,
+      "name": "烈雀",
+      "species": 8,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 22,
+      "name": "大嘴雀",
+      "species": 8,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        73,
+        93
+      ]
+    },
+    {
+      "nationalId": 23,
+      "name": "阿柏蛇",
+      "species": 9,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 24,
+      "name": "阿柏怪",
+      "species": 9,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        73,
+        93
+      ]
+    },
+    {
+      "nationalId": 25,
+      "name": "皮卡丘",
+      "species": 0,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 26,
+      "name": "雷丘",
+      "species": 0,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        73,
+        103
+      ]
+    },
+    {
+      "nationalId": 27,
+      "name": "穿山鼠",
+      "species": 10,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        0,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 28,
+      "name": "穿山王",
+      "species": 10,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        0,
+        73,
+        103
+      ]
+    },
+    {
+      "nationalId": 29,
+      "name": "尼多兰",
+      "species": 11,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 30,
+      "name": "尼多娜",
+      "species": 11,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        73,
+        93
+      ]
+    },
+    {
+      "nationalId": 31,
+      "name": "尼多后",
+      "species": 11,
+      "stage": 2,
+      "powerPercent": 155,
+      "powers": [
+        43,
+        68,
+        90,
+        115
+      ]
+    },
+    {
+      "nationalId": 32,
+      "name": "尼多朗",
+      "species": 12,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        54,
+        74
+      ]
+    },
+    {
+      "nationalId": 33,
+      "name": "尼多力诺",
+      "species": 12,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        68,
+        93
+      ]
+    },
+    {
+      "nationalId": 34,
+      "name": "尼多王",
+      "species": 12,
+      "stage": 2,
+      "powerPercent": 155,
+      "powers": [
+        43,
+        68,
+        84,
+        115
+      ]
+    },
+    {
+      "nationalId": 35,
+      "name": "皮皮",
+      "species": 13,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        66,
+        82
+      ]
+    },
+    {
+      "nationalId": 36,
+      "name": "皮可西",
+      "species": 13,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        83,
+        103
+      ]
+    },
+    {
+      "nationalId": 37,
+      "name": "六尾",
+      "species": 14,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 38,
+      "name": "九尾",
+      "species": 14,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        73,
+        103
+      ]
+    },
+    {
+      "nationalId": 39,
+      "name": "胖丁",
+      "species": 15,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        66,
+        82
+      ]
+    },
+    {
+      "nationalId": 40,
+      "name": "胖可丁",
+      "species": 15,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        83,
+        103
+      ]
+    },
+    {
+      "nationalId": 41,
+      "name": "超音蝠",
+      "species": 16,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        32,
+        44,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 42,
+      "name": "大嘴蝠",
+      "species": 16,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        40,
+        55,
+        73,
+        93
+      ]
+    },
+    {
+      "nationalId": 43,
+      "name": "走路草",
+      "species": 17,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 44,
+      "name": "臭臭花",
+      "species": 17,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        73,
+        103
+      ]
+    },
+    {
+      "nationalId": 45,
+      "name": "霸王花",
+      "species": 17,
+      "stage": 2,
+      "powerPercent": 155,
+      "powers": [
+        43,
+        68,
+        90,
+        127
+      ]
+    },
+    {
+      "nationalId": 46,
+      "name": "派拉斯",
+      "species": 18,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        40,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 47,
+      "name": "派拉斯特",
+      "species": 18,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        50,
+        73,
+        93
+      ]
+    },
+    {
+      "nationalId": 48,
+      "name": "毛球",
+      "species": 19,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 49,
+      "name": "摩鲁蛾",
+      "species": 19,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        73,
+        93
+      ]
+    },
+    {
+      "nationalId": 50,
+      "name": "地鼠",
+      "species": 20,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        40,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 51,
+      "name": "三地鼠",
+      "species": 20,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        50,
+        73,
+        103
+      ]
+    },
+    {
+      "nationalId": 52,
+      "name": "喵喵",
+      "species": 21,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 53,
+      "name": "猫老大",
+      "species": 21,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        73,
+        93
+      ]
+    },
+    {
+      "nationalId": 54,
+      "name": "可达鸭",
+      "species": 22,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        40,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 55,
+      "name": "哥达鸭",
+      "species": 22,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        50,
+        73,
+        93
+      ]
+    },
+    {
+      "nationalId": 56,
+      "name": "猴怪",
+      "species": 23,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 57,
+      "name": "火暴猴",
+      "species": 23,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        73,
+        93
+      ]
+    },
+    {
+      "nationalId": 58,
+      "name": "卡蒂狗",
+      "species": 24,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 59,
+      "name": "风速狗",
+      "species": 24,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        73,
+        103
+      ]
+    },
+    {
+      "nationalId": 60,
+      "name": "蚊香蝌蚪",
+      "species": 25,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        40,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 61,
+      "name": "蚊香君",
+      "species": 25,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        50,
+        73,
+        93
+      ]
+    },
+    {
+      "nationalId": 62,
+      "name": "蚊香泳士",
+      "species": 25,
+      "stage": 2,
+      "powerPercent": 155,
+      "powers": [
+        43,
+        62,
+        90,
+        115
+      ]
+    },
+    {
+      "nationalId": 63,
+      "name": "凯西",
+      "species": 26,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        32,
+        44,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 64,
+      "name": "勇基拉",
+      "species": 26,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        40,
+        55,
+        73,
+        103
+      ]
+    },
+    {
+      "nationalId": 65,
+      "name": "胡地",
+      "species": 26,
+      "stage": 2,
+      "powerPercent": 155,
+      "powers": [
+        50,
+        68,
+        90,
+        127
+      ]
+    },
+    {
+      "nationalId": 66,
+      "name": "腕力",
+      "species": 27,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        32,
+        44,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 67,
+      "name": "豪力",
+      "species": 27,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        40,
+        55,
+        73,
+        93
+      ]
+    },
+    {
+      "nationalId": 68,
+      "name": "怪力",
+      "species": 27,
+      "stage": 2,
+      "powerPercent": 155,
+      "powers": [
+        50,
+        68,
+        90,
+        115
+      ]
+    },
+    {
+      "nationalId": 69,
+      "name": "喇叭芽",
+      "species": 28,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        32,
+        44,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 70,
+      "name": "口呆花",
+      "species": 28,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        40,
+        55,
+        73,
+        93
+      ]
+    },
+    {
+      "nationalId": 71,
+      "name": "大食花",
+      "species": 28,
+      "stage": 2,
+      "powerPercent": 155,
+      "powers": [
+        50,
+        68,
+        90,
+        115
+      ]
+    },
+    {
+      "nationalId": 72,
+      "name": "玛瑙水母",
+      "species": 29,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 73,
+      "name": "毒刺水母",
+      "species": 29,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        73,
+        103
+      ]
+    },
+    {
+      "nationalId": 74,
+      "name": "小拳石",
+      "species": 30,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 75,
+      "name": "隆隆石",
+      "species": 30,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        73,
+        103
+      ]
+    },
+    {
+      "nationalId": 76,
+      "name": "隆隆岩",
+      "species": 30,
+      "stage": 2,
+      "powerPercent": 155,
+      "powers": [
+        43,
+        68,
+        90,
+        127
+      ]
+    },
+    {
+      "nationalId": 77,
+      "name": "小火马",
+      "species": 31,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 78,
+      "name": "烈焰马",
+      "species": 31,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        73,
+        103
+      ]
+    },
+    {
+      "nationalId": 79,
+      "name": "呆呆兽",
+      "species": 32,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        40,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 80,
+      "name": "呆壳兽",
+      "species": 32,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        50,
+        73,
+        103
+      ]
+    },
+    {
+      "nationalId": 81,
+      "name": "小磁怪",
+      "species": 33,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        40,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 82,
+      "name": "三合一磁怪",
+      "species": 33,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        50,
+        73,
+        103
+      ]
+    },
+    {
+      "nationalId": 83,
+      "name": "大葱鸭",
+      "species": 34,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 84,
+      "name": "嘟嘟",
+      "species": 35,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 85,
+      "name": "嘟嘟利",
+      "species": 35,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        73,
+        93
+      ]
+    },
+    {
+      "nationalId": 86,
+      "name": "小海狮",
+      "species": 36,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        32,
+        44,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 87,
+      "name": "白海狮",
+      "species": 36,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        40,
+        55,
+        73,
+        103
+      ]
+    },
+    {
+      "nationalId": 88,
+      "name": "臭泥",
+      "species": 37,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 89,
+      "name": "臭臭泥",
+      "species": 37,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        73,
+        93
+      ]
+    },
+    {
+      "nationalId": 90,
+      "name": "大舌贝",
+      "species": 38,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 91,
+      "name": "刺甲贝",
+      "species": 38,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        73,
+        103
+      ]
+    },
+    {
+      "nationalId": 92,
+      "name": "鬼斯",
+      "species": 39,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        66,
+        74
+      ]
+    },
+    {
+      "nationalId": 93,
+      "name": "鬼斯通",
+      "species": 39,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        83,
+        93
+      ]
+    },
+    {
+      "nationalId": 94,
+      "name": "耿鬼",
+      "species": 39,
+      "stage": 2,
+      "powerPercent": 155,
+      "powers": [
+        43,
+        68,
+        102,
+        115
+      ]
+    },
+    {
+      "nationalId": 95,
+      "name": "大岩蛇",
+      "species": 40,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 96,
+      "name": "催眠貘",
+      "species": 41,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 97,
+      "name": "引梦貘人",
+      "species": 41,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        73,
+        103
+      ]
+    },
+    {
+      "nationalId": 98,
+      "name": "大钳蟹",
+      "species": 42,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        32,
+        44,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 99,
+      "name": "巨钳蟹",
+      "species": 42,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        40,
+        55,
+        73,
+        93
+      ]
+    },
+    {
+      "nationalId": 100,
+      "name": "霹雳电球",
+      "species": 43,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        40,
+        54,
+        82
+      ]
+    },
+    {
+      "nationalId": 101,
+      "name": "顽皮雷弹",
+      "species": 43,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        50,
+        68,
+        103
+      ]
+    },
+    {
+      "nationalId": 102,
+      "name": "蛋蛋",
+      "species": 44,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 103,
+      "name": "椰蛋树",
+      "species": 44,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        73,
+        103
+      ]
+    },
+    {
+      "nationalId": 104,
+      "name": "卡拉卡拉",
+      "species": 45,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 105,
+      "name": "嘎啦嘎啦",
+      "species": 45,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        73,
+        93
+      ]
+    },
+    {
+      "nationalId": 106,
+      "name": "飞腿郎",
+      "species": 46,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        32,
+        44,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 107,
+      "name": "艾比郎",
+      "species": 47,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        32,
+        44,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 108,
+      "name": "大舌头",
+      "species": 48,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 109,
+      "name": "瓦斯弹",
+      "species": 49,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        32,
+        40,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 110,
+      "name": "双弹瓦斯",
+      "species": 49,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        40,
+        50,
+        73,
+        93
+      ]
+    },
+    {
+      "nationalId": 111,
+      "name": "独角犀牛",
+      "species": 50,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        32,
+        44,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 112,
+      "name": "钻角犀兽",
+      "species": 50,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        40,
+        55,
+        73,
+        103
+      ]
+    },
+    {
+      "nationalId": 113,
+      "name": "吉利蛋",
+      "species": 51,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 114,
+      "name": "蔓藤怪",
+      "species": 52,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 115,
+      "name": "袋兽",
+      "species": 53,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 116,
+      "name": "墨海马",
+      "species": 54,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 117,
+      "name": "海刺龙",
+      "species": 54,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        73,
+        103
+      ]
+    },
+    {
+      "nationalId": 118,
+      "name": "角金鱼",
+      "species": 55,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 119,
+      "name": "金鱼王",
+      "species": 55,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        73,
+        93
+      ]
+    },
+    {
+      "nationalId": 120,
+      "name": "海星星",
+      "species": 56,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 121,
+      "name": "宝石海星",
+      "species": 56,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        73,
+        103
+      ]
+    },
+    {
+      "nationalId": 122,
+      "name": "魔墙人偶",
+      "species": 57,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        32,
+        44,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 123,
+      "name": "飞天螳螂",
+      "species": 58,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        32,
+        44,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 124,
+      "name": "迷唇姐",
+      "species": 59,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        66,
+        82
+      ]
+    },
+    {
+      "nationalId": 125,
+      "name": "电击兽",
+      "species": 60,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 126,
+      "name": "鸭嘴火兽",
+      "species": 61,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 127,
+      "name": "凯罗斯",
+      "species": 62,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        32,
+        44,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 128,
+      "name": "肯泰罗",
+      "species": 63,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 129,
+      "name": "鲤鱼王",
+      "species": 64,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        0,
+        40,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 130,
+      "name": "暴鲤龙",
+      "species": 64,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        0,
+        50,
+        73,
+        93
+      ]
+    },
+    {
+      "nationalId": 131,
+      "name": "拉普拉斯",
+      "species": 65,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 132,
+      "name": "百变怪",
+      "species": 66,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        0,
+        40,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 133,
+      "name": "伊布",
+      "species": 67,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 134,
+      "name": "水伊布",
+      "species": 67,
+      "stage": 1,
+      "powerPercent": 130,
+      "powers": [
+        36,
+        57,
+        75,
+        96
+      ]
+    },
+    {
+      "nationalId": 135,
+      "name": "雷伊布",
+      "species": 67,
+      "stage": 2,
+      "powerPercent": 135,
+      "powers": [
+        38,
+        59,
+        78,
+        100
+      ]
+    },
+    {
+      "nationalId": 136,
+      "name": "火伊布",
+      "species": 67,
+      "stage": 3,
+      "powerPercent": 140,
+      "powers": [
+        39,
+        62,
+        81,
+        104
+      ]
+    },
+    {
+      "nationalId": 137,
+      "name": "多边兽",
+      "species": 68,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 138,
+      "name": "菊石兽",
+      "species": 69,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 139,
+      "name": "多刺菊石兽",
+      "species": 69,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        73,
+        103
+      ]
+    },
+    {
+      "nationalId": 140,
+      "name": "化石盔",
+      "species": 70,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        74
+      ]
+    },
+    {
+      "nationalId": 141,
+      "name": "镰刀盔",
+      "species": 70,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        73,
+        93
+      ]
+    },
+    {
+      "nationalId": 142,
+      "name": "化石翼龙",
+      "species": 71,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        32,
+        44,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 143,
+      "name": "卡比兽",
+      "species": 72,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        40,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 144,
+      "name": "急冻鸟",
+      "species": 73,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        32,
+        44,
+        66,
+        82
+      ]
+    },
+    {
+      "nationalId": 145,
+      "name": "闪电鸟",
+      "species": 74,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        40,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 146,
+      "name": "火焰鸟",
+      "species": 75,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        32,
+        40,
+        66,
+        82
+      ]
+    },
+    {
+      "nationalId": 147,
+      "name": "迷你龙",
+      "species": 76,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        82
+      ]
+    },
+    {
+      "nationalId": 148,
+      "name": "哈克龙",
+      "species": 76,
+      "stage": 1,
+      "powerPercent": 125,
+      "powers": [
+        35,
+        55,
+        73,
+        103
+      ]
+    },
+    {
+      "nationalId": 149,
+      "name": "快龙",
+      "species": 76,
+      "stage": 2,
+      "powerPercent": 155,
+      "powers": [
+        43,
+        68,
+        90,
+        127
+      ]
+    },
+    {
+      "nationalId": 150,
+      "name": "超梦",
+      "species": 77,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        32,
+        44,
+        66,
+        82
+      ]
+    },
+    {
+      "nationalId": 151,
+      "name": "梦幻",
+      "species": 78,
+      "stage": 0,
+      "powerPercent": 100,
+      "powers": [
+        28,
+        44,
+        58,
+        82
+      ]
+    }
+  ],
+  "balance": {
+    "model": "compact-game-v1",
+    "neutralPower": 55,
+    "evolutionPercent": [
+      100,
+      125,
+      155
+    ],
+    "eeveeBranchPercent": {
+      "134": 130,
+      "135": 135,
+      "136": 140
+    },
+    "statusPower": 0,
+    "description": "自定义轻量技能威力；非正作威力。形态倍率计入实际伤害，状态招式无直接伤害。"
+  }
+}

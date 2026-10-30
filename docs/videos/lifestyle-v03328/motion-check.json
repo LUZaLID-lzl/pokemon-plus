@@ -1,0 +1,38 @@
+{
+  "version": "0.33.28",
+  "duration": "15.000000",
+  "width": 720,
+  "height": 1280,
+  "fps": 24,
+  "videoFrames": 360,
+  "shots": {
+    "scene": {
+      "frameCount": 120,
+      "uniqueGameFrames": 120,
+      "meanStartEndPixelChange": [
+        20.106563585069445,
+        12.489024522569444,
+        14.486319444444444
+      ]
+    },
+    "battle": {
+      "frameCount": 120,
+      "uniqueGameFrames": 76,
+      "meanStartEndPixelChange": [
+        22.112137586805556,
+        18.47463650173611,
+        28.923169487847222
+      ]
+    },
+    "warehouse": {
+      "frameCount": 120,
+      "uniqueGameFrames": 6,
+      "meanStartEndPixelChange": [
+        29.739573567708334,
+        19.279237196180556,
+        24.90565863715278
+      ]
+    }
+  },
+  "sha256": "3b9eae5c00e8000f1b0a3447f1fc87a9eb3bb87ab456cfd2bc30e62c33d97b2f"
+}

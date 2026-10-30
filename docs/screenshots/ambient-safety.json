@@ -1,0 +1,62 @@
+[
+  {
+    "scene": 0,
+    "effectPixels": 122,
+    "hudAndButtonsUnchanged": true
+  },
+  {
+    "scene": 1,
+    "effectPixels": 208,
+    "hudAndButtonsUnchanged": true
+  },
+  {
+    "scene": 2,
+    "effectPixels": 98,
+    "hudAndButtonsUnchanged": true
+  },
+  {
+    "scene": 3,
+    "effectPixels": 107,
+    "hudAndButtonsUnchanged": true
+  },
+  {
+    "scene": 4,
+    "effectPixels": 170,
+    "hudAndButtonsUnchanged": true
+  },
+  {
+    "scene": 5,
+    "effectPixels": 123,
+    "hudAndButtonsUnchanged": true
+  },
+  {
+    "scene": 6,
+    "effectPixels": 131,
+    "hudAndButtonsUnchanged": true
+  },
+  {
+    "scene": 7,
+    "effectPixels": 64,
+    "hudAndButtonsUnchanged": true
+  },
+  {
+    "scene": 8,
+    "effectPixels": 69,
+    "hudAndButtonsUnchanged": true
+  },
+  {
+    "scene": 9,
+    "effectPixels": 72,
+    "hudAndButtonsUnchanged": true
+  },
+  {
+    "scene": 10,
+    "effectPixels": 139,
+    "hudAndButtonsUnchanged": true
+  },
+  {
+    "scene": 11,
+    "effectPixels": 630,
+    "hudAndButtonsUnchanged": true
+  }
+]
