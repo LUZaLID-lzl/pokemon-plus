@@ -1,0 +1,40 @@
+{
+  "source": "https://www.ti.com/lit/pdf/SLUUBD4",
+  "title": "BQ27220 Technical Reference Manual",
+  "revision": "SLUUBD4A, November 2022",
+  "downloadedDate": "2026-10-28",
+  "sha256": "44779f229423d649e410439d1d1a3a65026d5919cdd43112ee3a3d8d9811ead9",
+  "sections": [
+    "1.1.10 Initial Battery Capacity at Device Reset",
+    "2.2.21/22 CONFIG UPDATE and reinitialization",
+    "3.4 Data Memory Summary",
+    "6.1 Data Memory Parameter Update Example"
+  ],
+  "userCell": {
+    "nominalVoltageV": 3.7,
+    "capacityMah": 500,
+    "chargeLimitVoltageV": 4.2
+  },
+  "writeScope": {
+    "startAddress": "0x929d",
+    "blockBytes": 32,
+    "modifiedDataOffsets": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "capacityValue": 500,
+    "otherBytesPreserved": 28,
+    "target": "BQ27220 volatile RAM, not OTP or ETA6098 charger",
+    "verifyBlockBytes": 32,
+    "macPayloadDataBytes": 4,
+    "macLengthByte": 8,
+    "postWriteWaitMs": 10
+  },
+  "implementationNotes": [
+    "UNSEALED CONFIG UPDATE confirmed on actual board; no FULL ACCESS required for this transaction.",
+    "Short address+4-byte capacity write follows bundled espressif/bq27220 setter; 32-byte readback verifies remaining 28 bytes.",
+    "Standard FCC refresh lags CFGUPDATE exit; poll at 100ms for at most 3 seconds."
+  ]
+}

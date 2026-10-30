@@ -1,0 +1,255 @@
+{
+  "service": "MobiIoT",
+  "model": "gpt-image-1.5",
+  "attempts": 1,
+  "reviewed": true,
+  "source": "source/fishing-atlas-v1.png",
+  "prompt": "prompts/fishing-atlas-v1.txt",
+  "sourceSha256": "f06b669ceb0cf9cba2bcd15f9e0f93cdfbe87a72b750325d53e7001f1ba8059b",
+  "background": "fishing/pond.png",
+  "backgroundSource": "source/fishing-pond-v1.png",
+  "backgroundSha256": "8b8918af140a04fa73f14fba2396caa72a8b0f79c8abe679d24122d5fe54b129",
+  "controls": {
+    "source": "source/fishing-controls-v1.png",
+    "sourceSha256": "6d1d6f7d2c21278d969f16e017e318dc965ebce28a3d915b490ff3be7f6ee95c",
+    "images": [
+      "fishing/partner-icon.png",
+      "fishing/dex-icon.png"
+    ],
+    "generation": "fishing-controls-generation.json"
+  },
+  "icon": "fishing/icon.png",
+  "fish": [
+    {
+      "id": 0,
+      "name": "青尾鱼",
+      "weight": 230,
+      "coins": 10,
+      "rarity": 0,
+      "image": "fishing/fish-0.png"
+    },
+    {
+      "id": 1,
+      "name": "银鳍鱼",
+      "weight": 140,
+      "coins": 18,
+      "rarity": 0,
+      "image": "fishing/fish-1.png"
+    },
+    {
+      "id": 2,
+      "name": "金鳞鱼",
+      "weight": 40,
+      "coins": 35,
+      "rarity": 1,
+      "image": "fishing/fish-2.png"
+    },
+    {
+      "id": 3,
+      "name": "红斑鲫",
+      "weight": 110,
+      "coins": 12,
+      "rarity": 0,
+      "image": "fishing/fish-3.png"
+    },
+    {
+      "id": 4,
+      "name": "蓝纹鲈",
+      "weight": 80,
+      "coins": 16,
+      "rarity": 0,
+      "image": "fishing/fish-4.png"
+    },
+    {
+      "id": 5,
+      "name": "虎纹鳜",
+      "weight": 55,
+      "coins": 22,
+      "rarity": 1,
+      "image": "fishing/fish-5.png"
+    },
+    {
+      "id": 6,
+      "name": "月光鳟",
+      "weight": 35,
+      "coins": 40,
+      "rarity": 1,
+      "image": "fishing/fish-6.png"
+    },
+    {
+      "id": 7,
+      "name": "紫晶鱼",
+      "weight": 22,
+      "coins": 55,
+      "rarity": 2,
+      "image": "fishing/fish-7.png"
+    },
+    {
+      "id": 8,
+      "name": "樱花鲤",
+      "weight": 18,
+      "coins": 65,
+      "rarity": 2,
+      "image": "fishing/fish-8.png"
+    },
+    {
+      "id": 9,
+      "name": "星砂鱼",
+      "weight": 10,
+      "coins": 85,
+      "rarity": 2,
+      "image": "fishing/fish-9.png"
+    },
+    {
+      "id": 10,
+      "name": "琉璃蝶鱼",
+      "weight": 7,
+      "coins": 110,
+      "rarity": 3,
+      "image": "fishing/fish-10.png"
+    },
+    {
+      "id": 11,
+      "name": "金冠龙鱼",
+      "weight": 3,
+      "coins": 160,
+      "rarity": 3,
+      "image": "fishing/fish-11.png"
+    },
+    {
+      "id": 12,
+      "name": "柠檬鳉",
+      "weight": 40,
+      "coins": 12,
+      "rarity": 0,
+      "image": "fishing/fish-12.png"
+    },
+    {
+      "id": 13,
+      "name": "黑背鲶",
+      "weight": 35,
+      "coins": 14,
+      "rarity": 0,
+      "image": "fishing/fish-13.png"
+    },
+    {
+      "id": 14,
+      "name": "红眼鲢",
+      "weight": 30,
+      "coins": 15,
+      "rarity": 0,
+      "image": "fishing/fish-14.png"
+    },
+    {
+      "id": 15,
+      "name": "翠叶鲷",
+      "weight": 25,
+      "coins": 24,
+      "rarity": 1,
+      "image": "fishing/fish-15.png"
+    },
+    {
+      "id": 16,
+      "name": "斑点鳐",
+      "weight": 22,
+      "coins": 28,
+      "rarity": 1,
+      "image": "fishing/fish-16.png"
+    },
+    {
+      "id": 17,
+      "name": "雪纹鳗",
+      "weight": 20,
+      "coins": 32,
+      "rarity": 1,
+      "image": "fishing/fish-17.png"
+    },
+    {
+      "id": 18,
+      "name": "蓝焰斗鱼",
+      "weight": 18,
+      "coins": 38,
+      "rarity": 1,
+      "image": "fishing/fish-18.png"
+    },
+    {
+      "id": 19,
+      "name": "玫瑰神仙鱼",
+      "weight": 15,
+      "coins": 60,
+      "rarity": 2,
+      "image": "fishing/fish-19.png"
+    },
+    {
+      "id": 20,
+      "name": "琥珀河豚",
+      "weight": 12,
+      "coins": 70,
+      "rarity": 2,
+      "image": "fishing/fish-20.png"
+    },
+    {
+      "id": 21,
+      "name": "银月剑鱼",
+      "weight": 10,
+      "coins": 80,
+      "rarity": 2,
+      "image": "fishing/fish-21.png"
+    },
+    {
+      "id": 22,
+      "name": "虹彩孔雀鱼",
+      "weight": 8,
+      "coins": 95,
+      "rarity": 2,
+      "image": "fishing/fish-22.png"
+    },
+    {
+      "id": 23,
+      "name": "霜角冰鱼",
+      "weight": 6,
+      "coins": 125,
+      "rarity": 3,
+      "image": "fishing/fish-23.png"
+    },
+    {
+      "id": 24,
+      "name": "流星灯笼鱼",
+      "weight": 4,
+      "coins": 145,
+      "rarity": 3,
+      "image": "fishing/fish-24.png"
+    },
+    {
+      "id": 25,
+      "name": "赤焰龙鲤",
+      "weight": 3,
+      "coins": 180,
+      "rarity": 3,
+      "image": "fishing/fish-25.png"
+    },
+    {
+      "id": 26,
+      "name": "极光女王鱼",
+      "weight": 2,
+      "coins": 220,
+      "rarity": 3,
+      "image": "fishing/fish-26.png"
+    }
+  ],
+  "moreSource": "source/fishing-fish-v3.png",
+  "moreSourceSha256": "e6e4ca980b3187f8856fdda4fd298adf37232db531961b0cd82387a3fe583292",
+  "extraSource": "source/fishing-fish-v2.png",
+  "extraSourceSha256": "2eccaa84fa1dc6bcc71da7dce6080ce0240642c5336b1114ddf0aeb6e4ca55c8",
+  "backgroundModel": "gpt-image-1.5",
+  "backgroundAttempts": 1,
+  "backgroundPrompt": "prompts/fishing-pond-v1.txt",
+  "recipe": "2x2 atlas; alpha>=200; whole sprites nearest-fit;15 colors+transparent; icon32;fish24x16 integer4x; pond120/48 colors/integer3x",
+  "moreModel": "gpt-image-1.5",
+  "moreAttempts": 1,
+  "morePrompt": "prompts/fishing-fish-v3.txt",
+  "extraModel": "gpt-image-1.5",
+  "extraAttempts": 1,
+  "extraPrompt": "prompts/fishing-fish-v2.txt",
+  "extraRecipe": "whole connected fish by atlas slot; alpha>=200;24x16 nearest fit;15 colors+binary alpha;96x64 native display and48x32 thumbnails"
+}

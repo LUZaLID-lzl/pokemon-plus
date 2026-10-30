@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+import {execFileSync} from 'node:child_process';
+import {trainingScenes,trainingAmbientEvents} from '../web/training-catalog.mjs';
+import {trainingDiscovery} from '../web/training-events.mjs';
+const all=new Set(trainingScenes.flatMap(s=>s.pool));assert.equal(all.size,146);assert(trainingScenes.every(s=>s.pool.length>=24&&new Set(s.pool).size===s.pool.length));assert(![144,145,146,150,151].some(n=>all.has(n)));
+const lines=[];for(let scene=0;scene<6;scene++)for(let minute=0;minute<=60;minute++)lines.push(trainingDiscovery({elapsedMs:minute*60000,lootChecks:minute,lootRng:60+minute%40},scene,[]));
+const native=execFileSync(fileURLToPath(new URL('./build/test_training_variety',import.meta.url)),['--events'],{encoding:'utf8'}).split('\n');native.pop();assert.deepEqual(lines,native);assert.equal(new Set(trainingAmbientEvents.flat()).size,36);
+assert.equal(trainingDiscovery({elapsedMs:300000,lootChecks:5,lootRng:70,lastItem:1},0,[{name:'树果'}]),'发现 树果 ×1');
+assert.equal(trainingDiscovery({elapsedMs:300000,lootChecks:5,lootRng:70,lastCoins:8},0,[]),'发现 金币 +8');
+assert.notEqual(trainingDiscovery({elapsedMs:313000,lootChecks:5,lootRng:70,lastCoins:8},0,[]),'发现 金币 +8');
+console.log('PASS: 146 ordinary forms / six regional rosters; 366 C/Web event lines, receipt expiry and priority');

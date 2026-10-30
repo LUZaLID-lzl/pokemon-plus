@@ -1,0 +1,211 @@
+{
+  "range": [
+    117,
+    126
+  ],
+  "status": "completed-art-and-animation; integrated firmware/Web v0.19.0",
+  "runtimeIntegrated": true,
+  "actions": [
+    "idle",
+    "walk",
+    "happy",
+    "eat",
+    "sleep",
+    "attack"
+  ],
+  "framesPerAction": 8,
+  "items": [
+    {
+      "nationalId": 117,
+      "name": "海刺龙",
+      "english": "Seadra",
+      "artId": 116,
+      "species": 54,
+      "stage": 1,
+      "anatomy": "BLUE seahorse with long tubular snout, angular crown of three short head spikes, TWO reddish eyes, cream segmented belly, TWO attached pale-blue spiny dorsal fins and ONE curled blue tail; no arms or legs"
+    },
+    {
+      "nationalId": 118,
+      "name": "角金鱼",
+      "english": "Goldeen",
+      "artId": 117,
+      "species": 55,
+      "stage": 0,
+      "anatomy": "WHITE-and-orange rounded goldfish with ONE short cream forehead horn, TWO eyes, small pink mouth, attached flowing white fins edged in orange and ONE attached flowing white tail edged orange; no arms or legs"
+    },
+    {
+      "nationalId": 119,
+      "name": "金鱼王",
+      "english": "Seaking",
+      "artId": 118,
+      "species": 55,
+      "stage": 1,
+      "anatomy": "ORANGE round fish with black irregular patches, cream underside, ONE cream forehead horn, TWO eyes, small pink mouth, attached white side and dorsal fins with dark spots and ONE attached broad white spotted tail; no arms or legs"
+    },
+    {
+      "nationalId": 120,
+      "name": "海星星",
+      "english": "Staryu",
+      "artId": 119,
+      "species": 56,
+      "stage": 0,
+      "anatomy": "ONE ochre five-armed starfish, exactly FIVE thick triangular arms in a continuous body, central gold ring surrounding ONE RED circular jewel; no eyes, mouth, fingers or detached parts"
+    },
+    {
+      "nationalId": 121,
+      "name": "宝石海星",
+      "english": "Starmie",
+      "artId": 120,
+      "species": 56,
+      "stage": 1,
+      "anatomy": "PURPLE starfish formed by TWO connected overlapping five-point stars rotated relative to each other, ten outer tips total, central gold angular ring around ONE RED jewel; no eyes, mouth or limbs separate from star arms"
+    },
+    {
+      "nationalId": 122,
+      "name": "魔墙人偶",
+      "english": "Mr. Mime",
+      "artId": 121,
+      "species": 57,
+      "stage": 0,
+      "anatomy": "friendly pale-pink mime companion, round white head with TWO black eyes, pink round cheeks, TWO blue pointed side hair tufts, small smile, white round torso with red circular belly marking, TWO thin pink arms with white five-finger gloves and red shoulder joints, TWO thin pink legs with blue curled shoes; no tail"
+    },
+    {
+      "nationalId": 123,
+      "name": "飞天螳螂",
+      "english": "Scyther",
+      "artId": 122,
+      "species": 58,
+      "stage": 0,
+      "anatomy": "GREEN upright mantis companion, angular head with TWO eyes and three short head spikes, cream segmented belly, TWO attached pale-cream curved forearm blades, TWO sturdy green legs with white toes, TWO attached pale-green folded back wings; compact nonthreatening pose, no loose objects"
+    },
+    {
+      "nationalId": 124,
+      "name": "迷唇姐",
+      "english": "Jynx",
+      "artId": 123,
+      "species": 59,
+      "stage": 0,
+      "anatomy": "friendly round PURPLE-faced companion wearing a full-length RED robe with gold upper trim and sleeves, long pale-BLONDE hair framing face, TWO eyes and pink lips, TWO purple hands emerging from red sleeves, short red-clad feet subtly visible at robe hem; fully clothed compact game mascot, no props"
+    },
+    {
+      "nationalId": 125,
+      "name": "电击兽",
+      "english": "Electabuzz",
+      "artId": 124,
+      "species": 60,
+      "stage": 0,
+      "anatomy": "YELLOW upright striped companion with BLACK lightning-shaped torso marks and black bands on arms and tail, TWO short antennae with rounded tips, TWO eyes, cream muzzle, TWO attached arms with three blunt fingers, TWO legs with white toes, ONE attached long yellow tail with black bands"
+    },
+    {
+      "nationalId": 126,
+      "name": "鸭嘴火兽",
+      "english": "Magmar",
+      "artId": 125,
+      "species": 61,
+      "stage": 0,
+      "anatomy": "RED-and-yellow upright duck-billed fire companion with TWO rounded flame-shaped head bumps, TWO eyes, short cream duck bill, yellow flame-pattern belly, TWO red arms with three cream claws, TWO red legs, ONE attached tail with a SMALL flame tip touching the tail; no floating flame or effects"
+    }
+  ],
+  "evolution": [
+    {
+      "species": 54,
+      "nationalIds": [
+        116,
+        117
+      ],
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 32
+        }
+      ]
+    },
+    {
+      "species": 55,
+      "nationalIds": [
+        118,
+        119
+      ],
+      "steps": [
+        {
+          "trigger": "level",
+          "level": 33
+        }
+      ]
+    },
+    {
+      "species": 56,
+      "nationalIds": [
+        120,
+        121
+      ],
+      "steps": [
+        {
+          "trigger": "water-stone",
+          "item": "水之石",
+          "price": 200
+        }
+      ]
+    }
+  ],
+  "pendingEvolution": [],
+  "identityCompletedNationalIds": [
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126
+  ],
+  "completedAnimationNationalIds": [
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126
+  ],
+  "pendingAnimationNationalIds": [],
+  "failureLog": null,
+  "failedTask": null,
+  "activeTask": null,
+  "identityMode": "per-species sources;see identity manifest and visual-review identitySources",
+  "identityAtlasFailures": [
+    {
+      "kind": "identity-atlas",
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/gen1-117-126-generation-v1.log"
+    },
+    {
+      "kind": "identity-atlas",
+      "version": 2,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/gen1-117-126-generation-v2.log"
+    }
+  ],
+  "failedNationalId": null,
+  "previousStoppedTasks": [
+    {
+      "kind": "identity",
+      "nationalId": 120,
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-120-generation-v1.log",
+      "prompt": "assets/prompts/identity-120-v1.txt",
+      "sourceImage": null
+    }
+  ],
+  "firmwareVersion": "v0.19.0"
+}

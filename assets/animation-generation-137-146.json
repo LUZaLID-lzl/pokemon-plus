@@ -1,0 +1,95 @@
+{
+  "scope": "137-146",
+  "generator": "mobiiot-imagegen",
+  "generated": [
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146
+  ],
+  "exported": [
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146
+  ],
+  "completed": false,
+  "status": "137-146 reviewed artwork and complete48-pose sets integrated into firmware/Web v0.29.0; runtime QA passed",
+  "failedNationalId": null,
+  "runtimeIntegrated": true,
+  "identityCompletedNationalIds": [
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146
+  ],
+  "completedAnimationNationalIds": [
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146
+  ],
+  "pendingIdentityNationalIds": [],
+  "pendingAnimationNationalIds": [],
+  "failedTask": null,
+  "failureLog": null,
+  "activeTask": null,
+  "continuationPreference": null,
+  "previousStoppedTasks": [
+    {
+      "kind": "identity",
+      "nationalId": 139,
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-139-generation-v1.log",
+      "prompt": "assets/prompts/identity-139-v1.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "animation",
+      "nationalId": 143,
+      "version": 1,
+      "log": "assets/prompts/animation-143/generation-v1.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/animation-143/master-v1.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 144,
+      "version": 1,
+      "log": "build/identity-144-generation-v1.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-144-v1.txt",
+      "sourceImage": null
+    }
+  ],
+  "artScopeCompleted": true
+}
