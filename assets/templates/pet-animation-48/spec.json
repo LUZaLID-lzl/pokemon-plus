@@ -1,0 +1,36 @@
+{
+  "canvas": 48,
+  "maxSilhouette": 40,
+  "maxOpaqueColors": 16,
+  "outline": "#1b263a",
+  "rows": [
+    "idle",
+    "walk",
+    "happy",
+    "eat",
+    "sleep",
+    "attack"
+  ],
+  "columns": 8,
+  "frames": 48,
+  "sourceIdentity": "assets/pokemon/{batch}/{nationalId:03}.png",
+  "preserve": [
+    "identity",
+    "proportions",
+    "palette",
+    "outline",
+    "camera",
+    "baseline"
+  ],
+  "generation": "real articulated key poses, fixed scale; not whole-sprite translation",
+  "qa": [
+    "48 isolated source components",
+    "8 distinct registered frames per action",
+    "closed connected outline",
+    "exact horizontal mirrors",
+    "cyclic continuity",
+    "eyes closed throughout sleep",
+    "offline scene playback"
+  ],
+  "runtimeIntegrated": true
+}

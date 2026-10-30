@@ -1,0 +1,15 @@
+Create ONLY a SINGLE HORIZONTAL ROW of EXACTLY EIGHT separated pixel-art Paras attack poses. The attached image is the exact approved identity: small orange six-legged crab insect, big white eyes with black pupils, two front pincers, four small rear legs, and exactly TWO attached red mushrooms with cream spots on its back. Preserve its proportions, orange/red palette and closed deep navy pixel outline.
+
+One row, eight columns, eight full-body sprites total. No other rows. 8 complete separated characters across a wide transparent strip; each silhouette <=65% of its cell width with generous transparent gutters. Real transparent alpha, no text, numbers, grid, checkerboard, shadows, props, particles, projectiles or effects. Native48px character design, silhouette <=40px, crisp square pixels, no smoothing or whole-body scaling/stretching.
+
+Eight consecutive phases of ONE natural attack, in strict left-to-right order:
+1 neutral crouch, pincers close to body;
+2 brace feet, pincers draw back slightly;
+3 lean forward, one attached pincer extends;
+4 small pincer thrust forward, body remains compact;
+5 peak attached-pincer jab, no projectile;
+6 pincer retracts and body recoils gently;
+7 settle all six feet and lower pincers;
+8 recover the exact neutral pose.
+
+Camera three-quarter LEFT, all feet remain connected, both mushrooms remain attached and retain the same size/placement. Small joint articulation, stable head/body volume and floor baseline. Exactly EIGHT compact complete creatures, no missing or merged bodies. The strip supplies the missing attack action; do not draw sleeping or eating poses.

@@ -1,0 +1,192 @@
+#ifndef PLUS_GAME_H
+#define PLUS_GAME_H
+#include <stdbool.h>
+#include <stdint.h>
+#include "pokedex_roster.h"
+#include "travel_catalog.h"
+#define PP_PETS 5
+#define PP_SPECIES 11
+#define PP_EVOLUTIONS 16
+#define PP_THUNDER_STONE_PRICE 200u
+#define PP_ITEMS 6
+/* Immediate hatch is shop-only; keep six-slot inventory/save layout intact. */
+#define PP_INSTANT_EGG PP_ITEMS
+#define PP_SHOP_ITEMS (PP_ITEMS + 1)
+#define PP_DROP_SPOTS 24
+#define PP_SCENES 12
+#define PP_TRAVEL_COLLECTION 583
+#define PP_PURE_HEART 583
+#define PP_COLLECTION 584
+#define PP_VERSION 6
+#define PP_MAX_LEVEL 40
+#define PP_GYM_TEAM 3
+#define PP_RESERVES 11
+#define PP_TRAVEL_SECONDS 10800u
+#define PP_EGG_MIN_SECONDS 7200u
+#define PP_EGG_MAX_SECONDS 14400u
+#define PP_EGG_SECONDS PP_EGG_MAX_SECONDS
+typedef enum {
+  PP_OK,
+  PP_NO_COINS,
+  PP_EMPTY,
+  PP_FULL,
+  PP_BUSY,
+  PP_NEED_TWO,
+  PP_DAILY_LIMIT,
+  PP_NOT_READY,
+  PP_INVALID,
+  PP_EVOLUTION_LOCKED,
+  PP_NEED_THREE
+} pp_result;
+typedef struct {
+  uint8_t species, food, clean, health, mood, energy, sleeping;
+} pp_pet;
+typedef struct {
+  const char *name;
+  uint16_t price;
+  uint8_t food, clean, health, mood;
+} pp_item;
+typedef struct {
+  uint8_t level, stage;
+  uint16_t xp;
+} pp_growth;
+typedef struct {
+  uint64_t badges;
+  uint32_t wins, reward_coins;
+  uint16_t reward_xp, reward_item;
+  int16_t hp[PP_GYM_TEAM], max_hp[PP_GYM_TEAM];
+  int16_t enemy_hp[PP_GYM_TEAM], enemy_max[PP_GYM_TEAM];
+  uint8_t mode, team[PP_GYM_TEAM], ally, enemy, entered, result, first_clear;
+} pp_gym_state;
+typedef struct {
+  uint32_t magic, version, rng, revision, coins, stage, day, tarot_day,
+      tarot_card;
+  uint64_t seconds, travel_end, egg_end;
+  uint32_t care_remainder, travel_events, travel_reward;
+  int8_t traveler;
+  uint8_t count, scene, digs_today, egg_shakes;
+  uint16_t inventory[PP_ITEMS], scenes;
+  uint8_t collected[(PP_COLLECTION + 7) / 8];
+  pp_pet pets[PP_PETS];
+  /* 0 inactive, 1 legacy center, 2..25 persisted random lawn spot. */
+  uint8_t drop_item, drop_target, drop_active;
+  uint64_t drop_end;
+  uint8_t clock_ready, digging, dig_lives, dig_depth;
+  uint32_t dig_reward;
+  uint8_t battling, battle_pet;
+  int16_t battle_hp, enemy_hp, battle_max_hp, enemy_max_hp;
+  uint64_t battle_next;
+  char log[4][96];
+  pp_growth growth[PP_PETS];
+  uint32_t battle_round;
+  uint64_t total_steps;
+  uint32_t steps_today, steps_rewarded, steps_coins, steps_xp;
+  /* Per individual pet slot; permanent, persisted with its collectible reward. */
+  uint64_t evolution_declined;
+  /* Bench pets keep identity, growth and permanent evolution choice. */
+  pp_pet reserves[PP_RESERVES];
+  pp_growth reserve_growth[PP_RESERVES];
+  uint16_t reserve_declined;
+  uint8_t reserve_count, random_scene;
+  uint32_t random_scene_day, tarot_effect_day;
+  pp_gym_state gym;
+} pp_game;
+typedef struct {
+  uint16_t national_id;
+  uint8_t species, stage, art;
+  const char *name;
+} pp_dex_entry;
+extern const pp_dex_entry pp_pokedex[PP_DEX_COUNT];
+bool pp_dex_owned(const pp_game *, unsigned entry);
+unsigned pp_dex_count(const pp_game *);
+void pp_dex_order(const pp_game *, unsigned order[PP_DEX_COUNT]);
+#define PP_QUALITY_COUNT 6
+#define PP_QUALITY_ALL PP_QUALITY_COUNT
+typedef struct {
+  const char *name;
+  uint8_t quality, scene;
+} pp_collection_entry;
+typedef struct {
+  const char *name;
+  uint32_t color;
+  uint16_t count;
+  uint8_t target_percent;
+} pp_quality_entry;
+extern const pp_collection_entry pp_collectibles[PP_COLLECTION];
+extern const pp_quality_entry pp_qualities[PP_QUALITY_COUNT];
+/* ALL includes the exclusive special gift; travel randomness never includes it. */
+unsigned pp_collection_total(unsigned quality);
+unsigned pp_collection_owned(const pp_game *, unsigned quality);
+unsigned pp_collection_id(unsigned quality, unsigned index);
+extern const pp_item pp_items[PP_SHOP_ITEMS];
+extern const char *const pp_pet_names[PP_SPECIES];
+extern const char *const pp_scene_names[PP_SCENES];
+extern const char *const pp_tarot_names[8];
+void pp_init(pp_game *, uint32_t seed);
+bool pp_needs_starter(const pp_game *);
+pp_result pp_choose_starter(pp_game *, unsigned national_id);
+typedef struct {
+  uint8_t species, level, from_stage, art;
+  const char *name;
+} pp_evolution_template;
+extern const pp_evolution_template pp_evolutions[PP_EVOLUTIONS];
+unsigned pp_xp_needed(unsigned level);
+void pp_gain_xp(pp_game *, unsigned pet, unsigned xp);
+unsigned pp_evolution_level(const pp_game *, unsigned pet);
+pp_result pp_evolve(pp_game *, unsigned pet);
+bool pp_evolution_locked(const pp_game *, unsigned pet);
+pp_result pp_evolution_offer(const pp_game *, unsigned pet);
+pp_result pp_decline_evolution(pp_game *, unsigned pet);
+/* Purchased and consumed on the selected Pikachu; no save inventory slot. */
+pp_result pp_evolve_thunder_stone(pp_game *, unsigned pet);
+const char *pp_form_name(const pp_game *, unsigned pet);
+unsigned pp_art_id(const pp_game *, unsigned pet);
+unsigned pp_base_art(unsigned species);
+void pp_record_steps(pp_game *, unsigned steps);
+unsigned pp_step_coin_rate(const pp_game *);
+unsigned pp_step_xp_rate(const pp_game *);
+bool pp_import_v5(pp_game *, const void *, unsigned bytes, uint32_t checksum);
+bool pp_import_v4(pp_game *, const void *, unsigned bytes, uint32_t checksum);
+bool pp_import_v3(pp_game *, const void *, unsigned bytes, uint32_t checksum);
+bool pp_import_v2(pp_game *, const void *, unsigned bytes, uint32_t checksum);
+bool pp_import_v1(pp_game *, const void *, unsigned bytes, uint32_t checksum);
+bool pp_valid(const pp_game *);
+void pp_tick(pp_game *, uint32_t seconds, uint32_t day);
+pp_result pp_pat(pp_game *, unsigned pet);
+unsigned pp_pat_all(pp_game *);
+pp_result pp_replace_pet(pp_game *, unsigned slot, unsigned reserve);
+pp_result pp_reserve_pet(pp_game *, unsigned slot);
+pp_result pp_random_scene(pp_game *, bool enabled);
+bool pp_tarot_active(const pp_game *, unsigned card);
+extern const char *const pp_tarot_effects[8];
+pp_result pp_buy(pp_game *, unsigned item);
+pp_result pp_use(pp_game *, unsigned item, unsigned target);
+void pp_drop_position(const pp_game *, int *x, int *y);
+void pp_egg_position(const pp_game *, int *x, int *y);
+pp_result pp_travel(pp_game *, unsigned pet);
+unsigned pp_travel_destination(const pp_game *);
+const char *pp_travel_name(unsigned destination);
+typedef struct {
+  bool active, ready, walking;
+  unsigned remaining, events, pending_coins;
+  const char *activity, *event;
+} pp_travel_status;
+pp_travel_status pp_travel_describe(const pp_game *);
+pp_result pp_claim(pp_game *);
+pp_result pp_battle(pp_game *, unsigned pet); /* Legacy renderer/test compatibility. */
+typedef struct { const char *name; uint8_t level; uint16_t hp, attack, defense; } pp_gym_enemy;
+extern const pp_gym_enemy pp_pewter_team[PP_GYM_TEAM];
+pp_result pp_gym_start(pp_game *, const unsigned team[PP_GYM_TEAM]);
+unsigned pp_gym_hp(const pp_game *, unsigned pet);
+unsigned pp_gym_damage(const pp_game *, bool enemy, unsigned slot, unsigned variance);
+void pp_gym_leave(pp_game *); /* A running challenge continues when navigating away. */
+pp_result pp_dig_start(pp_game *);
+pp_result pp_shake(pp_game *);
+pp_result pp_dig_stop(pp_game *);
+pp_result pp_tarot(pp_game *);
+pp_result pp_scene(pp_game *, unsigned scene);
+unsigned pp_collected(const pp_game *);
+bool pp_has(const pp_game *, unsigned id);
+const char *pp_message(pp_result);
+uint32_t pp_checksum(const pp_game *);
+#endif

@@ -1,0 +1,30 @@
+{
+  "service": "MobiIoT",
+  "model": "gpt-image-1.5",
+  "attempts": 1,
+  "source": "source/scene-nests-v3.png",
+  "prompt": "prompts/scene-nests-v3.txt",
+  "reference": "reference/scene-nests-backgrounds.png",
+  "sourceSha256": "9602646e7d9d7addf383b1f57c882b4a649f34971fe110f73e8e0e7371ed7376",
+  "recipe": "Original120px scene + localized40x32 native AI terrain edit;15 local colors;3 native perimeter blend;48 scene colors; shared contrast; integer3x; front RGB cut from actual edited background",
+  "revision": 6,
+  "reviewed": true,
+  "sceneCount": 13,
+  "atlasRole": "Position reference only; runtime scenes use13 localized AI ground edits",
+  "terrainGeneration": "scene-nest-terrain-v3-generation.json",
+  "embeddedSources": [
+    "source/scene-nest-terrain-v2/00-native.png",
+    "source/scene-nest-terrain-v2/01-native.png",
+    "source/scene-nest-terrain-v2/02-native.png",
+    "source/scene-nest-terrain-v3/03-native.png",
+    "source/scene-nest-terrain-v2/04-native.png",
+    "source/scene-nest-terrain-v2/05-native.png",
+    "source/scene-nest-terrain-v2/06-native.png",
+    "source/scene-nest-terrain-v2/07-native.png",
+    "source/scene-nest-terrain-v2/08-native.png",
+    "source/scene-nest-terrain-v2/09-native.png",
+    "source/scene-nest-terrain-v2/10-native.png",
+    "source/scene-nest-terrain-v2/11-native.png",
+    "source/scene-nest-terrain-v3/12-native.png"
+  ]
+}

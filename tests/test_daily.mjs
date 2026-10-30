@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {createDailyPreview,tarotNames,tarotEffects} from '../web/daily.js';
+const values=new Map();let fails=false,rolls=0;
+const storage={getItem:k=>values.get(k),setItem(k,v){if(fails)throw Error('storage failed');values.set(k,v)}};
+const demo=()=>createDailyPreview({storage,sceneCount:12,roll:()=>++rolls});
+let d=demo();d.advance(20261023);d.toggle(20261023);const scene=d.state.scene;
+assert.equal(d.state.sceneDay,20261023);const n=rolls;d.toggle(20261023);d.toggle(20261023);assert.equal(rolls,n);
+assert.equal(demo().state.scene,scene);d.draw(20261023);assert.throws(()=>d.draw(20261023));
+const card=d.state.card;d=demo();assert.equal(d.state.card,card);assert.throws(()=>d.advance(20261022));
+d.advance(20261024);assert.notEqual(d.state.scene,scene);assert.notEqual(d.state.tarotDay,d.state.day);
+const before=JSON.stringify(d.state);fails=true;assert.throws(()=>d.draw(20261024));assert.equal(JSON.stringify(d.state),before);
+fails=false;d.draw(20261024);assert.equal(tarotNames.length,8);assert.equal(new Set(tarotEffects).size,8);
+console.log('PASS: browser daily persistence, no same-day reroll, tarot daily limit/expiry, clock rollback rejection and failed-storage rollback');

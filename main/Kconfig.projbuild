@@ -1,0 +1,8 @@
+menu "Pokemon Plus"
+config PP_WIFI_SSID
+    string "Optional Wi-Fi SSID for clock synchronization"
+    default ""
+config PP_WIFI_PASSWORD
+    string "Wi-Fi password (local sdkconfig only, never commit)"
+    default ""
+endmenu

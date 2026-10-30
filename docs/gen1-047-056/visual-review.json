@@ -1,0 +1,45 @@
+{
+  "identityReviewed": [
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56
+  ],
+  "animationReviewed": [
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56
+  ],
+  "acceptedVersions": {
+    "47": 1,
+    "48": 2,
+    "49": 1,
+    "50": 1,
+    "51": 1,
+    "52": 1,
+    "53": 2,
+    "54": 1,
+    "55": 1,
+    "56": 2
+  },
+  "notes": {
+    "048": "v1 sleep eyes open; independent AI closed-eye row replaces sleep only",
+    "053": "v1 sleep eyes not convincingly closed; independent AI closed-eye row replaces sleep only",
+    "056": "v1 has only five actions; independent AI eight-pose sleep row inserted before original attack row",
+    "palette": "Opaque hue-family palette protects rare noses, red forehead gems and eye whites; original older batches unchanged",
+    "050-051": "Attached earth bases, no added limbs; three complete heads in every Dugtrio pose"
+  }
+}

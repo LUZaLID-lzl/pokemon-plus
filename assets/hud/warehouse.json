@@ -1,0 +1,22 @@
+{
+  "service": "MobiIoT",
+  "model": "gpt-image-1.5",
+  "attempts": 1,
+  "source": "source/warehouse-icon-v2.png",
+  "prompt": "prompts/warehouse-icon-v2.txt",
+  "log": "build/warehouse-icon-generation-v2.log",
+  "references": [
+    "sdcard/pokemon-plus/hud/gym.png",
+    "sdcard/pokemon-plus/icons/13.png"
+  ],
+  "sourceSha256": "945c5a9433c20b9e22a2774360b2d54adfea33eac46ec1527f7b8551f1ca4dc4",
+  "output": "hud/warehouse.png",
+  "sha256": "c9b8d280a49379d49eb6679683f5a99f241c1686dbef15b901414790d0a53412",
+  "recipe": {
+    "alphaThreshold": 200,
+    "maxSilhouette": 29,
+    "canvas": 32,
+    "resampling": "nearest",
+    "quantizeColors": 15
+  }
+}

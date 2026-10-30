@@ -1,0 +1,190 @@
+{
+  "version": 2,
+  "kind": "single-pose art review",
+  "generator": "MobiIoT",
+  "model": "gpt-image-2.5-sunburst",
+  "attempts": 1,
+  "sourceAtlas": "../../source/gen1-097-106-v2.png",
+  "sourceSha256": "419e4998d4399f60584d082c31b7a834cb67fc05a826e789b97178f5fea6e8b0",
+  "prompt": "../../prompts/gen1-097-106-v2.txt",
+  "nativeCanvas": 48,
+  "maxColors": 16,
+  "outlineColor": "#1b263a",
+  "alpha": "binary",
+  "gameIntegrated": true,
+  "animationPosesPerSpecies": 1,
+  "items": [
+    {
+      "id": 97,
+      "name": "引梦貘人",
+      "english": "Hypno",
+      "chain": 41,
+      "stage": 1,
+      "image": "097.png",
+      "preview": "097@8x.png",
+      "sourceBox": [
+        65,
+        76,
+        339,
+        373
+      ],
+      "outlinePixels": 179,
+      "source": "https://wiki.52poke.com/wiki/引梦貘人"
+    },
+    {
+      "id": 98,
+      "name": "大钳蟹",
+      "english": "Krabby",
+      "chain": 42,
+      "stage": 0,
+      "image": "098.png",
+      "preview": "098@8x.png",
+      "sourceBox": [
+        420,
+        152,
+        771,
+        363
+      ],
+      "outlinePixels": 184,
+      "source": "https://wiki.52poke.com/wiki/大钳蟹"
+    },
+    {
+      "id": 99,
+      "name": "巨钳蟹",
+      "english": "Kingler",
+      "chain": 42,
+      "stage": 1,
+      "image": "099.png",
+      "preview": "099@8x.png",
+      "sourceBox": [
+        803,
+        94,
+        1192,
+        372
+      ],
+      "outlinePixels": 197,
+      "source": "https://wiki.52poke.com/wiki/巨钳蟹"
+    },
+    {
+      "id": 100,
+      "name": "霹雳电球",
+      "english": "Voltorb",
+      "chain": 43,
+      "stage": 0,
+      "image": "100.png",
+      "preview": "100@8x.png",
+      "sourceBox": [
+        1287,
+        149,
+        1506,
+        365
+      ],
+      "outlinePixels": 154,
+      "source": "https://wiki.52poke.com/wiki/霹雳电球"
+    },
+    {
+      "id": 101,
+      "name": "顽皮雷弹",
+      "english": "Electrode",
+      "chain": 43,
+      "stage": 1,
+      "image": "101.png",
+      "preview": "101@8x.png",
+      "sourceBox": [
+        1642,
+        104,
+        1901,
+        365
+      ],
+      "outlinePixels": 156,
+      "source": "https://wiki.52poke.com/wiki/顽皮雷弹"
+    },
+    {
+      "id": 102,
+      "name": "蛋蛋",
+      "english": "Exeggcute",
+      "chain": 44,
+      "stage": 0,
+      "image": "102.png",
+      "preview": "102@8x.png",
+      "sourceBox": [
+        55,
+        483,
+        378,
+        743
+      ],
+      "outlinePixels": 152,
+      "source": "https://wiki.52poke.com/wiki/蛋蛋"
+    },
+    {
+      "id": 103,
+      "name": "椰蛋树",
+      "english": "Exeggutor",
+      "chain": 44,
+      "stage": 1,
+      "image": "103.png",
+      "preview": "103@8x.png",
+      "sourceBox": [
+        421,
+        396,
+        803,
+        738
+      ],
+      "outlinePixels": 230,
+      "source": "https://wiki.52poke.com/wiki/椰蛋树"
+    },
+    {
+      "id": 104,
+      "name": "卡拉卡拉",
+      "english": "Cubone",
+      "chain": 45,
+      "stage": 0,
+      "image": "104.png",
+      "preview": "104@8x.png",
+      "sourceBox": [
+        844,
+        435,
+        1134,
+        743
+      ],
+      "outlinePixels": 185,
+      "source": "https://wiki.52poke.com/wiki/卡拉卡拉"
+    },
+    {
+      "id": 105,
+      "name": "嘎啦嘎啦",
+      "english": "Marowak",
+      "chain": 45,
+      "stage": 1,
+      "image": "105.png",
+      "preview": "105@8x.png",
+      "sourceBox": [
+        1268,
+        417,
+        1540,
+        742
+      ],
+      "outlinePixels": 188,
+      "source": "https://wiki.52poke.com/wiki/嘎啦嘎啦"
+    },
+    {
+      "id": 106,
+      "name": "飞腿郎",
+      "english": "Hitmonlee",
+      "chain": 46,
+      "stage": 0,
+      "image": "106.png",
+      "preview": "106@8x.png",
+      "sourceBox": [
+        1631,
+        422,
+        1927,
+        749
+      ],
+      "outlinePixels": 238,
+      "source": "https://wiki.52poke.com/wiki/飞腿郎"
+    }
+  ],
+  "firmwareVersion": "v0.17.0",
+  "animationManifest": "../../animation-templates/index.json"
+}
