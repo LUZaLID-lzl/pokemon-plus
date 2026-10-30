@@ -1,0 +1,35 @@
+# Local builds and downloaded ESP-IDF dependencies.
+/build/
+/preview/build*/
+/tests/build/
+/managed_components/
+/dist/
+/tmp/
+/sdkconfig
+/sdkconfig.old
+
+# Local caches and logs.
+.DS_Store
+*.pyc
+__pycache__/
+*.log
+node_modules/
+.venv/
+venv/
+
+# Local credentials and signing material.
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+/android/.signing/
+local.properties
+
+# Full device backups may include local configuration.
+/backup/

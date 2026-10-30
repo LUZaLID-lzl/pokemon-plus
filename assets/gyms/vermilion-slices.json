@@ -1,0 +1,20 @@
+{
+  "source": "assets/source/gyms/vermilion-atlas-v1.png",
+  "alphaThreshold": 220,
+  "surge": {
+    "box": [
+      160,
+      75,
+      630,
+      945
+    ]
+  },
+  "thunder": {
+    "box": [
+      835,
+      190,
+      1470,
+      825
+    ]
+  }
+}
