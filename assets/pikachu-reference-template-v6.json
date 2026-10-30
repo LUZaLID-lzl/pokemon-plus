@@ -1,0 +1,22 @@
+{
+  "kind": "manual pixel/SVG drawing",
+  "reference": "reference/pikachu-closeup-20261022.png",
+  "canvas": [
+    32,
+    32
+  ],
+  "colors": {
+    "outline": "#4b4329",
+    "tip": "#353b2b",
+    "yellow": "#f8df37",
+    "light": "#fff176",
+    "shine": "#fff8a2",
+    "shade": "#d4a62c",
+    "deep": "#b17b29",
+    "cheek": "#ed4930",
+    "cheeklight": "#ff6840"
+  },
+  "integrated": false,
+  "source": "tools/draw_pikachu_reference.py",
+  "imageServiceGenerated": false
+}

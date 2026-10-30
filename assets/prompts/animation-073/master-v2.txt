@@ -1,0 +1,11 @@
+Draw a transparent pixel-art animation sheet of 073 Tentacruel, the same friendly game creature as the attached approved reference. Preserve its exact face, colors, proportions and connected anatomy: large light BLUE jellyfish with broad domed head, exactly TWO large RED oval gems, small central pale blue diamond mark, dark blue central face and two narrow eyes, many pale thin tentacles visibly attached underneath in compact connected bunch, show EIGHT distinct tentacle tips, no hands or feet.
+Layout: 8 columns by 6 rows, exactly 48 separate COMPLETE whole-body poses. All cells have generous transparent margins; no touching or cropped bodies. Same scale, left-facing camera and baseline. Native 48px style with subject within40px, at most15 opaque colors plus transparency, crisp square pixels and continuous thin deep-navy outline. Real transparent background, no text, ground, props, particles, checkerboard or shadows.
+Rows top to bottom:
+1. Idle: eight breathing and blinking phases, seamless loop.
+2. Travel: eight genuine articulated in-place phases, seamless loop.
+3. Happy: eight small cheerful movement phases returning to neutral.
+4. Eat: eight head/mouth chewing phases without food props, seamless loop.
+5. Sleep: eight low resting poses with ALL eyes CLOSED throughout, subtle breathing, seamless loop.
+6. Action: eight compact game-action poses: prepare, brace, lean, extend, peak, recoil, recover, neutral. Keep complete body and every appendage attached in each cell.
+Motion and anatomy requirements: Floating jellyfish: NO ARMS, FEET or walking legs. Eight real alternating bends of fully attached tentacles to swim in place, fixed dome volume and TWO red gems. Happy gentle tentacle curl, eat subtle underside mouth movement without props, sleep low floating rest with eyes FULLY CLOSED for all eight poses, tiny attached tentacle breathing phases; attack tentacles thrust softly forward, recoil and recover. No water particles, disconnected tentacles or body stretching. Dense connected tentacle bunch with EIGHT distinct visible pale tips in every pose, no disappearing tentacles.
+Keep consistent body volume and exact reference identity throughout. Every row must have eight DISTINCT complete poses, not copies shifted or stretched. No cut-body assembly. Gentle phase spacing for smooth playback. Last frame of happy/action recovers neutral.

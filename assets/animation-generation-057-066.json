@@ -1,0 +1,46 @@
+{
+  "scope": "057-066",
+  "generator": "mobiiot-imagegen",
+  "generated": [
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66
+  ],
+  "exported": [
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66
+  ],
+  "completed": true,
+  "status": "complete; all ten visual reviews and runtime/release checks passed",
+  "failedNationalId": null,
+  "runtimeIntegrated": true,
+  "visualReviewed": [
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66
+  ],
+  "pendingNationalIds": [],
+  "firmwareVersion": "v0.13.0"
+}

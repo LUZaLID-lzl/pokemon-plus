@@ -1,0 +1,746 @@
+{
+  "version": 1,
+  "nationalId": 31,
+  "name": "尼多后",
+  "kind": "generated animation template",
+  "gameIntegrated": true,
+  "source": "assets/source/animation-031-master-v1.png",
+  "sourceSha256": "6a222fbc0f21743210a732e75ffbc1fcaad9c4f435b0591d5f1fa7d87ea59983",
+  "identityReference": "assets/pokemon/gen1-028-036/031.png",
+  "prompt": "assets/prompts/animation-031/master-v1.txt",
+  "generator": "mobiiot-imagegen",
+  "model": "gpt-image-2.5-sunburst",
+  "attempts": 1,
+  "alphaThreshold": 230,
+  "nativeCanvas": 48,
+  "silhouetteMax": 40,
+  "framesPerAction": 8,
+  "frames": 48,
+  "sourceFacing": "left",
+  "directions": {
+    "left": ".",
+    "right": "right"
+  },
+  "palette": "shared palette from this species approved native sprite",
+  "scale": 0.23952095808383234,
+  "actions": {
+    "idle": {
+      "frames": [
+        "idle-00.png",
+        "idle-01.png",
+        "idle-02.png",
+        "idle-03.png",
+        "idle-04.png",
+        "idle-05.png",
+        "idle-06.png",
+        "idle-07.png"
+      ],
+      "durationsMs": [
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140
+      ],
+      "mode": "loop"
+    },
+    "walk": {
+      "frames": [
+        "walk-00.png",
+        "walk-01.png",
+        "walk-02.png",
+        "walk-03.png",
+        "walk-04.png",
+        "walk-05.png",
+        "walk-06.png",
+        "walk-07.png"
+      ],
+      "durationsMs": [
+        80,
+        90,
+        80,
+        80,
+        90,
+        80,
+        80,
+        90
+      ],
+      "mode": "loop"
+    },
+    "happy": {
+      "frames": [
+        "happy-00.png",
+        "happy-01.png",
+        "happy-02.png",
+        "happy-03.png",
+        "happy-04.png",
+        "happy-05.png",
+        "happy-06.png",
+        "happy-07.png"
+      ],
+      "durationsMs": [
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90
+      ],
+      "mode": "one-shot"
+    },
+    "eat": {
+      "frames": [
+        "eat-00.png",
+        "eat-01.png",
+        "eat-02.png",
+        "eat-03.png",
+        "eat-04.png",
+        "eat-05.png",
+        "eat-06.png",
+        "eat-07.png"
+      ],
+      "durationsMs": [
+        130,
+        130,
+        130,
+        130,
+        130,
+        130,
+        130,
+        130
+      ],
+      "mode": "loop"
+    },
+    "sleep": {
+      "frames": [
+        "sleep-00.png",
+        "sleep-01.png",
+        "sleep-02.png",
+        "sleep-03.png",
+        "sleep-04.png",
+        "sleep-05.png",
+        "sleep-06.png",
+        "sleep-07.png"
+      ],
+      "durationsMs": [
+        240,
+        240,
+        240,
+        240,
+        240,
+        240,
+        240,
+        240
+      ],
+      "mode": "loop"
+    },
+    "attack": {
+      "frames": [
+        "attack-00.png",
+        "attack-01.png",
+        "attack-02.png",
+        "attack-03.png",
+        "attack-04.png",
+        "attack-05.png",
+        "attack-06.png",
+        "attack-07.png"
+      ],
+      "durationsMs": [
+        80,
+        70,
+        70,
+        80,
+        70,
+        80,
+        90,
+        130
+      ],
+      "mode": "one-shot"
+    }
+  },
+  "processing": "Measured alpha components, one fixed global scale, shared reference palette, anchored baseline, connected native navy outline; no whole-body stretch or cut-body deformation",
+  "items": [
+    {
+      "action": "idle",
+      "frame": 0,
+      "image": "idle-00.png",
+      "sourceBox": [
+        30,
+        28,
+        179,
+        178
+      ],
+      "sha256": "afa92ad2cfda4eece6c99a1acd8bb4fbcad111df90e460c41677953ca4b8dd5c"
+    },
+    {
+      "action": "idle",
+      "frame": 1,
+      "image": "idle-01.png",
+      "sourceBox": [
+        212,
+        29,
+        360,
+        178
+      ],
+      "sha256": "7dce2a5cf59c5989d5d8a8a0720da3e9a5858f2adcadcbe6caf64f060cb2ee08"
+    },
+    {
+      "action": "idle",
+      "frame": 2,
+      "image": "idle-02.png",
+      "sourceBox": [
+        396,
+        29,
+        541,
+        178
+      ],
+      "sha256": "51de7f5ecc0e8425fed5dea0590c47162a887d8f526486f7c301c386bb5e21f0"
+    },
+    {
+      "action": "idle",
+      "frame": 3,
+      "image": "idle-03.png",
+      "sourceBox": [
+        576,
+        29,
+        722,
+        179
+      ],
+      "sha256": "00179a540770c62aff5c94a3494a6a802c9e8164ae6614acb043ceea7e3533a5"
+    },
+    {
+      "action": "idle",
+      "frame": 4,
+      "image": "idle-04.png",
+      "sourceBox": [
+        757,
+        28,
+        903,
+        178
+      ],
+      "sha256": "c855534e8b2f52aa9c04c23123c6e4044539f6d6a46ece847cb09555163367ce"
+    },
+    {
+      "action": "idle",
+      "frame": 5,
+      "image": "idle-05.png",
+      "sourceBox": [
+        938,
+        28,
+        1083,
+        179
+      ],
+      "sha256": "175e24176a154253b593177149f590eece82c35d4f0f52f2fbdd2d740fe16ecb"
+    },
+    {
+      "action": "idle",
+      "frame": 6,
+      "image": "idle-06.png",
+      "sourceBox": [
+        1118,
+        29,
+        1263,
+        179
+      ],
+      "sha256": "cd936a5303f0498194bf13926ae06ed3cd69f6227f46e64f67a99db3b2c45422"
+    },
+    {
+      "action": "idle",
+      "frame": 7,
+      "image": "idle-07.png",
+      "sourceBox": [
+        1300,
+        29,
+        1443,
+        179
+      ],
+      "sha256": "e7c0f15859521856f7175b766b0225614881d6b6ce2248a682e64e13719770cb"
+    },
+    {
+      "action": "walk",
+      "frame": 0,
+      "image": "walk-00.png",
+      "sourceBox": [
+        35,
+        206,
+        180,
+        358
+      ],
+      "sha256": "e19db9bedd4d8acaa5bb9cf8de7d95df24d6137a3e36dbd209e77f31894b19ae"
+    },
+    {
+      "action": "walk",
+      "frame": 1,
+      "image": "walk-01.png",
+      "sourceBox": [
+        209,
+        206,
+        356,
+        358
+      ],
+      "sha256": "ac76ac08b7b687295dfb5fa7400d6d5817ad2fe2de64c7a50645d04f523bda52"
+    },
+    {
+      "action": "walk",
+      "frame": 2,
+      "image": "walk-02.png",
+      "sourceBox": [
+        381,
+        206,
+        529,
+        358
+      ],
+      "sha256": "3d1fcc212a823d5625ef7f553592653044128c890be908196f40e02f0a474009"
+    },
+    {
+      "action": "walk",
+      "frame": 3,
+      "image": "walk-03.png",
+      "sourceBox": [
+        559,
+        206,
+        710,
+        359
+      ],
+      "sha256": "0c3705dec1c078e0b5c50d92a57be30f82122fb71bd95abc5353db0440ee3e54"
+    },
+    {
+      "action": "walk",
+      "frame": 4,
+      "image": "walk-04.png",
+      "sourceBox": [
+        737,
+        206,
+        885,
+        359
+      ],
+      "sha256": "0532549655f25960bf82a2893af8fdf2d5a73cbdb709f9269b25654217dae263"
+    },
+    {
+      "action": "walk",
+      "frame": 5,
+      "image": "walk-05.png",
+      "sourceBox": [
+        919,
+        205,
+        1068,
+        359
+      ],
+      "sha256": "77335a30b87990dea1876857c07eada7429730a2c69e3b968150a2f6354c81d3"
+    },
+    {
+      "action": "walk",
+      "frame": 6,
+      "image": "walk-06.png",
+      "sourceBox": [
+        1100,
+        207,
+        1250,
+        359
+      ],
+      "sha256": "83c65ee14858d266fa70e9d62afa0bb1ea430899ac0da74dedc5ed568bd35546"
+    },
+    {
+      "action": "walk",
+      "frame": 7,
+      "image": "walk-07.png",
+      "sourceBox": [
+        1276,
+        206,
+        1423,
+        359
+      ],
+      "sha256": "0c3be6b4aa0c27aacf581994d6b65d2f6c4f66830b7617d0c3f0f83d2225bfd3"
+    },
+    {
+      "action": "happy",
+      "frame": 0,
+      "image": "happy-00.png",
+      "sourceBox": [
+        35,
+        402,
+        191,
+        547
+      ],
+      "sha256": "4f5d668635547bada3237342682c21ef663c6bbaf53f901e592f3ecaa9fa4c86"
+    },
+    {
+      "action": "happy",
+      "frame": 1,
+      "image": "happy-01.png",
+      "sourceBox": [
+        216,
+        387,
+        366,
+        548
+      ],
+      "sha256": "434e8af7c502e405950debd7eae1fa3ab82272efaa940f057063e2927424ead4"
+    },
+    {
+      "action": "happy",
+      "frame": 2,
+      "image": "happy-02.png",
+      "sourceBox": [
+        387,
+        374,
+        524,
+        533
+      ],
+      "sha256": "45c180e8c9e5562d578d248d628010474d771f8a30525d9f40eb46123c5ebc90"
+    },
+    {
+      "action": "happy",
+      "frame": 3,
+      "image": "happy-03.png",
+      "sourceBox": [
+        559,
+        379,
+        715,
+        532
+      ],
+      "sha256": "e61cd2fec3d06fd39a6565e502033525a764c79a875c8a8a4913dbc1d87f1f9b"
+    },
+    {
+      "action": "happy",
+      "frame": 4,
+      "image": "happy-04.png",
+      "sourceBox": [
+        746,
+        400,
+        902,
+        548
+      ],
+      "sha256": "114150aa61d59efcaeb2942a58db643a015310b155d37f5aeb8abad0b9b30374"
+    },
+    {
+      "action": "happy",
+      "frame": 5,
+      "image": "happy-05.png",
+      "sourceBox": [
+        935,
+        403,
+        1087,
+        548
+      ],
+      "sha256": "432066064a97e5b13087eb57f661e316b80827dc6a40d5a5490ea7c4d3f1d5a2"
+    },
+    {
+      "action": "happy",
+      "frame": 6,
+      "image": "happy-06.png",
+      "sourceBox": [
+        1112,
+        405,
+        1262,
+        548
+      ],
+      "sha256": "0104c5fcd3b6f5101674357b1f9fb7ae67cf81abfbf52aa0603bd88c4c894085"
+    },
+    {
+      "action": "happy",
+      "frame": 7,
+      "image": "happy-07.png",
+      "sourceBox": [
+        1291,
+        402,
+        1436,
+        548
+      ],
+      "sha256": "403e18bc9af52db0dd842eb118a0b6e34784e4727072fe1f217b10903254b1cd"
+    },
+    {
+      "action": "eat",
+      "frame": 0,
+      "image": "eat-00.png",
+      "sourceBox": [
+        30,
+        593,
+        188,
+        721
+      ],
+      "sha256": "35ad7cae4b509cc32e082a6bff4bb7a374411ea86df33289f72379539ee3ab0e"
+    },
+    {
+      "action": "eat",
+      "frame": 1,
+      "image": "eat-01.png",
+      "sourceBox": [
+        209,
+        608,
+        369,
+        722
+      ],
+      "sha256": "2d64d01fc33cac2937b45a1c6a46430af0086b31469ee7b66c4eb4b14894ba75"
+    },
+    {
+      "action": "eat",
+      "frame": 2,
+      "image": "eat-02.png",
+      "sourceBox": [
+        382,
+        614,
+        547,
+        722
+      ],
+      "sha256": "3712d6056adbdda6f7791a05c3f4c94409d6ba18d28dd37982f3626231ed69b8"
+    },
+    {
+      "action": "eat",
+      "frame": 3,
+      "image": "eat-03.png",
+      "sourceBox": [
+        567,
+        599,
+        724,
+        722
+      ],
+      "sha256": "73686dc433ce0e5932463d94ed409b76e2116446abe4563e333851ad76cf3a36"
+    },
+    {
+      "action": "eat",
+      "frame": 4,
+      "image": "eat-04.png",
+      "sourceBox": [
+        752,
+        599,
+        911,
+        722
+      ],
+      "sha256": "50155fdfdce04f569ce98d38f94e4f7fb4db6dc1e14e10559680e891e5ee64f7"
+    },
+    {
+      "action": "eat",
+      "frame": 5,
+      "image": "eat-05.png",
+      "sourceBox": [
+        935,
+        580,
+        1083,
+        724
+      ],
+      "sha256": "8e8a36b7f2270f5a5fbb05dacfae2e278d92784ab49adae57d35f825ad9924fa"
+    },
+    {
+      "action": "eat",
+      "frame": 6,
+      "image": "eat-06.png",
+      "sourceBox": [
+        1117,
+        573,
+        1260,
+        723
+      ],
+      "sha256": "31a5200a4aec73b1d8393b857f32769a4143be47694d8a7d103870c79d041a4b"
+    },
+    {
+      "action": "eat",
+      "frame": 7,
+      "image": "eat-07.png",
+      "sourceBox": [
+        1296,
+        579,
+        1439,
+        724
+      ],
+      "sha256": "98d988ed6098c7cc22ba6a5d2c699c8ca38832966464f636947e981e6caf409d"
+    },
+    {
+      "action": "sleep",
+      "frame": 0,
+      "image": "sleep-00.png",
+      "sourceBox": [
+        28,
+        775,
+        177,
+        879
+      ],
+      "sha256": "e2c3f452c481a949c9f31d30e901795b7d80ffbf259925545743217eeed380e5"
+    },
+    {
+      "action": "sleep",
+      "frame": 1,
+      "image": "sleep-01.png",
+      "sourceBox": [
+        201,
+        775,
+        353,
+        880
+      ],
+      "sha256": "7042d082f2434de12af5dd341b5cef7d7be535a8a10b36bac134c8d6c530d214"
+    },
+    {
+      "action": "sleep",
+      "frame": 2,
+      "image": "sleep-02.png",
+      "sourceBox": [
+        383,
+        775,
+        534,
+        880
+      ],
+      "sha256": "4ba6c9eb6ac8aec8d68041f2202dca6d2f9cdb2ac1de0c04c311b1a9ef4b2421"
+    },
+    {
+      "action": "sleep",
+      "frame": 3,
+      "image": "sleep-03.png",
+      "sourceBox": [
+        563,
+        775,
+        713,
+        880
+      ],
+      "sha256": "2f96f361b863a4b3326004eff6c0765553da0bf96451a26b090dd0967bb938a8"
+    },
+    {
+      "action": "sleep",
+      "frame": 4,
+      "image": "sleep-04.png",
+      "sourceBox": [
+        744,
+        775,
+        896,
+        880
+      ],
+      "sha256": "c38a0ab377b4a74047973fd6157ff1b40d66cef8f1703044ce808c204d771e3a"
+    },
+    {
+      "action": "sleep",
+      "frame": 5,
+      "image": "sleep-05.png",
+      "sourceBox": [
+        924,
+        775,
+        1077,
+        880
+      ],
+      "sha256": "fae08752a3124022efe5597695385c64cab5fcc4515e55aeab2be5545dfd1537"
+    },
+    {
+      "action": "sleep",
+      "frame": 6,
+      "image": "sleep-06.png",
+      "sourceBox": [
+        1107,
+        775,
+        1257,
+        881
+      ],
+      "sha256": "d98a8afe0eef00ecdcd55cbbde44a5f9aaa91b3636876603b09d5a106ffb2f37"
+    },
+    {
+      "action": "sleep",
+      "frame": 7,
+      "image": "sleep-07.png",
+      "sourceBox": [
+        1284,
+        775,
+        1435,
+        881
+      ],
+      "sha256": "df40e42ccd1b18a01b27cd29a0ad53effa84fc2671417ca21d403ab78c444080"
+    },
+    {
+      "action": "attack",
+      "frame": 0,
+      "image": "attack-00.png",
+      "sourceBox": [
+        31,
+        906,
+        177,
+        1059
+      ],
+      "sha256": "742d86476bd4075603128ce281dd2faf353c0af5d0023abaa1ae43370e1e2a2b"
+    },
+    {
+      "action": "attack",
+      "frame": 1,
+      "image": "attack-01.png",
+      "sourceBox": [
+        210,
+        911,
+        367,
+        1059
+      ],
+      "sha256": "69e828c42fb259085db2376f9609dde474bbc6ba6aa9ec058cdcd51583dc80d1"
+    },
+    {
+      "action": "attack",
+      "frame": 2,
+      "image": "attack-02.png",
+      "sourceBox": [
+        391,
+        912,
+        546,
+        1059
+      ],
+      "sha256": "8c95aa94ace25072a5041c3e9f1a49062ac8cc6f2f7fee690d7ecb3dea567107"
+    },
+    {
+      "action": "attack",
+      "frame": 3,
+      "image": "attack-03.png",
+      "sourceBox": [
+        567,
+        907,
+        734,
+        1059
+      ],
+      "sha256": "a6e6594f583489c53031162ba202bd07799070f3d517c26a77f878b0423ad3ed"
+    },
+    {
+      "action": "attack",
+      "frame": 4,
+      "image": "attack-04.png",
+      "sourceBox": [
+        745,
+        906,
+        908,
+        1059
+      ],
+      "sha256": "44a96d7bfb3dd8d6ec088747d82c1df55ea835e842bc6a1db706e8af386cf99c"
+    },
+    {
+      "action": "attack",
+      "frame": 5,
+      "image": "attack-05.png",
+      "sourceBox": [
+        929,
+        911,
+        1087,
+        1059
+      ],
+      "sha256": "b5aad00c672bd140c9b6e3835ba999876e098ea1e9177cfe6489ae451ac89601"
+    },
+    {
+      "action": "attack",
+      "frame": 6,
+      "image": "attack-06.png",
+      "sourceBox": [
+        1114,
+        910,
+        1261,
+        1059
+      ],
+      "sha256": "2232ad9987501860b638272739311df71881c3138448c1562138c8a55f13a016"
+    },
+    {
+      "action": "attack",
+      "frame": 7,
+      "image": "attack-07.png",
+      "sourceBox": [
+        1296,
+        907,
+        1439,
+        1059
+      ],
+      "sha256": "c0a984cda82ae261f21ff4e704478d3ced60a7da12d2face1db7507209ccb495"
+    }
+  ],
+  "firmwareVersion": "v0.10.0"
+}

@@ -1,0 +1,96 @@
+{
+  "service": "mobiiot-imagegen",
+  "batches": [
+    {
+      "id": 0,
+      "source": "source/collection-v1/00.png",
+      "sha256": "e3851448b9e8a6c1b56b5803ceb3871fa55565046c7f79d4f666b4629b5f304f",
+      "prompt": "prompts/collection-v1/00.txt",
+      "status": "reviewed-and-exported"
+    },
+    {
+      "id": 1,
+      "source": "source/collection-v1/01.png",
+      "sha256": "41a74d6e8c8b3d07ed40dd2f5e94e0dc53b0f2ae4c11d95c6fef4339a35c9faf",
+      "prompt": "prompts/collection-v1/01.txt",
+      "status": "reviewed-and-exported"
+    },
+    {
+      "id": 2,
+      "source": "source/collection-v1/02.png",
+      "sha256": "8c1c9c47b9634f9a97110e070134182df06ddee6aebc6c3d83651a12b486803f",
+      "prompt": "prompts/collection-v1/02.txt",
+      "status": "reviewed-and-exported"
+    },
+    {
+      "id": 3,
+      "source": "source/collection-v1/03.png",
+      "sha256": "584854f9608b0d8b15b3b0cffd86937f7da03e1dff6872e324ab47391ea76464",
+      "prompt": "prompts/collection-v1/03.txt",
+      "status": "reviewed-and-exported"
+    },
+    {
+      "id": 4,
+      "source": "source/collection-v1/04.png",
+      "sha256": "3e6d94671070b4af05c28d76abc56b9a60582e7e4fe162199ead0a13a3b00e78",
+      "prompt": "prompts/collection-v1/04.txt",
+      "status": "reviewed-and-exported"
+    },
+    {
+      "id": 5,
+      "source": "source/collection-v1/05.png",
+      "sha256": "2b6f2de4ba0fa8879d0fb9a73f7550a28e6d9e91155c30099fa11b765386a082",
+      "prompt": "prompts/collection-v1/05.txt",
+      "status": "reviewed-and-exported"
+    },
+    {
+      "id": 6,
+      "source": "source/collection-v1/06.png",
+      "sha256": "7be120e1b040700a261045c05048691e6c185226d3a7dbca543ed18b050bc54a",
+      "prompt": "prompts/collection-v1/06.txt",
+      "status": "reviewed-and-exported"
+    },
+    {
+      "id": 7,
+      "source": "source/collection-v1/07.png",
+      "sha256": "cef3e45fb44ef8515df05b07b7599dd95d7949d9afaa3afe2f202ada5208cf86",
+      "prompt": "prompts/collection-v1/07.txt",
+      "status": "reviewed-and-exported"
+    },
+    {
+      "id": 8,
+      "source": "source/collection-v1/08.png",
+      "sha256": "4e78feff0a4108159dcf6900361f09911a4c5faf4c60caafd38333e696fa9225",
+      "prompt": "prompts/collection-v1/08.txt",
+      "status": "reviewed-and-exported"
+    },
+    {
+      "id": 9,
+      "source": "source/collection-v1/09.png",
+      "sha256": "b7131803c37379d07849c720a1c48bfee49b8e3f5895931883bc953c75ab6cd7",
+      "prompt": "prompts/collection-v1/09.txt",
+      "status": "reviewed-and-exported"
+    },
+    {
+      "id": 10,
+      "source": "source/collection-v1/10.png",
+      "sha256": "bf65e7c2dcf3ba38dfe32d1fda03747a1f9c429c0d37fcf0eef014559129227b",
+      "prompt": "prompts/collection-v1/10.txt",
+      "status": "reviewed-and-exported"
+    },
+    {
+      "id": 11,
+      "source": "source/collection-v1/11.png",
+      "sha256": "5a4fac4fd9af210cfedeeb897d33fd7f045f35b2832c4d78ad8bc1ce5e751454",
+      "prompt": "prompts/collection-v1/11.txt",
+      "status": "reviewed-and-exported"
+    }
+  ],
+  "status": "reviewed-and-exported",
+  "exportedUniqueIcons": 583,
+  "export": "tools/export_collection_art.py",
+  "qa": "collection-qa.json",
+  "qualityClassification": "Catalog finalized by object value after illustration; prompt quality hints are retained verbatim as original generation provenance.",
+  "model": "gpt-image-2.5-sunburst",
+  "modelSelection": "First gpt-image-* returned from /models on each request; see skill script."
+}
