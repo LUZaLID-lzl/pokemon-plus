@@ -1,0 +1,1569 @@
+#include "game_ui.h"
+#include "battle_view.h"
+#include "moves.h"
+#include "pet_animation.h"
+#include "image_assets.h"
+#include "scene_fx.h"
+#include "src/misc/cache/instance/lv_image_cache.h"
+#include <math.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+LV_FONT_DECLARE(pp_font_12);
+LV_FONT_DECLARE(pp_font_14);
+LV_FONT_DECLARE(pp_font_18);
+LV_FONT_DECLARE(pp_font_title_22);
+LV_FONT_DECLARE(pp_font_nav_14);
+LV_FONT_DECLARE(pp_clock_38);
+LV_FONT_DECLARE(pp_clock_36);
+static pp_game *g;
+static lv_obj_t *screen, *body, *title, *subtitle, *coin, *clock_label, *toast,
+    *pet_img[PP_PETS], *bubble, *egg, *drop, *clock_shadow;
+static lv_obj_t *live_status, *live_log, *again, *egg_icon, *drop_icon,
+    *coin_shadow, *coin_icon, *back_button, *step_number, *step_rewards, *step_rate, *step_bar, *step_total;
+static unsigned current, selected, dex_page, scene_page, frame_count,
+    last_scene = 999;
+static bool battle_layout, travel_layout, starter_mode;
+static unsigned gym_team[3], gym_team_count;
+static const char *const gym_files[]={"brock","boulder","pewter","badge-icon","geodude-small","graveler-small","onix-small","arena"};
+static char gym_paths[8][320];
+static lv_obj_t *travel_activity, *travel_reward_label, *travel_claim;
+static lv_obj_t *travel_backdrop;
+static struct { bool active; unsigned art, coins, destination; char name[40], item[96]; } travel_receipt;
+enum { PETDEX_PAGE_SIZE = 10 };
+static unsigned starter_choice = 1, petdex_page;
+static unsigned collection_quality = PP_QUALITY_ALL;
+static unsigned collection_pages(void) { return (pp_collection_total(collection_quality)+63)/64; }
+static lv_obj_t *starter_card[3], *starter_name;
+static uint32_t home_epoch, next_talk, talk_until;
+static uint32_t ambient_seed, ambient_visits;
+static bool ambient_preview;
+static lv_obj_t *ambient_particles[PP_SCENE_FX_MAX][2];
+static void ambient_update(uint32_t elapsed) {
+  pp_scene_particle particles[PP_SCENE_FX_MAX];
+  unsigned count=pp_scene_fx_sample(g->scene,ambient_seed,elapsed,ambient_preview,particles);
+  for(unsigned i=0;i<PP_SCENE_FX_MAX;i++) for(unsigned part=0;part<2;part++) {
+    lv_obj_t *o=ambient_particles[i][part];
+    if(i>=count || (part && !particles[i].cross)) {lv_obj_add_flag(o,LV_OBJ_FLAG_HIDDEN);continue;}
+    const pp_scene_particle *p=&particles[i];
+    lv_obj_set_pos(o,p->x+(p->cross&&part?p->w/2:0),p->y+(p->cross&&!part?p->h/2:0));
+    lv_obj_set_size(o,p->cross?(part?1:p->w):p->w,p->cross?(part?p->h:1):p->h);
+    lv_obj_set_style_bg_color(o,lv_color_hex(p->color),0);
+    lv_obj_set_style_bg_opa(o,p->opacity,0);
+    lv_obj_remove_flag(o,LV_OBJ_FLAG_HIDDEN);
+  }
+}
+static unsigned talk_pet;
+static bool facing_left[PP_PETS];
+static const void *left_paths[PP_ART_COUNT][PP_FRAME_COUNT];
+static pp_animation_clock home_clocks[PP_PETS], activity_clocks[2], evolution_clock;
+static char starter_paths[3][320], type_paths[3][320];
+static lv_obj_t *evolution, *evo_pet, *evo_ring[3], *evo_glow[5], *evo_spark[32], *evo_hint, *evo_name,
+    *evo_done, *evo_gift;
+static bool evo_choosing, evo_stone, evo_declined;
+static uint32_t evo_started;
+static unsigned evo_pet_id, evo_before_art, evo_current_art, evo_tint;
+static const void *evo_sprite_source;
+static uint32_t evo_pixels[96 * 96];
+static lv_image_dsc_t evo_descriptor;
+/* Primary types, independent of whichever attack occupies slot zero. */
+static const unsigned evo_colors[] = {
+  0xf4ce58, 0x80cb83, 0xf69b68, 0x74c7ed, 0xb4cb65, 0xb4cb65,
+  0xc4b29a, 0xc4b29a, 0xc4b29a, 0xc294df, 0xd9b67c
+};
+static void evolution_tick(void);
+static void evolution_open(unsigned pet, bool stone);
+static void evolution_choose(bool decline);
+static void evo_sprite(unsigned art, unsigned pose, uint32_t now);
+static lv_obj_t *stairs[6], *lives;
+static uint32_t last_revision, happy_until[PP_PETS], drop_started;
+static bool drop_was_active;
+static int drop_from_x, drop_from_y;
+static const void *pet_src[PP_PETS], *activity_src[2];
+static lv_obj_t *activity_pet[2];
+static char asset_root[240] = "S:/assets",
+
+            scene_paths[PP_SCENES][320], thumb_paths[PP_SCENES][320],
+            icon_paths[16][320],
+            large_paths[16][320], avatar_paths[PP_ART_COUNT][320],
+            small_paths[16][320], nav_paths[3][320], hud_coin_path[320], hud_coin_large_path[320], step_icon_path[320], pokedex_icon_path[320], pure_heart_path[320], pure_heart_small_path[320];
+static const void *paths[PP_ART_COUNT][PP_FRAME_COUNT];
+static const void *travel_sources[PP_TRAVEL_DESTINATIONS];
+static void collection_path(char *out, size_t size, unsigned id, bool small) {
+  if (id==PP_PURE_HEART) snprintf(out,size,"%s/collection/pure-heart%s.bin",asset_root,small?"-small":"");
+  else snprintf(out,size,"%s/collection/%03u%s.bin",asset_root,id,small?"-small":"");
+}
+
+static bool assets_ok, imu_ok, refresh_pending;
+static const int px[] = {89, 238, 163, 189, 65},
+                 py[] = {128, 179, 227, 80, 213};
+static const char *const nav[] = {
+    "庭院", "APP",   "BAG",   "SHOP",     "宠物状态", "旅行",  "挑战",
+    "挖宝", "收藏品", "换场景", "每日塔罗", "设置",     "收藏物", "选择伙伴", "计步器", "宠物图鉴", "候补伙伴", "关都地图", "尼比道馆", "出战编队", "徽章展馆", "挑战收获"};
+static const char *const idle_talk[] = {"今天也一起冒险吧！",
+                                        "树果闻起来好香呀", "在这里等你回家",
+                                        "草地软软的，好舒服"};
+static lv_color_t color(unsigned c) { return lv_color_hex(c); }
+static void text(lv_obj_t *o, const char *s) {
+  if (strcmp(lv_label_get_text(o), s))
+    lv_label_set_text(o, s);
+}
+static lv_obj_t *label(lv_obj_t *parent, const char *s, int x, int y, int w,
+                       unsigned c) {
+  lv_obj_t *o = lv_label_create(parent);
+  lv_label_set_text(o, s);
+  lv_obj_set_pos(o, x, y);
+  lv_obj_set_width(o, w);
+  lv_obj_set_style_text_color(o, color(c), 0);
+  lv_obj_set_style_text_align(o, LV_TEXT_ALIGN_CENTER, 0);
+  lv_obj_set_style_text_font(o, &pp_font_14, 0);
+  return o;
+}
+static lv_obj_t *icon(lv_obj_t *parent, unsigned id, int x, int y) {
+  lv_obj_t *im = lv_image_create(parent);
+  pp_image_set_src(im, icon_paths[id]);
+  lv_obj_set_pos(im, x, y);
+  return im;
+}
+static void action(lv_event_t *e);
+static lv_obj_t *button(lv_obj_t *parent, const char *s, int x, int y, int w,
+                        int h, int command) {
+  lv_obj_t *b = lv_button_create(parent);
+  lv_obj_set_pos(b, x, y);
+  lv_obj_set_size(b, w, h);
+  lv_obj_set_style_radius(b, 13, 0);
+  lv_obj_set_style_bg_color(b, color(0x1c3c4e), 0);
+  lv_obj_set_style_bg_grad_color(b, color(0x142d3e), 0);
+  lv_obj_set_style_bg_grad_dir(b, LV_GRAD_DIR_VER, 0);
+  lv_obj_set_style_bg_color(b, color(0x34576a), LV_STATE_PRESSED);
+  lv_obj_set_style_border_width(b, 1, 0);
+  lv_obj_set_style_border_color(b, color(0x355568), 0);
+  lv_obj_set_style_shadow_width(b, 0, 0);
+  lv_obj_set_style_pad_all(b, 0, 0);
+  lv_obj_t *l = label(b, s, 0, 0, w, 0xe4eee9);
+  lv_obj_center(l);
+  int icon = -1;
+  if (strcmp(s, "返回")) {
+    switch (command) {
+    case 1:
+      icon = 14;
+      break;
+    case 2:
+      icon = 6;
+      break;
+    case 3:
+      icon = 7;
+      break;
+    case 5:
+      icon = 8;
+      break;
+    case 8:
+      icon = 10;
+      break;
+    case 6:
+      icon = 9;
+      break;
+    case 7:
+      icon = 10;
+      break;
+    case 9:
+      icon = 11;
+      break;
+    case 10:
+      icon = 12;
+      break;
+    case 15:
+      icon = 10;
+      break;
+    case 14:
+      icon = 8;
+      break;
+    case 11:
+      icon = 13;
+      break;
+    default:
+      break;
+    }
+  }
+  if (command >= 100 && command < 100 + PP_SHOP_ITEMS)
+    icon = command == 100 + PP_INSTANT_EGG ? 5 : command - 100;
+  if (command >= 120 && command < 126)
+    icon = command - 120;
+  if (!strcmp(s, "返回")) {
+    lv_label_set_text(l, LV_SYMBOL_LEFT);
+    lv_obj_set_style_text_font(l, &lv_font_montserrat_14, 0);
+  }
+  if (icon >= 0) {
+    lv_obj_t *im = lv_image_create(b);
+    pp_image_set_src(im, command < 100 ? small_paths[icon] : icon_paths[icon]);
+    if (command >= 100) {
+      lv_obj_set_pos(im, 5, (h - 32) / 2);
+      lv_obj_set_width(l, w - 40);
+      lv_obj_align(l, LV_ALIGN_RIGHT_MID, -1, 0);
+    } else {
+
+      lv_obj_set_pos(im, (w - 24) / 2, s[0] ? 3 : (h - 24) / 2);
+      lv_obj_align(l, LV_ALIGN_BOTTOM_MID, 0, -5);
+    }
+  }
+  lv_obj_add_event_cb(b, action, LV_EVENT_CLICKED, (void *)(intptr_t)command);
+  return b;
+}
+static void notice(const char *message) {
+  text(toast, message);
+  lv_obj_remove_flag(toast, LV_OBJ_FLAG_HIDDEN);
+  lv_obj_move_foreground(toast);
+  lv_obj_set_user_data(toast, (void *)(uintptr_t)(lv_tick_get() + 2600));
+}
+void pp_ui_notice(const char *s) { notice(s); }
+void pp_ui_assets(const char *root) {
+  snprintf(asset_root, sizeof(asset_root), "%s", root);
+  for(unsigned i=0;i<PP_TRAVEL_DESTINATIONS;i++) {
+    char path[320];snprintf(path,sizeof(path),"%s/travel-scenes/%u.bin",root,i);
+    travel_sources[i]=pp_image_descriptor(path);
+    if(!travel_sources[i]) abort();
+  }
+  for(unsigned i=0;i<8;i++) {snprintf(gym_paths[i],sizeof(gym_paths[i]),"%s/gyms/%s.bin",root,gym_files[i]);pp_image_preload(gym_paths[i]);}
+  static const char *const enemies[]={"geodude","graveler","onix"};
+  for(unsigned i=0;i<3;i++){char path[320];snprintf(path,sizeof(path),"%s/gyms/%s.bin",root,enemies[i]);pp_image_preload(path);}
+  snprintf(pure_heart_path,sizeof(pure_heart_path),"%s/collection/pure-heart.bin",root);
+  pp_image_preload(pure_heart_path);
+  snprintf(pure_heart_small_path,sizeof(pure_heart_small_path),"%s/collection/pure-heart-small.bin",root);
+  pp_image_preload(pure_heart_small_path);
+  for (unsigned id=0; id<PP_TRAVEL_COLLECTION; id++) {
+    char path[320];
+    collection_path(path,sizeof(path),id,false);pp_image_preload(path);
+    collection_path(path,sizeof(path),id,true);pp_image_preload(path);
+  }
+  snprintf(step_icon_path,sizeof(step_icon_path),"%s/hud/steps.bin",root);
+  pp_image_preload(step_icon_path);
+  snprintf(pokedex_icon_path,sizeof(pokedex_icon_path),"%s/hud/pokedex.bin",root);
+  pp_image_preload(pokedex_icon_path);
+  snprintf(hud_coin_path, sizeof(hud_coin_path), "%s/hud/coin.bin", asset_root);
+  for (unsigned i = 0; i < 16; i++) {
+    snprintf(icon_paths[i], sizeof(icon_paths[i]), "%s/icons/%u.bin",
+             asset_root, i);
+    snprintf(small_paths[i], sizeof(small_paths[i]), "%s/icons-small/%u.bin",
+             asset_root, i);
+    snprintf(large_paths[i], sizeof(large_paths[i]), "%s/icons-large/%u.bin",
+             asset_root, i);
+  }
+  for (unsigned n = 0; n < 3; n++)
+    snprintf(nav_paths[n], sizeof(nav_paths[n]), "%s/nav/%u.bin", asset_root,
+             n);
+  for (unsigned p = 0; p < PP_ART_COUNT; p++)
+    snprintf(avatar_paths[p], sizeof(avatar_paths[p]), "%s/avatars/%u-0.bin",
+             asset_root, p);
+  for (unsigned p = 0; p < PP_ART_COUNT; p++) {
+    pp_image_preload(avatar_paths[p]);
+    for (unsigned f = 0; f < pp_pet_frame_count(p); f++) {
+      char path[320];
+      snprintf(path,sizeof(path),"%s/pets/%u-%u.bin",asset_root,p,f);
+      paths[p][f]=pp_image_descriptor(path);
+      snprintf(path,sizeof(path),"%s/pets-left/%u-%u.bin",asset_root,p,f);
+      left_paths[p][f]=pp_image_descriptor(path);
+      if (!paths[p][f] || !left_paths[p][f]) abort();
+      /* Sources are stable descriptors; no duplicate per-frame path strings. */
+    }
+  }
+  for (unsigned i = 0; i < 3; i++)
+    snprintf(starter_paths[i], sizeof(starter_paths[i]), "%s/starters-large/%03u.bin", asset_root, 1 + i * 3);
+  static const char *const types[] = {"grass", "fire", "water"};
+  for (unsigned i = 0; i < 3; i++) {
+    snprintf(type_paths[i],sizeof(type_paths[i]),"%s/types-large/%s.bin",asset_root,types[i]);
+    pp_image_preload(type_paths[i]);
+  }
+  snprintf(hud_coin_large_path,sizeof(hud_coin_large_path),"%s/hud/coin-large.bin",asset_root);
+  pp_image_preload(hud_coin_large_path);
+  pp_image_preload(hud_coin_path);
+  for (unsigned i = 0; i < 16; i++) {
+    pp_image_preload(icon_paths[i]);
+    pp_image_preload(small_paths[i]);
+    if (i==10 || i==12) pp_image_preload(large_paths[i]);
+  }
+  for (unsigned i = 0; i < 3; i++) {
+    pp_image_preload(nav_paths[i]);
+    pp_image_preload(starter_paths[i]);
+  }
+  for (unsigned i = 0; i < PP_SCENES; i++) {
+    snprintf(scene_paths[i], sizeof(scene_paths[i]), "%s/scenes/%u.bin",
+             asset_root, i);
+    snprintf(thumb_paths[i], sizeof(thumb_paths[i]), "%s/thumbs/%u.bin",
+             asset_root, i);
+  }
+}
+static unsigned pet_art(unsigned p) {
+  unsigned art = pp_art_id(g, p);
+  return art < PP_ART_COUNT ? art : pp_base_art(g->pets[p].species);
+}
+static unsigned reserve_page, replacement_slot;
+static void pet_event(lv_event_t *e) {
+  unsigned p = (unsigned)(uintptr_t)lv_event_get_user_data(e);
+  selected = p;
+  if (lv_event_get_code(e) == LV_EVENT_LONG_PRESSED) {
+    pp_ui_open(4);
+  } else if (lv_event_get_code(e) == LV_EVENT_SHORT_CLICKED) {
+    pp_result r = pp_pat(g, p);
+    if (r == PP_OK)
+      happy_until[p] = lv_tick_get() + 2000;
+    notice(r == PP_OK ? "♥ +2     +1" : pp_message(r));
+  }
+}
+void pp_ui_pat_all(void) {
+  if(current!=0) return;
+  unsigned n=pp_pat_all(g);
+  for(unsigned i=0;i<g->count;i++) if((int)i!=g->traveler) happy_until[i]=lv_tick_get()+2000;
+  char message[64];snprintf(message,sizeof(message),"摸摸 %u 位伙伴 ♥",n);notice(message);
+  pp_ui_refresh();
+}
+static void update_home(void) {
+  char s[64];
+  snprintf(s, sizeof(s), "%lu", (unsigned long)g->coins);
+  text(coin, s);
+  text(coin_shadow, s);
+  lv_point_t size;
+  lv_text_get_size(&size,s,&pp_font_18,0,0,LV_COORD_MAX,LV_TEXT_FLAG_NONE);
+  int money_x=(360-24-4-size.x)/2;
+  lv_obj_set_x(coin_icon,money_x);
+  lv_obj_set_x(coin,money_x+28);
+  lv_obj_set_x(coin_shadow,money_x+29);
+  if (last_scene != g->scene) {
+    pp_image_set_src(body, scene_paths[g->scene]);
+    last_scene = g->scene;
+    home_epoch=lv_tick_get();
+  }
+  uint32_t now = lv_tick_get();
+  ambient_update(now-home_epoch);
+  int drop_x, drop_y;
+  pp_drop_position(g, &drop_x, &drop_y);
+  if (g->drop_active && !drop_was_active) {
+    drop_started = now;
+    unsigned p = g->drop_target;
+    drop_from_x = lv_obj_get_x(pet_img[p]);
+    drop_from_y = lv_obj_get_y(pet_img[p]);
+  }
+  if (!g->drop_active && drop_was_active)
+    happy_until[g->drop_target] = now + 1400;
+  drop_was_active = g->drop_active;
+  for (unsigned i = 0; i < PP_PETS; i++) {
+    if (i >= g->count || g->traveler == (int)i) {
+      lv_obj_add_flag(pet_img[i], LV_OBJ_FLAG_HIDDEN);
+      continue;
+    }
+    lv_obj_remove_flag(pet_img[i], LV_OBJ_FLAG_HIDDEN);
+    uint32_t cycle = (now - home_epoch + i * 2900) % 20000;
+    unsigned action = g->pets[i].sleeping ? PP_POSE_SLEEP
+                      : cycle < 14400 ? PP_POSE_WALK : PP_POSE_IDLE;
+    if ((int32_t)(happy_until[i] - now) > 0)
+      action = PP_POSE_HAPPY;
+    int x = px[i], y = py[i];
+    /* Closed patrols span the clear central lawn, with different phases per pet. */
+    static const int route_x[] = {0, 62, 88, 24, 0};
+    static const int route_y[] = {0, 30, 68, 54, 0};
+    if (cycle < 14400 && !g->pets[i].sleeping) {
+      unsigned segment = cycle / 3600, t = cycle % 3600;
+      int sign = i % 2 ? -1 : 1;
+      x += sign * (route_x[segment] + (route_x[segment + 1] - route_x[segment]) * (int)t / 3600);
+      y += route_y[segment] + (route_y[segment + 1] - route_y[segment]) * (int)t / 3600;
+      facing_left[i] = sign * (route_x[segment + 1] - route_x[segment]) < 0;
+    }
+    if (x < 48) x = 48;
+    if (x > 272) x = 272;
+    if (y < 115) y = 115;
+    if (y > 208) y = 208;
+    if (g->drop_active && g->drop_target == i) {
+      unsigned elapsed = now - drop_started;
+      if (elapsed > 2400)
+        elapsed = 2400;
+      x = drop_from_x + (drop_x - 8 - drop_from_x) * (int)elapsed / 2400;
+      y = drop_from_y + (drop_y - 16 - drop_from_y) * (int)elapsed / 2400;
+      action = elapsed < 2400 ? PP_POSE_WALK : PP_POSE_EAT;
+    }
+    unsigned pose = pp_animation_update(&home_clocks[i], pet_art(i), action, now);
+    if (g->drop_active && g->drop_target == i)
+      facing_left[i] = drop_from_x > drop_x - 8;
+    const void *src = facing_left[i] ? left_paths[pet_art(i)][pose] : paths[pet_art(i)][pose];
+    if (pet_src[i] != src) {
+      pp_image_set_src(pet_img[i], src);
+      pet_src[i] = src;
+    }
+    if (!lv_obj_has_state(pet_img[i], LV_STATE_PRESSED) &&
+        (lv_obj_get_x(pet_img[i]) != x || lv_obj_get_y(pet_img[i]) != y))
+      lv_obj_set_pos(pet_img[i], x, y);
+  }
+  if (g->egg_end) {
+    int ex, ey; pp_egg_position(g, &ex, &ey);
+    lv_obj_set_pos(egg_icon, ex, ey);
+    lv_obj_set_pos(egg, ex - 19, ey + 32);
+    lv_obj_remove_flag(egg, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_remove_flag(egg_icon, LV_OBJ_FLAG_HIDDEN);
+    unsigned h = g->egg_end > g->seconds
+                     ? (unsigned)((g->egg_end - g->seconds + 3599) / 3600)
+                     : 0;
+    snprintf(s, sizeof(s), "%uh %s", h, g->egg_shakes ? "" : "↔");
+    text(egg, s);
+  } else {
+    lv_obj_add_flag(egg, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_add_flag(egg_icon, LV_OBJ_FLAG_HIDDEN);
+  }
+  if (g->drop_active) {
+    lv_obj_remove_flag(drop, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_remove_flag(drop_icon, LV_OBJ_FLAG_HIDDEN);
+    if (lv_image_get_src(drop_icon) != icon_paths[g->drop_item])
+      pp_image_set_src(drop_icon, icon_paths[g->drop_item]);
+    lv_obj_set_pos(drop_icon, drop_x, drop_y);
+    text(drop, "");
+  } else {
+    lv_obj_add_flag(drop, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_add_flag(drop_icon, LV_OBJ_FLAG_HIDDEN);
+  }
+  if ((int32_t)(now - next_talk) >= 0) {
+    next_talk = now + 32000 + (g->rng % 11000);
+    talk_pet = (talk_pet + 1) % g->count;
+    if (g->traveler != (int)talk_pet && !g->pets[talk_pet].sleeping) {
+      const char *t = g->pets[talk_pet].food < 30 ? "肚子咕咕叫了……"
+                         : idle_talk[(now / 32000) % 4];
+      text(bubble, t);
+      talk_until = now + 2800;
+    }
+  }
+  bool speaking = (int32_t)(talk_until - now) > 0 &&
+                  talk_pet < g->count && g->traveler != (int)talk_pet &&
+                  !g->pets[talk_pet].sleeping;
+  if (!speaking)
+    lv_obj_add_flag(bubble, LV_OBJ_FLAG_HIDDEN);
+  else {
+    int x = lv_obj_get_x(pet_img[talk_pet]) + PP_SPRITE_SIZE / 2 - 64;
+    int y = lv_obj_get_y(pet_img[talk_pet]) - 39;
+    if (x < 45) x = 45;
+    if (x > 187) x = 187;
+    if (y < 99) y = 99;
+    lv_obj_set_pos(bubble, x, y);
+    lv_obj_remove_flag(bubble, LV_OBJ_FLAG_HIDDEN);
+  }
+}
+static void live(void) {
+  char s[160];
+  if (current == 5) {
+    bool active = g->traveler >= 0 || travel_receipt.active;
+    if (travel_layout != active) {
+      refresh_pending = true;
+      return;
+    }
+    if (!active) {
+      text(live_status, "三小时的小小冒险");
+      return;
+    }
+    pp_travel_status trip = pp_travel_describe(g);
+    const char *name = travel_receipt.active ? travel_receipt.name : pp_form_name(g, g->traveler);
+    if (travel_receipt.active || trip.ready)
+      snprintf(s, sizeof(s), "%s · 已返程", name);
+    else snprintf(s, sizeof(s), "%s · %02u:%02u:%02u", name,
+      trip.remaining / 3600, trip.remaining / 60 % 60, trip.remaining % 60);
+    text(live_status, s);
+    if (travel_receipt.active) {
+      text(travel_activity, "带回了旅途中的收获");
+      text(live_log, travel_receipt.item);
+      snprintf(s, sizeof(s), "金币 +%u · 经验 +20", travel_receipt.coins);
+    } else {
+      snprintf(s, sizeof(s), "%s%s", name, trip.activity);
+      text(travel_activity, s);
+      if (trip.event) snprintf(s, sizeof(s), "奇遇 · %s · +5金币", trip.event);
+      else snprintf(s, sizeof(s), "新的奇遇还在路上");
+      text(live_log, s);
+      snprintf(s, sizeof(s), "返程可领 %u金币 · 20经验", trip.pending_coins);
+    }
+    text(travel_reward_label, s);
+    bool claimable = !travel_receipt.active && trip.ready;
+    if (claimable) lv_obj_remove_flag(travel_claim, LV_OBJ_FLAG_HIDDEN);
+    else lv_obj_add_flag(travel_claim, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_set_x(back_button, claimable ? 100 : 144);
+  }
+  if (current == 6) {
+    bool layout = g->battling || g->battle_hp > 0 || g->enemy_hp > 0;
+    if (battle_layout != layout) {
+      refresh_pending = true;
+      return;
+    }
+    if (battle_layout)
+      pp_battle_view_tick();
+  }
+
+  if (current == 7) {
+    snprintf(s, sizeof(s), "%u/6    ↓%u    +%lu", g->digs_today, g->dig_depth,
+             (unsigned long)g->dig_reward);
+    text(live_status, s);
+    const char *hearts[] = {"♡ ♡ ♡", "♥ ♡ ♡", "♥ ♥ ♡", "♥ ♥ ♥"};
+    text(lives, hearts[g->dig_lives]);
+    for (unsigned i = 0; i < 6; i++)
+      lv_obj_set_style_bg_color(
+          stairs[i], color(i <= g->dig_depth % 6 ? 0xa78958 : 0x203e4c), 0);
+  }
+}
+static void update_steps(void) {
+  char s[128];
+  snprintf(s,sizeof(s),"%lu",(unsigned long)g->steps_today); text(step_number,s);
+  snprintf(s,sizeof(s),"+%lu              +%lu XP",(unsigned long)g->steps_coins,(unsigned long)g->steps_xp); text(step_rewards,s);
+  snprintf(s,sizeof(s),"累计 %llu%s",(unsigned long long)g->total_steps,
+           !imu_ok?" · IMU—":!g->clock_ready?" · 待校时":""); text(step_total,s);
+  snprintf(s,sizeof(s),"每100步 +%u金币 +%u经验",pp_step_coin_rate(g),pp_step_xp_rate(g));
+  text(step_rate,s);
+  lv_bar_set_value(step_bar,g->steps_today%100,LV_ANIM_OFF);
+}
+void pp_ui_refresh(void) {
+  if (evolution)
+    return;
+  if (current == 13)
+    return;
+  if (current == 0)
+    update_home();
+  else if (current == 14)
+    update_steps();
+  else if (current == 5 || current == 6 || current == 7)
+    live();
+  else if (last_revision != g->revision)
+    refresh_pending = true;
+  last_revision = g->revision;
+}
+static void animate(lv_timer_t *t) {
+  (void)t;
+  frame_count++;
+  lv_timer_set_period(t, current == 0 ? 33 : PP_FRAME_MS);
+  if (evolution) {
+    evolution_tick();
+    return;
+  }
+  if (refresh_pending) {
+    refresh_pending = false;
+    pp_ui_open(current);
+  }
+  pp_ui_refresh();
+  if(current==6 && g->gym.mode && g->gym.result && pp_battle_view_probe().settled) {pp_ui_open(21);return;}
+  if (current<17 && !g->battling && !g->drop_active &&
+      (current != 6 || !battle_layout || pp_battle_view_probe().settled)) {
+    for (unsigned p = 0; p < g->count; p++) {
+      unsigned gate = pp_evolution_level(g, p);
+      if (gate && g->growth[p].level >= gate && g->traveler != (int)p) {
+        evolution_open(p, false);
+        return;
+      }
+    }
+  }
+  if (!refresh_pending && current == 5 && activity_pet[0]) {
+    pp_travel_status trip = pp_travel_describe(g);
+    unsigned art = travel_receipt.active ? travel_receipt.art : pet_art(g->traveler);
+    unsigned pose = travel_receipt.active || trip.ready ? PP_POSE_HAPPY
+                    : trip.walking ? PP_POSE_WALK : PP_POSE_IDLE;
+    unsigned frame = pp_animation_update(&activity_clocks[0], art, pose, lv_tick_get());
+    const void *src = paths[art][frame];
+    if (src != activity_src[0]) {
+      pp_image_set_src(activity_pet[0], src);
+      activity_src[0] = src;
+    }
+  }
+  if (!lv_obj_has_flag(toast, LV_OBJ_FLAG_HIDDEN) &&
+      (int32_t)(lv_tick_get() -
+                (uint32_t)(uintptr_t)lv_obj_get_user_data(toast)) >= 0)
+    lv_obj_add_flag(toast, LV_OBJ_FLAG_HIDDEN);
+}
+static void action(lv_event_t *e) {
+  int cmd = (int)(intptr_t)lv_event_get_user_data(e);
+  pp_result r = PP_OK;
+  if (cmd >= 201 && cmd <= 203) {
+    starter_choice = (unsigned)(cmd - 200);
+    for (unsigned i = 0; i < 3; i++) {
+      bool active = i + 1 == starter_choice;
+      lv_obj_set_style_border_color(starter_card[i], color(active ? 0xa7e6ac : 0x355568), 0);
+      lv_obj_set_style_bg_color(starter_card[i], color(active ? 0x294a50 : 0x142d3e), 0);
+    }
+    text(starter_name, pp_pet_names[starter_choice]);
+    return;
+  }
+  if (cmd == 210) {
+    if (pp_choose_starter(g, 1 + (starter_choice - 1) * 3) == PP_OK) {
+      starter_mode = false;
+      pp_ui_open(0);
+    }
+    return;
+  }
+  if (cmd == 1 && current == 12) {pp_ui_open(8);return;}
+  if(cmd==180 || cmd==184) {replacement_slot=cmd==184?g->count:selected;reserve_page=0;pp_ui_open(16);return;}
+  if(cmd==181) {r=pp_reserve_pet(g,selected);if(r==PP_OK){selected=0;pp_ui_open(0);}else notice(pp_message(r));return;}
+  if(cmd==182 || cmd==183) {unsigned pages=(g->reserve_count+5)/6;if(pages)reserve_page=(reserve_page+(cmd==183?1:pages-1))%pages;pp_ui_open(16);return;}
+  if(cmd>=400 && cmd<400+PP_RESERVES) {
+    r=pp_replace_pet(g,replacement_slot,cmd-400);
+    if(r==PP_OK){selected=replacement_slot;pp_ui_open(0);}else notice(pp_message(r));return;
+  }
+  if(cmd==185){pp_random_scene(g,!g->random_scene);pp_ui_open(11);return;}
+  if(cmd==186){pp_ui_open(4);return;}
+  if(cmd==6 && !g->battling) {pp_ui_open(17);return;}
+  if(cmd==512) {gym_team_count=0;pp_ui_open(19);return;}
+  if(cmd>=500 && cmd<500+PP_PETS) {
+    unsigned p=cmd-500,i=0;
+    while(i<gym_team_count && gym_team[i]!=p)i++;
+    if(i<gym_team_count){for(unsigned j=i;j+1<gym_team_count;j++)gym_team[j]=gym_team[j+1];gym_team_count--;}
+    else if(gym_team_count<3)gym_team[gym_team_count++]=p;
+    else {notice("先移除一位，再选择伙伴");return;}
+    pp_ui_open(19);return;
+  }
+  if(cmd==510) {
+    r=gym_team_count==3?pp_gym_start(g,gym_team):PP_NEED_THREE;
+    if(r==PP_OK)pp_ui_open(6);else notice(pp_message(r));return;
+  }
+  if(cmd==511) {pp_gym_leave(g);pp_ui_open(18);return;}
+  if (cmd < 100) {
+    if (cmd == 15) petdex_page = 0;
+    if (cmd == 8) { dex_page=0; collection_quality=PP_QUALITY_ALL; }
+    pp_ui_open(cmd);
+    return;
+  }
+  if (cmd >= 100 && cmd < 110) {
+    r = pp_buy(g, cmd - 100);
+  } else if (cmd >= 120 && cmd < 130) {
+    r = pp_use(g, cmd - 120, selected);
+  } else if (cmd >= 140 && cmd < 150) {
+    selected = cmd - 140;
+    pp_ui_open(current);
+    return;
+  } else if (cmd == 160)
+    r = pp_travel(g, selected);
+  else if (cmd == 161) {
+    if (g->traveler >= 0) {
+      unsigned pet = (unsigned)g->traveler, coins = g->coins;
+      unsigned art = pet_art(pet);
+      unsigned destination = pp_travel_destination(g);
+      char name[40]; snprintf(name, sizeof(name), "%s", pp_form_name(g, pet));
+      r = pp_claim(g);
+      if (r == PP_OK) {
+        travel_receipt.active = true;
+        travel_receipt.art = art;
+        travel_receipt.destination = destination;
+        travel_receipt.coins = g->coins - coins;
+        snprintf(travel_receipt.name, sizeof(travel_receipt.name), "%s", name);
+        snprintf(travel_receipt.item, sizeof(travel_receipt.item), "%s", g->log[3]);
+        pp_ui_open(5);
+        return;
+      }
+    } else r = PP_INVALID;
+  }
+  else if (cmd == 162) {
+    if(g->gym.mode) {pp_ui_open(18);return;}
+    r = pp_battle(g, selected);
+    pp_ui_open(6);
+  } else if (cmd == 163)
+    r = PP_INVALID;
+  else if (cmd == 164)
+    r = pp_shake(g);
+  else if (cmd == 165)
+    r = pp_dig_stop(g);
+  else if (cmd == 166)
+    r = pp_tarot(g);
+  else if (cmd == 167) {
+    evolution_open(selected, false);
+    return;
+  } else if (cmd == 177) {
+    evolution_open(selected, true);
+    return;
+  } else if (cmd == 178 || cmd == 179) {
+    evolution_choose(cmd == 179);
+    return;
+  } else if (cmd == 168) {
+    if (evo_choosing || lv_obj_has_flag(evo_done, LV_OBJ_FLAG_HIDDEN)) return;
+    selected = evo_pet_id;
+    pp_ui_open(4);
+    return;
+  } else if (cmd == 170 || cmd == 171) {
+    unsigned pages=collection_pages();
+    dex_page = (dex_page + (cmd == 171 ? 1 : pages-1)) % pages;
+    pp_ui_open(8);
+    return;
+  } else if (cmd >= 300 && cmd <= 300 + PP_QUALITY_COUNT) {
+    collection_quality=cmd-300;dex_page=0;pp_ui_open(8);return;
+  } else if (cmd == 172 || cmd == 173) {
+    scene_page = (scene_page + (cmd == 173 ? 1 : 11)) % 12;
+    pp_ui_open(9);
+    return;
+  } else if (cmd == 175 || cmd == 176) {
+    unsigned pages=(PP_DEX_COUNT+PETDEX_PAGE_SIZE-1)/PETDEX_PAGE_SIZE;
+    petdex_page=(petdex_page+(cmd==176?1:pages-1))%pages;
+    pp_ui_open(15);
+    return;
+  } else if (cmd == 174)
+    r = pp_scene(g, scene_page);
+  else if (cmd >= 1000 && cmd < 1000 + PP_COLLECTION) {
+    selected = cmd - 1000;
+    pp_ui_open(12);
+    return;
+  }
+  if (r == PP_OK && cmd == 100 + PP_INSTANT_EGG) {
+    if(g->count==PP_PETS && g->reserve_count) {replacement_slot=selected;reserve_page=(g->reserve_count-1)/6;pp_ui_open(16);notice("孵化成功 · 已加入候补栏");return;}
+    selected = g->count - 1;
+    happy_until[selected] = lv_tick_get() + 2600;
+    pp_ui_open(0);
+    char message[80];
+    snprintf(message, sizeof(message), "孵化成功 · %s", pp_form_name(g, selected));
+    notice(message);
+    return;
+  }
+  pp_ui_refresh();
+  if (r == PP_OK && (cmd >= 120 && cmd < 130)) {
+    pp_ui_open(0);
+  } else if (current != 0 && current != 5 && current != 6 && current != 7)
+    pp_ui_open(current);
+  if (r == PP_OK && cmd == 161) notice(g->log[3]);
+  else if (r != PP_OK || cmd != 162) notice(pp_message(r));
+}
+static void pet_picker(int y) {
+  int start = 180 - (int)g->count * 25;
+  for (unsigned i = 0; i < g->count; i++) {
+    lv_obj_t *b = button(body, selected == i ? "●" : "", start + i * 50, y, 46,
+                         64, 140 + i);
+    if (selected == i)
+      lv_obj_set_style_border_color(b, color(0x9cdc98), 0);
+    lv_obj_t *im = lv_image_create(b);
+    pp_image_set_src(im, avatar_paths[pet_art(i)]);
+    lv_obj_set_pos(im, 3, 2);
+    lv_obj_t *l = lv_obj_get_child(b, 0);
+    lv_obj_align(l, LV_ALIGN_BOTTOM_MID, 0, -5);
+  }
+  label(body, pp_form_name(g, selected), 65, y + 76, 230, 0x9cbeb2);
+}
+
+void pp_ui_open(unsigned page) {
+  if (page == 7) page=1;
+  if (page > 21)
+    page = 0;
+  if (starter_mode && page != 11)
+    page = 13;
+  if (selected >= g->count && page != 12)
+    selected = 0;
+  evolution = NULL;
+  evo_choosing = false;
+  current = page;
+  if (page != 5) travel_receipt.active = false;
+  refresh_pending = false;
+  pp_battle_view_close();
+  lv_obj_clean(screen);
+  memset(pet_img, 0, sizeof(pet_img));
+  memset(pet_src, 0, sizeof(pet_src));
+  memset(activity_pet, 0, sizeof(activity_pet));
+  memset(activity_src, 0, sizeof(activity_src));
+  last_scene = 999;
+  again = NULL;
+  lv_obj_set_style_bg_color(screen, color(0x080e17), 0);
+  lv_obj_set_style_bg_grad_color(screen, color(0x050a11), 0);
+  lv_obj_set_style_bg_grad_dir(screen, LV_GRAD_DIR_VER, 0);
+  /* The physical panel clips the circle. Fill the entire framebuffer so
+   * software corner antialiasing cannot expose LVGL's default white layer. */
+  lv_obj_set_style_bg_opa(screen, LV_OPA_COVER, 0);
+  lv_obj_set_style_radius(screen, 0, 0);
+  lv_obj_set_style_clip_corner(screen, false, 0);
+  lv_obj_set_style_border_width(screen, 0, 0);
+  lv_obj_set_style_outline_width(screen, 0, 0);
+  lv_obj_set_style_shadow_width(screen, 0, 0);
+  lv_obj_set_scrollbar_mode(screen, LV_SCROLLBAR_MODE_OFF);
+  lv_obj_remove_flag(screen, LV_OBJ_FLAG_SCROLLABLE);
+  if (page == 13) {
+    lv_obj_t *heading = label(screen,"选择伙伴",80,48,200,0xe4eee9);
+    lv_obj_set_style_text_font(heading,&pp_font_title_22,0);
+    label(screen,"选一位伙伴，一起开始冒险吧",46,85,268,0x8fa9b7);
+    for (unsigned i = 0; i < 3; i++) {
+      int x = 30 + (int)i * 102;
+      starter_card[i] = button(screen,"",x,112,96,136,201+i);
+      lv_obj_set_style_border_width(starter_card[i],2,0);
+      lv_obj_t *element = lv_image_create(starter_card[i]);
+      pp_image_set_src(element,type_paths[i]);
+      lv_obj_set_pos(element,32,8);
+      lv_obj_t *portrait = lv_image_create(starter_card[i]);
+      pp_image_set_src(portrait,starter_paths[i]);
+      lv_obj_set_pos(portrait,8,46);
+    }
+    starter_choice = 1;
+    lv_obj_set_style_border_color(starter_card[0],color(0xa7e6ac),0);
+    lv_obj_set_style_bg_color(starter_card[0],color(0x294a50),0);
+    starter_name = label(screen,pp_pet_names[1],70,252,220,0xcbe3d3);
+    lv_obj_set_style_text_font(starter_name,&pp_font_18,0);
+    lv_obj_t *start = button(screen,"出发",126,286,108,38,210);
+    lv_obj_set_style_text_font(lv_obj_get_child(start,0),&pp_font_18,0);
+    body = screen;
+  } else if (page == 0) {
+    home_epoch = lv_tick_get();
+    next_talk = home_epoch + 18000;
+    talk_until = 0;
+    body = lv_image_create(screen);
+    lv_obj_set_pos(body, 0, 0);
+    lv_obj_set_size(body, 360, 360);
+    pp_image_set_src(body, scene_paths[g->scene]);
+    last_scene = g->scene;
+    ambient_seed=g->rng ^ (home_epoch*2654435761u) ^ (++ambient_visits*2246822519u);
+    for(unsigned i=0;i<PP_SCENE_FX_MAX;i++) for(unsigned part=0;part<2;part++) {
+      lv_obj_t *o=ambient_particles[i][part]=lv_obj_create(screen);lv_obj_remove_style_all(o);
+      lv_obj_remove_flag(o,LV_OBJ_FLAG_CLICKABLE|LV_OBJ_FLAG_SCROLLABLE);
+      lv_obj_add_flag(o,LV_OBJ_FLAG_HIDDEN);
+    }
+    lv_obj_t *hud = lv_obj_create(screen);
+    lv_obj_remove_style_all(hud);
+    lv_obj_set_pos(hud, 91, 26);
+    lv_obj_set_size(hud, 178, 84);
+    lv_obj_set_style_radius(hud, 22, 0);
+    lv_obj_set_style_bg_color(hud, color(0x112738), 0);
+    lv_obj_set_style_bg_opa(hud, 0, 0);
+    lv_obj_remove_flag(hud, LV_OBJ_FLAG_CLICKABLE | LV_OBJ_FLAG_SCROLLABLE);
+    clock_shadow = label(screen, "--:--", 86, 36, 190, 0x6c6592);
+    lv_obj_set_style_text_font(clock_shadow, &pp_clock_38, 0);
+    clock_label = label(screen, "--:--", 85, 35, 190, 0xd5c6ff);
+    lv_obj_set_style_text_font(clock_label, &pp_clock_38, 0);
+    lv_obj_set_style_text_opa(clock_label, LV_OPA_COVER, 0);
+    coin_icon = lv_image_create(screen);
+    pp_image_set_src(coin_icon, hud_coin_large_path);
+    lv_obj_set_pos(coin_icon, 150, 79);
+    coin_shadow = label(screen, "", 173, 79, 120, 0x344866);
+    coin = label(screen, "", 172, 78, 120, 0xe0e1ff);
+    lv_obj_set_style_text_font(coin,&pp_font_18,0);
+    lv_obj_set_style_text_font(coin_shadow,&pp_font_18,0);
+    lv_obj_set_width(coin_shadow,120);
+    lv_obj_set_style_text_align(coin,LV_TEXT_ALIGN_LEFT,0);
+    lv_obj_set_style_text_align(coin_shadow,LV_TEXT_ALIGN_LEFT,0);
+    bubble = label(screen, idle_talk[0], 121, 199, 127, 0xf1f0ff);
+    lv_obj_set_style_bg_color(bubble, color(0x123c60), 0);
+    lv_obj_set_style_bg_opa(bubble, 235, 0);
+    lv_obj_set_style_radius(bubble, 8, 0);
+    lv_obj_set_style_text_font(bubble, &pp_font_12, 0);
+    lv_obj_set_style_pad_all(bubble, 5, 0);
+    for (unsigned i = 0; i < PP_PETS; i++) {
+      pet_img[i] = lv_image_create(screen);
+      lv_obj_set_size(pet_img[i], PP_SPRITE_SIZE, PP_SPRITE_SIZE);
+      lv_obj_set_pos(pet_img[i], px[i], py[i] < 115 ? 115 : py[i] > 208 ? 208 : py[i]);
+      lv_obj_add_flag(pet_img[i], LV_OBJ_FLAG_CLICKABLE);
+      lv_obj_set_ext_click_area(pet_img[i], 9);
+      lv_obj_add_event_cb(pet_img[i], pet_event, LV_EVENT_SHORT_CLICKED,
+                          (void *)(uintptr_t)i);
+      lv_obj_add_event_cb(pet_img[i], pet_event, LV_EVENT_LONG_PRESSED,
+                          (void *)(uintptr_t)i);
+    }
+    lv_obj_move_foreground(bubble);
+    egg = label(screen, "蛋", 50, 259, 70, 0x183449);
+    egg_icon = lv_image_create(screen);
+    pp_image_set_src(egg_icon, icon_paths[5]);
+    lv_obj_set_pos(egg_icon, 65, 224);
+    drop = label(screen, "树果", 145, 267, 70, 0x583c21);
+    drop_icon = lv_image_create(screen);
+    pp_image_set_src(drop_icon, icon_paths[0]);
+    lv_obj_set_pos(drop_icon, 164, 234);
+    drop_was_active = false;
+    lv_obj_t *dock = lv_obj_create(screen);
+    lv_obj_remove_style_all(dock);
+    lv_obj_set_pos(dock, 92, 255);
+    lv_obj_set_size(dock, 176, 72);
+    lv_obj_set_style_radius(dock, 32, 0);
+    lv_obj_set_style_bg_color(dock, color(0x0e2539), 0);
+    lv_obj_set_style_bg_opa(dock, 0, 0);
+    lv_obj_remove_flag(dock, LV_OBJ_FLAG_CLICKABLE | LV_OBJ_FLAG_SCROLLABLE);
+    const char *captions[] = {"APP", "BAG", "SHOP"};
+    for (unsigned n = 0; n < 3; n++) {
+      lv_obj_t *shadow = label(screen,captions[n],103+n*52,260,52,0x163145);
+      lv_obj_set_style_text_font(shadow,&pp_font_nav_14,0);
+      lv_obj_t *caption = label(screen,captions[n],102+n*52,259,52,0xe1ddff);
+      lv_obj_set_style_text_font(caption,&pp_font_nav_14,0);
+      lv_obj_t *b = button(screen, "", 106 + n * 52, 278, 44, 44, n + 1);
+      lv_obj_set_style_radius(b, LV_RADIUS_CIRCLE, 0);
+      lv_obj_set_style_bg_color(b, color(0x103b75), 0);
+      lv_obj_set_style_border_color(b, color(0x63baff), 0);
+      lv_obj_set_style_border_width(b, 2, 0);
+      lv_obj_t *im = lv_obj_get_child(b, 1);
+      pp_image_set_src(im, nav_paths[n]);
+      lv_obj_center(im);
+    }
+    update_home();
+  } else {
+    title = label(screen, nav[page], 70, 38, 220, 0xf3ecdc);
+    lv_obj_set_style_text_font(title, &pp_font_18, 0);
+    subtitle = label(screen, "", 90, 62, 180, 0x6a979a);
+    (void)title;
+    (void)subtitle;
+    body = lv_obj_create(screen);
+    lv_obj_remove_style_all(body);
+    lv_obj_set_pos(body, 0, 76);
+    lv_obj_set_size(body, 360, 215);
+    if (page == 6) {
+      lv_obj_set_y(body, 64);
+      lv_obj_set_height(body, 227);
+    }
+    lv_obj_remove_flag(body, LV_OBJ_FLAG_SCROLLABLE);
+    back_button = button(
+        screen, "返回",
+        page == 6 && (g->battling || g->battle_hp > 0 || g->enemy_hp > 0) ? 96
+                                                                          : 145,
+        292, 70, 36, (page == 1 || page == 2 || page == 3 || page == 4) ? 0 : page==16?186:1);
+    if (page == 1 || page == 8 || page == 6 || page == 14 || page == 15 || page == 16 || page >= 17) {
+      lv_obj_set_pos(back_button, 162, 294);
+      lv_obj_set_size(back_button, 36, 36);
+      lv_obj_set_style_radius(back_button, LV_RADIUS_CIRCLE, 0);
+      lv_obj_set_style_bg_color(back_button, color(0x15517d), 0);
+      lv_obj_set_style_bg_grad_dir(back_button, LV_GRAD_DIR_NONE, 0);
+      lv_obj_set_style_border_color(back_button, color(0x66b8e8), 0);
+      lv_obj_set_style_border_width(back_button, 2, 0);
+      lv_obj_center(lv_obj_get_child(back_button, 0));
+    }
+    if(page>=17) {
+      lv_obj_remove_event_cb(back_button,action);
+      unsigned target=page==18?17:page==19?18:page==21?18:1;
+      lv_obj_add_event_cb(back_button,action,LV_EVENT_CLICKED,(void *)(intptr_t)target);
+    }
+    if (page == 1) {
+      text(title, "APP");
+      const char *names[] = {"旅行", "塔罗牌", "道馆", "设置", "换场景", "收藏品", "计步器", "宠物图鉴", "徽章展馆"};
+      const int pages[] = {5, 10, 6, 11, 9, 8, 14, 15, 20};
+      const unsigned ids[] = {8, 12, 9, 13, 11, 10, 8, 10, 10};
+      const unsigned colors[] = {0x319cae,0xb6819b,0xb9659b,0x3867a0,0x319bba,0x658390,0x527f79,0x4a7790,0x817c68};
+      for (unsigned i=0;i<9;i++) {
+        int x=64+(i%3)*90, y=2+(i/3)*72;
+        lv_obj_t *tile=button(body,"",x,y,52,52,pages[i]);
+        lv_obj_set_style_bg_color(tile,color(colors[i]),0);
+        lv_obj_set_style_bg_grad_dir(tile,LV_GRAD_DIR_NONE,0);
+        lv_obj_set_style_radius(tile,14,0);
+        lv_obj_set_style_border_color(tile,color(0x9fc9d9),0);
+        lv_obj_t *im=lv_obj_get_child(tile,1);
+        if (!im) im=lv_image_create(tile);
+        pp_image_set_src(im,i==6?step_icon_path:i==7?pokedex_icon_path:i==8?gym_paths[3]:icon_paths[ids[i]]);
+        lv_obj_center(im);
+        lv_obj_t *name=label(body,names[i],x-12,y+54,76,0xd4dce5);
+        lv_obj_set_style_text_font(name,&pp_font_12,0);
+      }
+    }
+    if(page==17) {
+      text(subtitle,"道馆之路 · 01 / 08");
+      /* Route drawn from map nodes, with the first implemented destination open. */
+      int nodes[5][2]={{88,168},{110,116},{180,58},{258,91},{267,155}};
+      for(unsigned n=0;n<4;n++)for(unsigned j=0;j<12;j++) {
+        lv_obj_t *dot=lv_obj_create(body);lv_obj_remove_style_all(dot);
+        lv_obj_set_pos(dot,nodes[n][0]+(nodes[n+1][0]-nodes[n][0])*(int)j/12,nodes[n][1]+(nodes[n+1][1]-nodes[n][1])*(int)j/12);
+        lv_obj_set_size(dot,3,3);lv_obj_set_style_bg_opa(dot,255,0);lv_obj_set_style_bg_color(dot,color(n<2?0xc4af7a:0x2b4252),0);
+      }
+      lv_obj_t *im=lv_image_create(body);pp_image_set_src(im,gym_paths[2]);lv_obj_set_pos(im,132,0);
+      button(body,"尼比市",138,88,84,32,18);
+      label(body,"小刚 · 岩石",116,124,128,0xd5c19b);
+      label(body,"真新镇",56,176,76,0x708da0);label(body,"常青市",55,101,70,0x9cb8ae);
+      label(body,"华蓝市",236,68,70,0x4c6376);label(body,"未开放",236,145,70,0x4c6376);
+      if(g->battling)button(body,"继续挑战",116,169,128,34,6);
+    }
+    if(page==18) {
+      text(subtitle,"尼比市 · 岩石系 · 建议 Lv.12–14");
+      lv_obj_t *im=lv_image_create(body);pp_image_set_src(im,gym_paths[0]);lv_obj_set_pos(im,77,5);
+      im=lv_image_create(body);pp_image_set_src(im,gym_paths[1]);lv_obj_set_pos(im,223,5);
+      label(body,"小刚",74,70,70,0xe1d5ba);label(body,g->gym.badges&1?"已获徽章":"灰色徽章",215,70,80,0xc0c8d6);
+      for(unsigned i=0;i<3;i++) {
+        im=lv_image_create(body);pp_image_set_src(im,gym_paths[4+i]);lv_obj_set_pos(im,85+i*78,95);
+        char t[40];snprintf(t,sizeof(t),"%s",pp_pewter_team[i].name);lv_obj_t *l=label(body,t,65+i*78,130,72,0xa4b7bf);lv_obj_set_style_text_font(l,&pp_font_12,0);
+        snprintf(t,sizeof(t),"Lv.%u",pp_pewter_team[i].level);l=label(body,t,65+i*78,148,72,0xcbbd94);lv_obj_set_style_text_font(l,&pp_font_12,0);
+      }
+      button(body,g->battling?"继续挑战":"选择三位伙伴",108,174,144,34,g->battling?6:512);
+      label(body,g->gym.badges&1?"再战 80金币 · 出场120经验":"首通 300金币 · 出场120经验",62,211,236,0x9dbaa8);
+    }
+    if(page==19) {
+      char t[80];snprintf(t,sizeof(t),"已选 %u / 3 · 按选择顺序出场",gym_team_count);text(subtitle,t);
+      for(unsigned i=0;i<g->count;i++) {
+        unsigned row=i/3,col=i%3;int x=row?113+col*70:78+col*70,y=8+row*80;
+        unsigned order=0;for(unsigned j=0;j<gym_team_count;j++)if(gym_team[j]==i)order=j+1;
+        snprintf(t,sizeof(t),"%u · Lv.%u",order,g->growth[i].level);
+        if(!order)snprintf(t,sizeof(t),"Lv.%u",g->growth[i].level);
+        lv_obj_t *tile=button(body,"",x,y,64,74,500+i);lv_obj_set_style_bg_color(tile,color(order?0x2c514c:0x183145),0);lv_obj_set_style_border_color(tile,color(order?0xb7db92:0x395064),0);
+        lv_obj_t *im=lv_image_create(tile);pp_image_set_src(im,avatar_paths[pet_art(i)]);lv_obj_set_pos(im,12,2);
+        lv_obj_t *l=label(tile,t,0,44,64,order?0xd8ecb7:0x9fb8c5);lv_obj_set_style_text_font(l,&pp_font_12,0);
+        l=label(tile,pp_form_name(g,i),-6,59,76,0xc4d0d9);lv_obj_set_style_text_font(l,&pp_font_12,0);
+      }
+      if(g->count<3) {lv_obj_t *l=label(body,"至少需要三只伙伴\n可前往SHOP孵蛋或调入候补",55,102,250,0xe1bc8b);lv_obj_set_style_text_font(l,&pp_font_12,0);}
+      button(body,"开始挑战",112,177,136,34,510);
+    }
+    if(page==20) {
+      text(subtitle,g->gym.badges&1?"已获得 1 / 8":"已获得 0 / 8");
+      for(unsigned i=0;i<8;i++) {
+        int x=66+(i%4)*60,y=14+(i/4)*78;
+        lv_obj_t *im=lv_image_create(body);pp_image_set_src(im,gym_paths[1]);lv_obj_set_pos(im,x,y);lv_image_set_scale(im,192);
+        if(i || !(g->gym.badges&1))lv_obj_set_style_image_recolor_opa(im,230,0);
+        lv_obj_set_style_image_recolor(im,color(0x263b4a),0);
+      }
+      label(body,g->gym.badges&1?"灰色徽章 · 小刚":"灰色徽章 · 尚未获得",66,176,228,0xcbbd99);
+      button(body,"前往尼比市",116,208,128,30,18);
+    }
+    if(page==21) {
+      bool win=g->gym.result==1;text(subtitle,win?(g->gym.first_clear?"首次通关 · 尼比道馆":"再次获胜 · 尼比道馆"):"惜败 · 再接再厉");
+      lv_obj_t *im=lv_image_create(body);pp_image_set_src(im,gym_paths[win?1:0]);lv_obj_set_pos(im,148,2);
+      label(body,win?(g->gym.first_clear?"获得灰色徽章":"灰色徽章已收藏"):"照顾伙伴，再来挑战",66,72,228,0xe0d1b0);
+      char t[96];snprintf(t,sizeof(t),"金币 +%lu · 出场伙伴 +%u XP",(unsigned long)g->gym.reward_coins,g->gym.reward_xp);label(body,t,48,98,264,0xb4d3bf);
+      if(win) {
+        unsigned id=g->gym.reward_item;char path[320];collection_path(path,sizeof(path),id,false);
+        im=lv_image_create(body);pp_image_set_src(im,path);lv_obj_set_pos(im,164,126);
+        snprintf(t,sizeof(t),"%s · %s",pp_qualities[pp_collectibles[id].quality].name,pp_collectibles[id].name);
+        lv_obj_t *l=label(body,t,52,166,256,0xc8b2e4);lv_obj_set_style_text_font(l,&pp_font_12,0);
+      }
+      button(body,win?"徽章展馆":"调整编队",116,202,128,32,win?20:512);
+    }
+    if (page == 15) {
+      unsigned order[PP_DEX_COUNT]; pp_dex_order(g, order);
+      unsigned pages=(PP_DEX_COUNT+PETDEX_PAGE_SIZE-1)/PETDEX_PAGE_SIZE;
+      char s[64];
+      for(unsigned slot=0;slot<PETDEX_PAGE_SIZE && petdex_page*PETDEX_PAGE_SIZE+slot<PP_DEX_COUNT;slot++) {
+        unsigned entry=order[petdex_page*PETDEX_PAGE_SIZE+slot];
+        const pp_dex_entry *p=&pp_pokedex[entry];
+        bool owned=pp_dex_owned(g,entry);
+        lv_obj_t *tile=lv_obj_create(body);lv_obj_remove_style_all(tile);
+        unsigned row=slot<3?0:slot<7?1:2;
+        unsigned col=slot-(row==0?0:row==1?3:7);
+        lv_obj_set_pos(tile,(row==1?48:81)+col*66,6+row*68);lv_obj_set_size(tile,62,62);
+        lv_obj_remove_flag(tile,LV_OBJ_FLAG_SCROLLABLE|LV_OBJ_FLAG_CLICKABLE);
+        lv_obj_set_style_radius(tile,10,0);lv_obj_set_style_bg_opa(tile,255,0);
+        lv_obj_set_style_bg_color(tile,color(owned?0x183b41:0x111f2b),0);
+        lv_obj_set_style_border_width(tile,1,0);lv_obj_set_style_border_color(tile,color(owned?0x578d79:0x233644),0);
+        lv_obj_t *im=lv_image_create(tile);pp_image_set_src(im,avatar_paths[p->art]);lv_obj_set_pos(im,11,2);
+        if(!owned) {
+          lv_obj_set_style_image_recolor(im,color(0x4c5a68),0);lv_obj_set_style_image_recolor_opa(im,255,0);
+          lv_obj_t *q=label(tile,"?",11,12,40,0xb9c6cc);lv_obj_set_style_text_font(q,&pp_font_18,0);
+        }
+        snprintf(s,sizeof(s),"%03u",p->national_id);
+        lv_obj_t *l=label(tile,owned?p->name:s,0,44,62,owned?0xd0e6d7:0x778a99);
+        lv_obj_set_style_text_font(l,&pp_font_12,0);
+      }
+      if(pages>1) {
+      snprintf(s,sizeof(s),"%u / %u",petdex_page+1,pages);
+      lv_obj_t *l=label(screen,s,144,271,72,0x6e8a9b);lv_obj_set_style_text_font(l,&pp_font_12,0);
+      button(screen,"<",80,282,32,32,175);button(screen,">",248,282,32,32,176);
+      }
+    }
+    if (page == 14) {
+      lv_obj_t *im=lv_image_create(body); pp_image_set_src(im,step_icon_path); lv_obj_set_pos(im,164,0);
+      lv_obj_t *l=label(body,"今日步数",80,33,200,0x91b7b1); lv_obj_set_style_text_font(l,&pp_font_12,0);
+      step_number=label(body,"0",65,53,230,0xd6edcf); lv_obj_set_style_text_font(step_number,&pp_clock_36,0);
+      step_bar=lv_bar_create(body); lv_obj_set_pos(step_bar,80,106); lv_obj_set_size(step_bar,200,5);
+      lv_obj_set_style_bg_color(step_bar,color(0x274248),0); lv_obj_set_style_bg_color(step_bar,color(0x9bdab4),LV_PART_INDICATOR);
+      l=label(body,"金币             经验 /只",60,124,240,0x88aaa8); lv_obj_set_style_text_font(l,&pp_font_12,0);
+      step_rewards=label(body,"",55,143,250,0xffdb8e);
+      step_rate=label(body,"",50,174,260,0x8eabb8); lv_obj_set_style_text_font(step_rate,&pp_font_12,0);
+      step_total=label(body,"",65,196,230,0x718e9b); lv_obj_set_style_text_font(step_total,&pp_font_12,0);
+      update_steps();
+    }
+    if (page == 2 || page == 3) {
+      char s[80];
+      snprintf(s, sizeof(s), "%lu", (unsigned long)g->coins);
+      lv_point_t money_size;
+      lv_text_get_size(&money_size,s,&pp_font_14,0,0,LV_COORD_MAX,LV_TEXT_FLAG_NONE);
+      int money_x=(360-20-money_size.x)/2;
+      lv_obj_t *money_icon=lv_image_create(screen);
+      pp_image_set_src(money_icon,hud_coin_path);
+      lv_obj_set_pos(money_icon,money_x,68);
+      label(screen,s,money_x+20,67,money_size.x,0x83c6b3);
+      for (unsigned i = 0; i < PP_ITEMS; i++) {
+        if (page == 2)
+          snprintf(s, sizeof(s), "%s\n×%u", pp_items[i].name, g->inventory[i]);
+        else
+          snprintf(s, sizeof(s), "%s\n%u", pp_items[i].name, pp_items[i].price);
+        button(body, s, 70 + (i % 2) * 114,
+               (page == 2 ? 32 : 26) + (i / 2) * (page == 2 ? 55 : 48),
+               106, page == 2 ? 50 : 44, (page == 2 ? 120 : 100) + i);
+      }
+      if (page == 3) {
+        snprintf(s, sizeof(s), "即孵蛋 · %u", pp_items[PP_INSTANT_EGG].price);
+        lv_obj_t *b = button(body, s, 88, 174, 184, 36, 100 + PP_INSTANT_EGG);
+        lv_obj_set_style_border_color(b, color(0xe4bd71), 0);
+      }
+    }
+    if (page == 4) {
+      pp_pet *p = &g->pets[selected];
+      pp_growth *growth = &g->growth[selected];
+      char s[80];
+      lv_obj_t *portrait = lv_image_create(body);
+      pp_image_set_src(portrait, avatar_paths[pet_art(selected)]);
+      lv_obj_set_pos(portrait, 62, -2);
+      label(body, pp_form_name(g, selected), 112, 0, 180, 0xffd887);
+      snprintf(s, sizeof(s), "Lv.%u    %u / %u", growth->level, growth->xp,
+               pp_xp_needed(growth->level));
+      lv_obj_t *xp = label(body, s, 112, 22, 180, 0xa4bfc5);
+      lv_obj_set_style_text_font(xp, &pp_font_12, 0);
+      lv_obj_t *bar = lv_bar_create(body);
+      lv_obj_set_pos(bar, 118, 44);
+      lv_obj_set_size(bar, 163, 5);
+      lv_bar_set_range(bar, 0, pp_xp_needed(growth->level));
+      lv_bar_set_value(bar, growth->xp, LV_ANIM_OFF);
+      lv_obj_set_style_bg_color(bar, color(0xf3cb76), LV_PART_INDICATOR);
+      const char *n[] = {"饱腹", "清洁", "健康", "心情", "精力"};
+      unsigned values[] = {p->food, p->clean, p->health, p->mood, p->energy};
+      for (unsigned i = 0; i < 5; i++) {
+        snprintf(s, sizeof(s), "%s %u", n[i], values[i]);
+        lv_obj_t *l = label(body, s, 64, 52 + i * 18, 100, 0xc0d4d0);
+        lv_obj_set_style_text_font(l, &pp_font_12, 0);
+        lv_obj_t *b = lv_bar_create(body);
+        lv_obj_set_pos(b, 174, 56 + i * 18);
+        lv_obj_set_size(b, 108, 8);
+        lv_bar_set_value(b, values[i], LV_ANIM_OFF);
+        lv_obj_set_style_bg_color(b, color(0x77cfb3), LV_PART_INDICATOR);
+      }
+      button(body,"换伙伴",g->count<PP_PETS?76:114,184,g->count<PP_PETS?100:132,30,180);
+      if(g->count<PP_PETS) button(body,"添伙伴",184,184,100,30,184);
+      unsigned gate = pp_evolution_level(g, selected);
+      if (pp_evolution_locked(g, selected)) {
+        lv_obj_t *l=label(body,"已选择永久不进化",70,152,220,0xbbe6df);
+        lv_obj_set_style_text_font(l,&pp_font_12,0);
+      } else if (g->pets[selected].species == 0 && !growth->stage) {
+        snprintf(s,sizeof(s),"雷之石 · %u币",PP_THUNDER_STONE_PRICE);
+        button(body,s,98,144,164,32,177);
+      } else if (gate) {
+        snprintf(s, sizeof(s),
+                 growth->level >= gate ? "突破进化" : "Lv.%u  可突破", gate);
+        lv_obj_t *b = button(body, s, 98, 144, 164, 32, 167);
+        if (growth->level < gate)
+          lv_obj_add_state(b, LV_STATE_DISABLED);
+      } else {
+        lv_obj_t *l =
+            label(body, p->species==10 ? "Lv.22进化 · 028待接入" : "最终形态", 80,
+                  152, 200, 0x8da5af);
+        lv_obj_set_style_text_font(l, &pp_font_12, 0);
+      }
+      if (growth->stage && pp_art_id(g, selected) >= PP_ART_COUNT) {
+        lv_obj_t *l = label(body, "图待补", 62, 40, 50, 0x8da5af);
+        lv_obj_set_style_text_font(l, &pp_font_12, 0);
+      }
+    }
+    if (page == 5 || page == 6 || page == 7) {
+      live_status = label(body, "", 45, 0, 270, 0x9bdaca);
+      live_log = label(body, "", 53, 116, 254, 0x9ab1b7);
+      lv_obj_set_height(live_log, 94);
+      lv_label_set_long_mode(live_log, LV_LABEL_LONG_CLIP);
+      lv_obj_set_style_text_align(live_log, LV_TEXT_ALIGN_LEFT, 0);
+      if (page == 5) {
+        travel_layout = g->traveler >= 0 || travel_receipt.active;
+        if (!travel_layout) {
+          pet_picker(50);
+          button(body, "出发", 97, 165, 166, 38, 160);
+          lv_obj_add_flag(live_log, LV_OBJ_FLAG_HIDDEN);
+        } else {
+          unsigned destination=travel_receipt.active?travel_receipt.destination:pp_travel_destination(g);
+          text(subtitle, pp_travel_name(destination));
+          lv_obj_set_y(live_status, 4);
+          lv_obj_set_style_text_font(live_status, &pp_font_12, 0);
+          lv_obj_t *im = lv_image_create(body);
+          travel_backdrop = im;
+          pp_image_set_src(im, travel_sources[destination]);
+          lv_obj_set_pos(im, 0, 32); /* Full-width scenery at screen y108, like battle. */
+          lv_obj_t *pet = lv_image_create(body);
+          unsigned art = travel_receipt.active ? travel_receipt.art : pet_art(g->traveler);
+          pp_image_set_src(pet, paths[art][pp_animation_frame(art, PP_POSE_WALK, 0)]);
+          lv_obj_set_pos(pet, 156, 88);
+          activity_pet[0] = pet;
+          travel_activity = label(body, "", 50, 150, 260, 0xdce8ee);
+          lv_obj_set_pos(live_log, 50, 172);
+          lv_obj_set_size(live_log, 260, 18);
+          lv_obj_set_style_text_align(live_log, LV_TEXT_ALIGN_CENTER, 0);
+          lv_obj_set_style_text_font(live_log, &pp_font_12, 0);
+          travel_reward_label = label(body, "", 55, 192, 250, 0xe4c88d);
+          lv_obj_set_style_text_font(travel_reward_label, &pp_font_12, 0);
+          travel_claim = button(screen, "领取", 188, 288, 72, 32, 161);
+          lv_obj_set_size(back_button, 72, 32);
+          lv_obj_set_y(back_button, 288);
+          live();
+        }
+      }
+      if (page == 6) {
+        battle_layout = g->battling || g->battle_hp > 0 || g->enemy_hp > 0;
+        lv_obj_add_flag(live_status, LV_OBJ_FLAG_HIDDEN);
+        lv_obj_add_flag(live_log, LV_OBJ_FLAG_HIDDEN);
+        if (!battle_layout) {
+          pet_picker(24);
+          for (unsigned slot = 0; slot < PP_MOVE_SLOTS; slot++) {
+            lv_obj_t *chip = button(
+                body, pp_move_at(g->pets[selected].species, slot)->name,
+                78 + (slot % 2) * 104, 121 + (slot / 2) * 28, 100, 24, 999);
+            lv_obj_remove_flag(chip, LV_OBJ_FLAG_CLICKABLE);
+            lv_obj_set_style_radius(chip, 8, 0);
+            lv_obj_set_style_text_font(lv_obj_get_child(chip, 0), &pp_font_12,
+                                       0);
+          }
+          button(body, "开始", 110, 181, 140, 32, 162);
+        } else {
+          again = button(screen, "再来", 188, 288, 64, 32, 162);
+          lv_obj_add_flag(again, LV_OBJ_FLAG_HIDDEN);
+          lv_obj_add_flag(title, LV_OBJ_FLAG_HIDDEN);
+          pp_battle_view_create(body, g, asset_root, again, back_button);
+        }
+      }
+      if (page == 7) {
+        lives = label(body, "", 100, 28, 160, 0xf4ab9b);
+        for (unsigned i = 0; i < 6; i++) {
+          stairs[i] = lv_obj_create(body);
+          lv_obj_set_pos(stairs[i], 60 + i * 36, 68 + i * 12);
+          lv_obj_set_size(stairs[i], 34, 21);
+          lv_obj_set_style_border_width(stairs[i], 0, 0);
+          lv_obj_set_style_radius(stairs[i], 4, 0);
+        }
+        icon(body, 10, 160, 118);
+        button(body, "开始", 52, 169, 76, 38, 163);
+        button(body, "↔", 137, 169, 86, 38, 164);
+        button(body, "领取", 232, 169, 76, 38, 165);
+        lv_obj_add_flag(live_log, LV_OBJ_FLAG_HIDDEN);
+      }
+      live();
+    }
+    if (page == 8) {
+      char s[80];
+      unsigned total=pp_collection_total(collection_quality),pages=collection_pages();
+      if (dex_page>=pages) dex_page=0;
+      snprintf(s,sizeof(s),"%s %u/%u   %u/%u",collection_quality==PP_QUALITY_ALL?"全部":pp_qualities[collection_quality].name,
+        pp_collection_owned(g,collection_quality),total,dex_page+1,pages);
+      lv_obj_t *count=label(screen,s,55,62,250,0x87a6b9);
+      lv_obj_set_style_text_font(count,&pp_font_12,0);
+      const char *tabs[]={"全","普","精","稀","史","传","心"};
+      for (unsigned tab=0;tab<7;tab++) {
+        unsigned q=tab?tab-1:PP_QUALITY_ALL,c=q==PP_QUALITY_ALL?0xd6e3ed:pp_qualities[q].color;
+        lv_obj_t *b=button(screen,tabs[tab],74+tab*31,81,28,24,300+q);
+        lv_obj_set_style_bg_opa(b,q==collection_quality?70:0,0);
+        lv_obj_set_style_bg_color(b,color(c),0);
+        lv_obj_set_style_border_width(b,0,0);
+        lv_obj_set_style_text_color(lv_obj_get_child(b,0),color(c),0);
+        lv_obj_set_style_text_font(lv_obj_get_child(b,0),&pp_font_12,0);
+      }
+      for (unsigned i=0;i<64 && dex_page*64+i<total;i++) {
+        unsigned id=pp_collection_id(collection_quality,dex_page*64+i);
+        unsigned c=pp_qualities[pp_collectibles[id].quality].color;
+        bool owned=pp_has(g,id);char path[320];
+        lv_obj_t *b=button(screen,"",80+(i%8)*25,111+(i/8)*22,23,21,1000+id);
+        lv_obj_set_style_bg_opa(b,0,0);lv_obj_set_style_border_width(b,0,0);
+        collection_path(path,sizeof(path),id,true);
+        lv_obj_t *im=lv_image_create(b);pp_image_set_src(im,path);lv_obj_align(im,LV_ALIGN_TOP_MID,0,-1);
+        lv_obj_set_style_opa(im,owned?255:65,0);lv_obj_remove_flag(im,LV_OBJ_FLAG_CLICKABLE);
+        lv_obj_t *dot=lv_obj_create(b);lv_obj_remove_style_all(dot);lv_obj_set_size(dot,owned?8:3,2);
+        lv_obj_set_style_bg_color(dot,color(c),0);lv_obj_set_style_bg_opa(dot,owned?255:110,0);
+        lv_obj_align(dot,LV_ALIGN_BOTTOM_MID,0,0);lv_obj_remove_flag(dot,LV_OBJ_FLAG_CLICKABLE);
+      }
+      if (pages>1) for (unsigned side=0;side<2;side++) {
+        lv_obj_t *arrow=button(screen,side?">":"<",side?292:30,161,38,46,170+side);
+        lv_obj_set_style_bg_opa(arrow,0,0);lv_obj_set_style_border_width(arrow,0,0);
+      }
+    }
+    if (page == 9) {
+      lv_obj_t *im = lv_image_create(body);
+      pp_image_set_src(im, thumb_paths[scene_page]);
+      lv_obj_set_pos(im, 104, 5);
+      char s[80];
+      snprintf(s, sizeof(s), "%s · %u/12", pp_scene_names[scene_page],
+               scene_page + 1);
+      label(body, s, 65, 133, 230, 0xf7f3de);
+      if (g->scenes & (1u << scene_page))
+        snprintf(s, sizeof(s), "使用");
+      else
+        snprintf(s, sizeof(s), "%u", 100 + scene_page * 20);
+      button(body, "<", 52, 65, 40, 44, 172);
+      button(body, ">", 268, 65, 40, 44, 173);
+      button(body, s, 97, 162, 166, 40, 174);
+    }
+    if (page == 16) {
+      text(title,"候补伙伴");
+      unsigned pages=(g->reserve_count+5)/6;
+      if(!g->reserve_count) label(body,"还没有候补伙伴",65,75,230,0x91adaf);
+      for(unsigned i=0;i<6 && reserve_page*6+i<g->reserve_count;i++) {
+        unsigned n=reserve_page*6+i,art=pp_base_art(g->reserves[n].species);
+        const char *name=pp_pet_names[g->reserves[n].species];
+        for(unsigned d=0;d<PP_DEX_COUNT;d++) if(pp_pokedex[d].species==g->reserves[n].species && pp_pokedex[d].stage==g->reserve_growth[n].stage) {art=pp_pokedex[d].art;name=pp_pokedex[d].name;}
+        int x=66+(i%3)*78,y=8+(i/3)*74;
+        lv_obj_t *tile=button(body,"",x,y,72,68,400+n);
+        lv_obj_t *im=lv_image_create(tile);pp_image_set_src(im,avatar_paths[art]);lv_obj_set_pos(im,16,0);
+        lv_obj_t *l=label(tile,name,0,42,72,0xcde0d7);lv_obj_set_style_text_font(l,&pp_font_12,0);
+      }
+      if(g->count>1 && replacement_slot<g->count) button(body,"收回休息",114,166,132,30,181);
+      if(pages>1){button(screen,"<",80,282,32,32,182);button(screen,">",248,282,32,32,183);}
+    }
+    if (page == 10) {
+      bool drawn = g->clock_ready && g->tarot_day == g->day;
+      lv_obj_t *card = lv_image_create(body);
+      pp_image_set_src(card, large_paths[12]);lv_obj_set_pos(card, 140, 0);
+      label(body, drawn ? pp_tarot_names[g->tarot_card] : "?",55,89,250,0xeac3e1);
+      lv_obj_t *l=label(body,drawn?(pp_tarot_active(g,g->tarot_card)?pp_tarot_effects[g->tarot_card]:"明日翻牌开启增益"):"每日一牌 · 当天有效",45,117,270,0xa6c6c4);
+      lv_obj_set_style_text_font(l,&pp_font_12,0);
+      l=label(body,drawn?(pp_tarot_active(g,g->tarot_card)?"今日生效 · 跨日结束":"今日已翻牌"):"翻牌获 10 金币",55,138,250,0x7c97a4);lv_obj_set_style_text_font(l,&pp_font_12,0);
+      lv_obj_t *b=button(body, drawn ? "明日再来" : "翻牌",94,166,172,38,166);
+      if(drawn) lv_obj_add_state(b,LV_STATE_DISABLED);
+    }
+    if (page == 11) {
+      icon(body,13,164,0);
+      char s[128];snprintf(s,sizeof(s),"FLASH %s    IMU %s    TIME %s",assets_ok?"✓":"—",imu_ok?"✓":"—",g->clock_ready?"✓":"—");
+      lv_obj_t *l=label(body,s,60,42,240,0x91adaf);lv_obj_set_style_text_font(l,&pp_font_12,0);
+      button(body,g->random_scene?"每日随机场景   开":"每日随机场景   关",70,78,220,42,185);
+      l=label(body,"每天更换 · 仅已解锁场景",55,125,250,0x8aabb3);lv_obj_set_style_text_font(l,&pp_font_12,0);
+      label(body,"v0.9.3    OTA —",70,180,220,0x829caa);
+    }
+    if (page == 12) {
+      const pp_collection_entry *entry=&pp_collectibles[selected];
+      const pp_quality_entry *quality=&pp_qualities[entry->quality];
+      char s[128],path[320];
+      label(body,entry->name,45,5,270,quality->color);
+      collection_path(path,sizeof(path),selected,false);
+      lv_obj_t *im=lv_image_create(body);pp_image_set_src(im,path);lv_obj_set_pos(im,164,50);
+      snprintf(s,sizeof(s),"%s · %s",quality->name,pp_has(g,selected)?"已收藏":"未获得");
+      label(body,s,50,96,260,quality->color);
+      if (selected==PP_PURE_HEART) snprintf(s,sizeof(s),"为伙伴选择永久不进化时赠送");
+      else snprintf(s,sizeof(s),"旅行归来 · %s",pp_scene_names[entry->scene]);
+      lv_obj_t *l=label(body,s,40,132,280,0x8da5af);lv_obj_set_style_text_font(l,&pp_font_12,0);
+      if (selected!=PP_PURE_HEART) {
+        snprintf(s,sizeof(s),"同品质 %u/%u · 占旅行品种 %.2f%%",pp_collection_owned(g,entry->quality),quality->count,100.0*quality->count/PP_TRAVEL_COLLECTION);
+        l=label(body,s,40,164,280,0x8da5af);lv_obj_set_style_text_font(l,&pp_font_12,0);
+      }
+    }
+  }
+
+  toast = label(screen, "", 68, 226, 224, 0xf8f4db);
+  lv_obj_set_style_bg_color(toast, color(0x1e433d), 0);
+  lv_obj_set_style_bg_opa(toast, 245, 0);
+  lv_obj_set_style_pad_all(toast, 8, 0);
+  lv_obj_set_style_radius(toast, 10, 0);
+  lv_obj_add_flag(toast, LV_OBJ_FLAG_HIDDEN);
+  last_revision = g->revision;
+}
+void pp_ui_clock(const char *s) {
+  if (current == 0 && clock_label) {
+    text(clock_label, s);
+    text(clock_shadow, s);
+  }
+}
+void pp_ui_hardware(bool assets, bool imu) {
+  assets_ok = assets;
+  imu_ok = imu;
+}
+/* Opening a choice never mutates the pet or spends coins. */
+static void evolution_open(unsigned pet, bool stone) {
+  if (evolution) return;
+  if (stone && g->coins<PP_THUNDER_STONE_PRICE) { notice(pp_message(PP_NO_COINS));return; }
+  pp_result result = pp_evolution_offer(g, pet);
+  if (result != PP_OK) { notice(pp_message(result)); return; }
+  evo_pet_id = pet; evo_before_art = pet_art(pet); evo_current_art = evo_before_art;
+  evo_stone = stone; evo_declined = false; evo_choosing = true;
+  evo_tint = evo_colors[g->pets[pet].species % (sizeof(evo_colors)/sizeof(evo_colors[0]))];
+  evo_sprite_source = NULL; memset(&evolution_clock,0,sizeof(evolution_clock));
+  refresh_pending = false;
+  evolution = lv_obj_create(screen);lv_obj_remove_style_all(evolution);
+  lv_obj_set_size(evolution,360,360);lv_obj_set_style_bg_color(evolution,color(0x0c1c30),0);
+  lv_obj_set_style_bg_opa(evolution,255,0);lv_obj_remove_flag(evolution,LV_OBJ_FLAG_SCROLLABLE);
+  lv_obj_t *l=label(evolution,"成长的选择",70,42,220,evo_tint);
+  lv_obj_set_style_text_font(l,&pp_font_18,0);
+  char str[80];snprintf(str,sizeof(str),"%s · Lv.%u",pp_form_name(g,pet),g->growth[pet].level);
+  l=label(evolution,str,60,72,240,0xc7d9d5);lv_obj_set_style_text_font(l,&pp_font_12,0);
+  evo_pet=lv_image_create(evolution);lv_obj_set_pos(evo_pet,132,94);
+  l=label(evolution,"保持原样后，这只伙伴将永久不再进化",50,191,260,0xe3c9aa);
+  lv_obj_set_style_text_font(l,&pp_font_12,0);
+  l=label(evolution,"并获得收藏品「纯净之心」",50,222,260,0xbbe6df);
+  lv_obj_set_style_text_font(l,&pp_font_12,0);
+  button(evolution,stone?"进化 · 200币":"进化",88,243,184,34,178);
+  button(evolution,"保持原样 · 永久",88,285,184,34,179);
+  evolution_tick();
+}
+/* Commit both the permanent decision and gift atomically, then present it. */
+static void evolution_choose(bool decline) {
+  if (!evolution || !evo_choosing) return;
+  unsigned pet=evo_pet_id, before_art=evo_before_art; bool stone=evo_stone;
+  pp_result result=decline?pp_decline_evolution(g,pet):stone?pp_evolve_thunder_stone(g,pet):pp_evolve(g,pet);
+  if (result != PP_OK) {
+    if (result == PP_NO_COINS) { notice(pp_message(result)); lv_obj_move_foreground(toast); return; }
+    selected=pet;pp_ui_open(4);notice(pp_message(result));return;
+  }
+  lv_obj_delete(evolution); evolution=NULL; evo_choosing=false; evo_declined=decline;
+  evo_pet_id = pet;
+  evo_before_art = before_art;
+  evo_tint = evo_colors[g->pets[pet].species % (sizeof(evo_colors)/sizeof(evo_colors[0]))];
+  evo_sprite_source = NULL;
+  memset(&evolution_clock, 0, sizeof(evolution_clock));
+  evo_started = lv_tick_get();
+  refresh_pending = false;
+  evolution = lv_obj_create(screen);
+  lv_obj_remove_style_all(evolution);
+  lv_obj_set_size(evolution, 360, 360);
+  lv_obj_set_style_bg_color(evolution, color(0x0c1c30), 0);
+  lv_obj_set_style_bg_opa(evolution, 255, 0);
+  lv_obj_remove_flag(evolution, LV_OBJ_FLAG_SCROLLABLE);
+  lv_obj_add_flag(evolution, LV_OBJ_FLAG_CLICKABLE);
+  lv_obj_t *l = label(evolution, decline ? "守护最初的自己" : stone ? "雷之石进化" : "突破进化", 70, 47, 220, evo_tint);
+  lv_obj_set_style_text_font(l, &pp_font_18, 0);
+  char str[96];
+  snprintf(str, sizeof(str), "%s", decline ? "成长，也可以是\n守护最初的自己。" : "每一次成长，都有你的陪伴。");
+  l = label(evolution, str, 55, 78, 250, 0x91b8c8);
+  lv_obj_set_style_text_font(l, &pp_font_12, 0);
+  /* Quiet layered glow, thin orbital rings and small coherent pixel motes. */
+  for (unsigned i = 0; i < 5; i++) {
+    evo_glow[i] = lv_obj_create(evolution);
+    lv_obj_remove_style_all(evo_glow[i]);
+    lv_obj_set_style_radius(evo_glow[i], LV_RADIUS_CIRCLE, 0);
+    lv_obj_set_style_bg_color(evo_glow[i], color(evo_tint), 0);
+    lv_obj_remove_flag(evo_glow[i], LV_OBJ_FLAG_CLICKABLE | LV_OBJ_FLAG_SCROLLABLE);
+  }
+  for (unsigned i = 0; i < 3; i++) {
+    evo_ring[i] = lv_obj_create(evolution);
+    lv_obj_remove_style_all(evo_ring[i]);
+    lv_obj_set_style_radius(evo_ring[i], LV_RADIUS_CIRCLE, 0);
+    lv_obj_set_style_border_width(evo_ring[i], 1, 0);
+    lv_obj_set_style_border_color(evo_ring[i], color(evo_tint), 0);
+    lv_obj_remove_flag(evo_ring[i], LV_OBJ_FLAG_CLICKABLE | LV_OBJ_FLAG_SCROLLABLE);
+  }
+  for (unsigned i = 0; i < 32; i++) {
+    evo_spark[i] = lv_obj_create(evolution);
+    lv_obj_remove_style_all(evo_spark[i]);
+    lv_obj_set_style_bg_color(evo_spark[i],
+        lv_color_mix(color(0xf5f7ef), color(evo_tint), i % 4 == 0 ? 150 : 0), 0);
+    lv_obj_remove_flag(evo_spark[i], LV_OBJ_FLAG_CLICKABLE | LV_OBJ_FLAG_SCROLLABLE);
+  }
+  evo_pet = lv_image_create(evolution);
+  lv_obj_set_pos(evo_pet, 132, 118);
+  evo_gift = lv_image_create(evolution);pp_image_set_src(evo_gift,pure_heart_path);
+  lv_obj_set_pos(evo_gift,252,145);lv_obj_set_style_opa(evo_gift,0,0);
+  evo_name = label(evolution, "", 60, 227, 240, evo_tint);
+  lv_obj_set_style_text_font(evo_name, &pp_font_18, 0);
+  evo_hint = l = label(evolution, decline ? "获得收藏品 · 纯净之心\n这只伙伴将永久保持当前形态" : "新形态已解锁", 60, 253, 240, 0x8baab9);
+  lv_obj_set_style_text_font(l, &pp_font_12, 0);
+  lv_obj_set_style_opa(evo_hint, 0, 0);
+  evo_done = button(evolution, "完成", 125, 282, 110, 38, 168);
+  lv_obj_add_flag(evo_done, LV_OBJ_FLAG_HIDDEN);
+  evolution_tick();
+}
+static float evo_progress(unsigned age, unsigned start, unsigned duration) {
+  if (age <= start) return 0;
+  if (age >= start + duration) return 1;
+  float t = (float)(age - start) / duration;
+  return t * t * (3 - 2 * t);
+}
+static void evo_circle(lv_obj_t *obj, int radius, unsigned opacity, bool ring) {
+  lv_obj_set_size(obj, radius * 2, radius * 2);
+  lv_obj_set_pos(obj, 180 - radius, 166 - radius);
+  if (ring) lv_obj_set_style_border_opa(obj, opacity, 0);
+  else lv_obj_set_style_bg_opa(obj, opacity, 0);
+}
+static void evo_sprite(unsigned art, unsigned pose, uint32_t now) {
+  unsigned frame = pp_animation_update(&evolution_clock, art, pose, now);
+  const void *source = paths[art][frame];
+  evo_current_art = art;
+  if (source == evo_sprite_source) return;
+  evo_sprite_source = source;
+  const lv_image_dsc_t *im = pp_image_descriptor(source);
+  if (!im || (im->header.cf != LV_COLOR_FORMAT_I4 && im->header.cf != LV_COLOR_FORMAT_I8)) {
+    pp_image_set_src(evo_pet, source);
+    lv_obj_set_pos(evo_pet, 156, 142);
+    return;
+  }
+  unsigned palette = im->header.cf == LV_COLOR_FORMAT_I4 ? 64 : 1024;
+  const uint8_t *indices = im->data + palette;
+  for (unsigned y = 0; y < 96; y++) for (unsigned x = 0; x < 96; x++) {
+    unsigned sx = x * im->header.w / 96, sy = y * im->header.h / 96;
+    unsigned index = im->header.cf == LV_COLOR_FORMAT_I4
+      ? (indices[sy * im->header.stride + sx / 2] >> (sx % 2 ? 0 : 4)) & 15
+      : indices[sy * im->header.stride + sx];
+    memcpy(&evo_pixels[y * 96 + x], im->data + index * 4, 4);
+  }
+  evo_descriptor = (lv_image_dsc_t){.header = {.magic=LV_IMAGE_HEADER_MAGIC,
+    .cf=LV_COLOR_FORMAT_ARGB8888, .flags=LV_IMAGE_FLAGS_MODIFIABLE,
+    .w=96, .h=96, .stride=96*4}, .data_size=sizeof(evo_pixels), .data=(const uint8_t *)evo_pixels};
+  lv_image_cache_drop(&evo_descriptor);
+  lv_image_set_src(evo_pet, &evo_descriptor);
+  lv_obj_invalidate(evo_pet);
+}
+static void evolution_tick(void) {
+  uint32_t now = lv_tick_get();
+  unsigned age = now - evo_started;
+  if (evo_choosing) { evo_sprite(evo_before_art,PP_POSE_IDLE,now);lv_obj_set_pos(evo_pet,132,94);return; }
+  float gather = evo_progress(age, 0, 900);
+  float burst = evo_progress(age, 1000, 750);
+  float settle = evo_progress(age, 1700, 500);
+  float light = evo_declined ? 0 : evo_progress(age, 400, 600) * (1 - evo_progress(age, 1250, 600));
+  for (unsigned i = 0; i < 5; i++) {
+    int radius = 84 - (int)i * 10 - (int)(gather * 8) + (int)(burst * 12);
+    evo_circle(evo_glow[i], radius, (unsigned)((8 + i * 2) * (0.4f + light * 0.6f) * (1 - settle * 0.8f)), false);
+  }
+  for (unsigned i = 0; i < 3; i++) {
+    int radius = age < 1000 ? 78 - (int)(gather * 30) + (int)i * 5
+                             : 40 + (int)(burst * (40 + i * 5));
+    unsigned opacity = age < 1000 ? (unsigned)(80 + gather * 60)
+                                 : (unsigned)(160 * (1 - burst));
+    evo_circle(evo_ring[i], radius, opacity, true);
+  }
+  for (unsigned i = 0; i < 32; i++) {
+    float angle = i * 6.283185f / 32 + age * (i % 2 ? 0.0006f : -0.00045f);
+    float distance = age < 1000 ? 78 - gather * (35 + i % 5 * 4)
+                               : 24 + burst * (45 + i % 5 * 5);
+    int size = i % 5 == 0 ? 3 : 2;
+    lv_obj_set_size(evo_spark[i], size, size);
+    lv_obj_set_pos(evo_spark[i], 180 + (int)(cosf(angle) * distance) - size/2,
+                   166 + (int)(sinf(angle) * distance) - size/2);
+    float shimmer = 0.7f + 0.3f * sinf(age * 0.004f + i);
+    lv_obj_set_style_bg_opa(evo_spark[i], (unsigned)(210 * shimmer * (1 - settle)), 0);
+  }
+  evo_sprite(age < 1100 ? evo_before_art : pet_art(evo_pet_id),
+             age < 1850 ? PP_POSE_IDLE : PP_POSE_HAPPY, now);
+  lv_obj_set_style_image_recolor(evo_pet, lv_color_mix(color(0xf9fbf1), color(evo_tint), 210), 0);
+  lv_obj_set_style_image_recolor_opa(evo_pet, (unsigned)(light * 255), 0);
+  lv_obj_set_y(evo_pet, 118 - (int)(sinf(gather * 3.14159f) * 3 * (1 - burst)));
+  if (age >= 1800) text(evo_name, pp_form_name(g, evo_pet_id));
+  lv_obj_set_style_opa(evo_name, (unsigned)(evo_progress(age, 1800, 400) * 255), 0);
+  lv_obj_set_style_opa(evo_hint, (unsigned)(settle * 255), 0);
+  lv_obj_set_style_opa(evo_gift,evo_declined?(unsigned)(settle*255):0,0);
+  if (age >= 2200) lv_obj_remove_flag(evo_done, LV_OBJ_FLAG_HIDDEN);
+}
+static void battle_timer(lv_timer_t *timer) {
+  (void)timer;
+  if (current == 6 && !refresh_pending)
+    pp_battle_view_tick();
+}
+void pp_ui_create(pp_game *game) {
+  g = game;
+  screen = lv_screen_active();
+  lv_obj_t *bottom = lv_display_get_layer_bottom(lv_obj_get_display(screen));
+  lv_obj_set_style_bg_color(bottom, lv_color_black(), 0);
+  lv_obj_set_style_bg_opa(bottom, LV_OPA_COVER, 0);
+  starter_mode = pp_needs_starter(game);
+  pp_ui_open(starter_mode ? 13 : 0);
+  lv_timer_create(animate, PP_FRAME_MS, NULL);
+  lv_timer_create(battle_timer, 40, NULL);
+}
+
+unsigned pp_ui_page(void) { return current; }
+
+bool pp_ui_evolving(void) { return evolution != NULL; }
+pp_travel_view_state pp_ui_travel_probe(void) {
+  pp_travel_view_state state={0};
+  if (current!=5 || !travel_layout) return state;
+  lv_obj_update_layout(screen);
+  lv_area_t area;lv_obj_get_coords(travel_backdrop,&area);
+  state.active=true;state.receipt=travel_receipt.active;
+  state.claimable=!lv_obj_has_flag(travel_claim,LV_OBJ_FLAG_HIDDEN);
+  state.x=area.x1;state.y=area.y1;state.width=lv_obj_get_width(travel_backdrop);
+  state.height=lv_obj_get_height(travel_backdrop);
+  snprintf(state.activity,sizeof(state.activity),"%s",lv_label_get_text(travel_activity));
+  snprintf(state.event,sizeof(state.event),"%s",lv_label_get_text(live_log));
+  snprintf(state.reward,sizeof(state.reward),"%s",lv_label_get_text(travel_reward_label));
+  return state;
+}
+pp_evolution_view_state pp_ui_evolution_probe(void) {
+  if (!evolution) return (pp_evolution_view_state){0};
+  return (pp_evolution_view_state){.active=true,
+    .choice=evo_choosing, .declined=evo_declined,
+    .ready=!evo_choosing && !lv_obj_has_flag(evo_done, LV_OBJ_FLAG_HIDDEN),
+    .age=lv_tick_get()-evo_started, .before_art=evo_before_art,
+    .current_art=evo_current_art, .tint=evo_tint,
+    .silhouette=lv_obj_get_style_image_recolor_opa(evo_pet, 0)};
+}
+
+pp_home_state pp_ui_home_probe(unsigned pet) {
+  pp_home_state state = {0};
+  if (current != 0 || pet >= g->count || !pet_img[pet]) return state;
+  state.x = lv_obj_get_x(pet_img[pet]);
+  state.y = lv_obj_get_y(pet_img[pet]);
+  state.left = facing_left[pet];
+  state.bubble_visible = !lv_obj_has_flag(bubble, LV_OBJ_FLAG_HIDDEN);
+  state.bubble_x = lv_obj_get_x(bubble);
+  state.bubble_y = lv_obj_get_y(bubble);
+  state.speaker = talk_pet;
+  state.drop_x = lv_obj_get_x(drop_icon);
+  state.drop_y = lv_obj_get_y(drop_icon);
+  state.drop_visible = !lv_obj_has_flag(drop_icon, LV_OBJ_FLAG_HIDDEN);
+  return state;
+}
+
+unsigned pp_ui_pokedex_page(void) { return petdex_page; }
+
+void pp_ui_scene_fx_preview(bool enabled) { ambient_preview=enabled; }
+
+unsigned pp_ui_collection_quality(void) {return collection_quality;}
+unsigned pp_ui_collection_page(void) {return dex_page;}

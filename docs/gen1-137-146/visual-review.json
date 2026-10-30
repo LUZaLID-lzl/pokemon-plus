@@ -1,0 +1,168 @@
+{
+  "identityReviewed": [
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146
+  ],
+  "animationReviewed": [
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146
+  ],
+  "runtimeIntegrated": false,
+  "acceptedVersions": {
+    "137": 1,
+    "138": 1,
+    "139": 1,
+    "140": 1,
+    "141": 1,
+    "142": 1,
+    "143": 2,
+    "144": 2,
+    "145": 1,
+    "146": 1
+  },
+  "note": "Partial reviewed art/animations;runtime not integrated",
+  "identitySources": {
+    "137": {
+      "sourceImage": "assets/source/identity-137-v1.png",
+      "version": 1,
+      "attempts": 1,
+      "sourceSha256": "069c918dd94e30f21d55bab15ecbd93bb53dea64adc870f55dba8c925ad13469"
+    },
+    "138": {
+      "sourceImage": "assets/source/identity-138-v1.png",
+      "version": 1,
+      "attempts": 1,
+      "sourceSha256": "7eefdf0a0fb3a628c80a922e4e87279af046e697c5d0d3e4fe23d3b2141d442d"
+    },
+    "139": {
+      "sourceImage": "assets/source/identity-139-v2.png",
+      "version": 2,
+      "attempts": 1,
+      "sourceSha256": "9cde865f4f07cbe13ffabde848e62b21949fdd73b1ce5536b6c5657bdbed2ea2"
+    },
+    "140": {
+      "sourceImage": "assets/source/identity-140-v1.png",
+      "version": 1,
+      "attempts": 1,
+      "sourceSha256": "cfcb3fbaa68b73374edc39d59c56a8cfaf6b43fb2840ecae401631cd11405ea1"
+    },
+    "141": {
+      "sourceImage": "assets/source/identity-141-v1.png",
+      "version": 1,
+      "attempts": 1,
+      "sourceSha256": "013b069a01994aefe15414c32af128d1718c9888e7cd6c584e8ca0e2dc4f9e8f"
+    },
+    "142": {
+      "sourceImage": "assets/source/identity-142-v1.png",
+      "version": 1,
+      "attempts": 6,
+      "sourceSha256": "a26974d0347002ccc9d2c2f177d3829a7abefcd48b6cce066ee010764e30ea4f"
+    },
+    "143": {
+      "sourceImage": "assets/source/identity-143-v1.png",
+      "version": 1,
+      "attempts": 1,
+      "sourceSha256": "309c5bbcf47e77444a251de95cc4c8422ba025cbf99e8ee38b25fd0d9da07e45"
+    },
+    "144": {
+      "sourceImage": "assets/source/identity-144-v2.png",
+      "version": 2,
+      "attempts": 3,
+      "sourceSha256": "f7ba3cdcccd321c6f19c23d2dc8bd2a822547883986076555b4bfd777f68ff10"
+    },
+    "145": {
+      "sourceImage": "assets/source/identity-145-v1.png",
+      "version": 1,
+      "attempts": 1,
+      "sourceSha256": "3d983ddb7c3ef2353516ea7ebbe6061d4b2128cfadab9f265d12754536ef1930"
+    },
+    "146": {
+      "sourceImage": "assets/source/identity-146-v1.png",
+      "version": 1,
+      "attempts": 1,
+      "sourceSha256": "54b31027ddbe9dd3853eeacdae8f368d31e12c8c6234c72754dd2908b9812af4"
+    }
+  },
+  "notes": {
+    "137": "identity: Raw and native48px visually checked: connected angular pink head/body, blue bill/two feet/tail, friendly left-facing polygon anatomy; crisp limited palette and transparent margins.\nanimation: Raw atlas and native contact sheet visually checked:48 distinct complete angular-body poses; polygon feet alternate, connected tail tilts; all8 sleep poses low with closed eyelid lines, awake action row; measured palette/binary alpha/exact mirrors pass.",
+    "138": "identity: Raw and native48px visually checked: cream spiral shell joined to blue body, two eyes and connected tentacles, left-facing compact form and binary transparent margins.\nanimation: Raw/native visually checked:48 distinct connected shell-body/tentacle poses;8 sleep cells have lowered shell/closed black eyelids without pupils; awake action row, shared palette and exact mirrors verified.",
+    "139": "identity: Raw and native48px visually checked: one attached cream spiked spiral shell, blue mollusk body with two eyes, circular beak and connected tentacles; compact complete silhouette and transparent margins.\nanimation: Raw atlas and native contact sheet visually checked:48 distinct whole-body poses, attached shell/spikes and tentacle bends, circular beak changes; all8 sleep poses low with closed dark eyelids and relaxed tentacles; awakened action row, exact mirrors and limited shared palette pass.",
+    "140": "identity: Raw/native visually checked: attached brown dome shell with two dark dorsal markings, two red underside eyes and four connected cream legs; no invented mouth, compact silhouette and transparent margins.\nanimation: Raw/native visually checked:48 distinct complete shell-and-four-leg poses, alternating feet and gentle shell tilt; all8 sleep poses low with legs folded and underside eyes closed under shell, dorsal spots remain markings; shared palette, binary alpha and exact mirrors pass.",
+    "141": "identity: Raw/native visually checked: brown flat head crest, red eyes, cream segmented chest and two attached curved cream forearms, two legs and attached tail; compact whole-body form with correct family colors.\nanimation: Raw/native visually checked:48 distinct connected whole-body poses, alternating bent-knee legs and attached curved forearm gestures/tail; all8 sleep cells seated low with head lowered and dark closed eyelids, no red pupils; awake final row and compact connected anatomy, limited shared palette and mirrors pass.",
+    "142": "identity: Raw/native visually checked: gray-lavender winged reptile, pointed ears, long toothed snout, two attached purple membrane wings, two feet and long arrow-tip tail; full silhouette inside transparent margins.\nanimation: Raw/native visually checked:48 distinct connected full-body poses with articulated purple membrane wing phases and attached arrow tail; all8 sleep cells low with folded wings and closed eyelids, no pupils; complete flight/action silhouettes, shared palette/binary alpha/mirrors pass.",
+    "143": "identity: Raw/native visually checked: rounded teal body and pointed ears, cream face/belly and two padded feet, two short attached arms with claws; calm characteristic narrow closed eyes, connected whole body and transparent margins.\nanimation: Raw/native visually checked:48 distinct connected whole-body poses, weight shifts and alternating feet, short-arm eating and gesture changes; all8 sleep cells lower with closed narrow eyelids and relaxed arms, cream belly and teal volume consistent; binary alpha/shared palette/exact mirrors pass.",
+    "144": "identity: Raw/native visually checked: three blue crest feathers, attached folded blue wings, white chest ruff, two gray feet and long blue ribbon tail curled close; compact complete silhouette with transparent margins and family style retained.\nanimation: Raw/native visually checked: revision2 flight row now shows attached wing lift, high spread and downward stroke with feet tucked, not only folded-wing bobbing;48 distinct connected whole-body poses, curled ribbon tail/crest retained; all8 sleep cells low with folded wings and fully closed eyelids. Binary alpha/shared palette/exact mirrors pass. Revision1 rejected for inadequate flight wing motion and archived.",
+    "145": "identity: Raw/native visually checked: yellow pointed crest and black-backed angular wing/tail feathers, long orange beak and two orange clawed feet; both wings and tail connected to body, single connected native silhouette, transparent margins and correct palette.\nanimation: Raw/native visually checked:48 distinct whole-body poses, black-backed yellow wings spread and sweep through flight phases with changing foot posture; crest and tail connected, orange beak changes; all8 sleep cells low perched with folded wings and closed eyelids. Shared palette/binary alpha/exact mirrors pass.",
+    "146": "identity: Raw/native visually checked: yellow-orange bird body, two attached flame-edged wings and long red-orange flame tail, connected flame crest, cream beak and two clawed feet; all flame shapes attached, no floating sparks, full compact silhouette inside transparent margins.\nanimation: Raw/native visually checked:48 distinct complete connected body poses, flame-edged wings lift and lower through flight phases, no detached sparks/flames, crest/tail remain attached; all8 sleep poses low with folded wings and closed eyelids. Shared palette/binary alpha/exact mirrors pass."
+  },
+  "failedTask": null,
+  "failedNationalId": null,
+  "failureLog": null,
+  "activeTask": null,
+  "status": "137–146 all identities/full48-pose animations reviewed; runtime integration pending",
+  "continuationPreference": null,
+  "previousStoppedTasks": [
+    {
+      "kind": "identity",
+      "nationalId": 139,
+      "version": 1,
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "log": "build/identity-139-generation-v1.log",
+      "prompt": "assets/prompts/identity-139-v1.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "animation",
+      "nationalId": 143,
+      "version": 1,
+      "log": "assets/prompts/animation-143/generation-v1.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/animation-143/master-v1.txt",
+      "sourceImage": null
+    },
+    {
+      "kind": "identity",
+      "nationalId": 144,
+      "version": 1,
+      "log": "build/identity-144-generation-v1.log",
+      "attempts": 6,
+      "category": "HTTP400/content_policy",
+      "prompt": "assets/prompts/identity-144-v1.txt",
+      "sourceImage": null
+    }
+  ],
+  "rejectedSources": [
+    {
+      "nationalId": 144,
+      "kind": "animation",
+      "version": 1,
+      "source": "assets/source/animation-144-master-v1.png",
+      "sourceSha256": "1ba3f78a94916055719de34b4b29bab7e7f0d7364468de499eb5e917bfe5e28d",
+      "attempts": 2,
+      "status": "rejected-visual-QA",
+      "reason": "Travel row does not show clear wing lift/downstroke phases; most wings remain folded. Sleep row acceptable, but flight motion does not meet species direction.",
+      "archive": "build/rejected-animation-144-v1",
+      "prompt": "assets/prompts/animation-144/master-v1.txt",
+      "log": "assets/prompts/animation-144/generation-v1.log"
+    }
+  ],
+  "artScopeCompleted": true
+}

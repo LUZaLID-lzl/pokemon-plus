@@ -1,0 +1,24 @@
+[
+  {
+    "id": 584,
+    "model": "gpt-image-1.5",
+    "attempts": 1,
+    "source": "assets/source/gym-crown-v1.png",
+    "prompt": "assets/prompts/gym-crown-v1.txt",
+    "sourceSha256": "fa42e80a90b05136c3d53bedcc1016c45f0411b6c9ca36084119a5a94a167bcd",
+    "nativeSize": 32,
+    "paletteLimit": 16,
+    "reviewed": true
+  },
+  {
+    "id": 585,
+    "model": "gpt-image-1.5",
+    "attempts": 1,
+    "source": "assets/source/dex-tome-v1.png",
+    "prompt": "assets/prompts/dex-tome-v1.txt",
+    "sourceSha256": "3a11c1915055731cc7cc9b89eeffc8dcd0984cb713f55b6e1ba16b63dc5c3132",
+    "nativeSize": 32,
+    "paletteLimit": 16,
+    "reviewed": true
+  }
+]

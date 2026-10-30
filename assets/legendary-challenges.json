@@ -1,0 +1,42 @@
+{
+  "generation": 1,
+  "requiredBadgeMask": 255,
+  "requiredBadges": 8,
+  "level": 60,
+  "repeatable": true,
+  "reward": "one exact species egg in bag",
+  "ordinaryEncounter": false,
+  "ordinaryHatch": false,
+  "minSeconds": 7200,
+  "maxSeconds": 14400,
+  "shakeToStart": true,
+  "pets": [
+    {
+      "nationalId": 144,
+      "name": "急冻鸟",
+      "classification": "legendary"
+    },
+    {
+      "nationalId": 145,
+      "name": "闪电鸟",
+      "classification": "legendary"
+    },
+    {
+      "nationalId": 146,
+      "name": "火焰鸟",
+      "classification": "legendary"
+    },
+    {
+      "nationalId": 150,
+      "name": "超梦",
+      "classification": "legendary"
+    },
+    {
+      "nationalId": 151,
+      "name": "梦幻",
+      "classification": "mythical"
+    }
+  ],
+  "classificationSource": "https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/pokemon_species.csv",
+  "note": "本游戏将梦幻一并纳入神兽挑战；指定蛋是本游戏玩法，非正作繁殖规则。"
+}

@@ -1,0 +1,37 @@
+{
+  "version": "v18",
+  "jobs": [
+    {
+      "id": 6,
+      "name": "水晶洞穴",
+      "prompt": "prompts/scenes-v18/06.txt",
+      "source": "source/scenes-v18/06.png",
+      "status": "reviewed-integrated",
+      "attempts": 1,
+      "model": "gpt-image-2.5-sunburst",
+      "sha256": "8c48e15b77ba0432d6453ca520ea628dfa813a5b53817937f9c23de6a1c5b6b0",
+      "runtimeSource": "source/scenes-v18/03-native.png",
+      "processing": "120px/48-color native conversion; merge isolated sign highlight at (69,32) into adjacent foliage for HUD clarity"
+    },
+    {
+      "id": 11,
+      "name": "天空岛",
+      "prompt": "prompts/scenes-v18/11.txt",
+      "source": "source/scenes-v18/11.png",
+      "status": "reviewed-integrated",
+      "attempts": 1,
+      "model": "gpt-image-2.5-sunburst",
+      "sha256": "8d395bec16ee1c994e4520faae6bbdafcd69ddbb7c1c239d54ee59dff6335401"
+    },
+    {
+      "id": 3,
+      "name": "城镇",
+      "prompt": "prompts/scenes-v18/03.txt",
+      "source": "source/scenes-v18/03.png",
+      "status": "reviewed-integrated",
+      "attempts": 1,
+      "model": "gpt-image-2.5-sunburst",
+      "sha256": "59f36bd49b02e2e79504db27fe4e068d3dfade5dfc667ba9784342a731e11a33"
+    }
+  ]
+}

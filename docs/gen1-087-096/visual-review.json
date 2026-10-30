@@ -1,0 +1,55 @@
+{
+  "identityReviewed": [
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96
+  ],
+  "animationReviewed": [
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96
+  ],
+  "acceptedVersions": {
+    "87": 3,
+    "88": 1,
+    "89": 1,
+    "90": 1,
+    "91": 1,
+    "92": 1,
+    "93": 2,
+    "94": 1,
+    "95": 2,
+    "96": 1
+  },
+  "notes": {
+    "identity": "Original sheet and ten native48px sprites visually reviewed: Dewgong horn/tusks/flippers; two connected slime bodies/arms/puddle bases; Shellder hinged shell/attached tongue; Cloyster spiked hinged shell/dark face; Gastly connected gas fringe; Haunter claws held against short body by natural overlap; Gengar red eyes/short limbs; Onix coiled connected rock chain/horn; Drowzee short trunk/yellow-brown body. Binary alpha, <=15 opaque colors, max40px silhouette and continuous connected navy outlines. Identity only; runtime not integrated.",
+    "87-v1": "Generated attempt1 but rejected: only five rows/40 complete bodies; sixth action row absent, sleep row includes open eyes. Original and component report retained; no template accepted.",
+    "87-v2": "Generated attempt1 but again only five rows, sixth action missing; some sleep poses not fully closed. Rejected. Newv3 uses a second approved8x6 layout reference and explicit full-height six-band placement.",
+    "87": "v3 accepted attempt1. Native48px six-action contact sheet reviewed: eight distinct whole bodies per row, single horn/tusks/two front flippers/forked rear tail. Real flipper sliding, no legs. All sleep frames low lying and fully closed eye. v1/v2 missing sixth rows rejected, sources/logs/measured rejection reports retained. v3 second001 reference is layout only;087 reference controls identity.",
+    "88": "v1 accepted attempt1: native contact sheet reviewed. Continuous violet sludge body with two attached rounded arms, stable low puddle base and no legs; all48 distinct whole bodies. Genuine arm/fold undulation, mouth chewing, cheerful lift, compact forward brace/recovery. All eight sleep poses settled low with fully closed visible eyes and no white eyeballs. Exact mirrors/native48px pass.",
+    "89": "v1 accepted attempt1: native48px six-action sheet reviewed. Broad violet sludge body, two connected folded arms, continuous puddle base/no legs. Distinct arm/fold/cheek changes and compact brace/recovery retain volume. All eight low settled sleep poses have fully closed eyelids with no eye whites. Exact mirrors and eight unique frames per action pass.",
+    "90": "v1 accepted attempt1: native sheet reviewed. Purple hinged shell halves remain connected, attached pink tongue curls and retracts, genuine shell tilts/open-close phases with no feet. All sleep frames low near-closed resting shell and tongue tucked; eyes reduced to narrow horizontal closed lids without open oval/pupil shapes. Complete48 poses/eight unique per action/native mirrors pass.",
+    "91": "v1 accepted attempt2 after one HTTP400. Native sheet reviewed: connected purple spiked shell halves/inner rim/dark face, all spikes attached. Eight distinct shell hinge/tilt/face phases per action. Sleep retains low resting shell with eyes closed to narrow purple horizontal lids and no pale eyeballs/pupils, face visible naturally; label uses closed-eye rest rather than falsely claiming fully shut shell. Whole48 bodies/native exact mirrors pass.",
+    "92": "v1 accepted attempt1: native48px sheet reviewed. Round dark face with attached continuous violet gas fringe, two pale eyes/tiny fangs; no limbs, detached gas specks or shadow. Genuine fringe-shape/face tilt changes, cheerful eyes/mouth, compact lean/recoil/recovery. All eight low-hover sleep bodies retain volume with purple closed lids and no white eyeballs/pupils.48 isolated complete poses and exact mirrors pass.",
+    "93-v1": "Six HTTP400 failures, safe service category content_policy, no image returned. Installed MobiIoT retry limit reached; entire image batch stopped.094–096 action sheets not requested.",
+    "93": "v2 accepted on attempt5 after four HTTP400 responses. Native48px contact sheet reviewed: pointed ears and short jagged body, two three-digit hands remain touching lower cheeks/body through natural overlap; gradual hand curl and face tilt without invented arms/legs. All eight low hovering sleep poses have closed purple eyelids, no pale eyeballs. All48 complete distinct poses, exact mirrors and continuous native outlines pass. Oldv1 six-failure log retained.",
+    "94": "v1 accepted on attempt3 after two HTTP400 responses. Native48px contact sheet reviewed: rounded purple biped with two short arms/legs, attached ears/back spikes/tail, red eyes and grin. Eight articulated short-step phases, compact gestures and recovery retain volume. All sleep poses are low crouched with closed dark eyelids, no red eyeballs or pupils.48 complete separate poses, eight unique frames/action and exact mirrors pass.",
+    "95-v1": "Six HTTP400 failures, safe service category content_policy; no image returned. Installed MobiIoT retry limit reached; entire image batch stopped.096 actions and097–106 identity/actions not requested.",
+    "95": "v2 accepted on attempt3 after two HTTP400 responses. Native48px contact sheet reviewed: complete horned gray head, compact continuous rock coil and inward tapered tail, no limbs or detached boulders. Genuine rock-joint/head tilt phases preserve compact body volume. Eight low coil-rest sleep poses have fully closed eyelids without pale eyeballs.48 distinct complete bodies,8 unique frames/action,continuous native navy outlines and exact mirrors pass. Oldv1 six-failure log retained.",
+    "96": "v1 accepted on attempt3 after two HTTP400 responses. Native48px contact sheet reviewed: yellow upper body, brown lower body with wavy boundary, attached short trunk, two ears, two arms and two legs. Genuine alternate short steps and compact arm/trunk gestures retain body volume. Eight low seated curled sleep poses have completely closed eyelids, no open eyeballs.48 complete bodies,8 distinct frames/action,continuous native navy outline and exact mirrors pass."
+  }
+}
